@@ -1,13 +1,14 @@
-Évènements,Catégorie
-Bombardement,Arrière
-Combats,Front
-Artillerie russe,Front
-Artillerie Ukrainienne,Front
-Aéronef abattu,Espace aérien
-Dissidence,Politique
-Crime de guerre,Crime de guerre
-Mouvement de troupes,Arrière
-Fosse commune,Crime de guerre
-Incident,Arrière
-Passage aérien,Espace aérien
-Navire coulé,Maritime
+Évènements,Catégorie,Type
+Bombardement,Arrière,Bombardements
+Combats,Front,Combats
+Artillerie russe,Front,Bombardements
+Artillerie Ukrainienne,Front,Bombardements
+Aéronef abattu,Espace aérien,Espace aérien
+Dissidence,Politique,Civil
+Crime de guerre,Crime de guerre,Crime de guerre
+Mouvement de troupes,Arrière,Préparatifs
+Fosse commune,Crime de guerre,Crime de guerre
+Incident,Arrière,Civil
+Passage aérien,Espace aérien,Espace aérien
+Navire coulé,Maritime,Bombardements
+Fortification,Arrière,Préparatifs
