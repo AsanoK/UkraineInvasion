@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCRIBUSUTF8NEW Version="1.5.8">
+    <DOCUMENT ANZPAGES="4" PAGEWIDTH="595.28" PAGEHEIGHT="841.89" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" PRESET="0" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" ORIENTATION="0" PAGESIZE="A4" FIRSTNUM="1" BOOK="0" AUTOTEXT="1" AUTOSPALTEN="2" ABSTSPALTEN="11" UNITS="0" DFONT="Arial Regular" DSIZE="12" DCOL="1" DGAP="0" TabFill="" TabWidth="36" TextDistLeft="0" TextDistRight="0" TextDistBottom="0" TextDistTop="0" FirstLineOffset="0" AUTHOR="" COMMENTS="" KEYWORDS="" PUBLISHER="" DOCDATE="" DOCTYPE="" DOCFORMAT="" DOCIDENT="" DOCSOURCE="" DOCLANGINFO="" DOCRELATION="" DOCCOVER="" DOCRIGHTS="" DOCCONTRIB="" TITLE="" SUBJECT="" VHOCH="33" VHOCHSC="66" VTIEF="33" VTIEFSC="66" VKAPIT="75" BASEGRID="14.4" BASEO="0" AUTOL="100" UnderlinePos="-1" UnderlineWidth="-1" StrikeThruPos="-1" StrikeThruWidth="-1" GROUPC="1" HCMS="0" DPSo="0" DPSFo="0" DPuse="0" DPgam="0" DPbla="1" DPPr="Fogra27L CMYK Coated Press" DPIn="sRGB display profile (ICC v2.2)" DPInCMYK="Fogra27L CMYK Coated Press" DPIn2="sRGB display profile (ICC v2.2)" DPIn3="Fogra27L CMYK Coated Press" DISc="1" DIIm="0" ALAYER="0" LANGUAGE="fr" AUTOMATIC="1" AUTOCHECK="0" GUIDELOCK="0" SnapToGuides="0" SnapToGrid="0" SnapToElement="0" MINGRID="20" MAJGRID="100" SHOWGRID="0" SHOWGUIDES="1" showcolborders="1" SHOWFRAME="1" SHOWControl="0" SHOWLAYERM="0" SHOWMARGIN="1" SHOWBASE="0" SHOWPICT="1" SHOWLINK="0" rulerMode="1" showrulers="1" showBleed="1" rulerXoffset="0" rulerYoffset="0" GuideRad="10" GRAB="4" POLYC="4" POLYF="0.5" POLYR="0" POLYIR="0" POLYCUR="0" POLYOCUR="0" POLYS="0" arcStartAngle="30" arcSweepAngle="300" spiralStartAngle="0" spiralEndAngle="1080" spiralFactor="1.2" AutoSave="1" AutoSaveTime="600000" AutoSaveCount="1" AutoSaveKeep="0" AUtoSaveInDocDir="1" AutoSaveDir="" ScratchBottom="20" ScratchLeft="100" ScratchRight="100" ScratchTop="20" GapHorizontal="0" GapVertical="40" StartArrow="0" EndArrow="0" PEN="Black" BRUSH="None" PENLINE="d" PENTEXT="Black" StrokeText="Black" TextBackGround="None" TextLineColor="None" TextBackGroundShade="100" TextLineShade="100" TextPenShade="100" TextStrokeShade="100" STIL="1" STILLINE="1" WIDTH="1" WIDTHLINE="1" PENSHADE="100" LINESHADE="100" BRUSHSHADE="100" CPICT="None" PICTSHADE="100" CSPICT="None" PICTSSHADE="100" PICTSCX="1" PICTSCY="1" PSCALE="1" PASPECT="1" EmbeddedPath="0" HalfRes="1" dispX="10" dispY="10" constrain="15" MINORC="#00ff00" MAJORC="#00ff00" GuideC="#000080" BaseC="#c0c0c0" renderStack="0 1 2 3 4" GridType="0" PAGEC="#ffffff" MARGC="#0000ff" RANDF="0" currentProfile="PostScript" calligraphicPenFillColor="Black" calligraphicPenLineColor="Black" calligraphicPenFillColorShade="100" calligraphicPenLineColorShade="100" calligraphicPenLineWidth="1" calligraphicPenAngle="0" calligraphicPenWidth="10" calligraphicPenStyle="1">
+        <CheckProfile Name="PDF 1.3" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkPartFilledImageFrames="0" checkResolution="1" checkTransparency="1" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkNotCMYKOrSpot="0" checkDeviceColorsAndOutputIntent="0" checkFontNotEmbedded="0" checkFontIsOpenType="0" checkAppliedMasterDifferentSide="1" checkEmptyTextFrames="1"/>
+        <CheckProfile Name="PDF 1.4" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkPartFilledImageFrames="0" checkResolution="1" checkTransparency="0" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkNotCMYKOrSpot="0" checkDeviceColorsAndOutputIntent="0" checkFontNotEmbedded="0" checkFontIsOpenType="0" checkAppliedMasterDifferentSide="1" checkEmptyTextFrames="1"/>
+        <CheckProfile Name="PDF 1.5" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkPartFilledImageFrames="0" checkResolution="1" checkTransparency="0" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkNotCMYKOrSpot="0" checkDeviceColorsAndOutputIntent="0" checkFontNotEmbedded="0" checkFontIsOpenType="0" checkAppliedMasterDifferentSide="1" checkEmptyTextFrames="1"/>
+        <CheckProfile Name="PDF 1.6" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkPartFilledImageFrames="0" checkResolution="1" checkTransparency="0" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkNotCMYKOrSpot="0" checkDeviceColorsAndOutputIntent="0" checkFontNotEmbedded="1" checkFontIsOpenType="0" checkAppliedMasterDifferentSide="1" checkEmptyTextFrames="1"/>
+        <CheckProfile Name="PDF/X-1a" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkPartFilledImageFrames="0" checkResolution="1" checkTransparency="1" minResolution="144" maxResolution="2400" checkAnnotations="1" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkNotCMYKOrSpot="0" checkDeviceColorsAndOutputIntent="0" checkFontNotEmbedded="0" checkFontIsOpenType="0" checkAppliedMasterDifferentSide="1" checkEmptyTextFrames="1"/>
+        <CheckProfile Name="PDF/X-3" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkPartFilledImageFrames="0" checkResolution="1" checkTransparency="1" minResolution="144" maxResolution="2400" checkAnnotations="1" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkNotCMYKOrSpot="0" checkDeviceColorsAndOutputIntent="0" checkFontNotEmbedded="0" checkFontIsOpenType="0" checkAppliedMasterDifferentSide="1" checkEmptyTextFrames="1"/>
+        <CheckProfile Name="PDF/X-4" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkPartFilledImageFrames="0" checkResolution="1" checkTransparency="0" minResolution="144" maxResolution="2400" checkAnnotations="1" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkNotCMYKOrSpot="0" checkDeviceColorsAndOutputIntent="1" checkFontNotEmbedded="1" checkFontIsOpenType="0" checkAppliedMasterDifferentSide="1" checkEmptyTextFrames="1"/>
+        <CheckProfile Name="PostScript" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkPartFilledImageFrames="0" checkResolution="1" checkTransparency="1" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkNotCMYKOrSpot="0" checkDeviceColorsAndOutputIntent="0" checkFontNotEmbedded="0" checkFontIsOpenType="0" checkAppliedMasterDifferentSide="1" checkEmptyTextFrames="1"/>
+        <COLOR NAME="Black" SPACE="CMYK" C="0" M="0" Y="0" K="100"/>
+        <COLOR NAME="Blue" SPACE="RGB" R="0" G="0" B="255"/>
+        <COLOR NAME="Cool Black" SPACE="CMYK" C="60" M="0" Y="0" K="100"/>
+        <COLOR NAME="Cyan" SPACE="CMYK" C="100" M="0" Y="0" K="0"/>
+        <COLOR NAME="Dark Yellow" SPACE="CMYK" C="5.09803921568627" M="14.1176470588235" Y="81.9607843137255" K="29.0196078431373"/>
+        <COLOR NAME="Dark blue" SPACE="CMYK" C="97.2549019607843" M="73.7254901960784" Y="0" K="0"/>
+        <COLOR NAME="Green" SPACE="RGB" R="0" G="255" B="0"/>
+        <COLOR NAME="Magenta" SPACE="CMYK" C="0" M="100" Y="0" K="0"/>
+        <COLOR NAME="Red" SPACE="RGB" R="255" G="0" B="0"/>
+        <COLOR NAME="Registration" SPACE="CMYK" C="100" M="100" Y="100" K="100" Register="1"/>
+        <COLOR NAME="Rich Black" SPACE="CMYK" C="60" M="40" Y="40" K="100"/>
+        <COLOR NAME="Warm Black" SPACE="CMYK" C="0" M="60" Y="29.8039215686275" K="100"/>
+        <COLOR NAME="White" SPACE="CMYK" C="0" M="0" Y="0" K="0"/>
+        <COLOR NAME="Yellow" SPACE="CMYK" C="0" M="0" Y="100" K="0"/>
+        <HYPHEN/>
+        <CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="Arial Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="fr"/>
+        <STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="5" RMARGIN="0" FIRST="5" VOR="0" NACH="0" ParagraphEffectOffset="0" DROP="0" DROPLIN="2"/>
+        <STYLE NAME="Liste" PARENT="Default Paragraph Style" LINESP="11" INDENT="5" FIRST="5" VOR="3" DROP="0" OpticalMargins="0" FONTSIZE="12">
+            <Tabs Type="0" Pos="12" Fill="."/>
+        </STYLE>
+        <STYLE NAME="Headers bleu" LINESP="20" VOR="10" FONT="A028 Extrabold Regular" FONTSIZE="20" FCOLOR="Dark blue" LANGUAGE="fr"/>
+        <STYLE NAME="Headers jaune" LINESP="20" VOR="10" FONT="A028 Extrabold Regular" FONTSIZE="20" FCOLOR="Dark Yellow" LANGUAGE="fr"/>
+        <STYLE NAME="Titre" ALIGN="1" LINESP="35" INDENT="0" FIRST="0" FONT="A028 Extrabold Regular" FONTSIZE="30" FCOLOR="Dark blue" LANGUAGE="fr"/>
+        <STYLE NAME="SousTitre" VOR="10" NACH="10" FONT="A028 Extrabold Regular" FONTSIZE="25" FCOLOR="Dark Yellow" LANGUAGE="fr">
+            <Tabs Type="0" Pos="20" Fill=""/>
+        </STYLE>
+        <STYLE NAME="Disclaimers" PARENT="Default Paragraph Style" FONT="Arial Italic" FONTSIZE="8" FSHADE="60"/>
+        <STYLE NAME="Important" LINESP="17" FIRST="15" VOR="15" FONT="A028 Medium Regular" FONTSIZE="18" FSHADE="90" LANGUAGE="fr"/>
+        <STYLE NAME="Chapitre" PARENT="Headers jaune" ALIGN="1"/>
+        <STYLE NAME="minititres" PARENT="Liste" VOR="10" FCOLOR="Dark blue"/>
+        <STYLE NAME="légendes" PARENT="Default Paragraph Style" INDENT="6" FIRST="0" FSHADE="100"/>
+        <STYLE NAME="Citations" PARENT="Default Paragraph Style" INDENT="10" RMARGIN="10" FIRST="5" VOR="0" NACH="0" FONT="Arial Bold Italic" FONTSIZE="15"/>
+        <TableStyle NAME="Default Table Style" DefaultStyle="1" FillColor="None" FillShade="100">
+            <TableBorderLeft>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderLeft>
+            <TableBorderRight>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderRight>
+            <TableBorderTop>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderTop>
+            <TableBorderBottom>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderBottom>
+        </TableStyle>
+        <CellStyle NAME="Default Cell Style" DefaultStyle="1" FillColor="None" FillShade="100" LeftPadding="1" RightPadding="1" TopPadding="1" BottomPadding="1">
+            <TableBorderLeft>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderLeft>
+            <TableBorderRight>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderRight>
+            <TableBorderTop>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderTop>
+            <TableBorderBottom>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderBottom>
+        </CellStyle>
+        <LAYERS NUMMER="0" LEVEL="0" NAME="Fond de page" SICHTBAR="1" DRUCKEN="1" EDIT="1" SELECT="0" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#000000"/>
+        <Printer firstUse="1" toFile="0" useAltPrintCommand="0" outputSeparations="0" useSpotColors="1" useColor="1" mirrorH="0" mirrorV="0" useICC="0" doGCR="0" doClip="0" setDevParam="0" useDocBleeds="1" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" includePDFMarks="1" PSLevel="3" PrintEngine="3" markLength="20" markOffset="0" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" printer="" filename="" separationName="All" printerCommand=""/>
+        <PDF firstUse="0" Thumbnails="1" Articles="1" Bookmarks="0" Compress="1" CMethod="0" Quality="0" EmbedPDF="0" MirrorH="0" MirrorV="0" Clip="0" rangeSel="0" rangeTxt="" RotateDeg="0" PresentMode="0" RecalcPic="1" FontEmbedding="0" Grayscale="0" RGBMode="1" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="200" Resolution="300" Version="14" Intent="1" Intent2="0" SolidP="sRGB display profile (ICC v2.2)" ImageP="sRGB display profile (ICC v2.2)" PrintP="Fogra27L CMYK Coated Press" InfoString="" BTop="0" BLeft="0" BRight="0" BBottom="0" useDocBleeds="1" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" docInfoMarks="0" markLength="1" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="1" doMultiFile="0" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" openAfterExport="1" PageLayout="0" openAction="">
+            <Subset Name="A028 Extrabold Regular"/>
+            <Subset Name="A028 Medium Regular"/>
+            <Subset Name="Arial Bold Italic"/>
+            <Subset Name="Arial Italic"/>
+            <Subset Name="Arial Regular"/>
+            <LPI Color="" Frequency="133" Angle="45" SpotFunction="3"/>
+            <LPI Color="Black" Frequency="133" Angle="45" SpotFunction="3"/>
+            <LPI Color="Cyan" Frequency="133" Angle="105" SpotFunction="3"/>
+            <LPI Color="Magenta" Frequency="133" Angle="75" SpotFunction="3"/>
+            <LPI Color="Yellow" Frequency="133" Angle="90" SpotFunction="3"/>
+        </PDF>
+        <DocItemAttributes/>
+        <TablesOfContents/>
+        <NotesStyles>
+            <notesStyle Name="Default" Start="1" Endnotes="0" Type="Type_1_2_3" Range="0" Prefix="" Suffix=")" AutoHeight="1" AutoWidth="1" AutoRemove="1" AutoWeld="1" SuperNote="1" SuperMaster="1" MarksStyle="" NotesStyle=""/>
+        </NotesStyles>
+        <PageSets>
+            <Set Name="Single Page" FirstPage="0" Rows="1" Columns="1"/>
+            <Set Name="Double Sided" FirstPage="1" Rows="1" Columns="2">
+                <PageNames Name="Left Page"/>
+                <PageNames Name="Right Page"/>
+            </Set>
+            <Set Name="3-Fold" FirstPage="0" Rows="1" Columns="3">
+                <PageNames Name="Left Page"/>
+                <PageNames Name="Middle"/>
+                <PageNames Name="Right Page"/>
+            </Set>
+            <Set Name="4-Fold" FirstPage="0" Rows="1" Columns="4">
+                <PageNames Name="Left Page"/>
+                <PageNames Name="Middle Left"/>
+                <PageNames Name="Middle Right"/>
+                <PageNames Name="Right Page"/>
+            </Set>
+        </PageSets>
+        <Sections>
+            <Section Number="0" Name="0" From="0" To="3" Type="Type_1_2_3" Start="1" Reversed="0" Active="1" FillChar="0" FieldWidth="0"/>
+        </Sections>
+        <MASTERPAGE PAGEXPOS="100" PAGEYPOS="20" PAGEWIDTH="595.28" PAGEHEIGHT="841.89" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" NUM="0" NAM="Normal" MNAM="" Size="Custom" Orientation="0" LEFT="0" PRESET="0" VerticalGuides="" HorizontalGuides="" AGhorizontalAutoGap="0" AGverticalAutoGap="0" AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGverticalAutoRefer="0" AGSelection="0 0 0 0" pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
+        <MASTERPAGE PAGEXPOS="100" PAGEYPOS="20" PAGEWIDTH="595.28" PAGEHEIGHT="841.89" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" NUM="1" NAM="Page de base" MNAM="" Size="Custom" Orientation="0" LEFT="0" PRESET="0" VerticalGuides="" HorizontalGuides="" AGhorizontalAutoGap="11" AGverticalAutoGap="11" AGhorizontalAutoCount="2" AGverticalAutoCount="1" AGhorizontalAutoRefer="0" AGverticalAutoRefer="0" AGSelection="0 0 0 0" pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
+        <PAGE PAGEXPOS="100" PAGEYPOS="20" PAGEWIDTH="595.28" PAGEHEIGHT="841.89" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" NUM="0" NAM="" MNAM="Normal" Size="Custom" Orientation="0" LEFT="0" PRESET="0" VerticalGuides="" HorizontalGuides="" AGhorizontalAutoGap="11" AGverticalAutoGap="11" AGhorizontalAutoCount="2" AGverticalAutoCount="1" AGhorizontalAutoRefer="0" AGverticalAutoRefer="0" AGSelection="0 0 0 0" pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
+        <PAGE PAGEXPOS="100" PAGEYPOS="901.89" PAGEWIDTH="595.28" PAGEHEIGHT="841.89" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" NUM="1" NAM="" MNAM="Normal" Size="Custom" Orientation="0" LEFT="0" PRESET="0" VerticalGuides="" HorizontalGuides="" AGhorizontalAutoGap="11" AGverticalAutoGap="11" AGhorizontalAutoCount="2" AGverticalAutoCount="1" AGhorizontalAutoRefer="0" AGverticalAutoRefer="0" AGSelection="0 0 0 0" pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
+        <PAGE PAGEXPOS="100" PAGEYPOS="1783.78" PAGEWIDTH="595.28" PAGEHEIGHT="841.89" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" NUM="2" NAM="" MNAM="Normal" Size="Custom" Orientation="0" LEFT="0" PRESET="0" VerticalGuides="" HorizontalGuides="" AGhorizontalAutoGap="11" AGverticalAutoGap="11" AGhorizontalAutoCount="2" AGverticalAutoCount="1" AGhorizontalAutoRefer="0" AGverticalAutoRefer="0" AGSelection="0 0 0 0" pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
+        <PAGE PAGEXPOS="100" PAGEYPOS="2665.67" PAGEWIDTH="595.28" PAGEHEIGHT="841.89" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" NUM="3" NAM="" MNAM="Normal" Size="Custom" Orientation="0" LEFT="0" PRESET="0" VerticalGuides="" HorizontalGuides="" AGhorizontalAutoGap="11" AGverticalAutoGap="11" AGhorizontalAutoCount="2" AGverticalAutoCount="1" AGhorizontalAutoRefer="0" AGverticalAutoRefer="0" AGSelection="0 0 0 0" pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
+        <MASTEROBJECT XPOS="101.5" YPOS="20" OwnPage="1" ItemID="186912560" PTYPE="2" WIDTH="593.5" HEIGHT="842.61" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="0.741875" LOCALSCY="0.741875" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="0" RATIO="1" Pagenumber="0" PFILE="../../Pictures/Ukraine/Lesser_Coat_of_Arms_of_Ukraine.svg.png" IRENDER="0" EMBEDDED="0" path="M0 0 L593.5 0 L593.5 842.61 L0 842.61 L0 0 Z" copath="M0 0 L593.5 0 L593.5 842.61 L0 842.61 L0 0 Z" OnMasterPage="Page de base" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <ImageEffect Code="3" Param="107"/>
+        </MASTEROBJECT>
+        <MASTEROBJECT XPOS="140" YPOS="60" OwnPage="1" ItemID="266020496" PTYPE="4" WIDTH="515.28" HEIGHT="516.97" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="2" COLGAP="11" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L515.28 0 L515.28 516.97 L0 516.97 L0 0 Z" copath="M0 0 L515.28 0 L515.28 516.97 L0 516.97 L0 0 Z" OnMasterPage="Page de base" gXpos="0" gYpos="0" gWidth="0" gHeight="0" ALIGN="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle ALIGN="0" LINESPMode="0" LINESP="15" FONT="Arial Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0"/>
+                <ITEXT CH="Géopolitique"/>
+                <para PARENT="Chapitre"/>
+                <ITEXT CH="Second front - Le président polonais appelle la Turquie à s’engager de manière plus importante en Syrie pour y menacer la position de force des Russes dans la région."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="UK - Boris Johnson envisagerait un voyage “immédiat” à Kyiv pour rencontrer le président Zelensky, et assurer l’Ukraine du soutien du Royaume-Unis."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Menaces - La Russie déclare qu’un embargo européen sur le pétrole russe aurait de graves conséquences sur l’économie européenne, et ajoute que ça ne sera pas le cas des USA par contre."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="UE - L’Union Européenne devrait approuver ce lundi la création d’une force commune de 5000 soldats, avec des composantes terrestres, aériennes et maritimes, ayant pour premier rôle de mener des opérations de sauvetage et d’évacuation de ressortissants européens à l’étranger."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Pologne - Dmitri Medvedev, ancien premier ministre et président de Russie (en tandem avec Putin en premier ministre), a aujourd’hui publié une lettre contre la “russophobie” de la Pologne, son ingratitude quant à sa libération par l’Armée Rouge et la malhonnêteté de leurs relations avec l’Ukraine. Le tout semble conçu pour enflammer l’opinion polonaise, qui est déjà une des plus interventionnistes d’occident. Par ailleurs, deux avions multirôles russes seraient entrés dans l’espace aérien polonais, pour le moment ce n’est pas confirmé par l’OTAN."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Diplomatie - L’ambassadeur US à Moscou est convoqué par le ministre des affaires étrangères, pour lui signifier que les relations diplomatiques sont proches d’être rompues, à cause de la qualification de Putin par Biden comme criminel de guerre. Selon la Russie, de tels propos sont inacceptables."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Pays-Bas - le premier ministre vient de visiter la Lituanie, et se dirige vers la Pologne. Un tandem intéressant puisque ces deux pays ont explicitement annoncé leur volonté de participer directement à une force de maintien de la paix en Ukraine sous égide de l’OTAN par exemple."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Des parlementaires de 13 pays signent un communiqué sur le besoin urgent de moderniser les défenses antiaériennes ukrainiennes."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="WW2 - la Russie cesse les négociations d’un accord de paix avec le japon pour la seconde guerre mondiale, en raison des sanctions japonaises. Le problème est aujourd’hui la possession des îles Kuril, que les deux anciens belligérants revendiquent"/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Russie"/>
+                <para PARENT="Chapitre"/>
+                <ITEXT CH="Économie - L’inflation au cours des deux dernières semaines a dépassé les prévisions annuelles, les prix montant de plus de 4%. La bourse de Moscou a rouvert, mais uniquement pour les échanges d’obligations gouvernementales. Pour beaucoup d’économistes, l’économie russe risque fort de chuter d’au moins 10% cette année."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Nestlé - Nestlé refuse de quitter le marché Russe, expliquant d’une part ne plus vendre que de l’alimentaire de base et ne plus faire de profits, et d’autre part, appelant son bureau ukrainien à s’entendre avec la Russie. "/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="News - La chaîne 1, dont une présentatrice avait fait une protestation remarquée lundi dernier, a fait une déclaration officielle à ce sujet, l’accusant d’être une espionne travaillant pour le compte des britanniques, et donc une traîtresse."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="La Russie envisagerait de se retirer de l’Organisation Mondiale du Commerce."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Des membres de l'équipe de l’opposant Alexeï Navalny ont relié Putin à un yacht luxueux à 700 millions de dollars : au moins une douzaine de membres de son service de sécurité travaillent à bord. Il est en Italie aujourd'hui."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Biélorussie"/>
+                <para PARENT="Chapitre"/>
+                <ITEXT CH="Dette - La Russie propose un délai de paiement de 5 à 6 ans pour la dette biélorusse."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Opposition - De nouveaux importants sabotages des chemins de fer biélorusses, en particulier les lignes se dirigeant vers l’Ukraine. L’opposition au dictateur Lukashenko appelle à se soulever contre l’occupation par les forces russes."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Ukraine"/>
+                <para PARENT="Chapitre"/>
+                <ITEXT CH="Cible - L’Ukraine affirme avoir tué Sergei Mashkin, le responsable du renseignement de la république séparatiste de Donetsk. "/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Mariupol - Le consul de Grèce à Mariupol compare la ville à Guernica, Leningrad (Saint-Pétersbourg) ou Alep en termes de destructions. Deux journalistes en ville ont été exfiltrés par des forces ukrainiennes, après avoir été cachés par le personnel de l’hôpital et racontent que les forces russes les cherchaient en ville pour leur faire “avouer” que leurs reportages sur le martyr de la ville étaient des mensonges. Ce sont ces journalistes qui avaient réalisé les images de la maternité bombardée, et la plupart des images de la ville ces dernières semaines. Des citoyens grecs disent eux avoir été bien traités par les forces russes, et menacés par les membres du groupe Azov (ce qui est généralement la version russe). "/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Sumy - Le gouverneur de Sumy rapporte une fuite d'ammoniac sur une zone d’environ 5km de diamètre. C’est un gaz toxique et incolore, plus léger que l’air. A priori la population de la ville n’est pas en danger vu l’emplacement de cette fuite."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Chernobyl - Le personnel de la centrale a opéré un changement d’équipe pour la première fois depuis le début de l’invasion."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Kyiv - nouveau couvre-feu de lundi 19h à mercredi 7h."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Stratégie"/>
+                <para PARENT="Chapitre"/>
+                <ITEXT CH="Mercenaires - La Russie aurait obtenu un accord pour recruter des soldats en Libye, possiblement via la société Wagner de mercenaires."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Logistique - Le responsable du comité de défense de Dnipro demande autant de camions, pickups et jeeps que possible pour assurer la logistique des troupes dans la région."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Direction - Des photos de matériel russe montrent des marquages de la région de Chernihiv remplacés par ceux de l’offensive dans le Donbass, validant l’hypothèse d’une redirection des réserves dans cette direction. Le Donbass semble réellement l’axe majeur de progression russe."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Renforts - Débarquement de troupes russes dans le port occupé de Berdyansk, au sud-ouest de l’Ukraine. "/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Négociations - Après 25 jours de guerre, Putin ouvre la porte à des négociations directes entre lui et Zelensky. A confirmer, cela peut valider le changement de position russe sur le conflit, sans nécessairement vouloir dire des progrès dans la négociation."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Arsenal - D’après le Wall Street Journal, citant un membre du département de la défense, des équipements antiaériens soviétiques seraient livrés à l’Ukraine depuis les réserves du pentagone; qui en aurait acquis au fil du temps de manière clandestine."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Opérations"/>
+                <para PARENT="Chapitre"/>
+                <ITEXT CH="Reddition - L’Ukraine ne rendra pas Mariupol. Le message hier des Russes précisait que les troupes restant dans la ville après midi seraient considérées comme des bandits et jugés par des tribunaux militaires."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Contre-attaque - La ville de Makariv, à l’ouest de Kyiv, aurait été reprise par l’armée ukrainienne. Cela va limiter la possibilité d’encerclement de la ville par l’ouest pour les forces russes."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Espace aérien - Alerte aérienne sur la majeure partie des régions d’Ukraine dans l’après-midi"/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Pertes - Des estimations du pentagone indiquent qu’au moins 30% de la capacité des forces aériennes russes n’est plus disponible (détruite, en réparation, sans pilote etc). Le renseignement ukrainien affirme avoir intercepté des communications révélant plus de 17 000 pertes (sans préciser si cela ne correspond qu’aux morts)."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Tactiques et anecdotes"/>
+                <para PARENT="Chapitre"/>
+                <ITEXT CH="Frappes - Frappes importantes à Kyiv en début de nuit, visant un centre commercial. Des photos semblent montrer que du matériel militaire, notamment des camions, y a été stocké. Un missile balistique contre 4-5 camions ou pièces d’artillerie."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Kherson - des troupes russes ont tiré dans une foule de manifestants non-armés. Il y a plusieurs blessés d’après les premières vidéos. L’aéroport a été renforcé de nouveaux hélicoptères russes, et bombardé à nouveau."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Incohérences - Au cours de l’opération de “dénazification” et de “protection des Russes en Ukraine” de Putin, un survivant de 4 camps de concentrations (Mr. Romantschenko) est mort lors du bombardement de son appartement à Kharkiv, et la ville de Mariupol, très majoritairement russophone, est une ruine fumante."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Fascistes - Une unité de la compagnie Wagner porte les couleurs du Russian Imperial Mouvement, groupe paramilitaire suprémaciste blanc, classé depuis 2020 comme terroriste par les USA."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Analyse"/>
+                <para PARENT="Chapitre"/>
+                <ITEXT CH="Dissensions - Une des impressions que me donne la Russie ces derniers jours, c’est de vouloir créer des dissensions dans le bloc occidental, entre des pays proches de l’Ukraine très vindicatifs, des pays beaucoup plus prudents dans leur engagement comme la France, et entre les USA d’une part, l’Europe d’autre part. Les provocations envers la Pologne pourraient aller dans ce sens, comme de nombreuses déclarations du ministre des affaires étrangères russe au cours du weekend. En particulier, énerver les pays proches pourrait amener les pays plus prudents à essayer de calmer le jeu rapidement, en faisant pression pour une fin de guerre. A voir si la diplomatie européenne notamment va tomber dans ce piège ou continuer à présenter un front relativement uni."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Stratégie russe - Si la première phase de la guerre semblait viser la destruction des forces ukrainiennes et la décapitation de l’État ukrainien, il apparaît clairement que beaucoup des offensives russes n’ont pas atteint leurs objectifs. Ce qui se dégage des mouvements récents, c’est la volonté de capturer le sud et l’est du pays et d’infliger un maximum de dégâts, y compris aux civils, pour faire pression sur Zelensky lors des négociations, quitte à ne pas s’emparer de toute l’Ukraine, mais “uniquement” obtenir sa neutralité."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Doctrine - La doctrine russe dispose depuis longtemps de la notion “d’escalade pour la désescalade” : une augmentation soudaine de la pression, pouvant aller jusqu’à la frappe nucléaire tactique (visant par exemple une ville), afin de faire reculer l’adversaire. C’est l’équivalent de sortir une arme et déclarer qu’on est un malade au cours d’une bagarre, beaucoup de gens vont reculer. Ici cette doctrine pourrait se manifester en incitant les forces OTAN à s’engager dans une guerre avec la Russie, puis des menaces de frappes nucléaires, notamment sur Varsovie ou les pays baltes par exemple. C’est une corde raide à prendre pour la Russie, notamment si les pays occidentaux considèrent qu’il s‘agit d’un bluff : aujourd’hui l’OTAN peut être confiant dans sa capacité à détruire l’armée russe dans un conflit conventionnel. A surveiller."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Stratégie ukrainienne - Pour le moment, la stratégie ukrainienne semble être de renforcer la situation de Kyiv, et de repousser les forces russes là où elles se sont trop étendues. En particulier autour de Kyiv et de Mykolaïv, où les défenses ont tenu bon, et où l’armée russe commence à prendre des positions défensives. A voir quel est le plan dans le Donbass où les efforts russes se concentrent aujourd’hui. Le dispositif ukrainien, fortement appuyé par la défense territoriale, locale, dispose d’une très grande profondeur, qui permet de tendre de multiples embuscades contre les colonnes isolées et les reconnaissances, même en force des troupes russes. En effet, chaque ville, même petite, est souvent défendue, et les troupes russes se retrouvent ainsi bloquées dès qu’elles tentent d’avancer avec trop peu d’hommes et de matériel. La situation est un peu différente dans le Donbass, où la guerre semble prendre un aspect plus conventionnel."/>
+                <para PARENT="Liste"/>
+            </StoryText>
+        </MASTEROBJECT>
+        <MASTEROBJECT XPOS="138.5" YPOS="577.72" OwnPage="1" ItemID="266023328" PTYPE="2" WIDTH="387" HEIGHT="242.89" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="0.101457811194653" LOCALSCY="0.101457811194653" LOCALX="251.696673391248" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="0" Pagenumber="0" PFILE="../../Pictures/Ukraine/carte 20 03 2022.jpg" PRFILE="Embedded sRGB" IRENDER="0" EPROF="Embedded sRGB" path="M0 0 L387 0 L387 242.89 L0 242.89 L0 0 Z" copath="M0 0 L387 0 L387 242.89 L0 242.89 L0 0 Z" OnMasterPage="Page de base" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1"/>
+        <MASTEROBJECT XPOS="528" YPOS="576.86" OwnPage="1" ItemID="266034656" PTYPE="4" WIDTH="127.5" HEIGHT="246" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="1" COLGAP="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L127.5 0 L127.5 246 L0 246 L0 0 Z" copath="M0 0 L127.5 0 L127.5 246 L0 246 L0 0 Z" OnMasterPage="Page de base" gXpos="0" gYpos="0" gWidth="0" gHeight="0" ALIGN="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle ALIGN="0" LINESPMode="0" LINESP="15" FONT="Arial Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0"/>
+                <ITEXT CH="Situation"/>
+                <para PARENT="Headers bleu"/>
+                <ITEXT CH="Carte de l'expansion russe. En violet les zones n'ayant pas changées depuis hier. En rouge les lignes d'hier, et en bleu les nouvelles lignes."/>
+                <para PARENT="Important"/>
+            </StoryText>
+        </MASTEROBJECT>
+        <PAGEOBJECT XPOS="102.5" YPOS="20" OwnPage="0" ItemID="266037488" PTYPE="2" WIDTH="593.5" HEIGHT="842.61" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="0.1196572581" LOCALSCY="0.1196572581" LOCALX="0" LOCALY="1040.931424" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="0" Pagenumber="0" PFILE="../../../../Pictures/mon rat render big.png" IRENDER="0" EMBEDDED="0" path="M0 0 L593.5 0 L593.5 842.61 L0 842.61 L0 0 Z" copath="M0 0 L593.5 0 L593.5 842.61 L0 842.61 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <ImageEffect Code="3" Param="224"/>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="90" YPOS="250" OwnPage="0" ItemID="266040320" PTYPE="7" WIDTH="608.5" HEIGHT="285" FRTYPE="3" CLIPEDIT="1" PWIDTH="1" PCOLOR="Dark Yellow" PCOLOR2="Black" PLINEART="1" TransValue="0.2" path="M7.5 25.9091 C6.5 25.3909 608.5 0 608.5 0 L607 190.95 C607 190.95 0 285 3.25 285 " copath="M7.5 25.9091 C6.5 25.3909 608.5 0 608.5 0 L607 190.95 C607 190.95 0 285 3.25 285 L7.5 25.9091 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0"/>
+        <PAGEOBJECT XPOS="100" YPOS="1655.83" OwnPage="1" ItemID="266031824" PTYPE="7" WIDTH="600" HEIGHT="88" FRTYPE="3" CLIPEDIT="1" PWIDTH="1" PCOLOR="Dark Yellow" PCOLOR2="Black" PLINEART="1" TransValue="0.1" path="M1 24.8054 L1 85.047 L599.25 88 L600 0 L0 25.9866 " copath="M1 24.8054 L1 85.047 L599.25 88 L600 0 L0 25.9866 L1 24.8054 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0"/>
+        <PAGEOBJECT XPOS="100" YPOS="2537.72" OwnPage="2" ItemID="266026160" PTYPE="7" WIDTH="600" HEIGHT="88" FRTYPE="3" CLIPEDIT="1" PWIDTH="1" PCOLOR="Dark Yellow" PCOLOR2="Black" PLINEART="1" TransValue="0.1" path="M1 24.8054 L1 85.047 L599.25 88 L600 0 L0 25.9866 " copath="M1 24.8054 L1 85.047 L599.25 88 L600 0 L0 25.9866 L1 24.8054 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0"/>
+        <PAGEOBJECT XPOS="103.5" YPOS="1783.78" OwnPage="2" ItemID="266014832" PTYPE="2" WIDTH="593.5" HEIGHT="842.61" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="0.1196572581" LOCALSCY="0.1196572581" LOCALX="0" LOCALY="1040.931424" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="0" Pagenumber="0" PFILE="../../../../Pictures/mon rat render big.png" IRENDER="0" EMBEDDED="0" path="M0 0 L593.5 0 L593.5 842.61 L0 842.61 L0 0 Z" copath="M0 0 L593.5 0 L593.5 842.61 L0 842.61 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <ImageEffect Code="3" Param="224"/>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="101.5" YPOS="2665.67" OwnPage="3" ItemID="266017664" PTYPE="2" WIDTH="593.5" HEIGHT="842.61" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="0.1196572581" LOCALSCY="0.1196572581" LOCALX="0" LOCALY="1040.931424" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="0" Pagenumber="0" PFILE="../../../../Pictures/mon rat render big.png" IRENDER="0" EMBEDDED="0" path="M0 0 L593.5 0 L593.5 842.61 L0 842.61 L0 0 Z" copath="M0 0 L593.5 0 L593.5 842.61 L0 842.61 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <ImageEffect Code="3" Param="224"/>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="100" YPOS="3419.61" OwnPage="3" ItemID="266043152" PTYPE="7" WIDTH="600" HEIGHT="88" FRTYPE="3" CLIPEDIT="1" PWIDTH="1" PCOLOR="Dark Yellow" PCOLOR2="Black" PLINEART="1" TransValue="0.1" path="M1 24.8054 L1 85.047 L599.25 88 L600 0 L0 25.9866 " copath="M1 24.8054 L1 85.047 L599.25 88 L600 0 L0 25.9866 L1 24.8054 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0"/>
+        <PAGEOBJECT XPOS="102.5" YPOS="901.89" OwnPage="1" ItemID="266051648" PTYPE="2" WIDTH="593.5" HEIGHT="842.61" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="0.119657258064516" LOCALSCY="0.119657258064516" LOCALX="0" LOCALY="1040.93142375737" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="0" Pagenumber="0" PFILE="../../../../Pictures/mon rat render big.png" IRENDER="0" EMBEDDED="0" path="M0 0 L593.5 0 L593.5 842.61 L0 842.61 L0 0 Z" copath="M0 0 L593.5 0 L593.5 842.61 L0 842.61 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <ImageEffect Code="3" Param="224"/>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="97" YPOS="152.75" OwnPage="0" ItemID="266045984" PTYPE="7" WIDTH="600.25" HEIGHT="121.75" FRTYPE="3" CLIPEDIT="1" PWIDTH="1" PCOLOR="Dark blue" PCOLOR2="Black" PLINEART="1" path="M0 0 L598.992 0 L600.25 98.857 L0.755031 121.75 " copath="M0 0 L598.992 0 L600.25 98.857 L0.755031 121.75 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0"/>
+        <PAGEOBJECT XPOS="138" YPOS="525.75" OwnPage="0" ItemID="266054480" PTYPE="4" WIDTH="516.28" HEIGHT="296.14" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="2" COLGAP="11" AUTOTEXT="1" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L516.28 0 L516.28 296.14 L0 296.14 L0 0 Z" copath="M0 0 L516.28 0 L516.28 296.14 L0 296.14 L0 0 Z" gXpos="-3" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="266068640" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT CH="Géopolitique"/>
+                <para PARENT="Chapitre"/>
+                <ITEXT CH="Cyberguerre"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="L’Union Européenne accuse officiellement la Russie d’avoir lancé une attaque informatique contre un réseau de satellite, 1h avant le début de son invasion."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Hongrie"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="Le 6ème round de sanctions européennes est toujours bloqué par la Hongrie, qui déclare que l’embargo sur le pétrole est inacceptable, et demande que les transferts par pipeline soient exemptés."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Le président hongrois a par ailleurs déclaré que l’embargo aurait pu être acceptable, si la côte adriatique n’avait pas été “prise”. Pour l’histoire, cette côte est désormais croate, et n’est plus sous domination hongroise depuis 1920."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Négociations"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="Lavrov, MAE russe, a déclaré que la conclusion qu’il avait était que l’occident ne permettait pas la négociation."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Gaz"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="Le gaz passant par l’Ukraine aurait diminué de 25% en Allemagne aujourd’hui, possiblement après les problèmes d’hier au niveau d’une des stations de pompage en Ukraine."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Suède"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="Le Royaume-Unis a officiellement signé un accord de défense mutuelle avec la Suède, probable préparation à une candidature OTAN. Boris Johnson doit passer sous peu en Finlande, possiblement pour signer un traité similaire."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Russie"/>
+                <para PARENT="Chapitre"/>
+                <ITEXT CH="Smog"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="Yekaterinburg, la quatrième ville de Russie, est aujourd’hui sous un épais brouillard âcre, expliqué par les nombreux feux de forêts dans la région."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Diplomatie ?"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="La Russie aurait commandé près de 175 000 passeports diplomatiques, probablement dans l’idée de contourner les sanctions occidentales."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Économie"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="Selon la chaîne Tass, l’inflation annuelle en Russie pourrait atteindre plus de 17% cette année, en augmentation importante pour la seconde semaine d’affilée."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Ukraine"/>
+                <para PARENT="Chapitre"/>
+                <ITEXT CH="Occupation"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="Les autorités d’occupation de la région de Kherson pourraient demander leur incorporation à la fédération de Russie sous peu, sans organiser de référendum bidon, selon les médias russes et ukrainiens."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Une affiche est apparue aujourd’hui dans la région, promettant une prime pour la capture d’un des traîtres, apparemment avec un lourd passé judiciaire."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Justice"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="Un soldat russe a commencé son procès pour meurtre, étant accusé d’avoir tué un civil de 62 ans dans la région de Sumy le 28 février."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Nationalisation"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="L’ensemble des propriétés russes en Ukraine ont été officiellement nationalisées par l’Ukraine."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Stratégie"/>
+                <para PARENT="Chapitre"/>
+                <ITEXT CH="Posture"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="Selon l’état-major ukrainien, l’armée russe a changé de posture sur plusieurs fronts : Zaporizhia, Kherson, Kharkiv et Izyum."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Changement notable d’autant que certaines de ces zones étaient parmi les plus actives du front, voire dans le cas d’Izyum, était le coeur de l’opération dans le Donbas."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Il est probable que l’armée russe se reconcentre (encore) sur ses (rares) succès, avec l’attaque vers Lyman et celle vers Popasna, pour obtenir une poche plus réduite, comprenant le bastion de Rubizhne/Lysychansk/Severodonetsk."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Opérations"/>
+                <para PARENT="Chapitre"/>
+                <ITEXT CH="Mariupol"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="De nouveaux bombardements ont détruit un des bunkers des défenseurs d’Azovstal. La situation arrive tous les jours à empirer pour eux."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Des images des médias russes montrent des frappes ukrainiennes détruire un tank sur une route entre Donetsk et Mariupol. Le fait que l’armée ukrainienne arrive à frapper aussi loin dans les lignes russes est surprenant."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Kharkiv"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="L’offensive ukrainienne autour de Kharkiv aurait atteint la frontière en un point au cours de la soirée, en capturant la ville de Temova. Il ne reste alors que deux poches de troupes russes en Ukraine à l’ouest de la Seversky Donets. Il est très improbable que l’armée ukrainienne tente de forcer la frontière, mais des bombardements sont possibles."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="En fin de journée, la Russie affirme qu’un village de ses villages frontalier a été bombardé, tuant 1 personne et blessant 3 autres."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Donbas"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="Autour d’Izyum, l’armée russe serait passée sur la défensive, et en tout cas, n’a monté aucune attaque majeure dans la journée."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Dans le fond du saillant de Severodonetsk, les attaques ont continué sur la lancée des jours précédents : des attaques importantes sur Rubizhne et Severodonetsk, et des tentatives de prise en tenaille. Des rapports non confirmés parlent d’un autre pont flottant qui a été détruit au nord, mais sans confirmation. Au sud, les attaques issues de Popasna n’ont pas donné de résultats."/>
+                <para PARENT="Liste"/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Tactiques et anecdotes"/>
+                <para PARENT="Chapitre"/>
+                <ITEXT CH="Gaz"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="Un nuage chimique, possiblement du chlore, a flotté dans la région d’Izyum, dans la direction Novomykolaivka. Les premiers éléments semblent indiquer qu’une frappe aurait touché une cuve dans ce secteur."/>
+                <para PARENT="Liste"/>
+                <ITEXT CH="Mercenaires"/>
+                <para PARENT="minititres"/>
+                <ITEXT CH="Selon des comptes prorusses, notamment sur Telegram, des mercenaires russes disposeraient d’au moins un avion de combat opérationnel."/>
+                <para PARENT="Liste"/>
+            </StoryText>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="274.75" YPOS="62.25" OwnPage="0" ItemID="266048816" PTYPE="4" WIDTH="242" HEIGHT="89.25" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="1" COLGAP="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L242 0 L242 89.25 L0 89.25 L0 0 Z" copath="M0 0 L242 0 L242 89.25 L0 89.25 L0 0 Z" gXpos="132" gYpos="1" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT CH="Invasion de l'Ukraine"/>
+                <trail PARENT="Titre"/>
+            </StoryText>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="233.25" YPOS="156.75" OwnPage="0" ItemID="266028992" PTYPE="4" WIDTH="321.75" HEIGHT="103.826271186441" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="1" COLGAP="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L321.75 0 L321.75 103.826 L0 103.826 L0 0 Z" copath="M0 0 L321.75 0 L321.75 103.826 L0 103.826 L0 0 Z" gXpos="105" gYpos="-14" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT CH="Situation"/>
+                <para PARENT="SousTitre" ALIGN="1"/>
+                <ITEXT CH="11 mai - 77ème jour"/>
+                <para PARENT="SousTitre" ALIGN="1"/>
+                <ITEXT CH="Fin de la 11ème semaine"/>
+                <trail PARENT="SousTitre" ALIGN="1"/>
+            </StoryText>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="517.084745762712" YPOS="62.75" OwnPage="0" ItemID="266062976" PTYPE="4" WIDTH="137.665254237288" HEIGHT="88.3686440677966" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="1" COLGAP="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L137.665 0 L137.665 88.3686 L0 88.3686 L0 0 Z" copath="M0 0 L137.665 0 L137.665 88.3686 L0 88.3686 L0 0 Z" gXpos="112.584745762712" gYpos="2" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT CH="Document réalisé par Antoine ROBIN d'après des information Open Source."/>
+                <para PARENT="Disclaimers"/>
+                <ITEXT CH="Toutes les analyses et leurs erreurs sont les miennes"/>
+                <trail PARENT="Disclaimers"/>
+            </StoryText>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="103.25" YPOS="281.25" OwnPage="0" ItemID="266057312" PTYPE="4" WIDTH="589.25" HEIGHT="239.25" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="2" COLGAP="11" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L589.25 0 L589.25 239.25 L0 239.25 L0 0 Z" copath="M0 0 L589.25 0 L589.25 239.25 L0 239.25 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT FONTSIZE="20" CH="Points majeurs"/>
+                <para PARENT="Headers bleu"/>
+                <ITEXT CH="Passage défensif de l'armée russe sur plusieurs fronts,en particulier Zaporizhia et Kherson"/>
+                <para PARENT="Important"/>
+                <ITEXT CH="Signature d'un accord de défense mutuelle entre le Royaume-Unis et la Suède"/>
+                <para PARENT="Important"/>
+                <ITEXT CH="La frontière près de Kharkiv repasse progressivement sous contrôle ukrainien"/>
+                <para PARENT="Important"/>
+                <ITEXT FONTSIZE="20" CH="A surveiller"/>
+                <para PARENT="Headers bleu"/>
+                <ITEXT CH="Mouvements russes sur leurs arrières dans le Donbas et à Belgorod"/>
+                <para PARENT="Important"/>
+                <ITEXT CH="Potentiels premières attaques d'artillerie ukrainienne en Russie"/>
+                <trail PARENT="Important"/>
+            </StoryText>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="140" YPOS="976.5" OwnPage="1" ItemID="266068640" PTYPE="4" WIDTH="513.75" HEIGHT="680.39" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="2" COLGAP="11" AUTOTEXT="1" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L513.75 0 L513.75 680.39 L0 680.39 L0 0 Z" copath="M0 0 L513.75 0 L513.75 680.39 L0 680.39 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="262580448" BACKITEM="266054480"/>
+        <PAGEOBJECT XPOS="135.559322033898" YPOS="1409.75" OwnPage="1" ItemID="266071472" PTYPE="2" WIDTH="315.303263762432" HEIGHT="190.758474576271" RADRECT="15" FRTYPE="3" CLIPEDIT="1" PWIDTH="1" PLINEART="1" TEXTFLOWMODE="3" LOCALSCX="0.315303263762431" LOCALSCY="0.315303263762431" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="0" RATIO="1" Pagenumber="0" PFILE="../../../../Pictures/Ukraine/2022 05 11 - 2.jpg" IRENDER="0" EMBEDDED="0" path="M11.7431 0 L303.561 0 C310.045 0 315.303 5.16045 315.303 11.5262 L315.303 179.231 C315.303 185.598 310.045 190.758 303.561 190.758 L11.7431 190.758 C5.25759 190.758 0 185.598 0 179.231 L0 11.5262 C0 5.16045 5.25759 0 11.7431 0 Z" copath="M4.51212 -7.67642 L310.822 -7.67642 C317.627 -7.67642 323.148 -2.1002 323.148 4.7784 L323.148 185.995 C323.148 192.873 317.627 198.451 310.822 198.451 L4.51212 198.451 C-2.29553 198.451 -7.81417 192.873 -7.81417 185.995 L-7.81417 4.7784 C-7.81417 -2.1002 -2.29553 -7.67642 4.51212 -7.67642 Z" gXpos="-256.190677966102" gYpos="442" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1"/>
+        <PAGEOBJECT XPOS="100" YPOS="918.75" OwnPage="1" ItemID="266074304" PTYPE="7" WIDTH="594.25" HEIGHT="55" FRTYPE="3" CLIPEDIT="1" PWIDTH="1" PCOLOR="Dark blue" PCOLOR2="Black" PLINEART="1" TransValue="0.1" path="M0 55 L594.25 35.3086 L594.25 0 L0 0 " copath="M0 55 L594.25 35.3086 L594.25 0 L0 0 L0 55 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0"/>
+        <PAGEOBJECT XPOS="139" YPOS="840.75" OwnPage="0" ItemID="266065808" PTYPE="4" WIDTH="176.25" HEIGHT="17.4999999999998" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="1" COLGAP="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L176.25 0 L176.25 17.5 L0 17.5 L0 0 Z" copath="M0 0 L176.25 0 L176.25 17.5 L0 17.5 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT FCOLOR="Dark blue" FSHADE="100" CH="@Antoine62723846"/>
+                <trail PARENT="Default Paragraph Style" ALIGN="0"/>
+            </StoryText>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="139" YPOS="840.75" OwnPage="0" ItemID="266077136" PTYPE="4" WIDTH="176.25" HEIGHT="17.5" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="1" COLGAP="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L176.25 0 L176.25 17.5 L0 17.5 L0 0 Z" copath="M0 0 L176.25 0 L176.25 17.5 L0 17.5 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT FCOLOR="Dark blue" FSHADE="100" CH="@Antoine62723846"/>
+                <trail PARENT="Default Paragraph Style" ALIGN="0"/>
+            </StoryText>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="110" YPOS="1719.64" OwnPage="1" ItemID="266060144" PTYPE="4" WIDTH="176.25" HEIGHT="17.5" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="1" COLGAP="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L176.25 0 L176.25 17.5 L0 17.5 L0 0 Z" copath="M0 0 L176.25 0 L176.25 17.5 L0 17.5 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT FCOLOR="Dark blue" FSHADE="100" CH="@Antoine62723846"/>
+                <trail PARENT="Default Paragraph Style" ALIGN="0"/>
+            </StoryText>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="140.75" YPOS="919.5" OwnPage="1" ItemID="262569120" PTYPE="2" WIDTH="51.75" HEIGHT="50.25" FRTYPE="0" CLIPEDIT="1" PWIDTH="1" PLINEART="1" LOCALSCX="0.0202620967741935" LOCALSCY="0.0202620967741935" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="0" RATIO="1" Pagenumber="0" PFILE="../../../../Pictures/mon rat render.png" IRENDER="0" EMBEDDED="0" path="M0 0 L51.75 0 L51.75 50.25 L0 50.25 L0 0 Z" copath="M0 0 L51.75 0 L51.75 50.25 L0 50.25 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <ImageEffect Code="3" Param="255"/>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="140" YPOS="1858.39" OwnPage="2" ItemID="262580448" PTYPE="4" WIDTH="513.75" HEIGHT="678.86" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="2" COLGAP="11" AUTOTEXT="1" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L513.75 0 L513.75 678.86 L0 678.86 L0 0 Z" copath="M0 0 L513.75 0 L513.75 678.86 L0 678.86 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="266068640"/>
+        <PAGEOBJECT XPOS="100" YPOS="1800.64" OwnPage="2" ItemID="262583280" PTYPE="7" WIDTH="594.25" HEIGHT="55" FRTYPE="3" CLIPEDIT="1" PWIDTH="1" PCOLOR="Dark blue" PCOLOR2="Black" PLINEART="1" TransValue="0.1" path="M0 55 L594.25 35.3086 L594.25 0 L0 0 " copath="M0 55 L594.25 35.3086 L594.25 0 L0 0 L0 55 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0"/>
+        <PAGEOBJECT XPOS="110" YPOS="2601.53" OwnPage="2" ItemID="262566288" PTYPE="4" WIDTH="176.25" HEIGHT="17.5" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="1" COLGAP="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L176.25 0 L176.25 17.5 L0 17.5 L0 0 Z" copath="M0 0 L176.25 0 L176.25 17.5 L0 17.5 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT FCOLOR="Dark blue" FSHADE="100" CH="@Antoine62723846"/>
+                <trail PARENT="Default Paragraph Style" ALIGN="0"/>
+            </StoryText>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="100" YPOS="2682.53" OwnPage="3" ItemID="262557792" PTYPE="7" WIDTH="594.25" HEIGHT="55" FRTYPE="3" CLIPEDIT="1" PWIDTH="1" PCOLOR="Dark blue" PCOLOR2="Black" PLINEART="1" TransValue="0.1" path="M0 55 L594.25 35.3086 L594.25 0 L0 0 " copath="M0 55 L594.25 35.3086 L594.25 0 L0 0 L0 55 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0"/>
+        <PAGEOBJECT XPOS="110" YPOS="3483.42" OwnPage="3" ItemID="262577616" PTYPE="4" WIDTH="176.25" HEIGHT="17.5" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="1" COLGAP="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L176.25 0 L176.25 17.5 L0 17.5 L0 0 Z" copath="M0 0 L176.25 0 L176.25 17.5 L0 17.5 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT FCOLOR="Dark blue" FSHADE="100" CH="@Antoine62723846"/>
+                <trail PARENT="Default Paragraph Style" ALIGN="0"/>
+            </StoryText>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="142" YPOS="2740.25" OwnPage="3" ItemID="262586112" PTYPE="4" WIDTH="513" HEIGHT="121.5" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="1" COLGAP="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 0 L513 0 L513 121.5 L0 121.5 L0 0 Z" copath="M0 0 L513 0 L513 121.5 L0 121.5 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT CH="Cartes"/>
+                <para PARENT="Headers bleu"/>
+                <ITEXT CH="La carte du haut représente les emplacements des évènements de ces derniers jours, et leur étalement dans le temps. On peut notamment voir les mouvements autour de Kharkiv, et les combats centrés sur le Donbas."/>
+                <para/>
+                <ITEXT CH="La seconde carte représente le contrôle du terrain dans le Donbas d'ailleurs, avec des avancées russes autour de Lyman/Yampil et Popasna essentiellement. Le secteur d'Izyum semble diminuer ses assauts."/>
+                <trail/>
+            </StoryText>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="141" YPOS="2860.75" OwnPage="3" ItemID="262571952" PTYPE="2" WIDTH="516.265996343693" HEIGHT="346.5" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PLINEART="1" LOCALSCX="0.632678917087859" LOCALSCY="0.632678917087859" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="0" RATIO="1" Pagenumber="0" PFILE="../../../../Pictures/Ukraine/carte 2022 05 11.PNG" PRFILE="Embedded sRGB built-in" IRENDER="0" EPROF="Embedded sRGB built-in" path="M0 0 L516.266 0 L516.266 346.5 L0 346.5 L0 0 Z" copath="M0 0 L516.266 0 L516.266 346.5 L0 346.5 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1"/>
+        <PAGEOBJECT XPOS="140.75" YPOS="1801.39" OwnPage="2" ItemID="262574784" PTYPE="2" WIDTH="51.75" HEIGHT="50.25" FRTYPE="0" CLIPEDIT="1" PWIDTH="1" PLINEART="1" LOCALSCX="0.0202620967741935" LOCALSCY="0.0202620967741935" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="0" RATIO="1" Pagenumber="0" PFILE="../../../../Pictures/mon rat render.png" IRENDER="0" EMBEDDED="0" path="M0 0 L51.75 0 L51.75 50.25 L0 50.25 L0 0 Z" copath="M0 0 L51.75 0 L51.75 50.25 L0 50.25 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <ImageEffect Code="3" Param="255"/>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="140.75" YPOS="2683.28" OwnPage="3" ItemID="262560624" PTYPE="2" WIDTH="51.75" HEIGHT="50.25" FRTYPE="0" CLIPEDIT="1" PWIDTH="1" PLINEART="1" LOCALSCX="0.0202620967741935" LOCALSCY="0.0202620967741935" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="0" RATIO="1" Pagenumber="0" PFILE="../../../../Pictures/mon rat render.png" IRENDER="0" EMBEDDED="0" path="M0 0 L51.75 0 L51.75 50.25 L0 50.25 L0 0 Z" copath="M0 0 L51.75 0 L51.75 50.25 L0 50.25 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <ImageEffect Code="3" Param="255"/>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="478.5" YPOS="2976" OwnPage="3" ItemID="262588944" PTYPE="6" WIDTH="88.6271186440679" HEIGHT="74.1700000000001" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR2="Black" PLINEART="1" path="M0 0 L88.6271 0 L88.6271 74.17 L0 74.17 L0 0 Z" copath="M0 0 L88.6271 0 L88.6271 74.17 L0 74.17 L0 0 Z" gXpos="37" gYpos="71" gWidth="0" gHeight="0" LAYER="0"/>
+        <PAGEOBJECT XPOS="137.75" YPOS="1599" OwnPage="1" ItemID="262563456" PTYPE="4" WIDTH="315.470338983051" HEIGHT="57.8899999999999" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Dark Yellow" PLINEART="1" TEXTFLOWMODE="2" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="1" COLGAP="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" TransValue="0.2" path="M0 0 L315.47 0 L315.47 57.89 L0 57.89 L0 0 Z" copath="M0 0 L315.47 0 L315.47 57.89 L0 57.89 L0 0 Z" gXpos="-254" gYpos="350" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT CH="Signature"/>
+                <para PARENT="Headers bleu"/>
+                <ITEXT CH="Boris johnson et son homologue suédoise pour la signature d'un traité de défense mutuelle aujourd'hui."/>
+                <trail PARENT="légendes"/>
+            </StoryText>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="159.5" YPOS="3170.5" OwnPage="3" ItemID="262603104" PTYPE="2" WIDTH="459.415760869565" HEIGHT="292.5" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR2="Black" PLINEART="1" LOCALSCX="0.53111648655441" LOCALSCY="0.53111648655441" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="0" RATIO="1" Pagenumber="0" PFILE="../../../../Pictures/Ukraine/Donbas 2022 05 11.PNG" PRFILE="Embedded sRGB built-in" IRENDER="0" EPROF="Embedded sRGB built-in" path="M0 0 L459.416 0 L459.416 292.5 L0 292.5 L0 0 Z" copath="M0 0 L459.416 0 L459.416 292.5 L0 292.5 L0 0 Z" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1"/>
+        <PAGEOBJECT XPOS="477.322033898305" YPOS="2975.18644067797" OwnPage="3" ItemID="262597440" PTYPE="5" WIDTH="372.8450536306" HEIGHT="1" FRTYPE="0" CLIPEDIT="0" ROT="148.183599240416" PWIDTH="1" PCOLOR2="Black" PLINEART="1" path="" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0"/>
+        <PAGEOBJECT XPOS="478.135593220339" YPOS="3049.22033898305" OwnPage="3" ItemID="262600272" PTYPE="5" WIDTH="521.167888897465" HEIGHT="1" FRTYPE="0" CLIPEDIT="0" ROT="127.759400495835" PWIDTH="1" PCOLOR2="Black" PLINEART="1" path="" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0"/>
+        <PAGEOBJECT XPOS="566.813559322034" YPOS="3050.03389830509" OwnPage="3" ItemID="262608768" PTYPE="5" WIDTH="414.389592053712" HEIGHT="1" FRTYPE="0" CLIPEDIT="0" ROT="82.9045596581177" PWIDTH="1" PCOLOR2="Black" PLINEART="1" path="" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0"/>
+        <PAGEOBJECT XPOS="566" YPOS="2975.67" OwnPage="3" ItemID="262605936" PTYPE="5" WIDTH="201.408481450013" HEIGHT="1" FRTYPE="0" CLIPEDIT="0" ROT="75.0377973610511" PWIDTH="1" PCOLOR2="Black" PLINEART="1" path="" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0"/>
+        <PAGEOBJECT XPOS="393.75" YPOS="988.64" OwnPage="1" ItemID="262614432" PTYPE="2" WIDTH="264.75" HEIGHT="172.834443573668" RADRECT="15" FRTYPE="3" CLIPEDIT="1" PWIDTH="1" PLINEART="1" TEXTFLOWMODE="3" LOCALSCX="0.207484326018809" LOCALSCY="0.207484326018809" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="0" RATIO="1" Pagenumber="0" PFILE="../../../../Pictures/Ukraine/2022 05 11 - 1.jpg" IRENDER="0" EMBEDDED="0" path="M9.86033 0 L254.89 0 C260.335 0 264.75 4.67556 264.75 10.4432 L264.75 162.39 C264.75 168.159 260.335 172.834 254.89 172.834 L9.86033 172.834 C4.41463 172.834 0 168.159 0 162.39 L0 10.4432 C0 4.67556 4.41463 0 9.86033 0 Z" copath="M3.78868 -6.95513 L260.987 -6.95513 C266.701 -6.95513 271.337 -1.90286 271.337 4.32941 L271.337 168.519 C271.337 174.75 266.701 179.804 260.987 179.804 L3.78868 179.804 C-1.92748 179.804 -6.56131 174.75 -6.56131 168.519 L-6.56131 4.32941 C-6.56131 -1.90286 -1.92748 -6.95513 3.78868 -6.95513 Z" gXpos="3" gYpos="-867" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1"/>
+        <PAGEOBJECT XPOS="398" YPOS="694.5" OwnPage="0" ItemID="262611600" PTYPE="4" WIDTH="251.25" HEIGHT="121.398305084746" RADRECT="10" FRTYPE="2" CLIPEDIT="1" PWIDTH="1" PLINEART="1" TEXTFLOWMODE="3" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="1" COLGAP="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" path="M0 10 C0 4.47715 4.47715 0 10 0 L241.25 0 C246.773 0 251.25 4.47715 251.25 10 L251.25 111.398 C251.25 116.921 246.773 121.398 241.25 121.398 L10 121.398 C4.47715 121.398 0 116.921 0 111.398 L0 10 Z" copath="M3.07463 -7.28379 L248.131 -7.28379 C253.983 -7.28379 258.728 -2.39219 258.728 3.64189 L258.728 117.815 C258.728 123.849 253.983 128.741 248.131 128.741 L3.07463 128.741 C-2.77794 128.741 -7.52239 123.849 -7.52239 117.815 L-7.52239 3.64189 C-7.52239 -2.39219 -2.77794 -7.28379 3.07463 -7.28379 Z" gXpos="-2" gYpos="-16" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT FONTSIZE="15" FCOLOR="Black" FSHADE="80" CH="&quot;Si le pays européen le plus dépendant de la Russie et avec le plus faible PIB par habitant peut tenir tête à Putin, alors l'ensemble de l'Union Européenne devrait le pouvoir&quot;"/>
+                <para PARENT="Citations" ALIGN="1"/>
+                <ITEXT FONTSIZE="15" FCOLOR="Black" FSHADE="80" CH="Kiril Petkov, premier ministre bulgare"/>
+                <trail PARENT="Citations" ALIGN="2"/>
+            </StoryText>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="140.949152542373" YPOS="1865.53" OwnPage="2" ItemID="262617264" PTYPE="2" WIDTH="509.550847457627" HEIGHT="278.351355932204" RADRECT="15" FRTYPE="3" CLIPEDIT="1" PWIDTH="1" PLINEART="1" TEXTFLOWMODE="3" LOCALSCX="0.203820338983051" LOCALSCY="0.203820338983051" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="0" RATIO="1" Pagenumber="0" PFILE="../../../../Pictures/Ukraine/2022 05 11 - 3.jpg" PRFILE="Embedded sRGB" IRENDER="0" EPROF="Embedded sRGB" path="M18.9777 0 L490.574 0 C501.054 0 509.551 7.53003 509.551 16.8188 L509.551 261.531 C509.551 270.821 501.054 278.351 490.574 278.351 L18.9777 278.351 C8.49661 278.351 0 270.821 0 261.531 L0 16.8188 C0 7.53003 8.49661 0 18.9777 0 Z" copath="M7.29188 -11.2013 L502.308 -11.2013 C513.306 -11.2013 522.229 -3.06457 522.229 6.97256 L522.229 271.401 C522.229 281.437 513.306 289.576 502.308 289.576 L7.29188 289.576 C-3.70972 289.576 -12.6282 281.437 -12.6282 271.401 L-12.6282 6.97256 C-12.6282 -3.06457 -3.70972 -11.2013 7.29188 -11.2013 Z" gXpos="-249.800847457627" gYpos="-872" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1"/>
+        <PAGEOBJECT XPOS="394.75" YPOS="1164" OwnPage="1" ItemID="262591776" PTYPE="4" WIDTH="264.25" HEIGHT="76.6779661016951" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Dark Yellow" PLINEART="1" TEXTFLOWMODE="2" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="1" COLGAP="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" TransValue="0.2" path="M0 0 L264.25 0 L264.25 76.678 L0 76.678 L0 0 Z" copath="M0 0 L264.25 0 L264.25 76.678 L0 76.678 L0 0 Z" gXpos="5" gYpos="-120" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT CH="Évasion"/>
+                <para PARENT="Headers bleu"/>
+                <ITEXT CH="Maria Alyokhina, du groupe Pussy Riot, et activiste russe, a fui son appartement déguisée en livreuse, avant de quitter le pays."/>
+                <trail PARENT="légendes"/>
+            </StoryText>
+        </PAGEOBJECT>
+        <PAGEOBJECT XPOS="140.75" YPOS="2138.89" OwnPage="2" ItemID="262620096" PTYPE="4" WIDTH="511.436440677966" HEIGHT="59.6015254237291" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Dark Yellow" PLINEART="1" TEXTFLOWMODE="2" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" LOCALROT="0" PICART="1" SCALETYPE="1" RATIO="1" COLUMNS="1" COLGAP="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" VAlign="0" FLOP="0" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" TransValue="0.2" path="M0 0 L511.436 0 L511.436 59.6015 L0 59.6015 L0 0 Z" copath="M0 0 L511.436 0 L511.436 59.6015 L0 59.6015 L0 0 Z" gXpos="-249" gYpos="-27" gWidth="0" gHeight="0" LAYER="0" NEXTITEM="-1" BACKITEM="-1">
+            <StoryText>
+                <DefaultStyle/>
+                <ITEXT CH="Donbas"/>
+                <para PARENT="Headers bleu"/>
+                <ITEXT CH="Autour d'Izyum et jusqu'à Severodonetsk, les feux de l'artillerie permettent de distinguer la ligne de front, même sur les images satellites."/>
+                <trail PARENT="légendes"/>
+            </StoryText>
+        </PAGEOBJECT>
+    </DOCUMENT>
+</SCRIBUSUTF8NEW>
