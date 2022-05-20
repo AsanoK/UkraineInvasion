@@ -69,7 +69,7 @@
         </CellStyle>
         <LAYERS NUMMER="0" LEVEL="0" NAME="Fond de page" SICHTBAR="1" DRUCKEN="1" EDIT="1" SELECT="0" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#000000"/>
         <Printer firstUse="1" toFile="0" useAltPrintCommand="0" outputSeparations="0" useSpotColors="1" useColor="1" mirrorH="0" mirrorV="0" useICC="0" doGCR="0" doClip="0" setDevParam="0" useDocBleeds="1" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" includePDFMarks="1" PSLevel="3" PrintEngine="3" markLength="20" markOffset="0" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" printer="" filename="" separationName="All" printerCommand=""/>
-        <PDF firstUse="0" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="0" Quality="0" EmbedPDF="0" MirrorH="0" MirrorV="0" Clip="0" rangeSel="0" rangeTxt="" RotateDeg="0" PresentMode="0" RecalcPic="1" FontEmbedding="0" Grayscale="0" RGBMode="1" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="400" Resolution="300" Version="14" Intent="1" Intent2="0" SolidP="sRGB display profile (ICC v2.2)" ImageP="sRGB display profile (ICC v2.2)" PrintP="Fogra27L CMYK Coated Press" InfoString="" BTop="0" BLeft="0" BRight="0" BBottom="0" useDocBleeds="1" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" docInfoMarks="0" markLength="1" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="1" doMultiFile="0" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" openAfterExport="0" PageLayout="0" openAction="">
+        <PDF firstUse="0" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="0" Quality="0" EmbedPDF="0" MirrorH="0" MirrorV="0" Clip="0" rangeSel="0" rangeTxt="" RotateDeg="0" PresentMode="0" RecalcPic="1" FontEmbedding="0" Grayscale="0" RGBMode="1" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="200" Resolution="300" Version="14" Intent="1" Intent2="0" SolidP="sRGB display profile (ICC v2.2)" ImageP="sRGB display profile (ICC v2.2)" PrintP="Fogra27L CMYK Coated Press" InfoString="" BTop="0" BLeft="0" BRight="0" BBottom="0" useDocBleeds="1" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" docInfoMarks="0" markLength="1" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="1" doMultiFile="0" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" openAfterExport="0" PageLayout="0" openAction="">
             <Subset Name="A028 Extrabold Regular"/>
             <Subset Name="A028 Medium Regular"/>
             <Subset Name="Arial Italic"/>
@@ -374,7 +374,7 @@
                 <para PARENT="Headers bleu"/>
                 <ITEXT CH="Les médias russes semblent critiquer un peu plus l’armée et ses actions, avec au moins un expert (ancien militaire) qui a décrit une situation assez proche de l’analyse occidentale, avec une armée russe qui semble patiner, et une situation internationale très hostile pour la Russie."/>
                 <para PARENT="Liste"/>
-                <ITEXT CH="De manière plus générale, la rhétorique très hostile envers l’Ukraine et les krainien continue, toujours aussi violemment, toujours aussi fréquemment, et chaque acte néfaste de la guerre est rejeté sur les Ukrainiens."/>
+                <ITEXT CH="De manière plus générale, la rhétorique très hostile envers l’Ukraine et les Ukrainiens continue, toujours aussi violemment, toujours aussi fréquemment, et chaque acte néfaste de la guerre est rejeté sur les Ukrainiens."/>
                 <para PARENT="Liste"/>
                 <ITEXT CH="Sumy"/>
                 <para PARENT="Chapitre"/>
@@ -462,7 +462,7 @@
                 <DefaultStyle/>
                 <ITEXT CH="Eurovision"/>
                 <para PARENT="Headers bleu"/>
-                <ITEXT CH="Victoire hautement symbolique dans ce concours très populaire en Europe occidentale"/>
+                <ITEXT CH="Victoire hautement symbolique dans ce concours très populaire en Europe occidentale et en Russie"/>
                 <trail/>
             </StoryText>
         </PAGEOBJECT>
