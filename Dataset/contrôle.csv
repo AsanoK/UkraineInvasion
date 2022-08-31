@@ -1,0 +1,235 @@
+Date,Contrôle,Lieux.nom,Lieux.oblast,ID
+11.08.2022,Contesté,Pisky,Donetsk,1
+11.08.2022,Ukraine,Shevelivka,Kharkiv,2
+11.08.2022,Ukraine,Karnaukhivka,Kharkiv,3
+11.08.2022,Ukraine,Virnopillya,Kharkiv,4
+11.08.2022,Ukraine,Mazanivka,Donetsk,5
+11.08.2022,Ukraine,Bohorodychne,Donetsk,6
+11.08.2022,Ukraine,Hryhorivka,Donetsk,7
+11.08.2022,Ukraine,Serebryanka,Donetsk,8
+11.08.2022,Ukraine,Sivers’k,Donetsk,9
+11.08.2022,Ukraine,Verkhnokam’yans’ke,Donetsk,10
+11.08.2022,Ukraine,Ivano-Dar’ivka,Donetsk,11
+11.08.2022,Ukraine,Pereizne,Donetsk,12
+11.08.2022,Ukraine,Vyimka,Donetsk,13
+11.08.2022,Ukraine,Spirne,Donetsk,14
+11.08.2022,Ukraine,Vesele,Donetsk,15
+11.08.2022,Ukraine,Yakovlivka,Donetsk,16
+11.08.2022,Ukraine,Soledar,Donetsk,17
+11.08.2022,Ukraine,Bakhmuts’ke,Donetsk,18
+11.08.2022,Ukraine,Bakhmut,Donetsk,19
+11.08.2022,Ukraine,Vesela Dolyna,Donetsk,20
+11.08.2022,Ukraine,Zaytseve,Donetsk,21
+11.08.2022,Contesté,Vershyna,Donetsk,22
+11.08.2022,Ukraine,Kostyantynivka,Donetsk,23
+11.08.2022,Ukraine,Dacha,Donetsk,24
+11.08.2022,Ukraine,Oleksandrivka,Kherson,25
+11.08.2022,Russie,Stanislav,Kherson,26
+11.08.2022,Ukraine,Doslidne,Kherson,27
+11.08.2022,Ukraine,Myrne,Kherson,28
+11.08.2022,Ukraine,Parysheve,Kherson,29
+11.08.2022,Abandonné,Pravdyne,Kherson,30
+11.08.2022,Abandonné,Kyselivka,Kherson,31
+11.08.2022,Russie,Klapaya,Kherson,32
+11.08.2022,Russie,Kruti Yar,Kherson,33
+11.08.2022,Russie,Chornobaivka,Kherson,34
+11.08.2022,Contesté,Novopetrivka,Kherson,36
+11.08.2022,Ukraine,Partizanske,Mykolaiv,37
+11.08.2022,Russie,Snihurivka,Mykolaiv,38
+11.08.2022,,,,39
+11.08.2022,Ukraine,Udy,Kharkiv,40
+11.08.2022,Ukraine,Husarivka,Kharkiv,41
+11.08.2022,Russie,Bayrak,Kharkiv,42
+11.08.2022,Russie,Donetsk,Donetsk,43
+11.08.2022,Ukraine,Nikopol,Dnipropetrovsk,44
+11.08.2022,Ukraine,Kushuhum,Zaporizhia,45
+11.08.2022,Ukraine,Novoyakovlivka,Zaporizhia,46
+11.08.2022,Ukraine,Shcherbaky,Zaporizhia,47
+11.08.2022,Ukraine,Orikhiv,Zaporizhia,48
+11.08.2022,Ukraine,Mala Tokmachka,Zaporizhia,49
+11.08.2022,Ukraine,Huliaipilske,Zaporizhia,50
+11.08.2022,Ukraine,Ol’hivs’ke,Zaporizhia,51
+11.08.2022,Ukraine,Poltavka,Zaporizhia,52
+11.08.2022,Ukraine,Burlats’ke,Zaporizhia,53
+11.08.2022,Ukraine,Vremivka,Donetsk,54
+11.08.2022,Ukraine,Zolota Nyva,Donetsk,55
+11.08.2022,Ukraine,Prechystivka,Donetsk,56
+11.08.2022,Ukraine,Shevchenko,Donetsk,57
+11.08.2022,Ukraine,Pavlivka,Donetsk,58
+11.08.2022,Ukraine,Vuhledar,Donetsk,59
+11.08.2022,Ukraine,Novomykaylivka,Donetsk,60
+11.08.2022,Ukraine,Maryinka,Donetsk,61
+11.08.2022,Ukraine,Netaylove,Donetsk,62
+11.08.2022,Ukraine,Avdiyivka,Donetsk,63
+11.08.2022,Ukraine,Opytne,Donetsk,64
+11.08.2022,Ukraine,Krasnohorivka,Donetsk,65
+11.08.2022,Ukraine,Vremivka,Donetsk,66
+11.08.2022,Ukraine,Zolota Nyva,Donetsk,67
+11.08.2022,Ukraine,Prechystivka,Donetsk,68
+11.08.2022,Ukraine,Shevchenko,Donetsk,69
+11.08.2022,Ukraine,Pavlivka,Donetsk,70
+11.08.2022,Ukraine,Vuhledar,Donetsk,71
+11.08.2022,Ukraine,Novomykaylivka,Donetsk,72
+11.08.2022,Ukraine,Maryinka,Donetsk,73
+11.08.2022,Ukraine,Netaylove,Donetsk,74
+11.08.2022,Ukraine,Avdiyivka,Donetsk,75
+11.08.2022,Ukraine,Opytne,Donetsk,76
+11.08.2022,Ukraine,Krasnohorivka,Donetsk,77
+11.08.2022,Ukraine,Lymany,Mykolaiv,78
+11.08.2022,Ukraine,Prybuz’ke,Mykolaiv,79
+11.08.2022,Ukraine,Halytsynove,Mykolaiv,80
+11.08.2022,Ukraine,Mykolaiv,Mykolaiv,81
+11.08.2022,Ukraine,Zorya,Mykolaiv,82
+11.08.2022,Ukraine,Shevchenkove,Mykolaiv,83
+11.08.2022,Ukraine,Novohryhorivka,Mykolaiv,84
+11.08.2022,Ukraine,Lyubomyrivka,Mykolaiv,85
+11.08.2022,Ukraine,Novomykolayivka,Mykolaiv,86
+11.08.2022,Ukraine,Kyselivka,Mykolaiv,87
+11.08.2022,Ukraine,Polyana,Mykolaiv,88
+11.08.2022,Ukraine,Zelenyi Hai,Kherson,89
+11.08.2022,Ukraine,Andriyivka,Kherson,90
+11.08.2022,Ukraine,Lozove,Kherson,91
+11.08.2022,Ukraine,Bila Krynytsya,Kherson,92
+11.08.2022,Ukraine,Bereznehuvate,Mykolaiv,93
+11.08.2022,Ukraine,Lepetykha,Mykolaiv,94
+11.08.2022,Ukraine,Tverdomedove,Kherson,95
+11.08.2022,Ukraine,Ivanivka,Kherson,96
+11.08.2022,Ukraine,Knyazivka,Kherson,97
+11.08.2022,Ukraine,Osorivka,Kherson,98
+11.08.2022,Russie,Nova Kakhovka,Kherson,99
+12.08.2022,Ukraine,Zalyman,Kharkiv,100
+12.08.2022,Ukraine,Chepil’,Kharkiv,101
+12.08.2022,Ukraine,Nortsivka,Kharkiv,102
+12.08.2022,Ukraine,Protopopivka,Kharkiv,103
+12.08.2022,Ukraine,Velyka Komyshuvakha,Kharkiv,104
+12.08.2022,Ukraine,Dmytrivka,Kharkiv,105
+12.08.2022,Ukraine,Ridne,Kharkiv,106
+12.08.2022,Ukraine,Dibrovne,Kharkiv,107
+12.08.2022,Ukraine,Krasnopillya,Donetsk,108
+12.08.2022,Ukraine,Dolyna,Donetsk,109
+12.08.2022,Ukraine,Zvanivka,Donetsk,110
+12.08.2022,Ukraine,Vasyukivka,Donetsk,111
+12.08.2022,Ukraine,Kodema,Donetsk,112
+12.08.2022,Ukraine,Kurdyumivka,Donetsk,113
+12.08.2022,Contesté,Spirne,Donetsk,114
+12.08.2022,Contesté,Zaytseve,Donetsk,115
+12.08.2022,Contesté,Bohorodychne,Donetsk,116
+12.08.2022,Russie,Makiivka,Donetsk,117
+12.08.2022,Ukraine,Spartak,Donetsk,118
+12.08.2022,Ukraine,Vodyane,Donetsk,119
+12.08.2022,Ukraine,Novobakhmutivka,Donetsk,120
+12.08.2022,Contesté,Bilohorivka,Luhansk,121
+12.08.2022,Contesté,Marinka,Donetsk,122
+12.08.2022,Russie,Bruskynske,Kherson,123
+12.08.2022,Russie,Vesele,Kherson,124
+13.08.2022,Ukraine,Oleksandropil’,Donetsk,125
+13.08.2022,Ukraine,Pytomnyk,Kharkiv,126
+13.08.2022,Contesté,Bakhmut,Donetsk,127
+15.08.2022,Russie,Blahodativka,Kherson,128
+15.08.2022,Russie,Novopetrivka,Kherson,129
+15.08.2022,Ukraine,Sribne,Donetsk,130
+15.08.2022,Ukraine,Sloviansk,Donetsk,131
+15.08.2022,Ukraine,Vovchansk,Kharkiv,132
+15.08.2022,Ukraine,Pryshyb,Donetsk,133
+15.08.2022,Ukraine,Asiyivka,Kharkiv,134
+15.08.2022,Ukraine,Hrushuvakha,Kharkiv,135
+15.08.2022,Ukraine,Rayhorodok,Donetsk,136
+15.08.2022,Ukraine,Pivnichne,Donetsk,137
+15.08.2022,Ukraine,Shumy,Donetsk,138
+15.08.2022,Ukraine,Bilohorivka,Donetsk,139
+15.08.2022,Ukraine,Fedorivka,Donetsk,140
+15.08.2022,Ukraine,Sosnivka,Kharkiv,141
+15.08.2022,Ukraine,Svitlychne,Kharkiv,142
+15.08.2022,Ukraine,Dementiyivka,Kharkiv,143
+15.08.2022,Ukraine,Slatyne,Kharkiv,144
+15.08.2022,Ukraine,Nove,Kharkiv,145
+15.08.2022,Ukraine,Rus’ka Lozova,Kharkiv,146
+15.08.2022,Ukraine,P’yatykhatky,Kharkiv,147
+15.08.2022,Ukraine,Rus’ki Tyshky,Kharkiv,148
+15.08.2022,Ukraine,Slobozhans’ke,Kharkiv,149
+15.08.2022,Ukraine,Verkhniy Sqltiv,Kharkiv,150
+25.08.2022,Ukraine,Petrivka,Kharkiv,151
+25.08.2022,Ukraine,Staryi Karavan,Donetsk,152
+25.08.2022,Ukraine,Pervomaiske,Donetsk,153
+25.08.2022,Ukraine,Blahodativka,Kherson,154
+25.08.2022,Ukraine,Orlivka,Donetsk,155
+25.08.2022,Ukraine,Pokrov’ske,Donetsk,156
+25.08.2022,Ukraine,Nevel’s’ke,Donetsk,157
+25.08.2022,Ukraine,Mali Shcherbaky,Zaporizhia,158
+25.08.2022,Ukraine,Dorozhnyanka,Zaporizhia,159
+25.08.2022,Ukraine,Novopil’,Donetsk,160
+25.08.2022,Ukraine,Velyka Novosilka,Donetsk,161
+25.08.2022,Ukraine,Novomayors’ke,Donetsk,162
+25.08.2022,Ukraine,Volodymyrivka,Donetsk,163
+25.08.2022,Ukraine,Novomykhaylivka,Donetsk,164
+25.08.2022,Ukraine,Pobyeda,Donetsk,165
+26.08.2022,Russie,Pont Antonovsky,Kherson,166
+26.08.2022,Russie,Evpatoria,Crimée,167
+26.08.2022,Russie,Berdyansk,Zaporizhia,168
+26.08.2022,Russie,Darivka,Kherson,169
+26.08.2022,Russie,Timonovo,Belgorod,170
+26.08.2022,Ukraine,Tetyanivka,Donetsk,171
+26.08.2022,Ukraine,Tykhonivka,Donetsk,172
+26.08.2022,Ukraine,Stepova Dolyna,Mykolaiv,173
+26.08.2022,Ukraine,Ternivka,Kherson,174
+26.08.2022,Ukraine,Velyke Artakove,Mykolaiv,175
+26.08.2022,Ukraine,Ol’hyne,Kherson,176
+26.08.2022,Ukraine,Topolyne,Kherson,177
+26.08.2022,Ukraine,Pot’omkyne,Kherson,178
+26.08.2022,Ukraine,Novodanylivka,Zaporizhia,179
+26.08.2022,Ukraine,Charivne,Zaporizhia,180
+26.08.2022,Ukraine,Shevchenka,Zaporizhia,181
+27.08.2022,Ukraine,Zaitseve,Donetsk,182
+27.08.2022,Ukraine,Mayorsk,Donetsk,183
+27.08.2022,Ukraine,Kurakhove,Donetsk,184
+27.08.2022,Russie,Kherson,Kherson,185
+27.08.2022,Russie,Sevastopol,Crimée,186
+27.08.2022,Ukraine,Dovhen’ke,Kharkiv,187
+28.08.2022,Contesté,Dovhen’ke,Kharkiv,188
+28.08.2022,Ukraine,Semyhirja,Donetsk,189
+28.08.2022,Contesté,Kodema,Donetsk,190
+28.08.2022,Ukraine,Lupareve,Mykolaiv,191
+28.08.2022,Ukraine,Posad-Pokrovs’ke,Kherson,192
+28.08.2022,Ukraine,Kyselivka,Mykolaiv,193
+28.08.2022,Ukraine,Kvitneve,Mykolaiv,194
+28.08.2022,Ukraine,Partyzans’ke,Mykolaiv,195
+28.08.2022,Ukraine,Veselyi Kut,Mykolaiv,196
+28.08.2022,Ukraine,Kam’yans’ke,Zaporizhia,197
+28.08.2022,Ukraine,Hulyaypole,Zaporizhia,198
+28.08.2022,Ukraine,Chervone,Zaporizhia,199
+28.08.2022,Ukraine,Bohoyavlenka,Donetsk,200
+28.08.2022,Ukraine,novooleksandrivka,Donetsk,201
+28.08.2022,Russie,Oleshki,Kherson,202
+28.08.2022,Ukraine,Novovorontsovka,Kherson,203
+28.08.2022,Russie,Svatove,Luhansk,204
+28.08.2022,Russie,Enerhodar,Zaporizhia,205
+29.08.2022,Russie,Udy,Kharkiv,206
+29.08.2022,Ukraine,Sukhoy Stavok,Kherson,207
+29.08.2022,Ukraine,Davydiv Brid,Kherson,208
+29.08.2022,Contesté,Bruskynske,Kherson,209
+29.08.2022,Russie,Beryslav,Kherson,210
+30.08.2022,Ukraine,Shnurky,Donetsk,211
+30.08.2022,Russie,Shyroka Balka,Kherson,212
+30.08.2022,Russie,Kachkarivka,Kherson,213
+30.08.2022,Russie,Okip,Kharkiv,214
+30.08.2022,Ukraine,Novoselivka,Mykolaiv,215
+30.08.2022,Ukraine,Kalynivka,Mykolaiv,216
+30.08.2022,Ukraine,Bilousove,Kherson,217
+30.08.2022,Ukraine,Novoselivka,Mykolaiv,218
+30.08.2022,Ukraine,Zarichne,Kherson,219
+30.08.2022,Ukraine,Zelenodol’s’k,Dnipropetrovsk,220
+30.08.2022,Russie,L’vove,Kherson,221
+31.08.2022,Ukraine,Prudyanka,Kharkiv,222
+31.08.2022,Russie,Polohy,Zaporizhia,223
+31.08.2022,Ukraine,Chervona Dolyna,Mykolaiv,224
+31.08.2022,Ukraine,Dobryanka,Kherson,225
+31.08.2022,Ukraine,Trudolyubivka,Kherson,226
+31.08.2022,Ukraine,Osokorivka,Kherson,227
+31.08.2022,Ukraine,Chervonyi Yar,Mykolaiv,228
+31.08.2022,Russie,Kostyrka,Kherson,229
+31.08.2022,Russie,Chornobaivka,Kherson,230
+31.08.2022,Russie,Bilozerka,Kherson,231
+31.08.2022,Russie,Chervonohvardiiske ,Crimée,232
+31.08.2022,Russie,Tokmak,Zaporizhia,233
+31.08.2022,Ukraine,Nikopol’,Dnipropetrovsk,234
+31.08.2022,Ukraine,Zakitne,Donetsk,235

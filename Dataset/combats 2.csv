@@ -1,0 +1,527 @@
+Lieux.nom,Lieux.oblast,Type,Date,ID
+Pisky,Donetsk,Bombardement,11.08.2022,1
+Shevelivka,Kharkiv,Bombardement,11.08.2022,2
+Karnaukhivka,Kharkiv,Bombardement,11.08.2022,3
+Virnopillya,Kharkiv,Bombardement,11.08.2022,4
+Mazanivka,Donetsk,Bombardement,11.08.2022,5
+Bohorodychne,Donetsk,Bombardement,11.08.2022,6
+Hryhorivka,Donetsk,Combats,11.08.2022,7
+Serebryanka,Donetsk,Bombardement,11.08.2022,8
+Sivers’k,Donetsk,Bombardement,11.08.2022,9
+Verkhnokam’yans’ke,Donetsk,Combats,11.08.2022,10
+Ivano-Dar’ivka,Donetsk,Combats,11.08.2022,11
+Pereizne,Donetsk,Bombardement,11.08.2022,12
+Vyimka,Donetsk,Bombardement,11.08.2022,13
+Spirne,Donetsk,Bombardement,11.08.2022,14
+Vesele,Donetsk,Bombardement,11.08.2022,15
+Yakovlivka,Donetsk,Combats,11.08.2022,16
+Soledar,Donetsk,Bombardement,11.08.2022,17
+Bakhmuts’ke,Donetsk,Combats,11.08.2022,18
+Bakhmut,Donetsk,Bombardement,11.08.2022,19
+Vesela Dolyna,Donetsk,Bombardement,11.08.2022,20
+Zaytseve,Donetsk,Combats,11.08.2022,21
+Vershyna,Donetsk,Combats,11.08.2022,22
+Kostyantynivka,Donetsk,Bombardement,11.08.2022,23
+Dacha,Donetsk,Combats,11.08.2022,24
+Oleksandrivka,Kherson,Combats,11.08.2022,25
+Chornobaivka,Kherson,Bombardement,11.08.2022,26
+Kharkiv,Kharkiv,Bombardement,11.08.2022,27
+Udy,Kharkiv,Combats,11.08.2022,28
+Husarivka,Kharkiv,Combats,11.08.2022,29
+Soledar,Donetsk,Combats,11.08.2022,30
+Donetsk,Donetsk,Bombardement,11.08.2022,31
+Centrale d’Enerhodar,Zaporizhia,Bombardement,11.08.2022,32
+Nikopol,Dnipropetrovsk,Bombardement,11.08.2022,33
+Kushuhum,Zaporizhia,Bombardement,11.08.2022,34
+Novoyakovlivka,Zaporizhia,Bombardement,11.08.2022,35
+Shcherbaky,Zaporizhia,Bombardement,11.08.2022,36
+Orikhiv,Zaporizhia,Bombardement,11.08.2022,37
+Mala Tokmachka,Zaporizhia,Bombardement,11.08.2022,38
+Huliaipilske,Zaporizhia,Bombardement,11.08.2022,39
+Ol’hivs’ke,Zaporizhia,Bombardement,11.08.2022,40
+Poltavka,Zaporizhia,Bombardement,11.08.2022,41
+Burlats’ke,Zaporizhia,Bombardement,11.08.2022,42
+Vremivka,Donetsk,Bombardement,11.08.2022,43
+Zolota Nyva,Donetsk,Bombardement,11.08.2022,44
+Prechystivka,Donetsk,Bombardement,11.08.2022,45
+Shevchenko,Donetsk,Bombardement,11.08.2022,46
+Pavlivka,Donetsk,Combats,11.08.2022,47
+Vuhledar,Donetsk,Bombardement,11.08.2022,48
+Novomykaylivka,Donetsk,Bombardement,11.08.2022,49
+Maryinka,Donetsk,Combats,11.08.2022,50
+Netaylove,Donetsk,Bombardement,11.08.2022,51
+Avdiyivka,Donetsk,Bombardement,11.08.2022,52
+Opytne,Donetsk,Bombardement,11.08.2022,53
+Krasnohorivka,Donetsk,Bombardement,11.08.2022,54
+Vremivka,Donetsk,Bombardement,11.08.2022,55
+Zolota Nyva,Donetsk,Bombardement,11.08.2022,56
+Prechystivka,Donetsk,Bombardement,11.08.2022,57
+Shevchenko,Donetsk,Bombardement,11.08.2022,58
+Pavlivka,Donetsk,Bombardement,11.08.2022,59
+Vuhledar,Donetsk,Bombardement,11.08.2022,60
+Novomykaylivka,Donetsk,Bombardement,11.08.2022,61
+Maryinka,Donetsk,Bombardement,11.08.2022,62
+Netaylove,Donetsk,Bombardement,11.08.2022,63
+Avdiyivka,Donetsk,Bombardement,11.08.2022,64
+Opytne,Donetsk,Bombardement,11.08.2022,65
+Krasnohorivka,Donetsk,Bombardement,11.08.2022,66
+Lymany,Mykolaiv,Bombardement,11.08.2022,67
+Prybuz’ke,Mykolaiv,Bombardement,11.08.2022,68
+Halytsynove,Mykolaiv,Bombardement,11.08.2022,69
+Mykolaiv,Mykolaiv,Bombardement,11.08.2022,70
+Zorya,Mykolaiv,Bombardement,11.08.2022,71
+Shevchenkove,Mykolaiv,Bombardement,11.08.2022,72
+Novohryhorivka,Mykolaiv,Bombardement,11.08.2022,73
+Lyubomyrivka,Mykolaiv,Bombardement,11.08.2022,74
+Novomykolayivka,Mykolaiv,Bombardement,11.08.2022,75
+Kyselivka,Mykolaiv,Bombardement,11.08.2022,76
+Polyana,Mykolaiv,Bombardement,11.08.2022,77
+Zelenyi Hai,Kherson,Bombardement,11.08.2022,78
+Andriyivka,Kherson,Bombardement,11.08.2022,79
+Lozove,Kherson,Bombardement,11.08.2022,80
+Bila Krynytsya,Kherson,Bombardement,11.08.2022,81
+Bereznehuvate,Mykolaiv,Bombardement,11.08.2022,82
+Lepetykha,Mykolaiv,Bombardement,11.08.2022,83
+Tverdomedove,Kherson,Bombardement,11.08.2022,84
+Ivanivka,Kherson,Bombardement,11.08.2022,85
+Knyazivka,Kherson,Bombardement,11.08.2022,86
+Osorivka,Kherson,Bombardement,11.08.2022,87
+Nova Kakhovka,Kherson,Bombardement,11.08.2022,88
+Husarivka,Kharkiv,Bombardement,12.08.2022,89
+Virnopillya,Kharkiv,Bombardement,12.08.2022,90
+Mazanivka,Kharkiv,Bombardement,12.08.2022,91
+Bohorodychne,Donetsk,Combats,12.08.2022,92
+Hryhorivka,Donetsk,Combats,12.08.2022,93
+Sivers’k,Donetsk,Bombardement,12.08.2022,94
+Verkhnokam’yans’ke,Donetsk,Bombardement,12.08.2022,95
+Ivano-Dar’ivka,Donetsk,Combats,12.08.2022,96
+Vyimka,Donetsk,Combats,12.08.2022,97
+Spirne,Donetsk,Combats,12.08.2022,98
+Yakovlivka,Donetsk,Bombardement,12.08.2022,99
+Soledar,Donetsk,Bombardement,12.08.2022,100
+Bakhmuts’ke,Donetsk,Bombardement,12.08.2022,101
+Bakhmut,Donetsk,Bombardement,12.08.2022,102
+Vershyna,Donetsk,Bombardement,12.08.2022,103
+Zaytseve,Donetsk,Combats,12.08.2022,104
+Zalyman,Kharkiv,Bombardement,12.08.2022,105
+Chepil’,Kharkiv,Bombardement,12.08.2022,106
+Nortsivka,Kharkiv,Bombardement,12.08.2022,107
+Protopopivka,Kharkiv,Bombardement,12.08.2022,108
+Velyka Komyshuvakha,Kharkiv,Bombardement,12.08.2022,109
+Dmytrivka,Kharkiv,Bombardement,12.08.2022,110
+Ridne,Kharkiv,Bombardement,12.08.2022,111
+Dibrovne,Kharkiv,Bombardement,12.08.2022,112
+Krasnopillya,Donetsk,Bombardement,12.08.2022,113
+Dolyna,Donetsk,Combats,12.08.2022,114
+Zvanivka,Donetsk,Bombardement,12.08.2022,115
+Vasyukivka,Donetsk,Bombardement,12.08.2022,116
+Kodema,Donetsk,Combats,12.08.2022,117
+Kurdyumivka,Donetsk,Bombardement,12.08.2022,118
+Kramatorsk,Donetsk,Bombardement,12.08.2022,119
+Pont de Kerch,Détroit de Kerch,Mouvement,12.08.2022,120
+Makiivka,Donetsk,Bombardement,12.08.2022,121
+Spartak,Donetsk,Combats,12.08.2022,122
+Vodyane,Donetsk,Combats,12.08.2022,123
+Novobakhmutivka,Donetsk,Combats,12.08.2022,124
+Avdiyivka,Donetsk,Combats,12.08.2022,125
+Maryinka,Donetsk,Combats,12.08.2022,126
+Netaylove,Donetsk,Combats,12.08.2022,127
+Pisky,Donetsk,Combats,12.08.2022,128
+Krasnohorivka,Donetsk,Combats,12.08.2022,129
+Bilohorivka,Luhansk,Combats,12.08.2022,130
+Zaporizhia,Zaporizhia,Bombardement,12.08.2022,131
+Andriyivka,Kherson,Bombardement,12.08.2022,132
+Bruskynske,Kherson,Bombardement,12.08.2022,133
+Vesele,Kherson,Bombardement,12.08.2022,134
+Nova Kakhovka,Kherson,Bombardement,12.08.2022,135
+Melitopol,Zaporizhia,Mouvement,13.08.2022,136
+Dmytrivka,Kharkiv,Combats,13.08.2022,137
+Dolyna,Kharkiv,Combats,13.08.2022,138
+Vyimka,Donetsk,Combats,13.08.2022,139
+Ivano-Dar’ivka,Donetsk,Combats,13.08.2022,140
+Yakovlivka,Donetsk,Combats,13.08.2022,141
+Vershyna,Donetsk,Combats,13.08.2022,142
+Zaytseve,Donetsk,Combats,13.08.2022,143
+Bakhmut,Donetsk,Combats,13.08.2022,144
+Mariupol,Donetsk,Incident,13.08.2022,145
+Kharkiv,Kharkiv,Bombardement,13.08.2022,146
+Pavlivka,Donetsk,Combats,13.08.2022,147
+Novosilka,Donetsk,Combats,13.08.2022,148
+Lozove,Kherson,Combats,13.08.2022,149
+Shyroky,Mykolaiv,Combats,13.08.2022,150
+Nova Kakhovka,Kherson,Bombardement,13.08.2022,151
+Melitopol,Zaporizhia,Bombardement,13.08.2022,152
+Novotroitskoye,Kherson,Bombardement,13.08.2022,153
+Nyzhni Sirohozy,Kherson,Bombardement,13.08.2022,154
+Velyka Blagoveshchenka,Kherson,Bombardement,13.08.2022,155
+Chaplinka,Kherson,Bombardement,13.08.2022,156
+Chkalov,Kherson,Bombardement,13.08.2022,157
+Maryinka,Donetsk,Combats,13.08.2022,158
+Pisky,Donetsk,Combats,13.08.2022,159
+Avdiyivka,Donetsk,Combats,13.08.2022,160
+Krasnohorivka,Donetsk,Combats,13.08.2022,161
+Oleksandropil’,Donetsk,Combats,13.08.2022,162
+Pytomnyk,Kharkiv,Combats,13.08.2022,163
+Kodema,Donetsk,Combats,13.08.2022,164
+Vershyna,Donetsk,Combats,13.08.2022,165
+Zalyman,Kharkiv,Bombardement,13.08.2022,166
+Nortsivka,Kharkiv,Bombardement,13.08.2022,167
+Dibrovne,Kharkiv,Bombardement,13.08.2022,168
+Mazanivka,Donetsk,Bombardement,13.08.2022,169
+Pytomnyk,Kharkiv,Bombardement,13.08.2022,170
+Brazhkivka,Kharkiv,Bombardement,13.08.2022,171
+Dolyna,Donetsk,Bombardement,13.08.2022,172
+Bohorodychne,Donetsk,Bombardement,13.08.2022,173
+Hryhorivka,Donetsk,Bombardement,13.08.2022,174
+Verkhnokam’yans’ke,Donetsk,Bombardement,13.08.2022,175
+Spirne,Donetsk,Bombardement,13.08.2022,176
+Berestove,Donetsk,Bombardement,13.08.2022,177
+Yakovlivka,Donetsk,Bombardement,13.08.2022,178
+Rozdolivka,Donetsk,Bombardement,13.08.2022,179
+Soledar,Donetsk,Bombardement,13.08.2022,180
+Bakhmuts’ke,Donetsk,Bombardement,13.08.2022,181
+Chasiv Yar,Donetsk,Bombardement,13.08.2022,182
+Kurdyumivka,Donetsk,Bombardement,13.08.2022,183
+New York,Donetsk,Bombardement,13.08.2022,184
+Kramatorsk,Donetsk,Bombardement,13.08.2022,185
+Maryinka,Donetsk,Bombardement,15.08.2022,186
+Pisky,Donetsk,Combats,15.08.2022,187
+Opytne,Donetsk,Bombardement,15.08.2022,188
+Krasnohorivka,Donetsk,Bombardement,15.08.2022,189
+Novobakhmutivka,Donetsk,Bombardement,15.08.2022,190
+Sribne,Donetsk,Bombardement,15.08.2022,191
+Dolyna,Donetsk,Combats,15.08.2022,192
+Ivano-Dar’ivka,Donetsk,Combats,15.08.2022,193
+Spirne,Donetsk,Combats,15.08.2022,194
+Yakovlivka,Donetsk,Combats,15.08.2022,195
+Soledar,Donetsk,Combats,15.08.2022,196
+Vershyna,Donetsk,Combats,15.08.2022,197
+Kodema,Donetsk,Combats,15.08.2022,198
+Zaytseve,Donetsk,Combats,15.08.2022,199
+Bakhmut,Donetsk,Combats,15.08.2022,200
+Sloviansk,Donetsk,Bombardement,15.08.2022,201
+Melitopol,Donetsk,Incident,15.08.2022,202
+Vovchansk,Kharkiv,Crime de guerre,15.08.2022,203
+Asiyivka,Kharkiv,Bombardement,15.08.2022,204
+Hrushuvakha,Kharkiv,Bombardement,15.08.2022,205
+Krasnopillya,Kharkiv,Bombardement,15.08.2022,206
+Mazanivka,Donetsk,Combats,15.08.2022,207
+Pryshyb,Donetsk,Bombardement,15.08.2022,208
+Rayhorodok,Donetsk,Bombardement,15.08.2022,209
+Kostyantynivka,Donetsk,Bombardement,15.08.2022,210
+Bakhmuts’ke,Donetsk,Bombardement,15.08.2022,211
+Vesela Dolyna,Donetsk,Bombardement,15.08.2022,212
+Pivnichne,Donetsk,Bombardement,15.08.2022,213
+Shumy,Donetsk,Bombardement,15.08.2022,214
+Bilohorivka,Donetsk,Bombardement,15.08.2022,215
+Vyimka,Donetsk,Combats,15.08.2022,216
+Fedorivka,Donetsk,Bombardement,15.08.2022,217
+Vesele,Donetsk,Combats,15.08.2022,218
+Sosnivka,Kharkiv,Bombardement,15.08.2022,219
+Svitlychne,Kharkiv,Bombardement,15.08.2022,220
+Dementiyivka,Kharkiv,Bombardement,15.08.2022,221
+Slatyne,Kharkiv,Bombardement,15.08.2022,222
+Nove,Kharkiv,Bombardement,15.08.2022,223
+Pytomnyk,Kharkiv,Bombardement,15.08.2022,224
+Rus’ka Lozova,Kharkiv,Bombardement,15.08.2022,225
+P’yatykhatky,Kharkiv,Bombardement,15.08.2022,226
+Rus’ki Tyshky,Kharkiv,Bombardement,15.08.2022,227
+Slobozhans’ke,Kharkiv,Bombardement,15.08.2022,228
+Verkhniy Sqltiv,Kharkiv,Bombardement,15.08.2022,229
+Kharkiv,Kharkiv,Bombardement,15.08.2022,230
+Blahodativka,Kherson,Bombardement,15.08.2022,231
+Novopetrivka,Kherson,Bombardement,15.08.2022,232
+Petrivka,Kharkiv,Combats,25.08.2022,233
+Staryi Karavan,Donetsk,Combats,25.08.2022,234
+Bakhmuts’ke,Donetsk,Combats,25.08.2022,235
+Kodema,Donetsk,Combats,25.08.2022,236
+Pisky,Donetsk,Combats,25.08.2022,237
+Pervomaiske,Donetsk,Combats,25.08.2022,238
+New York,Donetsk,Bombardement,25.08.2022,239
+Novobakhmutivka,Donetsk,Bombardement,25.08.2022,240
+Krasnohorivka,Donetsk,Bombardement,25.08.2022,241
+Orlivka,Donetsk,Bombardement,25.08.2022,242
+Vodyane,Donetsk,Bombardement,25.08.2022,243
+Netaylove,Donetsk,Bombardement,25.08.2022,244
+Pokrov’ske,Donetsk,Bombardement,25.08.2022,245
+Nevel’s’ke,Donetsk,Bombardement,25.08.2022,246
+Maryinka,Donetsk,Bombardement,25.08.2022,247
+Mali Shcherbaky,Zaporizhia,Bombardement,25.08.2022,248
+Orikhiv,Zaporizhia,Bombardement,25.08.2022,249
+Dorozhnyanka,Zaporizhia,Bombardement,25.08.2022,250
+Poltavka,Zaporizhia,Bombardement,25.08.2022,251
+Novopil’,Donetsk,Bombardement,25.08.2022,252
+Novosilka,Donetsk,Bombardement,25.08.2022,253
+Velyka Novosilka,Donetsk,Combats,25.08.2022,254
+Novomayors’ke,Donetsk,Bombardement,25.08.2022,255
+Pavlivka,Donetsk,Combats,25.08.2022,256
+Volodymyrivka,Donetsk,Bombardement,25.08.2022,257
+Novomykhaylivka,Donetsk,Combats,25.08.2022,258
+Pobyeda,Donetsk,Combats,25.08.2022,259
+Maryinka,Donetsk,Combats,25.08.2022,260
+Kharkiv,Kharkiv,Bombardement,25.08.2022,261
+Pont Antonovsky,Kherson,Bombardement,26.08.2022,262
+Evpatoria,Crimée,DCA active,26.08.2022,263
+Karnaukhivka,Kharkiv,Combats,26.08.2022,264
+Soledar,Donetsk,Combats,26.08.2022,265
+Bakhmut,Donetsk,Combats,26.08.2022,266
+Bakhmuts’ke,Donetsk,Combats,26.08.2022,267
+Kodema,Donetsk,Combats,26.08.2022,268
+Nevel’s’ke,Donetsk,Combats,26.08.2022,269
+Berdyansk,Zaporizhia,Incident,26.08.2022,270
+Nova Kakhovka,Kherson,Bombardement,26.08.2022,271
+Darivka,Kherson,Bombardement,26.08.2022,272
+Timonovo,Belgorod,Bombardement,26.08.2022,273
+Zalyman,Kharkiv,Bombardement,26.08.2022,274
+Chepil’,Kharkiv,Bombardement,26.08.2022,275
+Brazhkivka,Kharkiv,Bombardement,26.08.2022,276
+Bohorodychne,Donetsk,Bombardement,26.08.2022,277
+Tetyanivka,Donetsk,Bombardement,26.08.2022,278
+Sivers’k,Donetsk,Bombardement,26.08.2022,279
+Hryhorivka,Donetsk,Bombardement,26.08.2022,280
+Spirne,Donetsk,Bombardement,26.08.2022,281
+Ivano-Dar’ivka,Donetsk,Bombardement,26.08.2022,282
+Zvanivka,Donetsk,Bombardement,26.08.2022,283
+Vasyukivka,Donetsk,Bombardement,26.08.2022,284
+Yakovlivka,Donetsk,Bombardement,26.08.2022,285
+Tykhonivka,Donetsk,Bombardement,26.08.2022,286
+Kostyantynivka,Donetsk,Bombardement,26.08.2022,287
+Shumy,Donetsk,Bombardement,26.08.2022,288
+Oleksandrivka,Kherson,Bombardement,26.08.2022,289
+Stepova Dolyna,Mykolaiv,Bombardement,26.08.2022,290
+Pervomays’ke,Mykolaiv,Bombardement,26.08.2022,291
+Kobzartsi,Mykolaiv,Bombardement,26.08.2022,292
+Andriyivka,Kherson,Bombardement,26.08.2022,293
+Lozove,Kherson,Bombardement,26.08.2022,294
+Ternivka,Kherson,Bombardement,26.08.2022,295
+Velyke Artakove,Mykolaiv,Bombardement,26.08.2022,296
+Ol’hyne,Kherson,Bombardement,26.08.2022,297
+Topolyne,Kherson,Bombardement,26.08.2022,298
+Pot’omkyne,Kherson,Combats,26.08.2022,299
+Novodanylivka,Zaporizhia,Bombardement,26.08.2022,300
+Charivne,Zaporizhia,Bombardement,26.08.2022,301
+Huliaipilske,Zaporizhia,Bombardement,26.08.2022,302
+Ol’hivs’ke,Zaporizhia,Bombardement,26.08.2022,303
+Novopil’,Donetsk,Bombardement,26.08.2022,304
+Shevchenka,Zaporizhia,Bombardement,26.08.2022,305
+Velyka Novosilka,Donetsk,Bombardement,26.08.2022,306
+Prechystivka,Donetsk,Combats,26.08.2022,307
+Vuhledar,Donetsk,Bombardement,26.08.2022,308
+Novomykhaylivka,Donetsk,Bombardement,26.08.2022,309
+Volodymyrivka,Donetsk,Bombardement,26.08.2022,310
+Dementiyivka,Kharkiv,Combats,27.08.2022,311
+Brazhkivka,Kharkiv,Combats,27.08.2022,312
+Hryhorivka,Donetsk,Combats,27.08.2022,313
+Soledar,Donetsk,Combats,27.08.2022,314
+Zaitseve,Donetsk,Combats,27.08.2022,315
+Mayorsk,Donetsk,Combats,27.08.2022,316
+Oleksandropil’,Donetsk,Combats,27.08.2022,317
+Nevel’s’ke,Donetsk,Combats,27.08.2022,318
+Pavlivka,Donetsk,Combats,27.08.2022,319
+Pot’omkyne,Kherson,Combats,27.08.2022,320
+Kurakhove,Donetsk,Bombardement,27.08.2022,321
+Prechystivka,Donetsk,Combats,27.08.2022,322
+Nova Kakhovka,Kherson,Bombardement,27.08.2022,323
+Kherson,Kherson,Bombardement,27.08.2022,324
+Sevastopol,Crimée,DCA active,27.08.2022,325
+Svitlychne,Kharkiv,Combats,28.08.2022,326
+Bohorodychne,Donetsk,Combats,28.08.2022,327
+Dovhen’ke,Kharkiv,Combats,28.08.2022,328
+Semyhirja,Donetsk,Combats,28.08.2022,329
+Kodema,Donetsk,Combats,28.08.2022,330
+Vershyna,Donetsk,Combats,28.08.2022,331
+Zaitseve,Donetsk,Combats,28.08.2022,332
+Vesela Dolyna,Donetsk,Combats,28.08.2022,333
+Pervomaiske,Donetsk,Combats,28.08.2022,334
+Pavlivka,Donetsk,Combats,28.08.2022,335
+Mykolaiv,Mykolaiv,Bombardement,28.08.2022,336
+Oleksandrivka,Kherson,Bombardement,28.08.2022,337
+Lupareve,Mykolaiv,Bombardement,28.08.2022,338
+Posad-Pokrovs’ke,Kherson,Bombardement,28.08.2022,339
+Kyselivka,Mykolaiv,Bombardement,28.08.2022,340
+Myrne,Kherson,Bombardement,28.08.2022,341
+Kvitneve,Mykolaiv,Bombardement,28.08.2022,342
+Partyzans’ke,Mykolaiv,Bombardement,28.08.2022,343
+Veselyi Kut,Mykolaiv,Bombardement,28.08.2022,344
+Andriyivka,Kherson,Bombardement,28.08.2022,345
+Velyke Artakove,Kherson,Bombardement,28.08.2022,346
+Lozove,Kherson,Bombardement,28.08.2022,347
+Ol’hyne,Kherson,Bombardement,28.08.2022,348
+Knyazivka,Kherson,Bombardement,28.08.2022,349
+Topolyne,Kherson,Bombardement,28.08.2022,350
+Sevastopol,Crimée,Incident,28.08.2022,351
+Kam’yans’ke,Zaporizhia,Bombardement,28.08.2022,352
+Huliaipilske,Zaporizhia,Bombardement,28.08.2022,353
+Hulyaypole,Zaporizhia,Bombardement,28.08.2022,354
+Chervone,Zaporizhia,Bombardement,28.08.2022,355
+Burlats’ke,Donetsk,Bombardement,28.08.2022,356
+Vremivka,Donetsk,Bombardement,28.08.2022,357
+Bohoyavlenka,Donetsk,Bombardement,28.08.2022,358
+Velyka Novosilka,Donetsk,Bombardement,28.08.2022,359
+Vuhledar,Donetsk,Bombardement,28.08.2022,360
+Novomykhaylivka,Donetsk,Bombardement,28.08.2022,361
+Maryinka,Donetsk,Bombardement,28.08.2022,362
+Nevel’s’ke,Donetsk,Bombardement,28.08.2022,363
+Opytne,Donetsk,Bombardement,28.08.2022,364
+Orlivka,Donetsk,Bombardement,28.08.2022,365
+Krasnohorivka,Donetsk,Bombardement,28.08.2022,366
+Novooleksandrivka,Donetsk,Bombardement,28.08.2022,367
+New York,Donetsk,Bombardement,28.08.2022,368
+Oleshki,Kherson,Bombardement,28.08.2022,369
+Novovorontsovka,Kherson,Bombardement,28.08.2022,370
+Nova Kakhovka,Kherson,Bombardement,28.08.2022,371
+Svatove,Luhansk,Incident,28.08.2022,372
+Enerhodar,Zaporizhia,Bombardement,28.08.2022,373
+Melitopol,Zaporizhia,Bombardement,28.08.2022,374
+Kharkiv,Kharkiv,Bombardement,28.08.2022,375
+Orikhiv,Zaporizhia,Bombardement,29.08.2022,376
+Avdiyivka,Donetsk,Bombardement,29.08.2022,377
+Pont Antonovsky,Kherson,Bombardement,29.08.2022,378
+Kherson,Kherson,Bombardement,29.08.2022,379
+Mykolaiv,Mykolaiv,Bombardement,29.08.2022,380
+Nova Kakhovka,Kherson,Bombardement,29.08.2022,381
+Udy,Kharkiv,Combats,29.08.2022,382
+Dolyna,Donetsk,Combats,29.08.2022,383
+Bohorodychne,Donetsk,Combats,29.08.2022,384
+Ivano-Dar’ivka,Donetsk,Combats,29.08.2022,385
+Soledar,Donetsk,Combats,29.08.2022,386
+Bakhmut,Donetsk,Combats,29.08.2022,387
+Vesela Dolyna,Donetsk,Combats,29.08.2022,388
+Kodema,Donetsk,Combats,29.08.2022,389
+Pavlivka,Donetsk,Combats,29.08.2022,390
+Sukhoy Stavok,Kherson,Combats,29.08.2022,391
+Melitopol,Zaporizhia,Bombardement,29.08.2022,392
+Davydiv Brid,Kherson,Combats,29.08.2022,393
+Bruskynske,Kherson,Combats,29.08.2022,394
+Centrale d’Enerhodar,Zaporizhia,Bombardement,29.08.2022,395
+Beryslav,Kherson,Bombardement,29.08.2022,396
+Posad-Pokrovs’ke,Kherson,Combats,29.08.2022,397
+Kyselivka,Kherson,Combats,29.08.2022,398
+Andriyivka,Kherson,Combats,29.08.2022,399
+Chaplynka,Kherson,Bombardement,29.08.2022,400
+Lupareve,Mykolaiv,Bombardement,29.08.2022,401
+Tavriys’ke,Kherson,Bombardement,29.08.2022,402
+Prybuz’ke,Mykolaiv,Bombardement,29.08.2022,403
+Posad-Pokrovs’ke,Kherson,Bombardement,29.08.2022,404
+Myrne,Kherson,Bombardement,29.08.2022,405
+Ukrainka,Mykolaiv,Bombardement,29.08.2022,406
+Zorya,Mykolaiv,Bombardement,29.08.2022,407
+Lyubomyrivka,Mykolaiv,Bombardement,29.08.2022,408
+Kvitneve,Mykolaiv,Bombardement,29.08.2022,409
+Kyselivka,Mykolaiv,Bombardement,29.08.2022,410
+Kobzartsi,Mykolaiv,Bombardement,29.08.2022,411
+Velyke Artakove,Mykolaiv,Bombardement,29.08.2022,412
+Knyazivka,Kherson,Bombardement,29.08.2022,413
+Topolyne,Kherson,Bombardement,29.08.2022,414
+Pot’omkyne,Kherson,Combats,29.08.2022,415
+Udy,Kharkiv,Combats,30.08.2022,416
+Shnurky,Donetsk,Combats,30.08.2022,417
+Vesela Dolyna,Donetsk,Combats,30.08.2022,418
+Zaitseve,Donetsk,Combats,30.08.2022,419
+Shumy,Donetsk,Combats,30.08.2022,420
+Kodema,Donetsk,Combats,30.08.2022,421
+Krasnohorivka,Donetsk,Combats,30.08.2022,422
+Avdiyivka,Donetsk,Combats,30.08.2022,423
+Opytne,Donetsk,Combats,30.08.2022,424
+Pervomaiske,Donetsk,Combats,30.08.2022,425
+Maryinka,Donetsk,Combats,30.08.2022,426
+Novomykhaylivka,Donetsk,Combats,30.08.2022,427
+Pot’omkyne,Kherson,Combats,30.08.2022,428
+Shyroka Balka,Kherson,Bombardement,30.08.2022,429
+Kherson,Kherson,Bombardement,30.08.2022,430
+Pont Antonovsky,Kherson,Bombardement,30.08.2022,431
+Novooleksandrivka,Kherson,Bombardement,30.08.2022,432
+Kachkarivka,Kherson,Bombardement,30.08.2022,433
+Okip,Kharkiv,Combats,30.08.2022,434
+Enerhodar,Zaporizhia,Incident,30.08.2022,435
+Melitopol,Zaporizhia,Incident,30.08.2022,436
+Oleksandrivka,Kherson,Bombardement,30.08.2022,437
+Stepova Dolyna,Mykolaiv,Bombardement,30.08.2022,438
+Shevchenkove,Mykolaiv,Bombardement,30.08.2022,439
+Kharkiv,Kharkiv,Bombardement,30.08.2022,440
+Novohryhorivka,Mykolaiv,Bombardement,30.08.2022,441
+Lyubomyrivka,Mykolaiv,Bombardement,30.08.2022,442
+Mykolaiv,Mykolaiv,Bombardement,30.08.2022,443
+Novoselivka,Mykolaiv,Bombardement,30.08.2022,444
+Kalynivka,Mykolaiv,Bombardement,30.08.2022,445
+Kyselivka,Mykolaiv,Bombardement,30.08.2022,446
+Pervomaiske,Mykolaiv,Bombardement,30.08.2022,447
+Shyroky,Mykolaiv,Bombardement,30.08.2022,448
+Andriyivka,Kherson,Bombardement,30.08.2022,449
+Lozove,Kherson,Bombardement,30.08.2022,450
+Davydiv Brid,Kherson,Bombardement,30.08.2022,451
+Bilousove,Kherson,Bombardement,30.08.2022,452
+Zarichne,Kherson,Bombardement,30.08.2022,453
+Ol’hyne,Kherson,Bombardement,30.08.2022,454
+Knyazivka,Kherson,Bombardement,30.08.2022,455
+Zelenodol’s’k,Dnipropetrovsk,Bombardement,30.08.2022,456
+Pot’omkyne,Kherson,Bombardement,30.08.2022,457
+Osorivka,Kherson,Bombardement,30.08.2022,458
+Kherson,Kherson,Bombardement,30.08.2022,459
+Beryslav,Kherson,Bombardement,30.08.2022,460
+L’vove,Kherson,Bombardement,30.08.2022,461
+Prudyanka,Kharkiv,Combats,31.08.2022,462
+Bakhmut,Donetsk,Combats,31.08.2022,463
+Vesela Dolyna,Donetsk,Combats,31.08.2022,464
+Zaitseve,Donetsk,Combats,31.08.2022,465
+Kodema,Donetsk,Combats,31.08.2022,466
+Mayorsk,Donetsk,Combats,31.08.2022,467
+Krasnohorivka,Donetsk,Combats,31.08.2022,468
+Avdiyivka,Donetsk,Combats,31.08.2022,469
+Pervomaiske,Donetsk,Combats,31.08.2022,470
+Maryinka,Donetsk,Combats,31.08.2022,471
+Polohy,Zaporizhia,Combats,31.08.2022,472
+Oleksandrivka,Kherson,Bombardement,31.08.2022,473
+Lupareve,Mykolaiv,Bombardement,31.08.2022,474
+Novohryhorivka,Mykolaiv,Bombardement,31.08.2022,475
+Novomykaylivka,Mykolaiv,Bombardement,31.08.2022,476
+Lyubomyrivka,Mykolaiv,Bombardement,31.08.2022,477
+Kyselivka,Mykolaiv,Bombardement,31.08.2022,478
+Kvitneve,Mykolaiv,Bombardement,31.08.2022,479
+Pervomaiske,Mykolaiv,Bombardement,31.08.2022,480
+Partyzans’ke,Mykolaiv,Bombardement,31.08.2022,481
+Stepove,Mykolaiv,Bombardement,31.08.2022,482
+Chervona Dolyna,Mykolaiv,Bombardement,31.08.2022,483
+Kobzartsi,Mykolaiv,Bombardement,31.08.2022,484
+Ternivka,Mykolaiv,Bombardement,31.08.2022,485
+Andriyivka,Kherson,Bombardement,31.08.2022,486
+Bila Krynytsya,Kherson,Bombardement,31.08.2022,487
+Ivanivka,Kherson,Bombardement,31.08.2022,488
+Ol’hyne,Kherson,Bombardement,31.08.2022,489
+Knyazivka,Kherson,Bombardement,31.08.2022,490
+Dobryanka,Kherson,Bombardement,31.08.2022,491
+Pot’omkyne,Kherson,Bombardement,31.08.2022,492
+Trudolyubivka,Kherson,Bombardement,31.08.2022,493
+Osokorivka,Kherson,Bombardement,31.08.2022,494
+Chervonyi Yar,Mykolaiv,Bombardement,31.08.2022,495
+Kyselivka,Kherson,Bombardement,31.08.2022,496
+Kostyrka,Kherson,Bombardement,31.08.2022,497
+Kherson,Kherson,Bombardement,31.08.2022,498
+Chornobaivka,Kherson,Bombardement,31.08.2022,499
+Bilozerka,Kherson,Bombardement,31.08.2022,500
+Chervonohvardiiske ,Crimée,Bombardement,31.08.2022,501
+Tokmak,Zaporizhia,Incident,31.08.2022,502
+Nikopol’,Dnipropetrovsk,Bombardement,31.08.2022,503
+Husarivka,Kharkiv,Bombardement,31.08.2022,504
+Nortsivka,Kharkiv,Bombardement,31.08.2022,505
+Virnopillya,Kharkiv,Bombardement,31.08.2022,506
+Dibrovne,Kharkiv,Bombardement,31.08.2022,507
+Dolyna,Donetsk,Bombardement,31.08.2022,508
+Bohorodychne,Donetsk,Bombardement,31.08.2022,509
+Zakitne,Donetsk,Bombardement,31.08.2022,510
+Hryhorivka,Donetsk,Bombardement,31.08.2022,511
+Ivano-Dar’ivka,Donetsk,Bombardement,31.08.2022,512
+Spirne,Donetsk,Bombardement,31.08.2022,513
+Vesele,Donetsk,Bombardement,31.08.2022,514
+Soledar,Donetsk,Bombardement,31.08.2022,515
+Bakhmut,Donetsk,Combats,31.08.2022,516
+Vesela Dolyna,Donetsk,Combats,31.08.2022,517
+Kodema,Donetsk,Combats,31.08.2022,518
+Zaytseve,Donetsk,Combats,31.08.2022,519
+Mayorsk,Donetsk,Combats,31.08.2022,520
+Kharkiv,Kharkiv,Bombardement,31.08.2022,521
+Berdyansk,Zaporizhia,Incident,31.08.2022,522
+Oleshki,Kherson,Bombardement,31.08.2022,523
+Pont Antonovsky,Kherson,Bombardement,31.08.2022,524
+Nova Kakhovka,Kherson,Bombardement,31.08.2022,525
+Darivka,Kherson,Bombardement,31.08.2022,526
