@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Ukraine Control Map</name>
+    <description><![CDATA[Ukraine Control Map continuously updated by people at Project Owl OSINT (@projectowlosint)<br><br>Contact us on Twitter = @UAControlMap<br><br>Discord: https://discord.com/invite/projectowl<br><br>Information:<br>* Presence = reports of troops but no specific geolocation or imagery; covers a very wide area<br>* Position = there is some sort of evidence and/or geolocation of troops in question; covers a smaller, more specific area<br><br>Yellow: UA counter attacks and advances<br>Purple: RU advances (Currently unused)<br><br>Unit Patch Database: https://owlunits.com<br><br>Unit symbol guide: https://en.wikipedia.org/wiki/NATO_Joint_Military_Symbology<br><br>Changelog: https://docs.google.com/spreadsheets/d/1vk_fzRrkslICpz9DxgHolxqUO_aBrqN4HubgqGI7dWU]]></description>
+    <NetworkLink>
+      <name>Ukraine Control Map</name>
+      <Link>
+        <href>https://www.google.com/maps/d/u/0/kml?mid=180u1IkUjtjpdJWnIC0AxTKSiqK4G6Pez</href>
+      </Link>
+    </NetworkLink>
+  </Document>
+</kml>
