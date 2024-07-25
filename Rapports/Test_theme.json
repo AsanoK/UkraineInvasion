@@ -1,0 +1,42 @@
+{
+    "name": "Slava",
+"dataColors": [
+        "#005bbb",
+        "#ffd500",
+        "#fe5f55",
+        "#721121",
+        "#70a9a1",
+        "#D62828",
+        "#31231E",
+        "#9DCDC0"
+    ],
+    "good": "#9DCDC0",
+    "neutral": "#D9B300",
+    "bad": "#D62828",
+    "maximum": "#001e3d",
+    "center": "#005bbb",
+    "minimum": "#85c0ff",
+    "null": "#FF7F48",
+"textClasses": {
+        "callout": {
+            "fontSize": 20,
+            "fontFace": "LT Soul",
+            "color": "#005bbb"
+        },
+        "title": {
+            "fontSize": 12,
+            "fontFace": "LT Soul",
+            "color": "#005bbb"
+        },
+        "header": {
+            "fontSize": 12,
+            "fontFace": "Georgia",
+            "color": "#47a0ff"
+        },
+        "label": {
+            "fontSize": 10,
+            "fontFace": "Georgia",
+            "color": "#252423"
+        }
+    }
+}

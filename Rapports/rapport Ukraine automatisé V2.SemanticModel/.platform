@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "rapport Ukraine automatisé V2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "6e67d39e-dc25-4377-b5c6-42497e802715"
+  }
+}
