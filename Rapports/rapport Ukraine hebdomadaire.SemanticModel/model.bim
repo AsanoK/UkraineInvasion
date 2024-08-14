@@ -4,7 +4,7 @@
     "annotations": [
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Texte\",\"lieux\",\"Pertes RU confirmées\",\"Pertes_warspotting\",\"Pertes_Oryx\",\"Types pertes\",\"Mesures\",\"russia_losses_equipment\",\"russia_losses_personnel\",\"Pertes_UA\",\"LogsOWL_derniere_date\",\"Catégorisation\",\"points clé\",\"Typage_Owl\",\"Géolocs (Unités et images)\",\"front_source\",\"Ligne de front\",\"Secteurs\",\"Données cartographiques\",\"Assauts russes\",\"Date_Ref\"]"
+        "value": "[\"Texte\",\"lieux\",\"Pertes RU confirmées\",\"Pertes_warspotting\",\"Pertes_Oryx\",\"Types pertes\",\"Mesures\",\"russia_losses_equipment\",\"russia_losses_personnel\",\"Pertes_UA\",\"LogsOWL_derniere_date\",\"Catégorisation\",\"points clé\",\"Typage_Owl\",\"Géolocs (Unités et images)\",\"front_source\",\"Ligne de front\",\"Secteurs\",\"Points clés\",\"Données cartographiques\",\"Test events\",\"date_référence\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
@@ -26,89 +26,6 @@
         "linguisticMetadata": {
           "content": {
             "Entities": {
-              "assauts_russ": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Assauts russes"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "assauts russ": {
-                      "State": "Generated",
-                      "Weight": 0.87
-                    }
-                  },
-                  {
-                    "assaut russ": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.6786
-                    }
-                  }
-                ]
-              },
-              "assauts_russ.assauts_russ": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Assauts russes",
-                    "ConceptualProperty": "Assauts russes"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "assauts russ": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "assaut russ": {
-                      "State": "Generated",
-                      "Type": "Noun",
-                      "Weight": 0.78
-                    }
-                  }
-                ]
-              },
-              "assauts_russ.date": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Assauts russes",
-                    "ConceptualProperty": "Date"
-                  }
-                },
-                "SemanticType": "Time",
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "date": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "moment": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.736
-                    }
-                  },
-                  {
-                    "period": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.714
-                    }
-                  }
-                ]
-              },
               "calendrier": {
                 "Definition": {
                   "Binding": {
@@ -215,31 +132,6 @@
                     "année": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "date année": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "moment année": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.6
-                    }
-                  },
-                  {
-                    "period année": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.582
-                    }
                   }
                 ]
               },
@@ -258,31 +150,6 @@
                   {
                     "jour": {
                       "State": "Generated"
-                    }
-                  },
-                  {
-                    "date jour": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "moment jour": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.6
-                    }
-                  },
-                  {
-                    "period jour": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.582
                     }
                   }
                 ]
@@ -303,31 +170,6 @@
                     "mois": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "date mois": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "moment mois": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.6
-                    }
-                  },
-                  {
-                    "period mois": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.582
-                    }
                   }
                 ]
               },
@@ -347,31 +189,6 @@
                     "trimestre": {
                       "State": "Generated"
                     }
-                  },
-                  {
-                    "date trimestre": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "moment trimestre": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.6
-                    }
-                  },
-                  {
-                    "period trimestre": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.582
-                    }
                   }
                 ]
               },
@@ -386,6 +203,22 @@
                 "Terms": [
                   {
                     "jour d'invasion": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "calendrier.numéro_semaine": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calendrier",
+                    "ConceptualProperty": "Numéro semaine"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "numéro semaine": {
                       "State": "Generated"
                     }
                   }
@@ -1326,6 +1159,122 @@
                   }
                 ]
               },
+              "données_cartographique.test": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Données cartographiques",
+                    "ConceptualProperty": "test"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "test": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "examination": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "exam": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "assessment": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "investigation": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "analysis": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "quiz": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "trial": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "check": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "experiment": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "assay": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
               "données_cartographique.texte_affichage": {
                 "Definition": {
                   "Binding": {
@@ -1481,6 +1430,148 @@
                   }
                 ]
               },
+              "lieux": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "lieux"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "lieux": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "lieux.ID": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "lieux",
+                    "ConceptualProperty": "ID"
+                  }
+                },
+                "NameType": "Identifier",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ID": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "identification": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "identity": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "credential": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "lieux.coordonnée": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "lieux",
+                    "ConceptualProperty": "Coordonnées"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "coordonnée": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "lieux.lattitude": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "lieux",
+                    "ConceptualProperty": "Lattitude"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "lattitude": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "lieux.longitude": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "lieux",
+                    "ConceptualProperty": "Longitude"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "longitude": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "lieux.oblast": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "lieux",
+                    "ConceptualProperty": "Oblast"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "oblast": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "lieux.ville": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "lieux",
+                    "ConceptualProperty": "Ville"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ville": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
               "mesure": {
                 "Definition": {
                   "Binding": {
@@ -1511,7 +1602,7 @@
                     }
                   },
                   {
-                    "Bombardements": {
+                    "Bombardements notables": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -1551,15 +1642,28 @@
                     "combats": {
                       "State": "Generated"
                     }
+                  }
+                ]
+              },
+              "mesure.constante_1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Mesures",
+                    "ConceptualProperty": "Constante_1"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "constante 1": {
+                      "State": "Generated"
+                    }
                   },
                   {
-                    "Assauts russes": {
-                      "Source": {
-                        "Agent": "PowerBI.VisualColumnRename",
-                        "Type": "External"
-                      },
-                      "State": "Suggested",
-                      "Weight": 0.9
+                    "Constante_1": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
                     }
                   }
                 ]
@@ -1620,6 +1724,122 @@
                       "State": "Suggested",
                       "Type": "Noun",
                       "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "mesure.dernière_progression": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Mesures",
+                    "ConceptualProperty": "Dernière progression"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "dernière progression": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "dernière development": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "dernière evolution": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "dernière headway": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "dernière movement": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "dernière advancement": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "dernière advance": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "dernière progress": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "dernière series": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  },
+                  {
+                    "dernière succession": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  },
+                  {
+                    "dernière sequel": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
                     }
                   }
                 ]
@@ -1807,18 +2027,28 @@
                   }
                 ]
               },
-              "mesure.nombre_pertes_humaines": {
+              "mesure.nb_pertes_humaines": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Mesures",
-                    "ConceptualProperty": "nombre pertes humaines"
+                    "ConceptualProperty": "nb pertes humaines"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "nombre pertes humaines": {
+                    "nb pertes humaines": {
                       "State": "Generated"
+                    }
+                  },
+                  {
+                    "Personnel": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
                     }
                   }
                 ]
@@ -1942,7 +2172,7 @@
                     }
                   },
                   {
-                    "Destructions confirmées": {
+                    "Pertes matérielles confirmées": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -1964,6 +2194,22 @@
                 "Terms": [
                   {
                     "points d'intérêt": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "mesure.progression_dernier_mois": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Mesures",
+                    "ConceptualProperty": "Progression dernier mois"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "progression dernier mois": {
                       "State": "Generated"
                     }
                   }
@@ -2025,6 +2271,134 @@
                   {
                     "titre 2": {
                       "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "mesure.titrefront": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Mesures",
+                    "ConceptualProperty": "Titre-front"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "titre-front": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "titre front": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "front": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "titre-facade": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.482
+                    }
+                  },
+                  {
+                    "titre-façade": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.482
+                    }
+                  },
+                  {
+                    "titre-frontage": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.482
+                    }
+                  },
+                  {
+                    "obverse": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "forward-facing": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "opposite": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "titre facade": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  },
+                  {
+                    "titre façade": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  },
+                  {
+                    "titre frontage": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.475
+                    }
+                  },
+                  {
+                    "titre-face": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.468
                     }
                   }
                 ]
@@ -2574,6 +2948,49 @@
                   }
                 ]
               },
+              "pertes_UA.num_semaine": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Pertes_UA",
+                    "ConceptualProperty": "NumSemaine"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "num semaine": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "NumSemaine": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "number semaine": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  },
+                  {
+                    "Semaine": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
               "pertes_UA.perte": {
                 "Definition": {
                   "Binding": {
@@ -2706,6 +3123,410 @@
                   }
                 ]
               },
+              "test_event": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Test events"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "test event": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "event": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "test occurrence": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "test affair": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "test episode": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "occurrence": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "affair": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "episode": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "test occasion": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "test happening": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "test incident": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "test experience": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  }
+                ]
+              },
+              "test_event.date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Test events",
+                    "ConceptualProperty": "Date"
+                  }
+                },
+                "SemanticType": "Time",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "moment": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "period": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "test_event.date.variation.hiérarchie_de_date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Test events",
+                    "Hierarchy": "Hiérarchie de dates",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "hiérarchie de date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "hiérarchie de moment": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.762
+                    }
+                  },
+                  {
+                    "hiérarchie de period": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.739
+                    }
+                  }
+                ]
+              },
+              "test_event.date.variation.hiérarchie_de_date.année": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Test events",
+                    "Hierarchy": "Hiérarchie de dates",
+                    "HierarchyLevel": "Année",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "année": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date année": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "moment année": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "period année": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "test_event.date.variation.hiérarchie_de_date.jour": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Test events",
+                    "Hierarchy": "Hiérarchie de dates",
+                    "HierarchyLevel": "Jour",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "jour": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date jour": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "moment jour": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "period jour": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "test_event.date.variation.hiérarchie_de_date.mois": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Test events",
+                    "Hierarchy": "Hiérarchie de dates",
+                    "HierarchyLevel": "Mois",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "mois": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date mois": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "moment mois": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "period mois": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "test_event.date.variation.hiérarchie_de_date.trimestre": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Test events",
+                    "Hierarchy": "Hiérarchie de dates",
+                    "HierarchyLevel": "Trimestre",
+                    "VariationSet": "Variation",
+                    "VariationSource": "Date"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "trimestre": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date trimestre": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "moment trimestre": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.6
+                    }
+                  },
+                  {
+                    "period trimestre": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "test_event.texte": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Test events",
+                    "ConceptualProperty": "Texte"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "texte": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "test_event.titre": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Test events",
+                    "ConceptualProperty": "Titre"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "titre": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
               "texte": {
                 "Definition": {
                   "Binding": {
@@ -2774,220 +3595,6 @@
                   }
                 ]
               },
-              "texte.date.variation.hiérarchie_de_date": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Texte",
-                    "Hierarchy": "Hiérarchie de dates",
-                    "VariationSet": "Variation",
-                    "VariationSource": "Date"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "hiérarchie de date": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "hiérarchie de moment": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.762
-                    }
-                  },
-                  {
-                    "hiérarchie de period": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.739
-                    }
-                  }
-                ]
-              },
-              "texte.date.variation.hiérarchie_de_date.année": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Texte",
-                    "Hierarchy": "Hiérarchie de dates",
-                    "HierarchyLevel": "Année",
-                    "VariationSet": "Variation",
-                    "VariationSource": "Date"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "année": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "date année": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "moment année": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.6
-                    }
-                  },
-                  {
-                    "period année": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.582
-                    }
-                  }
-                ]
-              },
-              "texte.date.variation.hiérarchie_de_date.jour": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Texte",
-                    "Hierarchy": "Hiérarchie de dates",
-                    "HierarchyLevel": "Jour",
-                    "VariationSet": "Variation",
-                    "VariationSource": "Date"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "jour": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "date jour": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "moment jour": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.6
-                    }
-                  },
-                  {
-                    "period jour": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.582
-                    }
-                  }
-                ]
-              },
-              "texte.date.variation.hiérarchie_de_date.mois": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Texte",
-                    "Hierarchy": "Hiérarchie de dates",
-                    "HierarchyLevel": "Mois",
-                    "VariationSet": "Variation",
-                    "VariationSource": "Date"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "mois": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "date mois": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "moment mois": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.6
-                    }
-                  },
-                  {
-                    "period mois": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.582
-                    }
-                  }
-                ]
-              },
-              "texte.date.variation.hiérarchie_de_date.trimestre": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Texte",
-                    "Hierarchy": "Hiérarchie de dates",
-                    "HierarchyLevel": "Trimestre",
-                    "VariationSet": "Variation",
-                    "VariationSource": "Date"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "trimestre": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "date trimestre": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "moment trimestre": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.6
-                    }
-                  },
-                  {
-                    "period trimestre": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.582
-                    }
-                  }
-                ]
-              },
               "texte.datetitre": {
                 "Definition": {
                   "Binding": {
@@ -3050,150 +3657,34 @@
                   }
                 ]
               },
-              "texte.groupe": {
+              "texte.prio": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Texte",
-                    "ConceptualProperty": "Groupe"
+                    "ConceptualProperty": "Prio"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "groupe": {
+                    "prio": {
                       "State": "Generated"
                     }
                   }
                 ]
               },
-              "texte.ordre": {
+              "texte.résumé": {
                 "Definition": {
                   "Binding": {
                     "ConceptualEntity": "Texte",
-                    "ConceptualProperty": "Ordre"
+                    "ConceptualProperty": "Résumé"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "ordre": {
+                    "résumé": {
                       "State": "Generated"
-                    }
-                  }
-                ]
-              },
-              "texte.test": {
-                "Definition": {
-                  "Binding": {
-                    "ConceptualEntity": "Texte",
-                    "ConceptualProperty": "test"
-                  }
-                },
-                "State": "Generated",
-                "Terms": [
-                  {
-                    "test": {
-                      "State": "Generated"
-                    }
-                  },
-                  {
-                    "examination": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.491
-                    }
-                  },
-                  {
-                    "exam": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.491
-                    }
-                  },
-                  {
-                    "assessment": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.491
-                    }
-                  },
-                  {
-                    "investigation": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.491
-                    }
-                  },
-                  {
-                    "analysis": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.491
-                    }
-                  },
-                  {
-                    "quiz": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "trial": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "check": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "experiment": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
-                    }
-                  },
-                  {
-                    "assay": {
-                      "Source": {
-                        "Agent": "Thesaurus"
-                      },
-                      "State": "Suggested",
-                      "Type": "Noun",
-                      "Weight": 0.476
                     }
                   }
                 ]
@@ -3461,105 +3952,6 @@
             },
             "Language": "en-US",
             "Relationships": {
-              "assauts_russ_has_assauts_russ": {
-                "Binding": {
-                  "ConceptualEntity": "Assauts russes"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "assauts_russ.assauts_russ"
-                      },
-                      "Subject": {
-                        "Role": "assauts_russ"
-                      }
-                    },
-                    "ID": "assauts_russ_have_assauts_russ",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "assauts_russ": {
-                    "Target": {
-                      "Entity": "assauts_russ"
-                    }
-                  },
-                  "assauts_russ.assauts_russ": {
-                    "Target": {
-                      "Entity": "assauts_russ.assauts_russ"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "assauts_russ_has_calendrier": {
-                "Binding": {
-                  "ConceptualEntity": "Assauts russes"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "calendrier"
-                      },
-                      "Subject": {
-                        "Role": "assauts_russ"
-                      }
-                    },
-                    "ID": "assauts_russ_have_calendriers",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "assauts_russ": {
-                    "Target": {
-                      "Entity": "assauts_russ"
-                    }
-                  },
-                  "calendrier": {
-                    "Target": {
-                      "Entity": "calendrier"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "assauts_russ_has_date": {
-                "Binding": {
-                  "ConceptualEntity": "Assauts russes"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "assauts_russ.date"
-                      },
-                      "Subject": {
-                        "Role": "assauts_russ"
-                      }
-                    },
-                    "ID": "assauts_russ_have_dates",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "assauts_russ": {
-                    "Target": {
-                      "Entity": "assauts_russ"
-                    }
-                  },
-                  "assauts_russ.date": {
-                    "Target": {
-                      "Entity": "assauts_russ.date"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
               "calendrier_date_has_variation_hiérarchie_de_date": {
                 "Binding": {
                   "ConceptualEntity": "Calendrier"
@@ -3574,7 +3966,7 @@
                         "Role": "calendrier.date"
                       }
                     },
-                    "ID": "dates_have_hiérarchie_de_dates2",
+                    "ID": "dates_have_hiérarchie_de_dates1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -3607,7 +3999,7 @@
                         "Role": "calendrier.date.variation.hiérarchie_de_date.année"
                       }
                     },
-                    "ID": "années_have_trimestres2",
+                    "ID": "années_have_trimestres",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -3620,12 +4012,12 @@
                         "Role": "calendrier.date.variation.hiérarchie_de_date.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_années2",
+                    "ID": "trimestres_have_années",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_années",
+                    "ID": "trimestres_are_in_années1",
                     "Preposition": {
                       "Object": {
                         "Role": "calendrier.date.variation.hiérarchie_de_date.année"
@@ -3673,7 +4065,7 @@
                         "Role": "calendrier.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_années2",
+                    "ID": "hiérarchie_de_dates_have_années1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -3706,7 +4098,7 @@
                         "Role": "calendrier.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour2",
+                    "ID": "hiérarchie_de_dates_have_jour1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -3739,7 +4131,7 @@
                         "Role": "calendrier.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises2",
+                    "ID": "hiérarchie_de_dates_have_moises1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -3772,7 +4164,7 @@
                         "Role": "calendrier.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_trimestres2",
+                    "ID": "hiérarchie_de_dates_have_trimestres1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -3805,7 +4197,7 @@
                         "Role": "calendrier.date.variation.hiérarchie_de_date.mois"
                       }
                     },
-                    "ID": "moises_have_jour1",
+                    "ID": "moises_have_jour",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -3818,12 +4210,12 @@
                         "Role": "calendrier.date.variation.hiérarchie_de_date.jour"
                       }
                     },
-                    "ID": "jour_have_moises1",
+                    "ID": "jour_have_moises",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "jour_are_in_moises",
+                    "ID": "jour_are_in_moises1",
                     "Preposition": {
                       "Object": {
                         "Role": "calendrier.date.variation.hiérarchie_de_date.mois"
@@ -3871,7 +4263,7 @@
                         "Role": "calendrier.date.variation.hiérarchie_de_date.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_moises1",
+                    "ID": "trimestres_have_moises",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -3884,12 +4276,12 @@
                         "Role": "calendrier.date.variation.hiérarchie_de_date.mois"
                       }
                     },
-                    "ID": "moises_have_trimestres1",
+                    "ID": "moises_have_trimestres",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "moises_are_in_trimestres",
+                    "ID": "moises_are_in_trimestres1",
                     "Preposition": {
                       "Object": {
                         "Role": "calendrier.date.variation.hiérarchie_de_date.trimestre"
@@ -3918,39 +4310,6 @@
                   "calendrier.date.variation.hiérarchie_de_date.trimestre": {
                     "Target": {
                       "Entity": "calendrier.date.variation.hiérarchie_de_date.trimestre"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
-              "calendrier_has_assauts_russ": {
-                "Binding": {
-                  "ConceptualEntity": "Calendrier"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "assauts_russ"
-                      },
-                      "Subject": {
-                        "Role": "calendrier"
-                      }
-                    },
-                    "ID": "calendriers_have_assauts_russ",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "assauts_russ": {
-                    "Target": {
-                      "Entity": "assauts_russ"
-                    }
-                  },
-                  "calendrier": {
-                    "Target": {
-                      "Entity": "calendrier"
                     }
                   }
                 },
@@ -4017,6 +4376,39 @@
                   "calendrier.jour_dinvasion": {
                     "Target": {
                       "Entity": "calendrier.jour_dinvasion"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "calendrier_has_numéro_semaine": {
+                "Binding": {
+                  "ConceptualEntity": "Calendrier"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "calendrier.numéro_semaine"
+                      },
+                      "Subject": {
+                        "Role": "calendrier"
+                      }
+                    },
+                    "ID": "calendriers_have_numéro_semaines",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "calendrier": {
+                    "Target": {
+                      "Entity": "calendrier"
+                    }
+                  },
+                  "calendrier.numéro_semaine": {
+                    "Target": {
+                      "Entity": "calendrier.numéro_semaine"
                     }
                   }
                 },
@@ -4939,6 +5331,39 @@
                 },
                 "State": "Generated"
               },
+              "données_cartographique_has_test": {
+                "Binding": {
+                  "ConceptualEntity": "Données cartographiques"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "données_cartographique.test"
+                      },
+                      "Subject": {
+                        "Role": "données_cartographique"
+                      }
+                    },
+                    "ID": "données_cartographiques_have_tests",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "données_cartographique": {
+                    "Target": {
+                      "Entity": "données_cartographique"
+                    }
+                  },
+                  "données_cartographique.test": {
+                    "Target": {
+                      "Entity": "données_cartographique.test"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "données_cartographique_has_texte_affichage": {
                 "Binding": {
                   "ConceptualEntity": "Données cartographiques"
@@ -5038,6 +5463,217 @@
                 },
                 "State": "Generated"
               },
+              "lieux_has_ID": {
+                "Binding": {
+                  "ConceptualEntity": "lieux"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "lieux.ID"
+                      },
+                      "Subject": {
+                        "Role": "lieux"
+                      }
+                    },
+                    "ID": "lieuxes_have_ID",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "ID": "ID_are_names_IDs_of_lieuxes",
+                    "Name": {
+                      "Name": {
+                        "Role": "lieux.ID"
+                      },
+                      "Subject": {
+                        "Role": "lieux"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "lieux": {
+                    "Target": {
+                      "Entity": "lieux"
+                    }
+                  },
+                  "lieux.ID": {
+                    "Target": {
+                      "Entity": "lieux.ID"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "lieux_has_coordonnée": {
+                "Binding": {
+                  "ConceptualEntity": "lieux"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "lieux.coordonnée"
+                      },
+                      "Subject": {
+                        "Role": "lieux"
+                      }
+                    },
+                    "ID": "lieuxes_have_coordonnées",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "lieux": {
+                    "Target": {
+                      "Entity": "lieux"
+                    }
+                  },
+                  "lieux.coordonnée": {
+                    "Target": {
+                      "Entity": "lieux.coordonnée"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "lieux_has_lattitude": {
+                "Binding": {
+                  "ConceptualEntity": "lieux"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "lieux.lattitude"
+                      },
+                      "Subject": {
+                        "Role": "lieux"
+                      }
+                    },
+                    "ID": "lieuxes_have_lattitudes",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "lieux": {
+                    "Target": {
+                      "Entity": "lieux"
+                    }
+                  },
+                  "lieux.lattitude": {
+                    "Target": {
+                      "Entity": "lieux.lattitude"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "lieux_has_longitude": {
+                "Binding": {
+                  "ConceptualEntity": "lieux"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "lieux.longitude"
+                      },
+                      "Subject": {
+                        "Role": "lieux"
+                      }
+                    },
+                    "ID": "lieuxes_have_longitudes",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "lieux": {
+                    "Target": {
+                      "Entity": "lieux"
+                    }
+                  },
+                  "lieux.longitude": {
+                    "Target": {
+                      "Entity": "lieux.longitude"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "lieux_has_oblast": {
+                "Binding": {
+                  "ConceptualEntity": "lieux"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "lieux.oblast"
+                      },
+                      "Subject": {
+                        "Role": "lieux"
+                      }
+                    },
+                    "ID": "lieuxes_have_oblasts",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "lieux": {
+                    "Target": {
+                      "Entity": "lieux"
+                    }
+                  },
+                  "lieux.oblast": {
+                    "Target": {
+                      "Entity": "lieux.oblast"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "lieux_has_ville": {
+                "Binding": {
+                  "ConceptualEntity": "lieux"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "lieux.ville"
+                      },
+                      "Subject": {
+                        "Role": "lieux"
+                      }
+                    },
+                    "ID": "lieuxes_have_ville",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "lieux": {
+                    "Target": {
+                      "Entity": "lieux"
+                    }
+                  },
+                  "lieux.ville": {
+                    "Target": {
+                      "Entity": "lieux.ville"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "mesure_has_chars_détruits": {
                 "Binding": {
                   "ConceptualEntity": "Mesures"
@@ -5104,7 +5740,7 @@
                 },
                 "State": "Generated"
               },
-              "mesure_has_encart": {
+              "mesure_has_constante_1": {
                 "Binding": {
                   "ConceptualEntity": "Mesures"
                 },
@@ -5112,13 +5748,13 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "mesure.encart"
+                        "Role": "mesure.constante_1"
                       },
                       "Subject": {
                         "Role": "mesure"
                       }
                     },
-                    "ID": "mesures_have_encart",
+                    "ID": "mesures_have_constante_1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -5129,9 +5765,9 @@
                       "Entity": "mesure"
                     }
                   },
-                  "mesure.encart": {
+                  "mesure.constante_1": {
                     "Target": {
-                      "Entity": "mesure.encart"
+                      "Entity": "mesure.constante_1"
                     }
                   }
                 },
@@ -5368,39 +6004,6 @@
                 },
                 "State": "Generated"
               },
-              "mesure_has_titre_2": {
-                "Binding": {
-                  "ConceptualEntity": "Mesures"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "mesure.titre_2"
-                      },
-                      "Subject": {
-                        "Role": "mesure"
-                      }
-                    },
-                    "ID": "mesures_have_titre_2",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "mesure": {
-                    "Target": {
-                      "Entity": "mesure"
-                    }
-                  },
-                  "mesure.titre_2": {
-                    "Target": {
-                      "Entity": "mesure.titre_2"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
               "pertes_RU_confirmée_has_Column1_counts_damaged": {
                 "Binding": {
                   "ConceptualEntity": "Pertes RU confirmées"
@@ -5613,7 +6216,7 @@
                         "Role": "pertes_UA.date"
                       }
                     },
-                    "ID": "dates_have_hiérarchie_de_dates1",
+                    "ID": "dates_have_hiérarchie_de_dates2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -5664,7 +6267,7 @@
                     "Weight": 0.99
                   },
                   {
-                    "ID": "trimestres_are_in_années1",
+                    "ID": "trimestres_are_in_années",
                     "Preposition": {
                       "Object": {
                         "Role": "pertes_UA.date.variation.hiérarchie_de_date.année"
@@ -5712,7 +6315,7 @@
                         "Role": "pertes_UA.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_années1",
+                    "ID": "hiérarchie_de_dates_have_années2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -5745,7 +6348,7 @@
                         "Role": "pertes_UA.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour1",
+                    "ID": "hiérarchie_de_dates_have_jour2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -5778,7 +6381,7 @@
                         "Role": "pertes_UA.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises1",
+                    "ID": "hiérarchie_de_dates_have_moises2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -5811,7 +6414,7 @@
                         "Role": "pertes_UA.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_trimestres1",
+                    "ID": "hiérarchie_de_dates_have_trimestres2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -5844,7 +6447,7 @@
                         "Role": "pertes_UA.date.variation.hiérarchie_de_date.mois"
                       }
                     },
-                    "ID": "moises_have_jour",
+                    "ID": "moises_have_jour1",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -5857,12 +6460,12 @@
                         "Role": "pertes_UA.date.variation.hiérarchie_de_date.jour"
                       }
                     },
-                    "ID": "jour_have_moises",
+                    "ID": "jour_have_moises1",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "jour_are_in_moises1",
+                    "ID": "jour_are_in_moises",
                     "Preposition": {
                       "Object": {
                         "Role": "pertes_UA.date.variation.hiérarchie_de_date.mois"
@@ -5910,7 +6513,7 @@
                         "Role": "pertes_UA.date.variation.hiérarchie_de_date.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_moises",
+                    "ID": "trimestres_have_moises1",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -5923,12 +6526,12 @@
                         "Role": "pertes_UA.date.variation.hiérarchie_de_date.mois"
                       }
                     },
-                    "ID": "moises_have_trimestres",
+                    "ID": "moises_have_trimestres1",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
-                    "ID": "moises_are_in_trimestres1",
+                    "ID": "moises_are_in_trimestres",
                     "Preposition": {
                       "Object": {
                         "Role": "pertes_UA.date.variation.hiérarchie_de_date.trimestre"
@@ -6041,6 +6644,39 @@
                 },
                 "State": "Generated"
               },
+              "pertes_UA_has_mesure_dernière_progression": {
+                "Binding": {
+                  "ConceptualEntity": "Pertes_UA"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "mesure.dernière_progression"
+                      },
+                      "Subject": {
+                        "Role": "pertes_UA"
+                      }
+                    },
+                    "ID": "pertes_UA_have_dernière_progression",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "mesure.dernière_progression": {
+                    "Target": {
+                      "Entity": "mesure.dernière_progression"
+                    }
+                  },
+                  "pertes_UA": {
+                    "Target": {
+                      "Entity": "pertes_UA"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "pertes_UA_has_mesure_dernière_progression_pertes": {
                 "Binding": {
                   "ConceptualEntity": "Pertes_UA"
@@ -6074,7 +6710,7 @@
                 },
                 "State": "Generated"
               },
-              "pertes_UA_has_mesure_nombre_pertes_humaines": {
+              "pertes_UA_has_mesure_nb_pertes_humaines": {
                 "Binding": {
                   "ConceptualEntity": "Pertes_UA"
                 },
@@ -6082,21 +6718,21 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "mesure.nombre_pertes_humaines"
+                        "Role": "mesure.nb_pertes_humaines"
                       },
                       "Subject": {
                         "Role": "pertes_UA"
                       }
                     },
-                    "ID": "pertes_UA_have_nombre_pertes_humaines",
+                    "ID": "pertes_UA_have_nb_pertes_humaines",
                     "State": "Generated",
                     "Weight": 0.99
                   }
                 ],
                 "Roles": {
-                  "mesure.nombre_pertes_humaines": {
+                  "mesure.nb_pertes_humaines": {
                     "Target": {
-                      "Entity": "mesure.nombre_pertes_humaines"
+                      "Entity": "mesure.nb_pertes_humaines"
                     }
                   },
                   "pertes_UA": {
@@ -6130,6 +6766,39 @@
                   "mesure.pertes_totales_UA": {
                     "Target": {
                       "Entity": "mesure.pertes_totales_UA"
+                    }
+                  },
+                  "pertes_UA": {
+                    "Target": {
+                      "Entity": "pertes_UA"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "pertes_UA_has_mesure_progression_dernier_mois": {
+                "Binding": {
+                  "ConceptualEntity": "Pertes_UA"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "mesure.progression_dernier_mois"
+                      },
+                      "Subject": {
+                        "Role": "pertes_UA"
+                      }
+                    },
+                    "ID": "pertes_UA_have_progression_dernier_mois",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "mesure.progression_dernier_mois": {
+                    "Target": {
+                      "Entity": "mesure.progression_dernier_mois"
                     }
                   },
                   "pertes_UA": {
@@ -6206,6 +6875,39 @@
                 },
                 "State": "Generated"
               },
+              "pertes_UA_has_num_semaine": {
+                "Binding": {
+                  "ConceptualEntity": "Pertes_UA"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "pertes_UA.num_semaine"
+                      },
+                      "Subject": {
+                        "Role": "pertes_UA"
+                      }
+                    },
+                    "ID": "pertes_UA_have_num_semaines",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "pertes_UA": {
+                    "Target": {
+                      "Entity": "pertes_UA"
+                    }
+                  },
+                  "pertes_UA.num_semaine": {
+                    "Target": {
+                      "Entity": "pertes_UA.num_semaine"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "pertes_UA_has_perte": {
                 "Binding": {
                   "ConceptualEntity": "Pertes_UA"
@@ -6272,18 +6974,18 @@
                 },
                 "State": "Generated"
               },
-              "texte_date_has_variation_hiérarchie_de_date": {
+              "test_event_date_has_variation_hiérarchie_de_date": {
                 "Binding": {
-                  "ConceptualEntity": "Texte"
+                  "ConceptualEntity": "Test events"
                 },
                 "Phrasings": [
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "texte.date.variation.hiérarchie_de_date"
+                        "Role": "test_event.date.variation.hiérarchie_de_date"
                       },
                       "Subject": {
-                        "Role": "texte.date"
+                        "Role": "test_event.date"
                       }
                     },
                     "ID": "dates_have_hiérarchie_de_dates",
@@ -6292,47 +6994,47 @@
                   }
                 ],
                 "Roles": {
-                  "texte.date": {
+                  "test_event.date": {
                     "Target": {
-                      "Entity": "texte.date"
+                      "Entity": "test_event.date"
                     }
                   },
-                  "texte.date.variation.hiérarchie_de_date": {
+                  "test_event.date.variation.hiérarchie_de_date": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "texte_date_variation_hiérarchie_de_date_année_has_texte_date_variation_hiérarchie_de_date_trimestre": {
+              "test_event_date_variation_hiérarchie_de_date_année_has_test_event_date_variation_hiérarchie_de_date_trimestre": {
                 "Binding": {
-                  "ConceptualEntity": "Texte"
+                  "ConceptualEntity": "Test events"
                 },
                 "Phrasings": [
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.trimestre"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.trimestre"
                       },
                       "Subject": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.année"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.année"
                       }
                     },
-                    "ID": "années_have_trimestres",
+                    "ID": "années_have_trimestres2",
                     "State": "Generated",
                     "Weight": 0.99
                   },
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.année"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.année"
                       },
                       "Subject": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.trimestre"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.trimestre"
                       }
                     },
-                    "ID": "trimestres_have_années",
+                    "ID": "trimestres_have_années2",
                     "State": "Generated",
                     "Weight": 0.99
                   },
@@ -6340,7 +7042,7 @@
                     "ID": "trimestres_are_in_années2",
                     "Preposition": {
                       "Object": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.année"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.année"
                       },
                       "Prepositions": [
                         {
@@ -6350,7 +7052,7 @@
                         }
                       ],
                       "Subject": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.trimestre"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.trimestre"
                       }
                     },
                     "State": "Generated",
@@ -6358,31 +7060,31 @@
                   }
                 ],
                 "Roles": {
-                  "texte.date.variation.hiérarchie_de_date.année": {
+                  "test_event.date.variation.hiérarchie_de_date.année": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date.année"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date.année"
                     }
                   },
-                  "texte.date.variation.hiérarchie_de_date.trimestre": {
+                  "test_event.date.variation.hiérarchie_de_date.trimestre": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date.trimestre"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date.trimestre"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "texte_date_variation_hiérarchie_de_date_has_année": {
+              "test_event_date_variation_hiérarchie_de_date_has_année": {
                 "Binding": {
-                  "ConceptualEntity": "Texte"
+                  "ConceptualEntity": "Test events"
                 },
                 "Phrasings": [
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.année"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.année"
                       },
                       "Subject": {
-                        "Role": "texte.date.variation.hiérarchie_de_date"
+                        "Role": "test_event.date.variation.hiérarchie_de_date"
                       }
                     },
                     "ID": "hiérarchie_de_dates_have_années",
@@ -6391,31 +7093,31 @@
                   }
                 ],
                 "Roles": {
-                  "texte.date.variation.hiérarchie_de_date": {
+                  "test_event.date.variation.hiérarchie_de_date": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date"
                     }
                   },
-                  "texte.date.variation.hiérarchie_de_date.année": {
+                  "test_event.date.variation.hiérarchie_de_date.année": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date.année"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date.année"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "texte_date_variation_hiérarchie_de_date_has_jour": {
+              "test_event_date_variation_hiérarchie_de_date_has_jour": {
                 "Binding": {
-                  "ConceptualEntity": "Texte"
+                  "ConceptualEntity": "Test events"
                 },
                 "Phrasings": [
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.jour"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.jour"
                       },
                       "Subject": {
-                        "Role": "texte.date.variation.hiérarchie_de_date"
+                        "Role": "test_event.date.variation.hiérarchie_de_date"
                       }
                     },
                     "ID": "hiérarchie_de_dates_have_jour",
@@ -6424,31 +7126,31 @@
                   }
                 ],
                 "Roles": {
-                  "texte.date.variation.hiérarchie_de_date": {
+                  "test_event.date.variation.hiérarchie_de_date": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date"
                     }
                   },
-                  "texte.date.variation.hiérarchie_de_date.jour": {
+                  "test_event.date.variation.hiérarchie_de_date.jour": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date.jour"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date.jour"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "texte_date_variation_hiérarchie_de_date_has_mois": {
+              "test_event_date_variation_hiérarchie_de_date_has_mois": {
                 "Binding": {
-                  "ConceptualEntity": "Texte"
+                  "ConceptualEntity": "Test events"
                 },
                 "Phrasings": [
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.mois"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.mois"
                       },
                       "Subject": {
-                        "Role": "texte.date.variation.hiérarchie_de_date"
+                        "Role": "test_event.date.variation.hiérarchie_de_date"
                       }
                     },
                     "ID": "hiérarchie_de_dates_have_moises",
@@ -6457,31 +7159,31 @@
                   }
                 ],
                 "Roles": {
-                  "texte.date.variation.hiérarchie_de_date": {
+                  "test_event.date.variation.hiérarchie_de_date": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date"
                     }
                   },
-                  "texte.date.variation.hiérarchie_de_date.mois": {
+                  "test_event.date.variation.hiérarchie_de_date.mois": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date.mois"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date.mois"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "texte_date_variation_hiérarchie_de_date_has_trimestre": {
+              "test_event_date_variation_hiérarchie_de_date_has_trimestre": {
                 "Binding": {
-                  "ConceptualEntity": "Texte"
+                  "ConceptualEntity": "Test events"
                 },
                 "Phrasings": [
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.trimestre"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.trimestre"
                       },
                       "Subject": {
-                        "Role": "texte.date.variation.hiérarchie_de_date"
+                        "Role": "test_event.date.variation.hiérarchie_de_date"
                       }
                     },
                     "ID": "hiérarchie_de_dates_have_trimestres",
@@ -6490,31 +7192,31 @@
                   }
                 ],
                 "Roles": {
-                  "texte.date.variation.hiérarchie_de_date": {
+                  "test_event.date.variation.hiérarchie_de_date": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date"
                     }
                   },
-                  "texte.date.variation.hiérarchie_de_date.trimestre": {
+                  "test_event.date.variation.hiérarchie_de_date.trimestre": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date.trimestre"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date.trimestre"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "texte_date_variation_hiérarchie_de_date_mois_has_texte_date_variation_hiérarchie_de_date_jour": {
+              "test_event_date_variation_hiérarchie_de_date_mois_has_test_event_date_variation_hiérarchie_de_date_jour": {
                 "Binding": {
-                  "ConceptualEntity": "Texte"
+                  "ConceptualEntity": "Test events"
                 },
                 "Phrasings": [
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.jour"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.jour"
                       },
                       "Subject": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.mois"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.mois"
                       }
                     },
                     "ID": "moises_have_jour2",
@@ -6524,10 +7226,10 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.mois"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.mois"
                       },
                       "Subject": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.jour"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.jour"
                       }
                     },
                     "ID": "jour_have_moises2",
@@ -6538,7 +7240,7 @@
                     "ID": "jour_are_in_moises2",
                     "Preposition": {
                       "Object": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.mois"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.mois"
                       },
                       "Prepositions": [
                         {
@@ -6548,7 +7250,7 @@
                         }
                       ],
                       "Subject": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.jour"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.jour"
                       }
                     },
                     "State": "Generated",
@@ -6556,31 +7258,31 @@
                   }
                 ],
                 "Roles": {
-                  "texte.date.variation.hiérarchie_de_date.jour": {
+                  "test_event.date.variation.hiérarchie_de_date.jour": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date.jour"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date.jour"
                     }
                   },
-                  "texte.date.variation.hiérarchie_de_date.mois": {
+                  "test_event.date.variation.hiérarchie_de_date.mois": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date.mois"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date.mois"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "texte_date_variation_hiérarchie_de_date_trimestre_has_texte_date_variation_hiérarchie_de_date_mois": {
+              "test_event_date_variation_hiérarchie_de_date_trimestre_has_test_event_date_variation_hiérarchie_de_date_mois": {
                 "Binding": {
-                  "ConceptualEntity": "Texte"
+                  "ConceptualEntity": "Test events"
                 },
                 "Phrasings": [
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.mois"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.mois"
                       },
                       "Subject": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.trimestre"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.trimestre"
                       }
                     },
                     "ID": "trimestres_have_moises2",
@@ -6590,10 +7292,10 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.trimestre"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.trimestre"
                       },
                       "Subject": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.mois"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.mois"
                       }
                     },
                     "ID": "moises_have_trimestres2",
@@ -6604,7 +7306,7 @@
                     "ID": "moises_are_in_trimestres2",
                     "Preposition": {
                       "Object": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.trimestre"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.trimestre"
                       },
                       "Prepositions": [
                         {
@@ -6614,7 +7316,7 @@
                         }
                       ],
                       "Subject": {
-                        "Role": "texte.date.variation.hiérarchie_de_date.mois"
+                        "Role": "test_event.date.variation.hiérarchie_de_date.mois"
                       }
                     },
                     "State": "Generated",
@@ -6622,14 +7324,159 @@
                   }
                 ],
                 "Roles": {
-                  "texte.date.variation.hiérarchie_de_date.mois": {
+                  "test_event.date.variation.hiérarchie_de_date.mois": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date.mois"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date.mois"
                     }
                   },
-                  "texte.date.variation.hiérarchie_de_date.trimestre": {
+                  "test_event.date.variation.hiérarchie_de_date.trimestre": {
                     "Target": {
-                      "Entity": "texte.date.variation.hiérarchie_de_date.trimestre"
+                      "Entity": "test_event.date.variation.hiérarchie_de_date.trimestre"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "test_event_has_date": {
+                "Binding": {
+                  "ConceptualEntity": "Test events"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "test_event.date"
+                      },
+                      "Subject": {
+                        "Role": "test_event"
+                      }
+                    },
+                    "ID": "test_events_have_dates",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "test_event": {
+                    "Target": {
+                      "Entity": "test_event"
+                    }
+                  },
+                  "test_event.date": {
+                    "Target": {
+                      "Entity": "test_event.date"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "test_event_has_texte": {
+                "Binding": {
+                  "ConceptualEntity": "Test events"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "test_event.texte"
+                      },
+                      "Subject": {
+                        "Role": "test_event"
+                      }
+                    },
+                    "ID": "test_events_have_textes",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "test_event": {
+                    "Target": {
+                      "Entity": "test_event"
+                    }
+                  },
+                  "test_event.texte": {
+                    "Target": {
+                      "Entity": "test_event.texte"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "test_event_has_titre": {
+                "Binding": {
+                  "ConceptualEntity": "Test events"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "test_event.titre"
+                      },
+                      "Subject": {
+                        "Role": "test_event"
+                      }
+                    },
+                    "ID": "test_events_have_titres",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "test_event": {
+                    "Target": {
+                      "Entity": "test_event"
+                    }
+                  },
+                  "test_event.titre": {
+                    "Target": {
+                      "Entity": "test_event.titre"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "texte_has_calendrier": {
+                "Binding": {
+                  "ConceptualEntity": "Texte"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "calendrier"
+                      },
+                      "Subject": {
+                        "Role": "texte"
+                      }
+                    },
+                    "ID": "textes_have_calendriers",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "texte"
+                      },
+                      "Subject": {
+                        "Role": "calendrier"
+                      }
+                    },
+                    "ID": "calendriers_have_textes",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "calendrier": {
+                    "Target": {
+                      "Entity": "calendrier"
+                    }
+                  },
+                  "texte": {
+                    "Target": {
+                      "Entity": "texte"
                     }
                   }
                 },
@@ -6734,39 +7581,6 @@
                 },
                 "State": "Generated"
               },
-              "texte_has_groupe": {
-                "Binding": {
-                  "ConceptualEntity": "Texte"
-                },
-                "Phrasings": [
-                  {
-                    "Attribute": {
-                      "Object": {
-                        "Role": "texte.groupe"
-                      },
-                      "Subject": {
-                        "Role": "texte"
-                      }
-                    },
-                    "ID": "textes_have_groupes",
-                    "State": "Generated",
-                    "Weight": 0.99
-                  }
-                ],
-                "Roles": {
-                  "texte": {
-                    "Target": {
-                      "Entity": "texte"
-                    }
-                  },
-                  "texte.groupe": {
-                    "Target": {
-                      "Entity": "texte.groupe"
-                    }
-                  }
-                },
-                "State": "Generated"
-              },
               "texte_has_mesure_date_max": {
                 "Binding": {
                   "ConceptualEntity": "Texte"
@@ -6800,7 +7614,7 @@
                 },
                 "State": "Generated"
               },
-              "texte_has_ordre": {
+              "texte_has_mesure_encart": {
                 "Binding": {
                   "ConceptualEntity": "Texte"
                 },
@@ -6808,32 +7622,32 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "texte.ordre"
+                        "Role": "mesure.encart"
                       },
                       "Subject": {
                         "Role": "texte"
                       }
                     },
-                    "ID": "textes_have_ordres",
+                    "ID": "textes_have_encart",
                     "State": "Generated",
                     "Weight": 0.99
                   }
                 ],
                 "Roles": {
+                  "mesure.encart": {
+                    "Target": {
+                      "Entity": "mesure.encart"
+                    }
+                  },
                   "texte": {
                     "Target": {
                       "Entity": "texte"
-                    }
-                  },
-                  "texte.ordre": {
-                    "Target": {
-                      "Entity": "texte.ordre"
                     }
                   }
                 },
                 "State": "Generated"
               },
-              "texte_has_test": {
+              "texte_has_mesure_titre_2": {
                 "Binding": {
                   "ConceptualEntity": "Texte"
                 },
@@ -6841,13 +7655,79 @@
                   {
                     "Attribute": {
                       "Object": {
-                        "Role": "texte.test"
+                        "Role": "mesure.titre_2"
                       },
                       "Subject": {
                         "Role": "texte"
                       }
                     },
-                    "ID": "textes_have_tests",
+                    "ID": "textes_have_titre_2",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "mesure.titre_2": {
+                    "Target": {
+                      "Entity": "mesure.titre_2"
+                    }
+                  },
+                  "texte": {
+                    "Target": {
+                      "Entity": "texte"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "texte_has_mesure_titrefront": {
+                "Binding": {
+                  "ConceptualEntity": "Texte"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "mesure.titrefront"
+                      },
+                      "Subject": {
+                        "Role": "texte"
+                      }
+                    },
+                    "ID": "textes_have_titrefront",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "mesure.titrefront": {
+                    "Target": {
+                      "Entity": "mesure.titrefront"
+                    }
+                  },
+                  "texte": {
+                    "Target": {
+                      "Entity": "texte"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "texte_has_prio": {
+                "Binding": {
+                  "ConceptualEntity": "Texte"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "texte.prio"
+                      },
+                      "Subject": {
+                        "Role": "texte"
+                      }
+                    },
+                    "ID": "textes_have_prios",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -6858,9 +7738,42 @@
                       "Entity": "texte"
                     }
                   },
-                  "texte.test": {
+                  "texte.prio": {
                     "Target": {
-                      "Entity": "texte.test"
+                      "Entity": "texte.prio"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "texte_has_résumé": {
+                "Binding": {
+                  "ConceptualEntity": "Texte"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "texte.résumé"
+                      },
+                      "Subject": {
+                        "Role": "texte"
+                      }
+                    },
+                    "ID": "textes_have_résumé",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "texte": {
+                    "Target": {
+                      "Entity": "texte"
+                    }
+                  },
+                  "texte.résumé": {
+                    "Target": {
+                      "Entity": "texte.résumé"
                     }
                   }
                 },
@@ -7119,7 +8032,7 @@
           "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Colonnes renommées\",{\"Index.1\", \"Attribut\"}),",
           "    #\"Personnalisée ajoutée\" = Table.AddColumn(#\"Colonnes supprimées\", \"Catégorie\", each \"Front\"),",
           "    #\"Colonnes renommées1\" = Table.RenameColumns(#\"Personnalisée ajoutée\",{{\"Catégorie\", \"Type\"}, {\"Longitude_dep\", \"Longitude départ\"}, {\"Lattitude_dep\", \"Lattitude départ\"}, {\"Longitude_arr\", \"Longitude arrivée\"}, {\"Lattitude_arr\", \"Lattitude arrivée\"}}),",
-          "    #\"Personnalisée ajoutée1\" = Table.AddColumn(#\"Colonnes renommées1\", \"Date\", each Date_Ref),",
+          "    #\"Personnalisée ajoutée1\" = Table.AddColumn(#\"Colonnes renommées1\", \"Date\", each date_référence),",
           "    #\"Type modifié\" = Table.TransformColumnTypes(#\"Personnalisée ajoutée1\",{{\"Date\", type date}}),",
           "    #\"Personnalisée ajoutée2\" = Table.AddColumn(#\"Type modifié\", \"Priorité\", each 0)",
           "in",
@@ -7177,11 +8090,10 @@
           "    #\"Personnalisée ajoutée2\" = Table.AddColumn(#\"Type modifié6\", \"Date_\", each #date(2000+[Date_.1],[Date_.2],[Date_.3])),",
           "    #\"Erreurs remplacées\" = Table.ReplaceErrorValues(#\"Personnalisée ajoutée2\", {{\"Date_\", null}}),",
           "    #\"Colonnes supprimées2\" = Table.RemoveColumns(#\"Erreurs remplacées\",{\"Nom - Copier.1\", \"Nom - Copier.2\", \"Date_.1\", \"Date_.2\", \"Date_.3\"}),",
-          "    #\"Personnalisée ajoutée3\" = Table.AddColumn(#\"Colonnes supprimées2\", \"Date\", each if [Date_]=null then Date_Ref else [Date_]),",
-          "    #\"Type modifié7\" = Table.TransformColumnTypes(#\"Personnalisée ajoutée3\",{{\"Date\", type date}}),",
-          "    Priorisation = Table.AddColumn(#\"Type modifié7\", \"Priorité\", each if( [name]=\"Russian Unit Positions\" or [name]=\"Ukrainian Unit Positions\") then 0.5 else 1),",
-          "    #\"Type modifié8\" = Table.TransformColumnTypes(Priorisation,{{\"Priorité\", type number}}),",
-          "    #\"Personnalisée ajoutée4\" = Table.AddColumn(#\"Type modifié8\", \"Récente ?\", each Date.IsInPreviousNDays([Date_],3)),",
+          "    Dater = Table.AddColumn(#\"Colonnes supprimées2\", \"Date\", each if [Date_]=null then date_référence else [Date_]),",
+          "    #\"Type modifié7\" = Table.TransformColumnTypes(Dater,{{\"Date\", type date}}),",
+          "    Priorisation = Table.AddColumn(#\"Type modifié7\", \"Priorité\", each   if( [name]=\"Russian Unit Positions\" or [name]=\"Ukrainian Unit Positions\") then 0.5 else 1),",
+          "    #\"Personnalisée ajoutée4\" = Table.AddColumn(Priorisation, \"Récente ?\", each Date.IsInPreviousNDays([Date_],7)),",
           "    #\"Colonnes supprimées3\" = Table.RemoveColumns(#\"Personnalisée ajoutée4\",{\"Date_\"})",
           "in",
           "    #\"Colonnes supprimées3\""
@@ -7337,15 +8249,14 @@
         "expression": [
           "let",
           "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1EguBfb3VzBaOqYtk6nFXaXIUn5XsR1CYBC3KNrR-1sw\"),",
-          "    #\"points clé_Table\" = Source{[name=\"points clé\",ItemKind=\"Table\"]}[Data],",
-          "    #\"En-têtes promus\" = Table.PromoteHeaders(#\"points clé_Table\", [PromoteAllScalars=true]),",
-          "    #\"Type modifié\" = Table.TransformColumnTypes(#\"En-têtes promus\",{{\"ID lieux\", type text}, {\"Type\", type text}, {\"Date\", type date}, {\"Commentaire\", type any}, {\"Priorité\", Int64.Type}, {\"Source\", type any}}),",
-          "    #\"Lignes filtrées\" = Table.SelectRows(#\"Type modifié\", each ([ID lieux] <> \"\")),",
-          "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Lignes filtrées\",{{\"Priorité\", \"Priorité_\"}}),",
-          "    #\"Personnalisée ajoutée\" = Table.AddColumn(#\"Colonnes renommées\", \"Priorité\", each [Priorité_]+1),",
-          "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Personnalisée ajoutée\",{\"Priorité_\"})",
+          "    #\"Historisation points clés_Table\" = Source{[name=\"Historisation points clés\",ItemKind=\"Table\"]}[Data],",
+          "    #\"En-têtes promus\" = Table.PromoteHeaders(#\"Historisation points clés_Table\", [PromoteAllScalars=true]),",
+          "    #\"Type modifié\" = Table.TransformColumnTypes(#\"En-têtes promus\",{{\"ID lieux\", type text}, {\"Type\", type text}, {\"Date\", type date}, {\"Commentaire\", type any}, {\"Importance\", Int64.Type}}),",
+          "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Type modifié\",{{\"Importance\", \"Priorité\"}, {\"_1\", \"Affichage\"}, {\"\", \"Source\"}}),",
+          "    #\"Lignes filtrées\" = Table.SelectRows(#\"Colonnes renommées\", each ([ID lieux] <> \"\")),",
+          "    #\"Lignes triées\" = Table.Sort(#\"Lignes filtrées\",{{\"Date\", Order.Descending}})",
           "in",
-          "    #\"Colonnes supprimées\""
+          "    #\"Lignes triées\""
         ],
         "kind": "m",
         "lineageTag": "9fea24e4-8d83-4ae8-95f4-dbda5c5075be",
@@ -7459,7 +8370,7 @@
         "lineageTag": "6f83f8de-1f5f-4268-a790-2568f54229ba"
       },
       {
-        "name": "lieux",
+        "name": "Points clés",
         "annotations": [
           {
             "name": "PBI_NavigationStepName",
@@ -7472,21 +8383,26 @@
         ],
         "expression": [
           "let",
-          "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1EguBfb3VzBaOqYtk6nFXaXIUn5XsR1CYBC3KNrR-1sw\"),",
-          "    lieux_Table = Source{[name=\"lieux\",ItemKind=\"Table\"]}[Data],",
-          "    #\"En-têtes promus\" = Table.PromoteHeaders(lieux_Table, [PromoteAllScalars=true]),",
-          "    #\"Type modifié\" = Table.TransformColumnTypes(#\"En-têtes promus\",{{\"Ville\", type text}, {\"Oblast\", type text}, {\"Coordonnées\", type text}, {\"Lattitude\", type text}, {\"Longitude\", type text}, {\"ID\", type text}}),",
-          "    #\"Lignes filtrées\" = Table.SelectRows(#\"Type modifié\", each ([Ville] <> \"\")),",
-          "    #\"Valeur remplacée\" = Table.ReplaceValue(#\"Lignes filtrées\",\".\",\",\",Replacer.ReplaceText,{\"Lattitude\", \"Longitude\"}),",
-          "    #\"Type modifié1\" = Table.TransformColumnTypes(#\"Valeur remplacée\",{{\"Lattitude\", type number}, {\"Longitude\", type number}})",
+          "    Source = Table.NestedJoin(#\"points clé\", {\"ID lieux\"}, lieux, {\"ID\"}, \"lieux\", JoinKind.LeftOuter),",
+          "    #\"lieux développé\" = Table.ExpandTableColumn(Source, \"lieux\", {\"Lattitude\", \"Longitude\", \"Ville\"}, {\"lieux.Lattitude\", \"lieux.Longitude\", \"lieux.Ville\"}),",
+          "    #\"Autres colonnes supprimées\" = Table.SelectColumns(#\"lieux développé\",{\"Type\", \"Priorité\", \"Affichage\", \"lieux.Lattitude\", \"lieux.Longitude\", \"lieux.Ville\"}),",
+          "    #\"Colonnes renommées1\" = Table.RenameColumns(#\"Autres colonnes supprimées\",{{\"Affichage\", \"Prio Affichage\"}}),",
+          "    #\"Duplication de la colonne\" = Table.DuplicateColumn(#\"Colonnes renommées1\", \"lieux.Lattitude\", \"lieux.Lattitude - Copier\"),",
+          "    #\"Duplication de la colonne1\" = Table.DuplicateColumn(#\"Duplication de la colonne\", \"lieux.Longitude\", \"lieux.Longitude - Copier\"),",
+          "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Duplication de la colonne1\",{{\"lieux.Lattitude\", \"Lattitude_dep\"}, {\"lieux.Longitude\", \"Longitude_dep\"}, {\"lieux.Lattitude - Copier\", \"Lattitude_arr\"}, {\"lieux.Longitude - Copier\", \"Longitude_arr\"}, {\"Type\", \"Catégorie\"}}),",
+          "    #\"Index ajouté\" = Table.AddIndexColumn(#\"Colonnes renommées\", \"Index\", 0, 1, Int64.Type),",
+          "    #\"Type modifié\" = Table.TransformColumnTypes(#\"Index ajouté\",{{\"Lattitude_dep\", type number}, {\"Longitude_dep\", type number}, {\"Lattitude_arr\", type number}, {\"Longitude_arr\", type number}}),",
+          "    #\"Requête ajoutée\" = Table.Combine({#\"Type modifié\", #\"Ligne de front\"}),",
+          "    #\"Index ajouté1\" = Table.AddIndexColumn(#\"Requête ajoutée\", \"Index.1\", 0, 1, Int64.Type)",
           "in",
-          "    #\"Type modifié1\""
+          "    #\"Index ajouté1\""
         ],
         "kind": "m",
-        "lineageTag": "bec11cb2-3a99-4002-89fa-7dcaa4689653"
+        "lineageTag": "13cbe982-e3fb-40fd-819a-c88b4be609cc",
+        "queryGroup": "Cartographie"
       },
       {
-        "name": "Date_Ref",
+        "name": "date_référence",
         "annotations": [
           {
             "name": "PBI_NavigationStepName",
@@ -7507,7 +8423,7 @@
           "    Date"
         ],
         "kind": "m",
-        "lineageTag": "8b937c69-326f-41d9-be35-16ed2742d307"
+        "lineageTag": "be486019-b694-4f58-b0e2-ea2a11ab64dc"
       }
     ],
     "queryGroups": [
@@ -7522,14 +8438,6 @@
       }
     ],
     "relationships": [
-      {
-        "name": "e3c18fdf-b424-4949-aec0-ef547b3ba2eb",
-        "fromColumn": "Date",
-        "fromTable": "Texte",
-        "joinOnDateBehavior": "datePartOnly",
-        "toColumn": "Date",
-        "toTable": "LocalDateTable_b457552e-890f-4edd-a13a-24fa9d560fa6"
-      },
       {
         "name": "8d70ec33-881c-4200-a2fb-dd0fd25806b0",
         "fromColumn": "Date",
@@ -7570,11 +8478,17 @@
         "toTable": "Pertes RU confirmées"
       },
       {
-        "name": "cf3c31f4-d1cf-4cb2-a21a-2144c6253cea",
-        "crossFilteringBehavior": "bothDirections",
-        "fromCardinality": "one",
+        "name": "129e71a9-6a0b-43ac-8070-e5090efee5d2",
         "fromColumn": "Date",
-        "fromTable": "Assauts russes",
+        "fromTable": "Test events",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_f1a48135-381a-4d9b-8ec5-60b559fe161d"
+      },
+      {
+        "name": "67df6b07-b552-9619-2546-9df5609c8684",
+        "fromColumn": "Date",
+        "fromTable": "Texte",
         "toColumn": "Date",
         "toTable": "Calendrier"
       }
@@ -7591,19 +8505,6 @@
         ],
         "columns": [
           {
-            "name": "Groupe",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "e4a43189-1ffd-4053-9fba-a2525f78937d",
-            "sourceColumn": "Groupe",
-            "summarizeBy": "none"
-          },
-          {
             "name": "Texte",
             "annotations": [
               {
@@ -7618,7 +8519,7 @@
             ],
             "dataType": "string",
             "lineageTag": "eaaa6058-1f9a-43b7-8826-299137c6d493",
-            "sortByColumn": "Ordre",
+            "sortByColumn": "Prio",
             "sourceColumn": "Texte",
             "summarizeBy": "none"
           },
@@ -7637,7 +8538,6 @@
             ],
             "dataType": "string",
             "lineageTag": "cd088b89-a463-49f1-8e3b-2b57c99372be",
-            "sortByColumn": "Ordre",
             "sourceColumn": "Titre",
             "summarizeBy": "none"
           },
@@ -7662,10 +8562,16 @@
                 "value": "Automatic"
               }
             ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
             "dataType": "string",
             "expression": "if(Texte[Catégorie]=Texte[Titre],BLANK(),Texte[Titre])",
             "isDataTypeInferred": true,
             "lineageTag": "11f0fe19-54d7-44a5-932d-8075e77ac404",
+            "sortByColumn": "Prio",
             "summarizeBy": "none",
             "type": "calculated"
           },
@@ -7686,33 +8592,9 @@
               }
             ],
             "dataType": "dateTime",
-            "formatString": "d mmmm yyyy",
+            "formatString": "d mmmm",
             "lineageTag": "752993e5-1df5-4f77-a175-19bb5883251e",
             "sourceColumn": "Date",
-            "summarizeBy": "none",
-            "variations": [
-              {
-                "name": "Variation",
-                "defaultHierarchy": {
-                  "hierarchy": "Hiérarchie de dates",
-                  "table": "LocalDateTable_b457552e-890f-4edd-a13a-24fa9d560fa6"
-                },
-                "isDefault": true,
-                "relationship": "e3c18fdf-b424-4949-aec0-ef547b3ba2eb"
-              }
-            ]
-          },
-          {
-            "name": "Ordre",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "69cd225b-124f-44d0-b85c-83e0badf0800",
-            "sourceColumn": "Ordre",
             "summarizeBy": "none"
           },
           {
@@ -7732,7 +8614,6 @@
             "expression": "CONCATENATE(\"➤ \", Texte[Titre])",
             "isDataTypeInferred": true,
             "lineageTag": "c0063245-dda1-4158-8fc4-3c0c77e20ba7",
-            "sortByColumn": "Ordre",
             "summarizeBy": "none",
             "type": "calculated"
           },
@@ -7752,7 +8633,7 @@
             "type": "calculated"
           },
           {
-            "name": "test",
+            "name": "Résumé",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -7760,11 +8641,23 @@
               }
             ],
             "dataType": "string",
-            "expression": "FORMAT(Datevalue(Texte[Texte]),\"dd mmmm\")",
-            "isDataTypeInferred": true,
-            "lineageTag": "fe72b221-b72b-40b7-9ed4-f06256a8e4f5",
-            "summarizeBy": "none",
-            "type": "calculated"
+            "lineageTag": "a9de26bb-6964-42fd-80d4-79254825be19",
+            "sourceColumn": "Résumé",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prio",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ffe52fc3-504a-46cb-a7c7-06817e8ec65e",
+            "sourceColumn": "Prio",
+            "summarizeBy": "sum"
           }
         ],
         "lineageTag": "07b59ffb-39cd-4386-b7ab-1bdee64723f4",
@@ -7789,12 +8682,11 @@
               "expression": [
                 "let",
                 "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1EguBfb3VzBaOqYtk6nFXaXIUn5XsR1CYBC3KNrR-1sw\"),",
-                "    Texte_Table = Source{[name=\"Texte\",ItemKind=\"Table\"]}[Data],",
-                "    #\"Type modifié\" = Table.TransformColumnTypes(Texte_Table,{{\"Column3\", type text}}),",
-                "    #\"En-têtes promus\" = Table.PromoteHeaders(#\"Type modifié\", [PromoteAllScalars=true]),",
-                "    #\"Type modifié1\" = Table.TransformColumnTypes(#\"En-têtes promus\",{{\"Date\", type date}})",
+                "    Hebdo_Table = Source{[name=\"Hebdo\",ItemKind=\"Table\"]}[Data],",
+                "    #\"En-têtes promus\" = Table.PromoteHeaders(Hebdo_Table, [PromoteAllScalars=true]),",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(#\"En-têtes promus\",{{\"Date\", type date}, {\"Catégorie\", type text}, {\"Titre\", type text}, {\"Résumé\", type text}, {\"Texte\", type text}, {\"Prio\", Int64.Type}})",
                 "in",
-                "    #\"Type modifié1\""
+                "    #\"Type modifié\""
               ],
               "type": "m"
             }
@@ -8007,205 +8899,123 @@
         ]
       },
       {
-        "name": "LocalDateTable_b457552e-890f-4edd-a13a-24fa9d560fa6",
+        "name": "lieux",
         "annotations": [
           {
-            "name": "__PBI_LocalDateTable",
-            "value": "true"
+            "name": "PBI_ResultType",
+            "value": "Table"
           }
         ],
         "columns": [
           {
-            "name": "Date",
+            "name": "Ville",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "User"
+                "value": "Automatic"
               }
             ],
-            "dataCategory": "PaddedDateTableDates",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "isNameInferred": true,
-            "lineageTag": "7dc8092e-4686-47e6-8d03-a5ac9efeefa9",
-            "sourceColumn": "[Date]",
-            "summarizeBy": "none",
-            "type": "calculatedTableColumn"
-          },
-          {
-            "name": "Année",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Year"
-              }
-            ],
-            "dataCategory": "Years",
-            "dataType": "int64",
-            "expression": "YEAR([Date])",
-            "isHidden": true,
-            "lineageTag": "0beebd65-d472-4a86-b88c-ed0b3e473d69",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "NoMois",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "MonthNumber"
-              }
-            ],
-            "dataCategory": "MonthOfYear",
-            "dataType": "int64",
-            "expression": "MONTH([Date])",
-            "isHidden": true,
-            "lineageTag": "2f1c5552-0d8e-4280-8d66-fa31454a5a74",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Mois",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Month"
-              }
-            ],
-            "dataCategory": "Months",
             "dataType": "string",
-            "expression": "FORMAT([Date], \"MMMM\")",
-            "isHidden": true,
-            "lineageTag": "afb6a7e3-9a8d-4068-9d98-bc5460b5a712",
-            "sortByColumn": "NoMois",
-            "summarizeBy": "none",
-            "type": "calculated"
+            "lineageTag": "23b3cc31-8b46-400f-8856-9af52891f6f3",
+            "sourceColumn": "Ville",
+            "summarizeBy": "none"
           },
           {
-            "name": "NoTrimestre",
+            "name": "Oblast",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "QuarterNumber"
+                "value": "Automatic"
               }
             ],
-            "dataCategory": "QuarterOfYear",
-            "dataType": "int64",
-            "expression": "INT(([NoMois] + 2) / 3)",
-            "isHidden": true,
-            "lineageTag": "7cd69adf-3d17-4c07-81a3-07b5fd538fef",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Trimestre",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Quarter"
-              }
-            ],
-            "dataCategory": "Quarters",
             "dataType": "string",
-            "expression": "\"Trim \" & [NoTrimestre]",
-            "isHidden": true,
-            "lineageTag": "b42ae9ac-97c5-4116-8b3b-b186c2077147",
-            "sortByColumn": "NoTrimestre",
-            "summarizeBy": "none",
-            "type": "calculated"
+            "lineageTag": "42a49c18-0df4-44c0-868d-8247e7057d4e",
+            "sourceColumn": "Oblast",
+            "summarizeBy": "none"
           },
           {
-            "name": "Jour",
+            "name": "Coordonnées",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Day"
+                "value": "Automatic"
               }
             ],
-            "dataCategory": "DayOfMonth",
-            "dataType": "int64",
-            "expression": "DAY([Date])",
-            "isHidden": true,
-            "lineageTag": "731ee034-2627-41d1-82f2-4ac343c8a991",
-            "summarizeBy": "none",
-            "type": "calculated"
+            "dataType": "string",
+            "lineageTag": "c8c050f8-fe63-43c2-9dd0-8b6ff3f09a6c",
+            "sourceColumn": "Coordonnées",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Lattitude",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "57b97867-b428-4cf7-8062-a8b891597cc6",
+            "sourceColumn": "Lattitude",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Longitude",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "96e4547e-9a3b-4228-be00-73d9e2bec8d3",
+            "sourceColumn": "Longitude",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e8f5bb3b-847c-45e0-b040-6e811ca4b128",
+            "sourceColumn": "ID",
+            "summarizeBy": "none"
           }
         ],
-        "hierarchies": [
-          {
-            "name": "Hiérarchie de dates",
-            "annotations": [
-              {
-                "name": "TemplateId",
-                "value": "DateHierarchy"
-              }
-            ],
-            "levels": [
-              {
-                "name": "Année",
-                "column": "Année",
-                "lineageTag": "29ccbab7-0345-4241-866d-915cba095cb3",
-                "ordinal": 0
-              },
-              {
-                "name": "Trimestre",
-                "column": "Trimestre",
-                "lineageTag": "2a159c1b-2bf2-451a-abb2-ca9a96b6493e",
-                "ordinal": 1
-              },
-              {
-                "name": "Mois",
-                "column": "Mois",
-                "lineageTag": "f50bd42e-a061-4162-aab7-08a31a421575",
-                "ordinal": 2
-              },
-              {
-                "name": "Jour",
-                "column": "Jour",
-                "lineageTag": "0d38d0e2-24a4-4f3a-963a-1299f2a7b0d8",
-                "ordinal": 3
-              }
-            ],
-            "lineageTag": "1b15afd1-ebc4-4cd7-b63d-5f20c1ef2e5f"
-          }
-        ],
-        "isHidden": true,
-        "lineageTag": "1bf88e28-15e5-4798-8de8-079a6d1333a3",
+        "lineageTag": "8cfe0365-0275-4c32-84ea-a69f41a8dcbb",
         "partitions": [
           {
-            "name": "LocalDateTable_b457552e-890f-4edd-a13a-24fa9d560fa6",
+            "name": "lieux",
             "mode": "import",
             "source": {
-              "expression": "Calendar(Date(Year(MIN('Texte'[Date])), 1, 1), Date(Year(MAX('Texte'[Date])), 12, 31))",
-              "type": "calculated"
+              "expression": [
+                "let",
+                "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1EguBfb3VzBaOqYtk6nFXaXIUn5XsR1CYBC3KNrR-1sw\"),",
+                "    lieux_Table = Source{[name=\"lieux\",ItemKind=\"Table\"]}[Data],",
+                "    #\"En-têtes promus\" = Table.PromoteHeaders(lieux_Table, [PromoteAllScalars=true]),",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(#\"En-têtes promus\",{{\"Ville\", type text}, {\"Oblast\", type text}, {\"Coordonnées\", type text}, {\"Lattitude\", type text}, {\"Longitude\", type text}, {\"ID\", type text}}),",
+                "    #\"Lignes filtrées\" = Table.SelectRows(#\"Type modifié\", each ([Ville] <> \"\")),",
+                "    #\"Valeur remplacée\" = Table.ReplaceValue(#\"Lignes filtrées\",\".\",\",\",Replacer.ReplaceText,{\"Lattitude\", \"Longitude\"}),",
+                "    #\"Type modifié1\" = Table.TransformColumnTypes(#\"Valeur remplacée\",{{\"Lattitude\", type number}, {\"Longitude\", type number}})",
+                "in",
+                "    #\"Type modifié1\""
+              ],
+              "type": "m"
             }
           }
-        ],
-        "showAsVariationsOnly": true
+        ]
       },
       {
         "name": "Mesures",
@@ -8219,15 +9029,7 @@
         "measures": [
           {
             "name": "Combats",
-            "expression": [
-              "//\"161 (+37)\"",
-              "VAR __dateMax = [Date_max]",
-              "VAR __nb_jour = CALCULATE(MAX('Assauts russes'[Assauts russes]),'Assauts russes'[Date]=__dateMax)",
-              "VAR __nb_veille = CALCULATE(MAX('Assauts russes'[Assauts russes]),'Assauts russes'[Date]=__dateMax-1)",
-              "VAr __diff = (__nb_jour-__nb_veille)",
-              "VAR __format = if(__diff<0,__diff,\"+\"&__diff)",
-              "RETURN __nb_jour & \" (\"&__format&\")\""
-            ],
+            "expression": "\"170 (+30)\"",
             "lineageTag": "89dcaa34-537e-4f6a-add5-ee91027253eb"
           },
           {
@@ -8264,13 +9066,7 @@
           },
           {
             "name": "En-cart",
-            "expression": [
-              "",
-              "VAR __date_base = CALCULATE(MAX(Texte[Texte]),Texte[Catégorie]=\"Date\")",
-              "VAR __date_base_string = IFERROR(FORMAT(Datevalue(__date_base),\"dd mmmm\"),__date_base)//if(ISTEXT(__date_base),__date_base,FORMAT(__date_base,\"dd mmmm\"))",
-              "VAR __date = COMBINEVALUES(\" - \",__date_base_string,[nb_jours])",
-              "RETURN __date"
-            ],
+            "expression": "CALCULATE(max(Texte[Titre]),Texte[Catégorie]=\"Date\")",
             "lineageTag": "a9f88e0a-e78f-4f7a-8765-8bb6ed739c8c"
           },
           {
@@ -8286,11 +9082,7 @@
           },
           {
             "name": "Vidéos géocalisées",
-            "expression": [
-              "",
-              "Var __dateMax= [Date_max]",
-              "RETURN CALCULATE(COUNTROWS('Données cartographiques'),'Données cartographiques'[Date]=__dateMax,'Données cartographiques'[geoloc] IN {\"Russian Geolocations (~30 Days)\",\"Ukraine Geolocations (~30 Days)\"})"
-            ],
+            "expression": "CALCULATE(COUNTROWS('Données cartographiques'),'Données cartographiques'[geoloc] IN {\"Russian Geolocations (~30 Days)\",\"Ukraine Geolocations (~30 Days)\"})",
             "formatString": "0",
             "lineageTag": "9ca3a7ba-e6d7-47b3-9775-7775576a4662"
           },
@@ -8308,7 +9100,7 @@
             "name": "Pertes totales (UA)",
             "expression": [
               "",
-              "VAR __dateMax =[Date_max]",
+              "VAR __dateMax =max(Pertes_UA[Date])",
               "RETURN CALCULATE(SUM(Pertes_UA[Pertes]),Pertes_UA[Date]=__dateMax)"
             ],
             "formatString": "0",
@@ -8327,15 +9119,21 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "expression": "AVERAGEX('Catégorisation', AVERAGE(Pertes_UA[Progression]))",
+            "expression": [
+              "",
+              "VAR __dateMax = max(Calendrier[Date])",
+              "VAR __dateMin=min(Calendrier[Date])",
+              "RETURN AVERAGEX('Catégorisation', CALCULATE(SUM(Pertes_UA[Pertes]),Pertes_UA[Date]=__dateMax)-CALCULATE(SUM(Pertes_UA[Pertes]),Pertes_UA[Date]=__dateMin))"
+            ],
             "lineageTag": "0d195396-291f-4d97-a3e7-6799d881c7d1"
           },
           {
             "name": "Dernière progression pertes",
             "expression": [
               "",
-              "Var __dateMax = [Date_max]",
-              "RETURN CALCULATE(SUM(Pertes_UA[Progression]),Pertes_UA[Date]=__dateMax)"
+              "Var __dateMax = max(Calendrier[Date])",
+              "VAR __dateMin=min(Calendrier[Date])",
+              "RETURN CALCULATE(SUM(Pertes_UA[Progression]),Pertes_UA[Date]>=__dateMin&&Pertes_UA[Date]<=__dateMax)//CALCULATE(SUM(Pertes_UA[Pertes]),Pertes_UA[Date]=__dateMax)-CALCULATE(SUM(Pertes_UA[Pertes]),Pertes_UA[Date]=__dateMin)"
             ],
             "formatString": "0",
             "lineageTag": "277649fc-c4c1-470e-8f5d-8e5aaacdc503"
@@ -8361,7 +9159,7 @@
           },
           {
             "name": "Notes_icones",
-            "expression": "\" : > 150% de la moyenne quotidienne\"",
+            "expression": "\" : > 150% de la moyenne hebdomadaire\"",
             "lineageTag": "ff512edc-3591-4d79-b28d-413b9f9b37d1"
           },
           {
@@ -8370,15 +9168,48 @@
               "",
               "VAR total = SUM('Pertes RU confirmées'[Pertes totales])",
               "Var nouvelles = SUM('Pertes RU confirmées'[Nouvelles pertes])",
-              "RETURN if(total<>blank(),CONVERT(total,STRING) & \"(+\"&CONVERT(nouvelles,STRING)&\")\",blank())"
+              "RETURN if(total<>blank(),CONVERT(total,STRING))"
             ],
             "lineageTag": "482d092f-7418-406d-bc51-6383716d6233"
           },
           {
-            "name": "nombre pertes humaines",
-            "expression": "CALCULATE(SUM(Pertes_UA[Progression]),all('Catégorisation'),'Catégorisation'[Catégorie UA]=\"Personnel\")",
+            "name": "Titre-front",
+            "expression": "[En-cart] & \" - Ligne de front\"",
+            "lineageTag": "fae46655-5da7-429b-bbb3-9eb8f9adf310"
+          },
+          {
+            "name": "Progression dernier mois",
+            "expression": [
+              "",
+              "",
+              "VAR __dateMax = MAX(Calendrier[Date])",
+              "VAR __dateMin = DATE(YEAR(__dateMax),MONTH(__dateMax),1)",
+              "RETURN CALCULATE(SUM(Pertes_UA[Progression]),Pertes_UA[Date]>+__dateMin&&Pertes_UA[Date]<=__dateMax)"
+            ],
             "formatString": "0",
-            "lineageTag": "ea4f09c4-da98-4d16-ae5c-9e1eb2081b64"
+            "lineageTag": "bee5a66f-115f-4d17-9505-7377fec29acd"
+          },
+          {
+            "name": "Dernière progression",
+            "expression": [
+              "",
+              "VAr __dateMax = max(Calendrier[Date])",
+              "REturn CALCULATE(SUM(Pertes_UA[Progression]),Pertes_UA[Date]=__dateMax)"
+            ],
+            "formatString": "0",
+            "lineageTag": "e9ec3b0f-93cb-42d5-8bca-5e71d7eba866"
+          },
+          {
+            "name": "nb pertes humaines",
+            "expression": "CALCULATE(SUM(Pertes_UA[Progression]),ALL('Catégorisation'),'Catégorisation'[Catégorie UA]=\"Personnel\")",
+            "formatString": "0",
+            "lineageTag": "63fd360f-9442-48d3-bf23-31a68128f09e"
+          },
+          {
+            "name": "Constante_1",
+            "expression": "1",
+            "formatString": "0",
+            "lineageTag": "9cfceb71-0f7d-45d5-886c-d03e66ff7a63"
           }
         ],
         "partitions": [
@@ -8477,6 +9308,22 @@
             "lineageTag": "74456e70-88df-4c5d-a871-93bb45dfe08c",
             "sourceColumn": "Progression",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "NumSemaine",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "WEEKNUM(Pertes_UA[Date],2)",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "7149e723-f161-45ac-abe9-400cabf3d7ec",
+            "summarizeBy": "sum",
+            "type": "calculated"
           }
         ],
         "lineageTag": "207a9fb8-f0e4-45e5-9a93-07fc3de7e072",
@@ -8724,7 +9571,7 @@
               }
             ],
             "dataType": "dateTime",
-            "formatString": "dd/mm/yy",
+            "formatString": "d mmmm",
             "isDataTypeInferred": true,
             "isNameInferred": true,
             "lineageTag": "f9e9ae04-043e-4345-adb8-039e2a157018",
@@ -8756,6 +9603,22 @@
             "formatString": "0",
             "isDataTypeInferred": true,
             "lineageTag": "86c43a5e-94b3-493d-a8d8-cf4475371842",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          },
+          {
+            "name": "Numéro semaine",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "WEEKNUM(Calendrier[Date],2)",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "a586113e-1148-40cf-ae4f-47d3c6937d1d",
             "summarizeBy": "sum",
             "type": "calculated"
           }
@@ -9153,13 +10016,15 @@
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              },
+              }
+            ],
+            "changedProperties": [
               {
-                "name": "PBI_FormatHint",
-                "value": "{\"isGeneralNumber\":true}"
+                "property": "DataType"
               }
             ],
             "dataType": "double",
+            "formatString": "0.0",
             "lineageTag": "788c3746-9b41-4fe3-9d4c-071f11a9b77b",
             "sourceColumn": "Priorité",
             "summarizeBy": "sum"
@@ -9377,6 +10242,22 @@
             "lineageTag": "8c95233e-307c-43aa-8205-cc42033600de",
             "summarizeBy": "sum",
             "type": "calculated"
+          },
+          {
+            "name": "test",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "expression": "RELATED(Calendrier[Numéro semaine])",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "lineageTag": "9d5c8c1c-bd89-4122-8ff9-d88190051d6d",
+            "summarizeBy": "sum",
+            "type": "calculated"
           }
         ],
         "lineageTag": "70718056-c127-4b05-bceb-d1c5d8d5eef9",
@@ -9391,17 +10272,16 @@
                 "    Source = Table.NestedJoin(#\"points clé\", {\"ID lieux\"}, lieux, {\"ID\"}, \"lieux\", JoinKind.LeftOuter),",
                 "    #\"lieux développé\" = Table.ExpandTableColumn(Source, \"lieux\", {\"Lattitude\", \"Longitude\", \"Ville\"}, {\"lieux.Lattitude\", \"lieux.Longitude\", \"lieux.Ville\"}),",
                 "    #\"Autres colonnes supprimées\" = Table.SelectColumns(#\"lieux développé\",{\"Type\", \"Date\", \"Priorité\", \"Affichage\", \"lieux.Lattitude\", \"lieux.Longitude\", \"lieux.Ville\"}),",
-                "    #\"Doublons supprimés\" = Table.Distinct(#\"Autres colonnes supprimées\", {\"lieux.Ville\"}),",
-                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Doublons supprimés\",{{\"lieux.Lattitude\", \"Lattitude départ\"}, {\"lieux.Longitude\", \"Longitude départ\"}}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Autres colonnes supprimées\",{{\"lieux.Lattitude\", \"Lattitude départ\"}, {\"lieux.Longitude\", \"Longitude départ\"}}),",
                 "    #\"Duplication de la colonne\" = Table.DuplicateColumn(#\"Colonnes renommées\", \"Lattitude départ\", \"Lattitude départ - Copier\"),",
                 "    #\"Duplication de la colonne1\" = Table.DuplicateColumn(#\"Duplication de la colonne\", \"Longitude départ\", \"Longitude départ - Copier\"),",
                 "    #\"Colonnes renommées1\" = Table.RenameColumns(#\"Duplication de la colonne1\",{{\"Lattitude départ - Copier\", \"Lattitude arrivée\"}, {\"Longitude départ - Copier\", \"Longitude arrivée\"}, {\"lieux.Ville\", \"Nom\"}}),",
                 "    #\"Requête ajoutée\" = Table.Combine({#\"Colonnes renommées1\", #\"Ligne de front\", #\"Géolocs (Unités et images)\"}),",
                 "    #\"Index ajouté\" = Table.AddIndexColumn(#\"Requête ajoutée\", \"Index.1\", 0, 1, Int64.Type),",
                 "    #\"Colonnes renommées2\" = Table.RenameColumns(#\"Index ajouté\",{{\"name\", \"geoloc\"}}),",
-                "    #\"Type modifié\" = Table.TransformColumnTypes(#\"Colonnes renommées2\",{{\"Priorité\", type number}})",
+                "    #\"Valeur remplacée\" = Table.ReplaceValue(#\"Colonnes renommées2\",null,0,Replacer.ReplaceValue,{\"Priorité\"})",
                 "in",
-                "    #\"Type modifié\""
+                "    #\"Valeur remplacée\""
               ],
               "type": "m"
             }
@@ -9518,7 +10398,7 @@
         ]
       },
       {
-        "name": "Assauts russes",
+        "name": "Test events",
         "annotations": [
           {
             "name": "PBI_ResultType",
@@ -9540,37 +10420,58 @@
             ],
             "dataType": "dateTime",
             "formatString": "Long Date",
-            "lineageTag": "9547f2e2-eab5-4a08-a2b7-31ea48b722fc",
+            "lineageTag": "ae443cd7-1477-4551-9f77-f0bb0644f2f0",
             "sourceColumn": "Date",
-            "summarizeBy": "none"
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Hiérarchie de dates",
+                  "table": "LocalDateTable_f1a48135-381a-4d9b-8ec5-60b559fe161d"
+                },
+                "isDefault": true,
+                "relationship": "129e71a9-6a0b-43ac-8070-e5090efee5d2"
+              }
+            ]
           },
           {
-            "name": "Assauts russes",
+            "name": "Texte",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
               }
             ],
-            "dataType": "int64",
-            "formatString": "0",
-            "lineageTag": "896bc505-c1e1-4470-907d-0e5712036ad5",
-            "sourceColumn": "Assauts russes",
-            "summarizeBy": "sum"
+            "dataType": "string",
+            "lineageTag": "7ff071db-286a-404d-9c85-333debc56ee5",
+            "sourceColumn": "Texte",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Titre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3bdab0d1-35d8-4b93-b45f-62eb106e6194",
+            "sourceColumn": "Titre",
+            "summarizeBy": "none"
           }
         ],
-        "lineageTag": "14dd23cd-4bb0-48a5-bbf9-52f7fc0e33fe",
+        "lineageTag": "e60fd0ea-2ce4-4055-ac45-7281368f4555",
         "partitions": [
           {
-            "name": "Assauts russes",
+            "name": "Test events",
             "mode": "import",
             "source": {
               "expression": [
                 "let",
-                "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1EguBfb3VzBaOqYtk6nFXaXIUn5XsR1CYBC3KNrR-1sw\"),",
-                "    #\"nb assauts russes_Table\" = Source{[name=\"nb assauts russes\",ItemKind=\"Table\"]}[Data],",
-                "    #\"En-têtes promus\" = Table.PromoteHeaders(#\"nb assauts russes_Table\", [PromoteAllScalars=true]),",
-                "    #\"Type modifié\" = Table.TransformColumnTypes(#\"En-têtes promus\",{{\"Date\", type date}, {\"Assauts russes\", Int64.Type}})",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45WMrLQNzDTNzIwMlHSUXIsS8xLPrwyVSHUEcgLySwpSlUwVIrViVYyNkBSFpSZmqeQkqpQXHB4ZXJmYg5crRFYrZEpspElJal5JZn5eQqZyZkKQKosUSE3tQSkujRPoSS1oiRVoSCntFghJz8vHW6QgVJsLAA=\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Date = _t, Texte = _t, Titre = _t]),",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(Source,{{\"Date\", type date}, {\"Texte\", type text}})",
                 "in",
                 "    #\"Type modifié\""
               ],
@@ -9578,6 +10479,207 @@
             }
           }
         ]
+      },
+      {
+        "name": "LocalDateTable_f1a48135-381a-4d9b-8ec5-60b559fe161d",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "a769cb39-56cf-4f36-a5b7-f01ac57d2d99",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Année",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "9d097f1b-67d5-47fb-ab5a-56c87103f3e7",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NoMois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "6f775383-cdc8-4b65-9030-ed2cf30af04a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "5f9d233c-57ba-45e5-b390-258cc689d781",
+            "sortByColumn": "NoMois",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NoTrimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([NoMois] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "43522a48-9561-4ac3-830d-671ca4618050",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Trim \" & [NoTrimestre]",
+            "isHidden": true,
+            "lineageTag": "5976822e-e027-44ae-a6c9-03dc8e0fd357",
+            "sortByColumn": "NoTrimestre",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Jour",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "a1fc4608-ecfc-4b5b-ad46-7b63ae321e1f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hiérarchie de dates",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Année",
+                "column": "Année",
+                "lineageTag": "72f02f38-474a-4ff3-8671-fd892825f19d",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "5ba79886-81fd-426f-bb05-2e981ac8bc83",
+                "ordinal": 1
+              },
+              {
+                "name": "Mois",
+                "column": "Mois",
+                "lineageTag": "5d17abee-dfb1-4d08-918a-8488d903cced",
+                "ordinal": 2
+              },
+              {
+                "name": "Jour",
+                "column": "Jour",
+                "lineageTag": "2d6820af-e0ea-481d-ba0c-4fc3e15ae3cd",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "d5231a63-7ed9-4fc4-9537-912b31e4cc33"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "b5ad79f8-34c9-40c9-b61d-029ce5bffd95",
+        "partitions": [
+          {
+            "name": "LocalDateTable_f1a48135-381a-4d9b-8ec5-60b559fe161d",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Test events'[Date])), 1, 1), Date(Year(MAX('Test events'[Date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
       }
     ]
   }
