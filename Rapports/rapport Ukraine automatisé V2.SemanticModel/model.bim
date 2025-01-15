@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.131.1203.0 (24.07)"
+        "value": "2.137.1102.0 (24.10)"
       },
       {
         "name": "PBI_ProTooling",
@@ -9570,9 +9570,10 @@
                 "    Source = GoogleSheets.Contents(\"https://docs.google.com/spreadsheets/d/1EguBfb3VzBaOqYtk6nFXaXIUn5XsR1CYBC3KNrR-1sw\"),",
                 "    #\"nb assauts russes_Table\" = Source{[name=\"nb assauts russes\",ItemKind=\"Table\"]}[Data],",
                 "    #\"En-têtes promus\" = Table.PromoteHeaders(#\"nb assauts russes_Table\", [PromoteAllScalars=true]),",
-                "    #\"Type modifié\" = Table.TransformColumnTypes(#\"En-têtes promus\",{{\"Date\", type date}, {\"Assauts russes\", Int64.Type}})",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(#\"En-têtes promus\",{{\"Date\", type date}, {\"Assauts russes\", Int64.Type}}),",
+                "    #\"Lignes filtrées\" = Table.SelectRows(#\"Type modifié\", each ([Date] <> null))",
                 "in",
-                "    #\"Type modifié\""
+                "    #\"Lignes filtrées\""
               ],
               "type": "m"
             }
