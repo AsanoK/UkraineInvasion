@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.138.1452.0 (24.11)"
+        "value": "2.140.1078.0 (25.02)+2cce24fb16e8b71ba835921d23e7ffc1fab909df"
       },
       {
         "name": "PBI_ProTooling",
@@ -120,6 +120,29 @@
                   {
                     "calendrier": {
                       "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "calendrier.dans_le_passé": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calendrier",
+                    "ConceptualProperty": "Dans le passé"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "dans le passé": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "dan le passé": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.78
                     }
                   }
                 ]
@@ -1685,7 +1708,7 @@
                     }
                   },
                   {
-                    "Bombardements notables": {
+                    "Bombardements": {
                       "Source": {
                         "Agent": "PowerBI.VisualColumnRename",
                         "Type": "External"
@@ -2787,6 +2810,22 @@
                   }
                 ]
               },
+              "pertes_UA.année_effective": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Pertes_UA",
+                    "ConceptualProperty": "Année effective"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "année effective": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
               "pertes_UA.catégorie": {
                 "Definition": {
                   "Binding": {
@@ -3047,6 +3086,55 @@
                   },
                   {
                     "period trimestre": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ]
+              },
+              "pertes_UA.mois_effectif": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Pertes_UA",
+                    "ConceptualProperty": "Mois effectif"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "mois effectif": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "pertes_UA.num_mois": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Pertes_UA",
+                    "ConceptualProperty": "numMois"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "num mois": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "numMois": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "number mois": {
                       "Source": {
                         "Agent": "Thesaurus"
                       },
@@ -4319,7 +4407,7 @@
                         "Role": "calendrier.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour1",
+                    "ID": "hiérarchie_de_dates_have_jour2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -4352,7 +4440,7 @@
                         "Role": "calendrier.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises1",
+                    "ID": "hiérarchie_de_dates_have_moises2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -4385,7 +4473,7 @@
                         "Role": "calendrier.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_trimestres1",
+                    "ID": "hiérarchie_de_dates_have_trimestres2",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -4536,6 +4624,39 @@
                 },
                 "State": "Generated"
               },
+              "calendrier_has_dans_le_passé": {
+                "Binding": {
+                  "ConceptualEntity": "Calendrier"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "calendrier.dans_le_passé"
+                      },
+                      "Subject": {
+                        "Role": "calendrier"
+                      }
+                    },
+                    "ID": "calendriers_have_dans_le_passé",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "calendrier": {
+                    "Target": {
+                      "Entity": "calendrier"
+                    }
+                  },
+                  "calendrier.dans_le_passé": {
+                    "Target": {
+                      "Entity": "calendrier.dans_le_passé"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "calendrier_has_date": {
                 "Binding": {
                   "ConceptualEntity": "Calendrier"
@@ -4630,6 +4751,61 @@
                   "calendrier.numéro_semaine": {
                     "Target": {
                       "Entity": "calendrier.numéro_semaine"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "calendrier_is_dans_le_passé": {
+                "Binding": {
+                  "ConceptualEntity": "Calendrier"
+                },
+                "Conditions": [
+                  {
+                    "Operator": "Equals",
+                    "Target": {
+                      "Role": "calendrier.dans_le_passé"
+                    },
+                    "Value": {
+                      "Boolean": [
+                        true
+                      ]
+                    }
+                  }
+                ],
+                "Phrasings": [
+                  {
+                    "Adjective": {
+                      "Adjectives": [
+                        {
+                          "dans le passé": {
+                            "State": "Generated"
+                          }
+                        },
+                        {
+                          "dans-le-passé": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "calendrier"
+                      }
+                    },
+                    "ID": "some_calendriers_are_dans_le_passé_calendriers",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "calendrier": {
+                    "Target": {
+                      "Entity": "calendrier"
+                    }
+                  },
+                  "calendrier.dans_le_passé": {
+                    "Target": {
+                      "Entity": "calendrier.dans_le_passé"
                     }
                   }
                 },
@@ -6569,7 +6745,7 @@
                         "Role": "pertes_UA.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour",
+                    "ID": "hiérarchie_de_dates_have_jour1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -6602,7 +6778,7 @@
                         "Role": "pertes_UA.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises",
+                    "ID": "hiérarchie_de_dates_have_moises1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -6635,7 +6811,7 @@
                         "Role": "pertes_UA.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_trimestres",
+                    "ID": "hiérarchie_de_dates_have_trimestres1",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -6781,6 +6957,39 @@
                   "pertes_UA.date.variation.hiérarchie_de_date.trimestre": {
                     "Target": {
                       "Entity": "pertes_UA.date.variation.hiérarchie_de_date.trimestre"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "pertes_UA_has_année_effective": {
+                "Binding": {
+                  "ConceptualEntity": "Pertes_UA"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "pertes_UA.année_effective"
+                      },
+                      "Subject": {
+                        "Role": "pertes_UA"
+                      }
+                    },
+                    "ID": "pertes_UA_have_année_effectives",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "pertes_UA": {
+                    "Target": {
+                      "Entity": "pertes_UA"
+                    }
+                  },
+                  "pertes_UA.année_effective": {
+                    "Target": {
+                      "Entity": "pertes_UA.année_effective"
                     }
                   }
                 },
@@ -7129,6 +7338,72 @@
                 },
                 "State": "Generated"
               },
+              "pertes_UA_has_mois_effectif": {
+                "Binding": {
+                  "ConceptualEntity": "Pertes_UA"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "pertes_UA.mois_effectif"
+                      },
+                      "Subject": {
+                        "Role": "pertes_UA"
+                      }
+                    },
+                    "ID": "pertes_UA_have_mois_effectifs",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "pertes_UA": {
+                    "Target": {
+                      "Entity": "pertes_UA"
+                    }
+                  },
+                  "pertes_UA.mois_effectif": {
+                    "Target": {
+                      "Entity": "pertes_UA.mois_effectif"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "pertes_UA_has_num_mois": {
+                "Binding": {
+                  "ConceptualEntity": "Pertes_UA"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "pertes_UA.num_mois"
+                      },
+                      "Subject": {
+                        "Role": "pertes_UA"
+                      }
+                    },
+                    "ID": "pertes_UA_have_num_moises",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "pertes_UA": {
+                    "Target": {
+                      "Entity": "pertes_UA"
+                    }
+                  },
+                  "pertes_UA.num_mois": {
+                    "Target": {
+                      "Entity": "pertes_UA.num_mois"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
               "pertes_UA_has_num_semaine": {
                 "Binding": {
                   "ConceptualEntity": "Pertes_UA"
@@ -7374,7 +7649,7 @@
                         "Role": "test_event.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_jour2",
+                    "ID": "hiérarchie_de_dates_have_jour",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -7407,7 +7682,7 @@
                         "Role": "test_event.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_moises2",
+                    "ID": "hiérarchie_de_dates_have_moises",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -7440,7 +7715,7 @@
                         "Role": "test_event.date.variation.hiérarchie_de_date"
                       }
                     },
-                    "ID": "hiérarchie_de_dates_have_trimestres2",
+                    "ID": "hiérarchie_de_dates_have_trimestres",
                     "State": "Generated",
                     "Weight": 0.99
                   }
@@ -8693,14 +8968,6 @@
     ],
     "relationships": [
       {
-        "name": "8d70ec33-881c-4200-a2fb-dd0fd25806b0",
-        "fromColumn": "Date",
-        "fromTable": "Pertes_UA",
-        "joinOnDateBehavior": "datePartOnly",
-        "toColumn": "Date",
-        "toTable": "LocalDateTable_a7281321-ffb6-436e-92db-4aedc84d83ab"
-      },
-      {
         "name": "a193ed5e-6743-4d38-98b4-cf5b5b500c9e",
         "fromColumn": "Date",
         "fromTable": "Calendrier",
@@ -8753,6 +9020,14 @@
         "fromTable": "Assauts russes",
         "toColumn": "Date",
         "toTable": "Calendrier"
+      },
+      {
+        "name": "148d91ff-3915-46b2-a0b6-22e9d151d57a",
+        "fromColumn": "Date",
+        "fromTable": "Pertes_UA",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_029b5a00-60a7-4ea0-b916-174748d35f17"
       }
     ],
     "sourceQueryCulture": "fr-FR",
@@ -8762,7 +9037,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Table"
           },
           {
             "name": "PBI_NavigationStepName",
@@ -9538,10 +9813,10 @@
                 "name": "Variation",
                 "defaultHierarchy": {
                   "hierarchy": "Hiérarchie de dates",
-                  "table": "LocalDateTable_a7281321-ffb6-436e-92db-4aedc84d83ab"
+                  "table": "LocalDateTable_029b5a00-60a7-4ea0-b916-174748d35f17"
                 },
                 "isDefault": true,
-                "relationship": "8d70ec33-881c-4200-a2fb-dd0fd25806b0"
+                "relationship": "148d91ff-3915-46b2-a0b6-22e9d151d57a"
               }
             ]
           },
@@ -9674,6 +9949,28 @@
             "lineageTag": "ad447cea-5896-4d97-b351-1e923e3c7b9d",
             "summarizeBy": "sum",
             "type": "calculated"
+          },
+          {
+            "name": "6 derniers mois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "expression": [
+              "",
+              "VAR __date_max = MAX('Assauts russes'[Date])",
+              "VAr __param1= DATEDIFF(Pertes_UA[Date],__date_max,MONTH)<=6",
+              "VAR __param2= Pertes_UA[Date]<=__date_max",
+              "RETURN __param1&&__param2"
+            ],
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "lineageTag": "c9c054bc-fec4-42df-852e-dead33709bb3",
+            "summarizeBy": "none",
+            "type": "calculated"
           }
         ],
         "lineageTag": "207a9fb8-f0e4-45e5-9a93-07fc3de7e072",
@@ -9693,207 +9990,6 @@
             }
           }
         ]
-      },
-      {
-        "name": "LocalDateTable_a7281321-ffb6-436e-92db-4aedc84d83ab",
-        "annotations": [
-          {
-            "name": "__PBI_LocalDateTable",
-            "value": "true"
-          }
-        ],
-        "columns": [
-          {
-            "name": "Date",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              }
-            ],
-            "dataCategory": "PaddedDateTableDates",
-            "dataType": "dateTime",
-            "isHidden": true,
-            "isNameInferred": true,
-            "lineageTag": "c643735e-38cf-4a67-995c-c30fa49971a2",
-            "sourceColumn": "[Date]",
-            "summarizeBy": "none",
-            "type": "calculatedTableColumn"
-          },
-          {
-            "name": "Année",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Year"
-              }
-            ],
-            "dataCategory": "Years",
-            "dataType": "int64",
-            "expression": "YEAR([Date])",
-            "isHidden": true,
-            "lineageTag": "a9491052-6572-486b-9edc-1e0c4c950187",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "NoMois",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "MonthNumber"
-              }
-            ],
-            "dataCategory": "MonthOfYear",
-            "dataType": "int64",
-            "expression": "MONTH([Date])",
-            "isHidden": true,
-            "lineageTag": "07fe4c25-76a6-44ae-9364-bf7e7c18e191",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Mois",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Month"
-              }
-            ],
-            "dataCategory": "Months",
-            "dataType": "string",
-            "expression": "FORMAT([Date], \"MMMM\")",
-            "isHidden": true,
-            "lineageTag": "9fc802ce-267f-453d-a0d1-2c3269858eea",
-            "sortByColumn": "NoMois",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "NoTrimestre",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "QuarterNumber"
-              }
-            ],
-            "dataCategory": "QuarterOfYear",
-            "dataType": "int64",
-            "expression": "INT(([NoMois] + 2) / 3)",
-            "isHidden": true,
-            "lineageTag": "2e3763a3-987f-4918-a2e0-73764a7a3ec0",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Trimestre",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Quarter"
-              }
-            ],
-            "dataCategory": "Quarters",
-            "dataType": "string",
-            "expression": "\"Trim \" & [NoTrimestre]",
-            "isHidden": true,
-            "lineageTag": "2177c746-73a0-4fc7-8a9c-db15a941d480",
-            "sortByColumn": "NoTrimestre",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Jour",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Day"
-              }
-            ],
-            "dataCategory": "DayOfMonth",
-            "dataType": "int64",
-            "expression": "DAY([Date])",
-            "isHidden": true,
-            "lineageTag": "3434448d-a597-4c3e-a41e-fd2a8d27cd66",
-            "summarizeBy": "none",
-            "type": "calculated"
-          }
-        ],
-        "hierarchies": [
-          {
-            "name": "Hiérarchie de dates",
-            "annotations": [
-              {
-                "name": "TemplateId",
-                "value": "DateHierarchy"
-              }
-            ],
-            "levels": [
-              {
-                "name": "Année",
-                "column": "Année",
-                "lineageTag": "1e3a2c75-73e2-4439-8568-b1a1cf88da76",
-                "ordinal": 0
-              },
-              {
-                "name": "Trimestre",
-                "column": "Trimestre",
-                "lineageTag": "e248b920-8332-4bf9-8597-19771ae94b09",
-                "ordinal": 1
-              },
-              {
-                "name": "Mois",
-                "column": "Mois",
-                "lineageTag": "2800d2d8-1f8a-4e00-9c09-ee54dc72888a",
-                "ordinal": 2
-              },
-              {
-                "name": "Jour",
-                "column": "Jour",
-                "lineageTag": "4a0aa9eb-1aa4-4ea2-8763-a057307364d7",
-                "ordinal": 3
-              }
-            ],
-            "lineageTag": "d89293a6-5280-4ac8-b8c5-5150541b2791"
-          }
-        ],
-        "isHidden": true,
-        "lineageTag": "e46ae44d-a67a-4b09-88ed-7bcacf0a5120",
-        "partitions": [
-          {
-            "name": "LocalDateTable_a7281321-ffb6-436e-92db-4aedc84d83ab",
-            "mode": "import",
-            "source": {
-              "expression": "Calendar(Date(Year(MIN('Pertes_UA'[Date])), 1, 1), Date(Year(MAX('Pertes_UA'[Date])), 12, 31))",
-              "type": "calculated"
-            }
-          }
-        ],
-        "showAsVariationsOnly": true
       },
       {
         "name": "Calendrier",
@@ -9985,6 +10081,28 @@
             "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
             "isDataTypeInferred": true,
             "lineageTag": "ab2f55b5-dd08-436c-b69b-9c7138bd469b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "6 derniers mois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "expression": [
+              "",
+              "VAR __date_max = MAX('Assauts russes'[Date])",
+              "VAr __param1= DATEDIFF(Calendrier[Date],__date_max,MONTH)<=6",
+              "VAR __param2= Calendrier[Date]<=__date_max",
+              "RETURN __param1&&__param2"
+            ],
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "lineageTag": "eb7510b6-4aed-4c67-a7a1-633b21d02b1d",
             "summarizeBy": "none",
             "type": "calculated"
           }
@@ -11060,7 +11178,7 @@
           },
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Table"
           }
         ],
         "columns": [
@@ -11116,6 +11234,207 @@
             }
           }
         ]
+      },
+      {
+        "name": "LocalDateTable_029b5a00-60a7-4ea0-b916-174748d35f17",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "062bd6c9-e41c-4a5c-8ca8-8ff311125858",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Année",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "7c5fc1f1-99ee-472c-888a-7206305dd361",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NoMois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "52209bb7-2a52-4699-855b-0f7068808afc",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "0654f1b4-293a-4faa-b19d-14d94bb6f055",
+            "sortByColumn": "NoMois",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NoTrimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([NoMois] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "b262beff-9c4f-478d-bcc1-1d65c8faec40",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Trim \" & [NoTrimestre]",
+            "isHidden": true,
+            "lineageTag": "8537b060-fe83-42c9-b945-ca400bfcec1a",
+            "sortByColumn": "NoTrimestre",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Jour",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "830b30bf-5cd3-4f9b-98ea-bc5a93c1684f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hiérarchie de dates",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Année",
+                "column": "Année",
+                "lineageTag": "d5a7dc82-cc4b-459f-a274-dcce4f4af196",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "b9bf935f-4860-42a6-8b35-0ee60c2a2033",
+                "ordinal": 1
+              },
+              {
+                "name": "Mois",
+                "column": "Mois",
+                "lineageTag": "7bea2f9c-e875-4528-9ea7-aa2ed02c37f8",
+                "ordinal": 2
+              },
+              {
+                "name": "Jour",
+                "column": "Jour",
+                "lineageTag": "dc998e51-bcac-4b47-824c-48993dd541fe",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "fe278515-f180-44ad-9f00-72e893b8a5a4"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "4bde8496-4079-4dc3-bc1c-1c9d73203e31",
+        "partitions": [
+          {
+            "name": "LocalDateTable_029b5a00-60a7-4ea0-b916-174748d35f17",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Pertes_UA'[Date])), 1, 1), Date(Year(MAX('Pertes_UA'[Date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
       }
     ]
   }

@@ -12,7 +12,7 @@
       },
       {
         "name": "PBIDesktopVersion",
-        "value": "2.138.1452.0 (24.11)"
+        "value": "2.140.1078.0 (25.02)+2cce24fb16e8b71ba835921d23e7ffc1fab909df"
       },
       {
         "name": "PBI_ProTooling",
@@ -7225,6 +7225,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -8158,6 +8162,17 @@
               ")"
             ],
             "lineageTag": "0632dc49-978a-4261-ae1e-8e7569a48269"
+          },
+          {
+            "name": "coût unitaire des assauts",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "DIVIDE([nombre pertes humaines],SUM('Assauts russes'[Assauts russes]))",
+            "lineageTag": "e2d5f39d-bc83-4f88-b730-d121acace55b"
           }
         ],
         "partitions": [
@@ -8425,6 +8440,28 @@
             "lineageTag": "72e2dab3-8ff7-4131-9c4f-e56b1bacad38",
             "summarizeBy": "none",
             "type": "calculated"
+          },
+          {
+            "name": "6 derniers mois",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "expression": [
+              "",
+              "VAR __date_max = MAX('Assauts russes'[Date])",
+              "VAr __param1= DATEDIFF(Calendrier[Date],__date_max,MONTH)<=6",
+              "VAR __param2= Calendrier[Date]<=__date_max",
+              "RETURN __param1&&__param2"
+            ],
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isDataTypeInferred": true,
+            "lineageTag": "3766463a-5f0b-4a5e-8631-b25fa17a55e6",
+            "summarizeBy": "none",
+            "type": "calculated"
           }
         ],
         "dataCategory": "Time",
@@ -8605,7 +8642,7 @@
         "annotations": [
           {
             "name": "PBI_ResultType",
-            "value": "Exception"
+            "value": "Table"
           },
           {
             "name": "PBI_NavigationStepName",
@@ -8911,6 +8948,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [

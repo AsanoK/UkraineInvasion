@@ -3,7 +3,6 @@
   "datasetReference": {
     "byPath": {
       "path": "../rapport Ukraine automatisé V2_.SemanticModel"
-    },
-    "byConnection": null
+    }
   }
 }
