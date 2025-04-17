@@ -1,0 +1,226 @@
+table Mesures
+	lineageTag: 49557378-ca30-41b2-a0bf-9274fff10355
+
+	measure Combats =
+			//"161 (+37)"
+			VAR __dateMax = [Date_max]
+			VAR __nb_jour = CALCULATE(MAX('Assauts russes'[Assauts russes]),'Assauts russes'[Date]=__dateMax)
+			VAR __nb_veille = CALCULATE(MAX('Assauts russes'[Assauts russes]),'Assauts russes'[Date]=__dateMax-1)
+			VAr __diff = (__nb_jour-__nb_veille)
+			VAR __format = if(__diff<0,__diff,"+"&__diff)
+			RETURN __nb_jour & " ("&__format&")"
+		lineageTag: 89dcaa34-537e-4f6a-add5-ee91027253eb
+
+	measure 'Points d''intérêt' = CALCULATE(COUNTROWS('Points clés'),'Points clés'[Catégorie]<>"Front")
+		formatString: 0
+		lineageTag: 55b110cb-bf54-4bb2-8bcb-7f77be7ac25b
+
+	measure Date_max = ```
+			VAR __date = CALCULATE(MAX(Texte[Texte]),Texte[Titre]="Date")
+			VAR __date_format_date = max(Texte[Date])
+			RETURN __date_format_date
+			
+			```
+		formatString: d mmmm
+		lineageTag: 77842560-52f5-40c4-a8c8-7e72a388280f
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	measure nb_jours =
+			
+			VAr __decompte=DATEDIFF(DATE(2022,2,24),[Date_max]+1,DAY)
+			RETURN CONCATENATE(__decompte,"e jour")
+		lineageTag: 7d8d6582-394b-4d8a-bf69-309ad5045e84
+
+	measure En-cart =
+			
+			VAR __date_base = CALCULATE(MAX(Texte[Texte]),Texte[Catégorie]="Date")
+			VAR __date_base_string = IFERROR(FORMAT(Datevalue(__date_base),"dd mmmm"),__date_base)//if(ISTEXT(__date_base),__date_base,FORMAT(__date_base,"dd mmmm"))
+			VAR __date = COMBINEVALUES(" - ",__date_base_string,[nb_jours])
+			RETURN __date
+		lineageTag: a9f88e0a-e78f-4f7a-8765-8bb6ed739c8c
+
+	measure 'Titre 2' = CONCATENATE([En-cart], " : Pertes russes")
+		lineageTag: c95fa5b2-bd8a-40e3-89d2-e9d1cb2f017b
+
+	measure 'Bombardements majeurs' = CALCULATE(COUNTROWS('Données cartographiques'),'Données cartographiques'[Type]="Bombardement")
+		formatString: 0
+		lineageTag: 2d8e283f-ab16-424f-9bb7-1cb8738f4efa
+
+	measure 'Vidéos géocalisées' =
+			
+			Var __dateMax= [Date_max]
+			RETURN CALCULATE(COUNTROWS('Données cartographiques'),'Données cartographiques'[Date]=__dateMax,'Données cartographiques'[geoloc] IN {"Russian Geolocations (~30 Days)","Ukraine Geolocations (~30 Days)"})
+		formatString: 0
+		lineageTag: 9ca3a7ba-e6d7-47b3-9775-7775576a4662
+
+	measure 'Chars détruits' = CALCULATE([Pertes russes],Pertes_UA[Catégorie]="Tank")
+		lineageTag: 04d5e64c-a9b3-4680-9b49-19c0e7986fcf
+
+	measure 'Missiles abattus' = CALCULATE([Pertes russes],Pertes_UA[Catégorie]="cruise missiles")
+		lineageTag: 002e1b24-59c4-42e4-8bf6-c66444b22aa4
+
+	measure 'Pertes totales (UA)' =
+			
+			VAR __dateMax =[Date_max]
+			RETURN CALCULATE(SUM(Pertes_UA[Pertes]),Pertes_UA[Date]=__dateMax)
+		formatString: 0
+		lineageTag: fb8fc33b-f329-4c16-9cd8-0aee892920df
+
+	measure 'Pertes russes' = if([Pertes totales (UA)]>0, [Pertes totales (UA)] & " (+" & [Dernière progression pertes]&")",blank())
+		lineageTag: db0a3178-e1e1-414b-a416-d3737d5e867f
+
+	measure 'Progression moyenne' = AVERAGEX('Catégorisation', AVERAGE(Pertes_UA[Progression]))
+		lineageTag: 0d195396-291f-4d97-a3e7-6799d881c7d1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dernière progression pertes' =
+			
+			Var __dateMax = [Date_max]
+			RETURN CALCULATE(SUM(Pertes_UA[Progression]),Pertes_UA[Date]=__dateMax)
+		formatString: 0
+		lineageTag: 277649fc-c4c1-470e-8f5d-8e5aaacdc503
+
+	measure 'Ratio progression UA' = divide([Dernière progression pertes],[Progression moyenne])
+		lineageTag: 6ef37747-28b8-4d86-ba2f-ce9c68444ff0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Pertes humaines' = ```
+			CALCULATE([Pertes russes],Pertes_UA[Catégorie]="Personnel")
+			
+			```
+		lineageTag: dffda3bd-cfae-458e-9441-4b4ca98930fc
+
+	measure Notes_icones = " : > 150% de la moyenne quotidienne"
+		lineageTag: ff512edc-3591-4d79-b28d-413b9f9b37d1
+
+	measure Pertes_Warspotting =
+			
+			VAR total = SUM('Pertes RU confirmées'[Pertes totales])
+			Var nouvelles = SUM('Pertes RU confirmées'[Nouvelles pertes])
+			RETURN if(total<>blank(),CONVERT(total,STRING) & "(+"&CONVERT(nouvelles,STRING)&")",blank())
+		lineageTag: 482d092f-7418-406d-bc51-6383716d6233
+
+	measure 'nombre pertes humaines' = CALCULATE(SUM(Pertes_UA[Progression]),all('Catégorisation'),'Catégorisation'[Catégorie UA]="Personnel")
+		formatString: 0
+		lineageTag: ea4f09c4-da98-4d16-ae5c-9e1eb2081b64
+
+	measure 'Moyenne mobile de Progression' =
+			
+			IF(
+				ISFILTERED('Pertes_UA'[Date]),
+				ERROR("Les mesures rapides de Time Intelligence peuvent être regroupées ou filtrées seulement par la hiérarchie de dates ou les colonnes de dates principales fournies par Power BI."),
+				VAR __LAST_DATE = LASTDATE(Calendrier[Date])
+				RETURN
+					AVERAGEX(
+						DATESBETWEEN(
+							Calendrier[Date],
+							DATEADD(__LAST_DATE, -7, DAY),
+							DATEADD(__LAST_DATE, 7, DAY)
+						),
+						CALCULATE(SUM('Pertes_UA'[Progression]))
+					)
+			)
+		formatString: 0
+		lineageTag: 5b03cab3-0dd8-441d-b5c1-6353867d2b9b
+
+		extendedProperty MeasureTemplate =
+				{
+				  "daxTemplateName": "RollingAverage",
+				  "version": 0
+				}
+
+		changedProperty = FormatString
+
+	measure nb_vidéos_géolocalisées = COUNTROWS('Données cartographiques')
+		formatString: 0
+		lineageTag: a755830a-e17b-49c4-9cd2-ac449bcfde49
+
+	measure 'Moyenne mobile de pertes humaines' =
+			
+			IF(
+				ISFILTERED('Pertes_UA'[Date]),
+				ERROR("Les mesures rapides de Time Intelligence peuvent être regroupées ou filtrées seulement par la hiérarchie de dates ou les colonnes de dates principales fournies par Power BI."),
+				VAR __LAST_DATE = LASTDATE(Calendrier[Date])
+				RETURN
+					AVERAGEX(
+						DATESBETWEEN(
+							Calendrier[Date],
+							DATEADD(__LAST_DATE, -7, DAY),
+							DATEADD(__LAST_DATE, 7, DAY)
+						),
+						CALCULATE([nombre pertes humaines])
+					)
+			)
+		lineageTag: 17c13212-5707-4780-88ff-07a07cc5e8bb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Pertes blindées' = CALCULATE(SUM(Pertes_UA[Progression]),'Catégorisation'[Catégorie sup]="Blindés")
+		formatString: 0
+		lineageTag: 8a1be240-ac2c-41cc-b588-cb01844e1d33
+
+	measure 'ratio troupes/blindé' = DIVIDE([nombre pertes humaines],[Pertes blindées])
+		lineageTag: bd68cf2d-be67-4e93-b4b2-dc3aa7afd1a1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Moyenne mobile de ratio troupes/blindés' =
+			
+			IF(
+				ISFILTERED('Pertes_UA'[Date]),
+				ERROR("Les mesures rapides de Time Intelligence peuvent être regroupées ou filtrées seulement par la hiérarchie de dates ou les colonnes de dates principales fournies par Power BI."),
+				VAR __LAST_DATE = LASTDATE(Calendrier[Date])
+				RETURN
+					AVERAGEX(
+						DATESBETWEEN(
+							Calendrier[Date],
+							DATEADD(__LAST_DATE, -7, DAY),
+							DATEADD(__LAST_DATE, 7, DAY)
+						),
+						CALCULATE([ratio troupes/blindé])
+					)
+			)
+		lineageTag: cfdc9d06-8d68-4363-8119-d85c338c9410
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Moyenne mobile de pertes blindées' =
+			
+			IF(
+				ISFILTERED('Pertes_UA'[Date]),
+				ERROR("Les mesures rapides de Time Intelligence peuvent être regroupées ou filtrées seulement par la hiérarchie de dates ou les colonnes de dates principales fournies par Power BI."),
+				VAR __LAST_DATE = LASTDATE(Calendrier[Date])
+				RETURN
+					AVERAGEX(
+						DATESBETWEEN(
+							Calendrier[Date],
+							DATEADD(__LAST_DATE, -7, DAY),
+							DATEADD(__LAST_DATE, 7, DAY)
+						),
+						CALCULATE([Pertes blindées])
+					)
+			)
+		lineageTag: 0632dc49-978a-4261-ae1e-8e7569a48269
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'coût unitaire des assauts' = DIVIDE([nombre pertes humaines],SUM('Assauts russes'[Assauts russes]))
+		lineageTag: e2d5f39d-bc83-4f88-b730-d121acace55b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Mesures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Colonne 1" = _t]),
+				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Colonne 1", type text}}),
+				    #"Colonnes supprimées" = Table.RemoveColumns(#"Type modifié",{"Colonne 1"})
+				in
+				    #"Colonnes supprimées"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,166 @@
+table Texte
+	lineageTag: 07b59ffb-39cd-4386-b7ab-1bdee64723f4
+
+	measure Date-titre =
+			
+			VAR __date = CALCULATE(MAX(Texte[Texte]),Texte[Titre]="Date")
+			VAR __date_format_date = max(Texte[Date])
+			VAr __decompte=DATEDIFF(DATE(2022,2,24),__date_format_date,DAY)+1
+			RETURN COMBINEVALUES(" ",__date, "- jour", __decompte)
+		lineageTag: 1185f4a3-2e55-4fa2-8163-9a52f0f3f651
+
+	column Groupe
+		dataType: string
+		lineageTag: e4a43189-1ffd-4053-9fba-a2525f78937d
+		summarizeBy: none
+		sourceColumn: Groupe
+
+		annotation SummarizationSetBy = Automatic
+
+	column Texte
+		dataType: string
+		lineageTag: eaaa6058-1f9a-43b7-8826-299137c6d493
+		summarizeBy: none
+		sourceColumn: Texte
+		sortByColumn: Ordre
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Titre
+		dataType: string
+		lineageTag: cd088b89-a463-49f1-8e3b-2b57c99372be
+		summarizeBy: none
+		sourceColumn: Titre
+		sortByColumn: Ordre
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Catégorie
+		dataType: string
+		lineageTag: 650de36e-902c-4dd4-a4ed-324a37c4341c
+		summarizeBy: none
+		sourceColumn: Catégorie
+
+		annotation SummarizationSetBy = Automatic
+
+	column Titre_dyn = if(Texte[Catégorie]=Texte[Titre],BLANK(),Texte[Titre])
+		lineageTag: 11f0fe19-54d7-44a5-932d-8075e77ac404
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: d mmmm yyyy
+		lineageTag: 752993e5-1df5-4f77-a175-19bb5883251e
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: e3c18fdf-b424-4949-aec0-ef547b3ba2eb
+			defaultHierarchy: LocalDateTable_b457552e-890f-4edd-a13a-24fa9d560fa6.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Ordre
+		dataType: string
+		lineageTag: 69cd225b-124f-44d0-b85c-83e0badf0800
+		summarizeBy: none
+		sourceColumn: Ordre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Titre_display = CONCATENATE("➤ ", Texte[Titre])
+		lineageTag: c0063245-dda1-4158-8fc4-3c0c77e20ba7
+		summarizeBy: none
+		sortByColumn: Ordre
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Texte display' = COMBINEVALUES(" : ",Texte[Titre_display],Texte[Texte])
+		lineageTag: fb288aae-a937-4223-8d59-a2b7b2deb233
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column test = FORMAT(Datevalue(Texte[Texte]),"dd mmmm")
+		lineageTag: fe72b221-b72b-40b7-9ed4-f06256a8e4f5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column1
+		dataType: string
+		lineageTag: 449e4f31-2e33-4a46-8cfd-6b8344869401
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column _1
+		dataType: string
+		lineageTag: b7bd7458-a412-47bd-9b5b-26eb59435ac7
+		summarizeBy: none
+		sourceColumn: _1
+
+		annotation SummarizationSetBy = Automatic
+
+	column _2
+		dataType: string
+		lineageTag: 3c99645c-4ab9-4b17-82b0-ecfae5bfe4c9
+		summarizeBy: none
+		sourceColumn: _2
+
+		annotation SummarizationSetBy = Automatic
+
+	column _3
+		dataType: string
+		lineageTag: 6a807976-058c-4d5a-ac10-1134c91a6eb1
+		summarizeBy: none
+		sourceColumn: _3
+
+		annotation SummarizationSetBy = Automatic
+
+	column _4
+		dataType: string
+		lineageTag: 12e89409-2e84-4e95-94ae-786a77e26905
+		summarizeBy: none
+		sourceColumn: _4
+
+		annotation SummarizationSetBy = Automatic
+
+	column _5
+		dataType: string
+		lineageTag: 26645720-2a19-4528-b032-f6d35152c0fc
+		summarizeBy: none
+		sourceColumn: _5
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Texte = m
+		mode: import
+		source =
+				let
+				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1EguBfb3VzBaOqYtk6nFXaXIUn5XsR1CYBC3KNrR-1sw"),
+				    Texte_Table = Source{[name="Texte",ItemKind="Table"]}[Data],
+				    #"Type modifié" = Table.TransformColumnTypes(Texte_Table,{{"Column3", type text}}),
+				    #"En-têtes promus" = Table.PromoteHeaders(#"Type modifié", [PromoteAllScalars=true]),
+				    #"Type modifié1" = Table.TransformColumnTypes(#"En-têtes promus",{{"Date", type date}})
+				in
+				    #"Type modifié1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,181 @@
+table 'Données cartographiques'
+	lineageTag: 70718056-c127-4b05-bceb-d1c5d8d5eef9
+
+	column Type
+		dataType: string
+		lineageTag: 78c18599-7bba-4623-aed5-13e5b78143e7
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fbaf8b46-3162-47a5-9492-32bccf2ddd9c
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Priorité
+		dataType: double
+		formatString: 0.0
+		lineageTag: 788c3746-9b41-4fe3-9d4c-071f11a9b77b
+		summarizeBy: sum
+		sourceColumn: Priorité
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Affichage
+		dataType: string
+		lineageTag: f5377fc5-adb3-4c80-9b76-c611df9afb07
+		summarizeBy: none
+		sourceColumn: Affichage
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lattitude départ'
+		dataType: double
+		lineageTag: 5331b530-85b1-4f44-8ed9-19750a47af05
+		summarizeBy: sum
+		sourceColumn: Lattitude départ
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Longitude départ'
+		dataType: double
+		lineageTag: ab96d364-5858-4014-ba35-570421c23a0e
+		summarizeBy: sum
+		sourceColumn: Longitude départ
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Nom
+		dataType: string
+		lineageTag: 955a0d33-629e-4552-96e2-fa571e8c12f5
+		summarizeBy: none
+		sourceColumn: Nom
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lattitude arrivée'
+		dataType: double
+		lineageTag: 4b26e1f9-2a34-4dbd-a8eb-fbcef76b5dbd
+		summarizeBy: sum
+		sourceColumn: Lattitude arrivée
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Longitude arrivée'
+		dataType: double
+		lineageTag: 1e366b32-2a9d-4466-9914-e08430310dab
+		summarizeBy: sum
+		sourceColumn: Longitude arrivée
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: b8dc5edc-4b67-4c21-a58e-896c90c890ea
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Index.1'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c736fbf-1923-4a52-909c-4a9e8831d07a
+		summarizeBy: sum
+		sourceColumn: Index.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dist_date = abs(DATEDIFF(TODAY(),'Données cartographiques'[Date],DAY))
+		formatString: 0
+		lineageTag: 10765526-b796-4703-9c09-49b03099e32a
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Texte_affichage = if('Données cartographiques'[Affichage]="1",'Données cartographiques'[Nom],blank())
+		lineageTag: d1ceebc7-425a-4b01-98c5-b292996e0c10
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column geoloc
+		dataType: string
+		lineageTag: 74aeb26c-5c7b-41c0-b726-3ac0e6711bc4
+		summarizeBy: none
+		sourceColumn: geoloc
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Récente ?'
+		dataType: string
+		lineageTag: 5c8c50d5-6464-4ab5-aec7-4a7d7bdebf99
+		summarizeBy: none
+		sourceColumn: Récente ?
+
+		annotation SummarizationSetBy = Automatic
+
+	column Transparency = if('Données cartographiques'[Type] IN {"Combat","Bombardement","Incident","Crime de guerre"}||'Données cartographiques'[Récente ?],0,50+'Données cartographiques'[Dist_date])
+		formatString: 0
+		lineageTag: 0de56007-55b9-40a9-afa7-484408c3d3af
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Taille_effective = 'Données cartographiques'[Priorité]+if('Données cartographiques'[Type] IN {"Combat","Bombardement","Incident","Crime de guerre"},1,0)
+		lineageTag: 8c95233e-307c-43aa-8205-cc42033600de
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column test = RELATED(Calendrier[Numéro semaine])
+		formatString: 0
+		lineageTag: 9d5c8c1c-bd89-4122-8ff9-d88190051d6d
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Données cartographiques' = m
+		mode: import
+		queryGroup: Cartographie
+		source =
+				let
+				    Source = Table.NestedJoin(#"points clé", {"ID lieux"}, lieux, {"ID"}, "lieux", JoinKind.LeftOuter),
+				    #"lieux développé" = Table.ExpandTableColumn(Source, "lieux", {"Lattitude", "Longitude", "Ville"}, {"lieux.Lattitude", "lieux.Longitude", "lieux.Ville"}),
+				    #"Autres colonnes supprimées" = Table.SelectColumns(#"lieux développé",{"Type", "Date", "Priorité", "Affichage", "lieux.Lattitude", "lieux.Longitude", "lieux.Ville"}),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Autres colonnes supprimées",{{"lieux.Lattitude", "Lattitude départ"}, {"lieux.Longitude", "Longitude départ"}}),
+				    #"Duplication de la colonne" = Table.DuplicateColumn(#"Colonnes renommées", "Lattitude départ", "Lattitude départ - Copier"),
+				    #"Duplication de la colonne1" = Table.DuplicateColumn(#"Duplication de la colonne", "Longitude départ", "Longitude départ - Copier"),
+				    #"Colonnes renommées1" = Table.RenameColumns(#"Duplication de la colonne1",{{"Lattitude départ - Copier", "Lattitude arrivée"}, {"Longitude départ - Copier", "Longitude arrivée"}, {"lieux.Ville", "Nom"}}),
+				    #"Requête ajoutée" = Table.Combine({#"Colonnes renommées1", #"Ligne de front", #"Géolocs (Unités et images)"}),
+				    #"Index ajouté" = Table.AddIndexColumn(#"Requête ajoutée", "Index.1", 0, 1, Int64.Type),
+				    #"Colonnes renommées2" = Table.RenameColumns(#"Index ajouté",{{"name", "geoloc"}}),
+				    #"Valeur remplacée" = Table.ReplaceValue(#"Colonnes renommées2",null,0,Replacer.ReplaceValue,{"Priorité"})
+				in
+				    #"Valeur remplacée"
+
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = Navigation
+

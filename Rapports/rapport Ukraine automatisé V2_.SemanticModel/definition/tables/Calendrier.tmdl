@@ -1,0 +1,105 @@
+table Calendrier
+	lineageTag: 3c8df586-1acd-498a-ba3e-3c0daf360983
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: dd/mm/yy
+		lineageTag: f9e9ae04-043e-4345-adb8-039e2a157018
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Jour d''invasion' = DATEDIFF(DATE(2022,02,24),Calendrier[Date],DAY)
+		formatString: 0
+		lineageTag: 86c43a5e-94b3-493d-a8d8-cf4475371842
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column semaine = WEEKNUM(Calendrier[Date],2)
+		formatString: 0
+		lineageTag: cbaae68e-ccc2-4dcd-ada1-8822cdff7941
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Année = YEAR(Calendrier[Date])
+		formatString: 0
+		lineageTag: 87de4535-acef-4d74-aaec-8ada602dd1f7
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mois = FORMAT(Calendrier[Date],"mmmm")
+		lineageTag: a45b4c99-c511-4700-823b-8d2ec0f306ef
+		summarizeBy: none
+		sortByColumn: 'num mois'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'num mois' = MONTH(Calendrier[Date])
+		formatString: 0
+		lineageTag: 12bb993f-a7bd-4003-9cc3-e65ffdfabfe0
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column jour = DAY(Calendrier[Date])
+		formatString: 0
+		lineageTag: d6ba5eee-6165-47df-809f-c1363bcc5161
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Année-mois = COMBINEVALUES(" ",Calendrier[Mois],Calendrier[Année])
+		lineageTag: 94cc7b83-92a9-4461-8ef7-48c012476093
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Année-semaine = COMBINEVALUES("-",Calendrier[Année],Calendrier[semaine])
+		lineageTag: 72e2dab3-8ff7-4131-9c4f-e56b1bacad38
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column '6 derniers mois' =
+			
+			VAR __date_max = MAX('Assauts russes'[Date])
+			VAr __param1= DATEDIFF(Calendrier[Date],__date_max,MONTH)<=6
+			VAR __param2= Calendrier[Date]<=__date_max
+			RETURN __param1&&__param2
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3766463a-5f0b-4a5e-8631-b25fa17a55e6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Année mois jour'
+		lineageTag: fe10ca7c-5bf8-4179-8c2f-cd4f55a5c56a
+
+		level Année
+			lineageTag: d5aa1487-c49f-4acd-8114-6c3bba4d122d
+			column: Année
+
+		level Mois
+			lineageTag: bdcb4879-65db-421c-b5b7-ae398f11b560
+			column: Mois
+
+		level jour
+			lineageTag: c9bb9337-b926-41f0-9964-f1383d080c15
+			column: jour
+
+	partition Calendrier = calculated
+		mode: import
+		source = CALENDAR(DATE(2022,1,1),DATE(YEAR(TODAY()),12,31))
+
+	annotation PBI_Id = b3cf2a6154744ba993a839fd979a68c4
+

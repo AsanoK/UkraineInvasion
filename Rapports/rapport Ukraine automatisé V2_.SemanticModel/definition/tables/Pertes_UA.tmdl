@@ -1,0 +1,51 @@
+table Pertes_UA
+	lineageTag: 207a9fb8-f0e4-45e5-9a93-07fc3de7e072
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 46fd389e-5f4b-42d4-8ec4-6c596970ec3a
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Catégorie
+		dataType: string
+		lineageTag: bdb62821-c81f-43e5-8474-51f8f17d2519
+		summarizeBy: none
+		sourceColumn: Catégorie
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pertes
+		dataType: int64
+		formatString: 0
+		lineageTag: 76c4a19c-f99f-45e6-a760-396e37d3a8fb
+		summarizeBy: sum
+		sourceColumn: Pertes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Progression
+		dataType: int64
+		formatString: 0
+		lineageTag: 74456e70-88df-4c5d-a871-93bb45dfe08c
+		summarizeBy: sum
+		sourceColumn: Progression
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Pertes_UA = m
+		mode: import
+		source =
+				let
+				    Source = Table.Combine({russia_losses_equipment, russia_losses_personnel}),
+				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Pertes", Int64.Type}, {"Progression", Int64.Type}, {"Catégorie", type text}, {"Date", type date}})
+				in
+				    #"Type modifié"
+
+	annotation PBI_ResultType = Table
+

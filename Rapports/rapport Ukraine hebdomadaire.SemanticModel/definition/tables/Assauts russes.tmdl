@@ -1,0 +1,38 @@
+table 'Assauts russes'
+	lineageTag: 1604d2ff-cc90-4ea5-a447-8887c6744c0f
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 033f2d63-125b-4561-a699-c706f4443ef5
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Assauts russes'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ac612c2-41d4-47ec-9283-46bccd0d58ab
+		summarizeBy: sum
+		sourceColumn: Assauts russes
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Assauts russes' = m
+		mode: import
+		source =
+				let
+				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1EguBfb3VzBaOqYtk6nFXaXIUn5XsR1CYBC3KNrR-1sw"),
+				    #"nb assauts russes_Table" = Source{[name="nb assauts russes",ItemKind="Table"]}[Data],
+				    #"En-têtes promus" = Table.PromoteHeaders(#"nb assauts russes_Table", [PromoteAllScalars=true]),
+				    #"Type modifié" = Table.TransformColumnTypes(#"En-têtes promus",{{"Date", type date}, {"Assauts russes", Int64.Type}})
+				in
+				    #"Type modifié"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

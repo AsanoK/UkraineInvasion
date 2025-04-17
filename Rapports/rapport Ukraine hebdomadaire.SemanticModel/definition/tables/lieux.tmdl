@@ -1,0 +1,71 @@
+table lieux
+	lineageTag: 8cfe0365-0275-4c32-84ea-a69f41a8dcbb
+
+	column Ville
+		dataType: string
+		lineageTag: 23b3cc31-8b46-400f-8856-9af52891f6f3
+		summarizeBy: none
+		sourceColumn: Ville
+
+		annotation SummarizationSetBy = Automatic
+
+	column Oblast
+		dataType: string
+		lineageTag: 42a49c18-0df4-44c0-868d-8247e7057d4e
+		summarizeBy: none
+		sourceColumn: Oblast
+
+		annotation SummarizationSetBy = Automatic
+
+	column Coordonnées
+		dataType: string
+		lineageTag: c8c050f8-fe63-43c2-9dd0-8b6ff3f09a6c
+		summarizeBy: none
+		sourceColumn: Coordonnées
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lattitude
+		dataType: double
+		lineageTag: 57b97867-b428-4cf7-8062-a8b891597cc6
+		summarizeBy: sum
+		sourceColumn: Lattitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		lineageTag: 96e4547e-9a3b-4228-be00-73d9e2bec8d3
+		summarizeBy: sum
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ID
+		dataType: string
+		lineageTag: e8f5bb3b-847c-45e0-b040-6e811ca4b128
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition lieux = m
+		mode: import
+		source =
+				let
+				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1EguBfb3VzBaOqYtk6nFXaXIUn5XsR1CYBC3KNrR-1sw"),
+				    lieux_Table = Source{[name="lieux",ItemKind="Table"]}[Data],
+				    #"En-têtes promus" = Table.PromoteHeaders(lieux_Table, [PromoteAllScalars=true]),
+				    #"Type modifié" = Table.TransformColumnTypes(#"En-têtes promus",{{"Ville", type text}, {"Oblast", type text}, {"Coordonnées", type text}, {"Lattitude", type text}, {"Longitude", type text}, {"ID", type text}}),
+				    #"Lignes filtrées" = Table.SelectRows(#"Type modifié", each ([Ville] <> "")),
+				    #"Valeur remplacée" = Table.ReplaceValue(#"Lignes filtrées",".",",",Replacer.ReplaceText,{"Lattitude", "Longitude"}),
+				    #"Type modifié1" = Table.TransformColumnTypes(#"Valeur remplacée",{{"Lattitude", type number}, {"Longitude", type number}})
+				in
+				    #"Type modifié1"
+
+	annotation PBI_ResultType = Exception
+

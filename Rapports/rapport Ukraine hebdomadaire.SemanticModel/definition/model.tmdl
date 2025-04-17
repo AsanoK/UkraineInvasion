@@ -1,0 +1,37 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: fr-FR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup Cartographie
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["Assauts russes","Texte","lieux","Pertes RU confirmées","Pertes_warspotting","Pertes_Oryx","Types pertes","Mesures","russia_losses_equipment","russia_losses_personnel","Pertes_UA","LogsOWL_derniere_date","Catégorisation","points clé","Typage_Owl","Géolocs (Unités et images)","front_source","Ligne de front","Secteurs","Points clés","Données cartographiques","Test events","date_référence"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.141.1558.0 (25.03)+75b5f06a991f8f8a8a4d6b6fcd0f66e1ec2d6fdc
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Texte
+ref table DateTableTemplate_3d88b9d9-2caa-4834-9e47-e9442402ba28
+ref table lieux
+ref table Mesures
+ref table Pertes_UA
+ref table Calendrier
+ref table LocalDateTable_92958ceb-3dbb-4f87-9172-34a50f0ff3df
+ref table Catégorisation
+ref table 'Données cartographiques'
+ref table 'Pertes RU confirmées'
+ref table 'Test events'
+ref table LocalDateTable_f1a48135-381a-4d9b-8ec5-60b559fe161d
+ref table 'Assauts russes'
+ref table LocalDateTable_029b5a00-60a7-4ea0-b916-174748d35f17
+
+ref cultureInfo fr-FR
+

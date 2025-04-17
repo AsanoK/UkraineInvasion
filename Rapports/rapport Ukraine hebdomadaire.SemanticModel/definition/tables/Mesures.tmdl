@@ -1,0 +1,160 @@
+table Mesures
+	lineageTag: 49557378-ca30-41b2-a0bf-9274fff10355
+
+	measure Combats = "170 (+30)"
+		lineageTag: 89dcaa34-537e-4f6a-add5-ee91027253eb
+
+	measure 'Points d''intérêt' = CALCULATE(COUNTROWS('Points clés'),'Points clés'[Catégorie]<>"Front")
+		formatString: 0
+		lineageTag: 55b110cb-bf54-4bb2-8bcb-7f77be7ac25b
+
+	measure Date_max = ```
+			VAR __date = CALCULATE(MAX(Texte[Texte]),Texte[Titre]="Date")
+			VAR __date_format_date = max(Texte[Date])
+			RETURN __date_format_date
+			
+			```
+		formatString: d mmmm
+		lineageTag: 77842560-52f5-40c4-a8c8-7e72a388280f
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	measure nb_jours =
+			
+			VAr __decompte=DATEDIFF(DATE(2022,2,24),[Date_max]+1,DAY)
+			RETURN CONCATENATE(__decompte,"e jour")
+		lineageTag: 7d8d6582-394b-4d8a-bf69-309ad5045e84
+
+	measure En-cart = CALCULATE(max(Texte[Titre]),Texte[Catégorie]="Date")
+		lineageTag: a9f88e0a-e78f-4f7a-8765-8bb6ed739c8c
+
+	measure 'Titre 2' = CONCATENATE([En-cart], " : Pertes russes")
+		lineageTag: c95fa5b2-bd8a-40e3-89d2-e9d1cb2f017b
+
+	measure 'Bombardements majeurs' = CALCULATE(COUNTROWS('Données cartographiques'),'Données cartographiques'[Type]="Bombardement")
+		formatString: 0
+		lineageTag: 2d8e283f-ab16-424f-9bb7-1cb8738f4efa
+
+	measure 'Vidéos géocalisées' = CALCULATE(COUNTROWS('Données cartographiques'),'Données cartographiques'[geoloc] IN {"Russian Geolocations (~30 Days)","Ukraine Geolocations (~30 Days)"})
+		formatString: 0
+		lineageTag: 9ca3a7ba-e6d7-47b3-9775-7775576a4662
+
+	measure 'Chars détruits' = CALCULATE([Pertes russes],Pertes_UA[Catégorie]="Tank")
+		lineageTag: 04d5e64c-a9b3-4680-9b49-19c0e7986fcf
+
+	measure 'Missiles abattus' = CALCULATE([Pertes russes],Pertes_UA[Catégorie]="cruise missiles")
+		lineageTag: 002e1b24-59c4-42e4-8bf6-c66444b22aa4
+
+	measure 'Pertes totales (UA)' =
+			
+			VAR __dateMax =max(Pertes_UA[Date])
+			RETURN CALCULATE(SUM(Pertes_UA[Pertes]),Pertes_UA[Date]=__dateMax)
+		formatString: 0
+		lineageTag: fb8fc33b-f329-4c16-9cd8-0aee892920df
+
+	measure 'Pertes russes' = if([Pertes totales (UA)]>0, [Pertes totales (UA)] & " (+" & [Dernière progression pertes]&")",blank())
+		lineageTag: db0a3178-e1e1-414b-a416-d3737d5e867f
+
+	measure 'Progression moyenne' =
+			
+			VAR __dateMax = max(Calendrier[Date])
+			VAR __dateMin=min(Calendrier[Date])
+			RETURN AVERAGEX('Catégorisation', CALCULATE(SUM(Pertes_UA[Pertes]),Pertes_UA[Date]=__dateMax)-CALCULATE(SUM(Pertes_UA[Pertes]),Pertes_UA[Date]=__dateMin))
+		lineageTag: 0d195396-291f-4d97-a3e7-6799d881c7d1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dernière progression pertes' =
+			
+			Var __dateMax = max(Calendrier[Date])
+			VAR __dateMin=min(Calendrier[Date])
+			RETURN max(CALCULATE(SUM(Pertes_UA[Progression]),Pertes_UA[Date]>=__dateMin&&Pertes_UA[Date]<=__dateMax),0)//CALCULATE(SUM(Pertes_UA[Pertes]),Pertes_UA[Date]=__dateMax)-CALCULATE(SUM(Pertes_UA[Pertes]),Pertes_UA[Date]=__dateMin)
+		formatString: 0
+		lineageTag: 277649fc-c4c1-470e-8f5d-8e5aaacdc503
+
+	measure 'Ratio progression UA' = divide([Dernière progression pertes],[Progression moyenne])
+		lineageTag: 6ef37747-28b8-4d86-ba2f-ce9c68444ff0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Pertes humaines' = ```
+			CALCULATE([Pertes russes],Pertes_UA[Catégorie]="Personnel")
+			
+			```
+		lineageTag: dffda3bd-cfae-458e-9441-4b4ca98930fc
+
+	measure Notes_icones = " : > 150% de la moyenne hebdomadaire"
+		lineageTag: ff512edc-3591-4d79-b28d-413b9f9b37d1
+
+	measure Pertes_Warspotting =
+			
+			VAR total = SUM('Pertes RU confirmées'[Pertes totales])
+			Var nouvelles = SUM('Pertes RU confirmées'[Nouvelles pertes])
+			RETURN if(total<>blank(),CONVERT(total,STRING))
+		lineageTag: 482d092f-7418-406d-bc51-6383716d6233
+
+	measure Titre-front = [En-cart] & " - Ligne de front"
+		lineageTag: fae46655-5da7-429b-bbb3-9eb8f9adf310
+
+	measure 'Progression dernier mois' =
+			
+			
+			VAR __dateMax = MAX(Calendrier[Date])
+			VAR __dateMin = DATE(YEAR(__dateMax),MONTH(__dateMax),1)
+			RETURN CALCULATE(SUM(Pertes_UA[Progression]),Pertes_UA[Date]>+__dateMin&&Pertes_UA[Date]<=__dateMax)
+		formatString: 0
+		lineageTag: bee5a66f-115f-4d17-9505-7377fec29acd
+
+	measure 'Dernière progression' =
+			
+			VAr __dateMax = max(Calendrier[Date])
+			REturn MAX(CALCULATE(SUM(Pertes_UA[Progression]),Pertes_UA[Date]=__dateMax),0)
+		formatString: 0
+		lineageTag: e9ec3b0f-93cb-42d5-8bca-5e71d7eba866
+
+	measure 'nb pertes humaines' = CALCULATE(SUM(Pertes_UA[Progression]),ALL('Catégorisation'),'Catégorisation'[Catégorie UA]="Personnel")
+		formatString: 0
+		lineageTag: 63fd360f-9442-48d3-bf23-31a68128f09e
+
+	measure Constante_1 = 1
+		formatString: 0
+		lineageTag: 9cfceb71-0f7d-45d5-886c-d03e66ff7a63
+
+	measure 'Pertes matérielles UTD' =
+			
+			VAR __dateMax = [Date_max]
+			RETURN CALCULATE(SUM(Pertes_UA[Progression]))
+		formatString: 0
+		lineageTag: ebee5567-95c2-4cbd-a7d2-dc7cb12ee5f0
+
+	measure 'Assauts russes' = SUM('Assauts russes'[Assauts russes])
+		formatString: 0
+		lineageTag: 849da96e-6499-407a-b406-1d9ca1785c43
+
+	measure 'Assauts russes S-1' =
+			
+			VAR _num_semaine = SELECTEDVALUE(Calendrier[Numéro semaine])-1
+			RETURN CALCULATE([Assauts russes],Calendrier[Numéro semaine]=_num_semaine)
+		formatString: 0
+		lineageTag: f742f395-936d-4b5b-808a-d8695d7ad5a5
+
+	measure 'Assauts russes (disp)' =
+			
+			VAR __base = [Assauts russes]
+			Var __diff = [Assauts russes]-[Assauts russes S-1]
+			VAR __signe = if(__diff>0,"+ "&__diff,if(__diff<0,"- "&__diff,""))
+			RETURN __base& " ("&__signe&")"
+		lineageTag: 9517a549-ba0c-4f91-b0da-07ffe584d465
+
+	partition Mesures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Colonne 1" = _t]),
+				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Colonne 1", type text}}),
+				    #"Colonnes supprimées" = Table.RemoveColumns(#"Type modifié",{"Colonne 1"})
+				in
+				    #"Colonnes supprimées"
+
+	annotation PBI_ResultType = Table
+

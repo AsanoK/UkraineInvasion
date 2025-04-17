@@ -1,0 +1,315 @@
+expression front_source =
+		let
+		    Source = Xml.Tables(File.Contents("C:\Users\Antoine\Documents\Data Ukraine Offline\Ukraine Control Map.kml")),
+		    Table0 = Source{0}[Table],
+		    #"Type modifié" = Table.TransformColumnTypes(Table0,{{"name", type text}, {"description", type text}}),
+		    Folder = #"Type modifié"{0}[Folder],
+		    #"Type modifié1" = Table.TransformColumnTypes(Folder,{{"name", type text}}),
+		    #"Lignes filtrées" = Table.SelectRows(#"Type modifié1", each ([name] = "Frontline")),
+		    Placemark = #"Lignes filtrées"{0}[Placemark],
+		    #"Type modifié2" = Table.TransformColumnTypes(Placemark,{{"name", type text}, {"description", type text}, {"styleUrl", type text}}),
+		    #"LineString développé" = Table.ExpandTableColumn(#"Type modifié2", "LineString", {"coordinates"}, {"LineString.coordinates"}),
+		    #"Fractionner la colonne par délimiteur" = Table.ExpandListColumn(Table.TransformColumns(#"LineString développé", {{"LineString.coordinates", Splitter.SplitTextByDelimiter(",0", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "LineString.coordinates"),
+		    #"Type modifié3" = Table.TransformColumnTypes(#"Fractionner la colonne par délimiteur",{{"LineString.coordinates", type text}}),
+		    #"Fractionner la colonne par délimiteur1" = Table.SplitColumn(#"Type modifié3", "LineString.coordinates", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), {"LineString.coordinates.1", "LineString.coordinates.2"}),
+		    #"Type modifié4" = Table.TransformColumnTypes(#"Fractionner la colonne par délimiteur1",{{"LineString.coordinates.1", type text}, {"LineString.coordinates.2", type text}}),
+		    #"Valeur remplacée" = Table.ReplaceValue(#"Type modifié4",".",",",Replacer.ReplaceText,{"LineString.coordinates.1", "LineString.coordinates.2"}),
+		    #"Type modifié5" = Table.TransformColumnTypes(#"Valeur remplacée",{{"LineString.coordinates.1", type number}, {"LineString.coordinates.2", type number}}),
+		    #"Colonnes supprimées" = Table.RemoveColumns(#"Type modifié5",{"description", "styleUrl"}),
+		    #"Colonnes renommées" = Table.RenameColumns(#"Colonnes supprimées",{{"LineString.coordinates.1", "Longitude"}, {"LineString.coordinates.2", "Lattitude"}}),
+		    #"Index ajouté" = Table.AddIndexColumn(#"Colonnes renommées", "Index", 0, 1, Int64.Type),
+		    #"Colonnes renommées1" = Table.RenameColumns(#"Index ajouté",{{"name", "Attribut"}})
+		in
+		    #"Colonnes renommées1"
+	lineageTag: 9c3cee49-0804-4a18-881d-24dd10412f9c
+	queryGroup: Cartographie
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 'Ligne de front' =
+		let
+		    Source = front_source,
+		    #"Index ajouté" = Table.AddIndexColumn(Source, "Index.1", 1, 1, Int64.Type),
+		    #"Requêtes fusionnées" = Table.NestedJoin(#"Index ajouté", {"Index"}, #"Index ajouté", {"Index.1"}, "Index ajouté", JoinKind.LeftOuter),
+		    #"Index ajouté développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "Index ajouté", {"Longitude", "Lattitude"}, {"Index ajouté.Longitude", "Index ajouté.Lattitude"}),
+		    #"Colonnes renommées" = Table.RenameColumns(#"Index ajouté développé",{{"Longitude", "Longitude_dep"}, {"Lattitude", "Lattitude_dep"}, {"Index ajouté.Longitude", "Longitude_arr"}, {"Index ajouté.Lattitude", "Lattitude_arr"}}),
+		    #"Colonnes supprimées" = Table.RemoveColumns(#"Colonnes renommées",{"Index.1", "Attribut"}),
+		    #"Personnalisée ajoutée" = Table.AddColumn(#"Colonnes supprimées", "Catégorie", each "Front"),
+		    #"Colonnes renommées1" = Table.RenameColumns(#"Personnalisée ajoutée",{{"Catégorie", "Type"}, {"Longitude_dep", "Longitude départ"}, {"Lattitude_dep", "Lattitude départ"}, {"Longitude_arr", "Longitude arrivée"}, {"Lattitude_arr", "Lattitude arrivée"}}),
+		    #"Personnalisée ajoutée1" = Table.AddColumn(#"Colonnes renommées1", "Date", each date_référence),
+		    #"Type modifié" = Table.TransformColumnTypes(#"Personnalisée ajoutée1",{{"Date", type date}}),
+		    #"Personnalisée ajoutée2" = Table.AddColumn(#"Type modifié", "Priorité", each 0)
+		in
+		    #"Personnalisée ajoutée2"
+	lineageTag: ec40d4b7-faca-41ea-b13c-e8d8ca2f1766
+	queryGroup: Cartographie
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 'Géolocs (Unités et images)' =
+		let
+		    Source = Xml.Tables(File.Contents("C:\Users\Antoine\Documents\Data Ukraine Offline\Ukraine Control Map.kml")),
+		    Table0 = Source{0}[Table],
+		    #"Type modifié" = Table.TransformColumnTypes(Table0,{{"name", type text}, {"description", type text}}),
+		    Folder = #"Type modifié"{0}[Folder],
+		    #"Type modifié1" = Table.TransformColumnTypes(Folder,{{"name", type text}}),
+		    #"Lignes filtrées" = Table.SelectRows(#"Type modifié1", each ([name] = "Russian Geolocations (~30 Days)" or [name] = "Russian Unit Positions" or [name] = "Ukraine Geolocations (~30 Days)" or [name] = "Ukrainian Unit Positions")),
+		    #"Placemark développé" = Table.ExpandTableColumn(#"Lignes filtrées", "Placemark", {"name", "Point"}, {"Placemark.name", "Placemark.Point"}),
+		    #"Placemark.Point développé" = Table.ExpandTableColumn(#"Placemark développé", "Placemark.Point", {"coordinates"}, {"Placemark.Point.coordinates"}),
+		    #"Fractionner la colonne par délimiteur" = Table.SplitColumn(#"Placemark.Point développé", "Placemark.Point.coordinates", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), {"Placemark.Point.coordinates.1", "Placemark.Point.coordinates.2", "Placemark.Point.coordinates.3"}),
+		    #"Type modifié2" = Table.TransformColumnTypes(#"Fractionner la colonne par délimiteur",{{"Placemark.Point.coordinates.1", type text}, {"Placemark.Point.coordinates.2", type text}, {"Placemark.Point.coordinates.3", Int64.Type}}),
+		    #"Valeur remplacée" = Table.ReplaceValue(#"Type modifié2",".",",",Replacer.ReplaceText,{"Placemark.Point.coordinates.1", "Placemark.Point.coordinates.2"}),
+		    #"Type modifié3" = Table.TransformColumnTypes(#"Valeur remplacée",{{"Placemark.Point.coordinates.1", type number}, {"Placemark.Point.coordinates.2", type number}}),
+		    #"Colonnes renommées" = Table.RenameColumns(#"Type modifié3",{{"Placemark.Point.coordinates.1", "Longitude"}, {"Placemark.Point.coordinates.2", "Lattitude"}}),
+		    #"Colonnes supprimées" = Table.RemoveColumns(#"Colonnes renommées",{"Placemark.Point.coordinates.3"}),
+		    #"Lignes filtrées1" = Table.SelectRows(#"Colonnes supprimées", each true),
+		    #"Duplication de la colonne" = Table.DuplicateColumn(#"Lignes filtrées1", "Longitude", "Longitude - Copier"),
+		    #"Duplication de la colonne1" = Table.DuplicateColumn(#"Duplication de la colonne", "Lattitude", "Lattitude - Copier"),
+		    #"Espaces supprimés" = Table.TransformColumns(#"Duplication de la colonne1",{{"name", Text.Trim, type text}}),
+		    #"Requêtes fusionnées" = Table.NestedJoin(#"Espaces supprimés", {"name"}, Typage_Owl, {"Name"}, "Typage_Owl", JoinKind.LeftOuter),
+		    #"Typage_Owl développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "Typage_Owl", {"Nom"}, {"Typage_Owl.Nom"}),
+		    #"Colonnes renommées1" = Table.RenameColumns(#"Typage_Owl développé",{{"Typage_Owl.Nom", "Type"}}),
+		    #"Colonnes renommées2" = Table.RenameColumns(#"Colonnes renommées1",{{"Placemark.name", "Nom"}, {"Longitude", "Longitude départ"}, {"Lattitude", "Lattitude départ"}, {"Longitude - Copier", "Longitude arrivée"}, {"Lattitude - Copier", "Lattitude arrivée"}}),
+		    #"Duplication de la colonne2" = Table.DuplicateColumn(#"Colonnes renommées2", "Nom", "Nom - Copier"),
+		    #"Fractionner la colonne par position" = Table.SplitColumn(#"Duplication de la colonne2", "Nom - Copier", Splitter.SplitTextByPositions({0, 10}, false), {"Nom - Copier.1", "Nom - Copier.2"}),
+		    #"Type modifié4" = Table.TransformColumnTypes(#"Fractionner la colonne par position",{{"Nom - Copier.1", type text}, {"Nom - Copier.2", type text}}),
+		    #"Valeur remplacée1" = Table.ReplaceValue(#"Type modifié4","[","",Replacer.ReplaceText,{"Nom - Copier.1"}),
+		    #"Valeur remplacée2" = Table.ReplaceValue(#"Valeur remplacée1","]","",Replacer.ReplaceText,{"Nom - Copier.1"}),
+		    #"Personnalisée ajoutée1" = Table.AddColumn(#"Valeur remplacée2", "Date_", each if Text.Contains([#"Nom - Copier.1"],"/") then [#"Nom - Copier.1"] else null),
+		    #"Type modifié5" = Table.TransformColumnTypes(#"Personnalisée ajoutée1",{{"Date_", type text}}),
+		    #"Fractionner la colonne par délimiteur1" = Table.SplitColumn(#"Type modifié5", "Date_", Splitter.SplitTextByDelimiter("/", QuoteStyle.Csv), {"Date_.1", "Date_.2", "Date_.3"}),
+		    #"Type modifié6" = Table.TransformColumnTypes(#"Fractionner la colonne par délimiteur1",{{"Date_.1", Int64.Type}, {"Date_.2", Int64.Type}, {"Date_.3", Int64.Type}}),
+		    #"Personnalisée ajoutée2" = Table.AddColumn(#"Type modifié6", "Date_", each #date(2000+[Date_.1],[Date_.2],[Date_.3])),
+		    #"Erreurs remplacées" = Table.ReplaceErrorValues(#"Personnalisée ajoutée2", {{"Date_", null}}),
+		    #"Colonnes supprimées2" = Table.RemoveColumns(#"Erreurs remplacées",{"Nom - Copier.1", "Nom - Copier.2", "Date_.1", "Date_.2", "Date_.3"}),
+		    Dater = Table.AddColumn(#"Colonnes supprimées2", "Date", each if [Date_]=null then date_référence else [Date_]),
+		    #"Type modifié7" = Table.TransformColumnTypes(Dater,{{"Date", type date}}),
+		    Priorisation = Table.AddColumn(#"Type modifié7", "Priorité", each   if( [name]="Russian Unit Positions" or [name]="Ukrainian Unit Positions") then 0.5 else 1),
+		    #"Personnalisée ajoutée4" = Table.AddColumn(Priorisation, "Récente ?", each Date.IsInPreviousNDays([Date_],7)),
+		    #"Colonnes supprimées3" = Table.RemoveColumns(#"Personnalisée ajoutée4",{"Date_"})
+		in
+		    #"Colonnes supprimées3"
+	lineageTag: d04e0ab1-7979-4256-afbc-5f39fe99a71d
+	queryGroup: Cartographie
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Secteurs =
+		let
+		    Source = Xml.Tables(File.Contents("C:\Users\Antoine\Documents\Data Ukraine Offline\Ukraine Control Map.kml")),
+		    Table0 = Source{0}[Table],
+		    #"Type modifié" = Table.TransformColumnTypes(Table0,{{"name", type text}, {"description", type text}}),
+		    Folder = #"Type modifié"{0}[Folder],
+		    #"Lignes filtrées2" = Table.SelectRows(Folder, each ([name] = "Important Areas")),
+		    Placemark = #"Lignes filtrées2"{0}[Placemark],
+		    #"Type modifié1" = Table.TransformColumnTypes(Placemark,{{"name", type text}, {"styleUrl", type text}, {"description", type text}}),
+		    #"Lignes filtrées" = Table.SelectRows(#"Type modifié1", each ([name] = "Russian Avdiivka Offensive" or [name] = "Russian Bakhmut Offensive" or [name] = "Russian K Kharkiv Offensive 2" or [name] = "Russian Luhansk/Kharkiv Offensive" or [name] = "Russian Marinka Offensive" or [name] = "Russian N Kharkiv Offensive" or [name] = "Russian Robotyne Offensive" or [name] = "Russian Velyka Novosilka Offensive")),
+		    #"Polygon développé" = Table.ExpandTableColumn(#"Lignes filtrées", "Polygon", {"outerBoundaryIs"}, {"Polygon.outerBoundaryIs"}),
+		    #"Polygon.outerBoundaryIs développé" = Table.ExpandTableColumn(#"Polygon développé", "Polygon.outerBoundaryIs", {"LinearRing"}, {"LinearRing"}),
+		    #"LinearRing développé" = Table.ExpandTableColumn(#"Polygon.outerBoundaryIs développé", "LinearRing", {"coordinates"}, {"coordinates"}),
+		    #"Autres colonnes supprimées" = Table.SelectColumns(#"LinearRing développé",{"name", "coordinates", "description"}),
+		    #"Fractionner la colonne par délimiteur" = Table.ExpandListColumn(Table.TransformColumns(#"Autres colonnes supprimées", {{"coordinates", Splitter.SplitTextByDelimiter("#(lf)", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "coordinates"),
+		    #"Type modifié2" = Table.TransformColumnTypes(#"Fractionner la colonne par délimiteur",{{"coordinates", type text}}),
+		    #"Fractionner la colonne par délimiteur1" = Table.SplitColumn(#"Type modifié2", "coordinates", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), {"coordinates.1", "coordinates.2", "coordinates.3"}),
+		    #"Type modifié3" = Table.TransformColumnTypes(#"Fractionner la colonne par délimiteur1",{{"coordinates.1", type text}, {"coordinates.2", type text}, {"coordinates.3", Int64.Type}}),
+		    #"Valeur remplacée" = Table.ReplaceValue(#"Type modifié3",".",",",Replacer.ReplaceText,{"coordinates.1", "coordinates.2"}),
+		    #"Type modifié4" = Table.TransformColumnTypes(#"Valeur remplacée",{{"coordinates.1", type number}, {"coordinates.2", type number}}),
+		    #"Colonnes supprimées" = Table.RemoveColumns(#"Type modifié4",{"coordinates.3"}),
+		    #"Lignes filtrées1" = Table.SelectRows(#"Colonnes supprimées", each ([coordinates.1] <> null)),
+		    #"Index ajouté" = Table.AddIndexColumn(#"Lignes filtrées1", "Index", 0, 1, Int64.Type),
+		    #"Colonnes renommées" = Table.RenameColumns(#"Index ajouté",{{"coordinates.1", "Longitude"}, {"coordinates.2", "Lattitude"}}),
+		    #"Personnalisée ajoutée" = Table.AddColumn(#"Colonnes renommées", "Index -1", each if [Index]> 0 then [Index]-1 else 0),
+		    #"Requêtes fusionnées" = Table.NestedJoin(#"Personnalisée ajoutée", {"Index"}, #"Personnalisée ajoutée", {"Index -1"}, "Personnalisée ajoutée", JoinKind.LeftOuter),
+		    #"Personnalisée ajoutée développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "Personnalisée ajoutée", {"Longitude", "Lattitude"}, {"Longitude.1", "Lattitude.1"})
+		in
+		    #"Personnalisée ajoutée développé"
+	lineageTag: d447e8c4-ce6a-4d39-ab2a-4d75904d4ae2
+	queryGroup: Cartographie
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Pertes_warspotting =
+		let
+		    Source = Json.Document(Web.Contents("https://ukr.warspotting.net/api/losses/russia/2024-06-20")),
+		    #"Converti en table" = Record.ToTable(Source),
+		    #"Value développé" = Table.ExpandListColumn(#"Converti en table", "Value"),
+		    #"Value développé1" = Table.ExpandRecordColumn(#"Value développé", "Value", {"id", "type", "model", "status", "lost_by", "date", "nearest_location", "geo", "unit", "tags"}, {"Value.id", "Value.type", "Value.model", "Value.status", "Value.lost_by", "Value.date", "Value.nearest_location", "Value.geo", "Value.unit", "Value.tags"})
+		in
+		    #"Value développé1"
+	lineageTag: 8b3c190b-1007-4d79-952b-6bbf16dc46da
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression russia_losses_equipment =
+		let
+		    Source = Json.Document(File.Contents("C:\Users\Antoine\Documents\2022-Ukraine-Russia-War-Dataset\data\russia_losses_equipment.json")),
+		    #"Converti en table" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+		    #"Column1 développé" = Table.ExpandRecordColumn(#"Converti en table", "Column1", {"date", "day", "aircraft", "helicopter", "tank", "APC", "field artillery", "MRL", "military auto", "fuel tank", "drone", "naval ship", "submarines", "anti-aircraft warfare", "special equipment", "mobile SRBM system", "vehicles and fuel tanks", "cruise missiles", "greatest losses direction"}, {"date", "day", "aircraft", "helicopter", "tank", "APC", "field artillery", "MRL", "military auto", "fuel tank", "drone", "naval ship", "submarines", "anti-aircraft warfare", "special equipment", "mobile SRBM system", "vehicles and fuel tanks", "cruise missiles", "greatest losses direction"}),
+		    #"Type modifié" = Table.TransformColumnTypes(#"Column1 développé",{{"date", type date}, {"day", Int64.Type}, {"aircraft", Int64.Type}, {"helicopter", Int64.Type}, {"tank", Int64.Type}, {"APC", Int64.Type}, {"field artillery", Int64.Type}, {"MRL", Int64.Type}, {"military auto", Int64.Type}, {"fuel tank", Int64.Type}, {"drone", Int64.Type}, {"naval ship", Int64.Type}, {"submarines", type any}, {"anti-aircraft warfare", Int64.Type}, {"special equipment", type any}, {"mobile SRBM system", type any}, {"vehicles and fuel tanks", type any}, {"cruise missiles", type any}, {"greatest losses direction", type any}}),
+		    #"Personnalisée ajoutée" = Table.AddColumn(#"Type modifié", "day_after", each [day]+1),
+		    #"Tableau croisé dynamique des colonnes supprimé" = Table.UnpivotOtherColumns(#"Personnalisée ajoutée", {"date", "day", "day_after"}, "Attribut", "Valeur"),
+		    #"Lignes filtrées" = Table.SelectRows(#"Tableau croisé dynamique des colonnes supprimé", each ([Attribut] <> "greatest losses direction")),
+		    #"Requêtes fusionnées" = Table.NestedJoin(#"Lignes filtrées", {"day", "Attribut"}, #"Lignes filtrées", {"day_after", "Attribut"}, "Tableau croisé dynamique des colonnes supprimé", JoinKind.LeftOuter),
+		    #"Tableau croisé dynamique des colonnes supprimé développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "Tableau croisé dynamique des colonnes supprimé", {"Valeur"}, {"Tableau croisé dynamique des colonnes supprimé.Valeur"}),
+		    #"Personnalisée ajoutée1" = Table.AddColumn(#"Tableau croisé dynamique des colonnes supprimé développé", "Progression", each if [Tableau croisé dynamique des colonnes supprimé.Valeur]=null then [Valeur] else [Valeur]-[Tableau croisé dynamique des colonnes supprimé.Valeur]),
+		    #"Autres colonnes supprimées" = Table.SelectColumns(#"Personnalisée ajoutée1",{"date", "Attribut", "Valeur", "Progression"}),
+		    #"Colonnes renommées" = Table.RenameColumns(#"Autres colonnes supprimées",{{"Valeur", "Pertes"}, {"Attribut", "Catégorie"}, {"date", "Date"}})
+		in
+		    #"Colonnes renommées"
+	lineageTag: 13f0c20a-d42b-48a0-8bcc-a50be58041df
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression russia_losses_personnel =
+		let
+		    Source = Json.Document(File.Contents("C:\Users\Antoine\Documents\2022-Ukraine-Russia-War-Dataset\data\russia_losses_personnel.json")),
+		    #"Converti en table" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+		    #"Column1 développé" = Table.ExpandRecordColumn(#"Converti en table", "Column1", {"date", "day", "personnel", "personnel*", "POW"}, {"Column1.date", "Column1.day", "Column1.personnel", "Column1.personnel*", "Column1.POW"}),
+		    #"Personnalisée ajoutée" = Table.AddColumn(#"Column1 développé", "day_after", each [Column1.day]+1),
+		    #"Requêtes fusionnées" = Table.NestedJoin(#"Personnalisée ajoutée", {"Column1.day"}, #"Personnalisée ajoutée", {"day_after"}, "Personnalisée ajoutée", JoinKind.LeftOuter),
+		    #"Personnalisée ajoutée développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "Personnalisée ajoutée", {"Column1.personnel"}, {"Personnalisée ajoutée.Column1.personnel"}),
+		    #"Personnalisée ajoutée1" = Table.AddColumn(#"Personnalisée ajoutée développé", "Progression", each if [Personnalisée ajoutée.Column1.personnel]=null then  [Column1.personnel] else [Column1.personnel]-[Personnalisée ajoutée.Column1.personnel]),
+		    #"Autres colonnes supprimées" = Table.SelectColumns(#"Personnalisée ajoutée1",{"Column1.date", "Column1.personnel", "Progression"}),
+		    #"Colonnes renommées" = Table.RenameColumns(#"Autres colonnes supprimées",{{"Column1.date", "Date"}, {"Column1.personnel", "Pertes"}}),
+		    #"Personnalisée ajoutée2" = Table.AddColumn(#"Colonnes renommées", "Catégorie", each "Personnel")
+		in
+		    #"Personnalisée ajoutée2"
+	lineageTag: 5bd89184-f119-4380-a861-e7c4b8c52c94
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 'points clé' =
+		let
+		    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1EguBfb3VzBaOqYtk6nFXaXIUn5XsR1CYBC3KNrR-1sw"),
+		    #"Historisation points clés_Table" = Source{[name="Historisation points clés",ItemKind="Table"]}[Data],
+		    #"En-têtes promus" = Table.PromoteHeaders(#"Historisation points clés_Table", [PromoteAllScalars=true]),
+		    #"Type modifié" = Table.TransformColumnTypes(#"En-têtes promus",{{"ID lieux", type text}, {"Type", type text}, {"Date", type date}, {"Commentaire", type any}, {"Importance", Int64.Type}}),
+		    #"Colonnes renommées" = Table.RenameColumns(#"Type modifié",{{"Importance", "Priorité"}, {"_1", "Affichage"}, {"", "Source"}}),
+		    #"Lignes filtrées" = Table.SelectRows(#"Colonnes renommées", each ([ID lieux] <> "")),
+		    #"Lignes triées" = Table.Sort(#"Lignes filtrées",{{"Date", Order.Descending}})
+		in
+		    #"Lignes triées"
+	lineageTag: 9fea24e4-8d83-4ae8-95f4-dbda5c5075be
+	queryGroup: Cartographie
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression Typage_Owl =
+		let
+		    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WCs0uSszMy0zMUwjNyyxRCMgvzizJzM8rVtJRAgkcXqlQClGRmpeXqhSrE60UVFpcjE99EVAeVaV7an5OfnIiWJ2CRp2xgYJLYmWxJjYtEOekEtaC4qpYAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Name = _t, Nom = _t]),
+		    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Name", type text}, {"Nom", type text}})
+		in
+		    #"Type modifié"
+	lineageTag: 5d36e667-ada8-45b1-9533-29b96d6d5eb8
+	queryGroup: Cartographie
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Pertes_Oryx =
+		let
+		    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1bngHbR0YPS7XH1oSA1VxoL4R34z60SJcR3NxguZM9GI/edit?gid=0#gid=0"),
+		    Totals_Table = Source{[name="Totals",ItemKind="Table"]}[Data],
+		    #"En-têtes promus" = Table.PromoteHeaders(Totals_Table, [PromoteAllScalars=true]),
+		    #"Type modifié" = Table.TransformColumnTypes(#"En-têtes promus",{{"Date", type date}, {"Russia_Aircraft", Int64.Type}, {"Russia_Anti-Aircraft_Guns", Int64.Type}, {"Russia_Anti-Tank_Guided_Missiles", Int64.Type}, {"Russia_Armoured_Fighting_Vehicles", Int64.Type}, {"Russia_Armoured_Personnel_Carriers", Int64.Type}, {"Russia_Artillery_Support_Vehicles_And_Equipment", Int64.Type}, {"Russia_Command_Posts_And_Communications_Stations", Int64.Type}, {"Russia_Engineering_Vehicles_And_Equipment", Int64.Type}, {"Russia_Heavy_Mortars", Int64.Type}, {"Russia_Helicopters", Int64.Type}, {"Russia_Infantry_Fighting_Vehicles", Int64.Type}, {"Russia_Infantry_Mobility_Vehicles", Int64.Type}, {"Russia_Jammers_And_Deception_Systems", Int64.Type}, {"Russia_Logistics_Trains", Int64.Type}, {"Russia_Man-Portable_Air_Defence_Systems", Int64.Type}, {"Russia_Mine-Resistant_Ambush_Protected", Int64.Type}, {"Russia_Multiple_Rocket_Launchers", Int64.Type}, {"Russia_Naval_Ships", Int64.Type}, {"Russia_Naval_Ships_and_Submarines", Int64.Type}, {"Russia_Radars", Int64.Type}, {"Russia_Reconnaissance_Unmanned_Aerial_Vehicles", Int64.Type}, {"Russia_Self-Propelled_Anti-Aircraft_Guns", Int64.Type}, {"Russia_Self-Propelled_Anti-Tank_Missile_Systems", Int64.Type}, {"Russia_Self-Propelled_Artillery", Int64.Type}, {"Russia_Surface-To-Air_Missile_Systems", Int64.Type}, {"Russia_Tanks", Int64.Type}, {"Russia_Total", Int64.Type}, {"Russia_Towed_Artillery", Int64.Type}, {"Russia_Trucks,_Vehicles_and_Jeeps", Int64.Type}, {"Russia_Unmanned_Aerial_Vehicles", Int64.Type}, {"Russia_Unmanned_Combat_Aerial_Vehicles", Int64.Type}, {"Russia_Unmanned_Ground_Vehicles", Int64.Type}, {"Ukraine_Aircraft", Int64.Type}, {"Ukraine_Anti-Aircraft_Guns", Int64.Type}, {"Ukraine_Anti-Tank_Guided_Missiles", Int64.Type}, {"Ukraine_Armoured_Fighting_Vehicles", Int64.Type}, {"Ukraine_Armoured_Personnel_Carriers", Int64.Type}, {"Ukraine_Artillery_Support_Vehicles_And_Equipment", Int64.Type}, {"Ukraine_Command_Posts_And_Communications_Stations", Int64.Type}, {"Ukraine_Engineering_Vehicles_And_Equipment", Int64.Type}, {"Ukraine_Helicopters", Int64.Type}, {"Ukraine_Infantry_Fighting_Vehicles", Int64.Type}, {"Ukraine_Infantry_Mobility_Vehicles", type number}, {"Ukraine_Jammers_And_Deception_Systems", Int64.Type}, {"Ukraine_Man-Portable_Air_Defence_Systems", Int64.Type}, {"Ukraine_Mine-Resistant_Ambush_Protected", Int64.Type}, {"Ukraine_Multiple_Rocket_Launchers", Int64.Type}, {"Ukraine_Naval_Ships", Int64.Type}, {"Ukraine_Radars_And_Communications_Equipment", Int64.Type}, {"Ukraine_Reconnaissance_Unmanned_Aerial_Vehicles", Int64.Type}, {"Ukraine_Self-Propelled_Anti-Aircraft_Guns", Int64.Type}, {"Ukraine_Self-Propelled_Anti-Tank_Missile_Systems", Int64.Type}, {"Ukraine_Self-Propelled_Artillery", Int64.Type}, {"Ukraine_Surface-To-Air_Missile_Systems", Int64.Type}, {"Ukraine_Tanks", Int64.Type}, {"Ukraine_Total", Int64.Type}, {"Ukraine_Towed_Artillery", Int64.Type}, {"Ukraine_Trucks,_Vehicles_and_Jeeps", Int64.Type}, {"Ukraine_Unmanned_Aerial_Vehicles", Int64.Type}, {"Ukraine_Unmanned_Combat_Aerial_Vehicles", Int64.Type}, {"Ukraine_Unmanned_Ground_Vehicles", Int64.Type}}),
+		    #"Tableau croisé dynamique des colonnes supprimé" = Table.UnpivotOtherColumns(#"Type modifié", {"Date"}, "Attribut", "Valeur"),
+		    #"Lignes filtrées" = Table.SelectRows(#"Tableau croisé dynamique des colonnes supprimé", each ([Attribut] <> "Russia_Total" and [Attribut] <> "Ukraine_Total"))
+		in
+		    #"Lignes filtrées"
+	lineageTag: 88b39595-b8ef-4d86-8519-a8f475b747e3
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 'Types pertes' =
+		let
+		    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("jVRdbuIwEL6KxXOjPUMELbRqVhGhvKA+GDOQEY6djm1W3Gg5BxfbceKygaXVvtnjzzPfj5PVavRsttJ4Ooon3NUezU4soUalwY0eRs9Py9H7w2q0oKD27uFyJKTZiBeANoKW5xNXQyzr82kH5Po70uzj8biWqTIHZY2R6Jw0CsSbaaQxsBE5EEo9nPuW93NzamwghtwjlydyFehtVpJtQevYjTzygo4RktYIHfLR7NAAbweNRM5SHj8Ctg0Yz3em55NJ+Mv4kkUxddBiLIm7UTe/HHeoi4OFXaNGf7xysOhJFkF7bDWIuVV78OJVBqPq1Oia5cL++l7G2DZNDKC0zvf8YyUYVNKjNU5Uvl/w1cSxCrSVCrKFzXIkUXAGyGSqo/PQRNxknPc82aBsDg6dZ1Eib9bB1YLd9aA8bBhZzPOyg/5HfjPQqGzre52z86nfnn8TpCchN/w67mkYRtKjfkSES8Ekc0QV2taS/zrOG+9YvSK57U4OnUex+iKbBhKPCShoI4eBO9MARCCYP7tA1uBHSO2Mxyy+dDENuGEvkrNdrItpMRB5V0e8/kmJW5hhFLfv+jLq3/RuRP6UB86jqrH7PnmHBNeRMYW19N8kd2/4V0QH47ofQxXWjeSPDG6mz0Ae4ldCvrejjKu17g8LabLPgohvdAJbiL+Jvyqv8K92x28UlRMLktjx6RbXOqdkAzMaCpyywPc/", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Nom = _t, Catégorie = _t]),
+		    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Nom", type text}, {"Catégorie", type text}})
+		in
+		    #"Type modifié"
+	lineageTag: 4d608bea-10dc-4a49-86e7-2f789be71aa7
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression LogsOWL_derniere_date =
+		let
+		    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1u0N-CJNyuB4oSRwHpPkI27bAzwjCfBbAPUH4DKO7gqY/edit?gid=1319550306#gid=1319550306"),
+		    #"Logs 2023_Table" = Source{[name="Logs 2023",ItemKind="Table"]}[Data],
+		    #"Premières lignes supprimées" = Table.Skip(#"Logs 2023_Table",29),
+		    #"En-têtes promus" = Table.PromoteHeaders(#"Premières lignes supprimées", [PromoteAllScalars=true]),
+		    #"Type modifié" = Table.TransformColumnTypes(#"En-têtes promus",{{"Date", type date}, {"Time (Kyiv)", type text}, {"Location", type text}, {"Coordinates", type text}, {"Event (Map Change)", type text}, {"Description (Twitter)", type text}, {"Source", type text}, {"", type any}, {"_1", type text}, {"MAPPED BY", type text}, {"Further notes", type text}, {"_2", type text}}),
+		    #"Lignes filtrées" = Table.SelectRows(#"Type modifié", each ([Date] <> null) and ([Coordinates] <> "") and ([_1] = "C")),
+		    #"Texte en majuscules" = Table.TransformColumns(#"Lignes filtrées",{{"Event (Map Change)", Text.Upper, type text}}),
+		    #"Valeur remplacée" = Table.ReplaceValue(#"Texte en majuscules","POSTION","POSITION",Replacer.ReplaceText,{"Event (Map Change)"}),
+		    #"Espaces supprimés" = Table.TransformColumns(#"Valeur remplacée",{{"Event (Map Change)", Text.Trim, type text}}),
+		    #"Fractionner la colonne par délimiteur" = Table.SplitColumn(#"Espaces supprimés", "Coordinates", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), {"Coordinates.1", "Coordinates.2"}),
+		    #"Type modifié1" = Table.TransformColumnTypes(#"Fractionner la colonne par délimiteur",{{"Coordinates.1", type text}, {"Coordinates.2", type text}}),
+		    #"Valeur remplacée1" = Table.ReplaceValue(#"Type modifié1",".",",",Replacer.ReplaceText,{"Coordinates.1", "Coordinates.2"}),
+		    #"Type modifié2" = Table.TransformColumnTypes(#"Valeur remplacée1",{{"Coordinates.1", type number}, {"Coordinates.2", type number}}),
+		    #"Colonnes renommées" = Table.RenameColumns(#"Type modifié2",{{"Coordinates.1", "Longitude"}, {"Coordinates.2", "Lattitude"}}),
+		    #"Autres colonnes supprimées" = Table.SelectColumns(#"Colonnes renommées",{"Date", "Longitude", "Lattitude", "Event (Map Change)"}),
+		    #"Lignes filtrées1" = Table.SelectRows(#"Autres colonnes supprimées", let latest = List.Max(#"Autres colonnes supprimées"[Date]) in each [Date] = latest)
+		in
+		    #"Lignes filtrées1"
+	lineageTag: 6f83f8de-1f5f-4268-a790-2568f54229ba
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 'Points clés' =
+		let
+		    Source = Table.NestedJoin(#"points clé", {"ID lieux"}, lieux, {"ID"}, "lieux", JoinKind.LeftOuter),
+		    #"lieux développé" = Table.ExpandTableColumn(Source, "lieux", {"Lattitude", "Longitude", "Ville"}, {"lieux.Lattitude", "lieux.Longitude", "lieux.Ville"}),
+		    #"Autres colonnes supprimées" = Table.SelectColumns(#"lieux développé",{"Type", "Priorité", "Affichage", "lieux.Lattitude", "lieux.Longitude", "lieux.Ville"}),
+		    #"Colonnes renommées1" = Table.RenameColumns(#"Autres colonnes supprimées",{{"Affichage", "Prio Affichage"}}),
+		    #"Duplication de la colonne" = Table.DuplicateColumn(#"Colonnes renommées1", "lieux.Lattitude", "lieux.Lattitude - Copier"),
+		    #"Duplication de la colonne1" = Table.DuplicateColumn(#"Duplication de la colonne", "lieux.Longitude", "lieux.Longitude - Copier"),
+		    #"Colonnes renommées" = Table.RenameColumns(#"Duplication de la colonne1",{{"lieux.Lattitude", "Lattitude_dep"}, {"lieux.Longitude", "Longitude_dep"}, {"lieux.Lattitude - Copier", "Lattitude_arr"}, {"lieux.Longitude - Copier", "Longitude_arr"}, {"Type", "Catégorie"}}),
+		    #"Index ajouté" = Table.AddIndexColumn(#"Colonnes renommées", "Index", 0, 1, Int64.Type),
+		    #"Type modifié" = Table.TransformColumnTypes(#"Index ajouté",{{"Lattitude_dep", type number}, {"Longitude_dep", type number}, {"Lattitude_arr", type number}, {"Longitude_arr", type number}}),
+		    #"Requête ajoutée" = Table.Combine({#"Type modifié", #"Ligne de front"}),
+		    #"Index ajouté1" = Table.AddIndexColumn(#"Requête ajoutée", "Index.1", 0, 1, Int64.Type)
+		in
+		    #"Index ajouté1"
+	lineageTag: 13cbe982-e3fb-40fd-819a-c88b4be609cc
+	queryGroup: Cartographie
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression date_référence =
+		let
+		    Source = Texte,
+		    #"Autres colonnes supprimées" = Table.SelectColumns(Source,{"Date"}),
+		    #"Lignes triées" = Table.Sort(#"Autres colonnes supprimées",{{"Date", Order.Descending}}),
+		    Date = #"Lignes triées"{0}[Date]
+		in
+		    Date
+	lineageTag: be486019-b694-4f58-b0e2-ea2a11ab64dc
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Date
+

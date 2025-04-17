@@ -1,0 +1,38 @@
+relationship a193ed5e-6743-4d38-98b4-cf5b5b500c9e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Calendrier.Date
+	toColumn: LocalDateTable_92958ceb-3dbb-4f87-9172-34a50f0ff3df.Date
+
+relationship bd6ec5be-26ea-08b2-56d5-44c98f8c0d7f
+	fromColumn: Pertes_UA.Catégorie
+	toColumn: Catégorisation.'Catégorie UA'
+
+relationship 534dedb5-4d37-b22a-da68-106eb8ef8563
+	fromColumn: 'Données cartographiques'.Date
+	toColumn: Calendrier.Date
+
+relationship b4619371-92a4-36f4-172d-674badcc56fc
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Catégorisation.Catégorie_WS
+	toColumn: 'Pertes RU confirmées'.Type
+
+relationship 129e71a9-6a0b-43ac-8070-e5090efee5d2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Test events'.Date
+	toColumn: LocalDateTable_f1a48135-381a-4d9b-8ec5-60b559fe161d.Date
+
+relationship 67df6b07-b552-9619-2546-9df5609c8684
+	fromColumn: Texte.Date
+	toColumn: Calendrier.Date
+
+relationship ea68c372-6b6f-5e29-b2c5-7c4935c8e2a3
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Assauts russes'.Date
+	toColumn: Calendrier.Date
+
+relationship 148d91ff-3915-46b2-a0b6-22e9d151d57a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Pertes_UA.Date
+	toColumn: LocalDateTable_029b5a00-60a7-4ea0-b916-174748d35f17.Date
+

@@ -1,0 +1,114 @@
+table Pertes_UA
+	lineageTag: 207a9fb8-f0e4-45e5-9a93-07fc3de7e072
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 46fd389e-5f4b-42d4-8ec4-6c596970ec3a
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 148d91ff-3915-46b2-a0b6-22e9d151d57a
+			defaultHierarchy: LocalDateTable_029b5a00-60a7-4ea0-b916-174748d35f17.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Catégorie
+		dataType: string
+		lineageTag: bdb62821-c81f-43e5-8474-51f8f17d2519
+		summarizeBy: none
+		sourceColumn: Catégorie
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pertes
+		dataType: int64
+		formatString: 0
+		lineageTag: 76c4a19c-f99f-45e6-a760-396e37d3a8fb
+		summarizeBy: sum
+		sourceColumn: Pertes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Progression
+		dataType: int64
+		formatString: 0
+		lineageTag: 74456e70-88df-4c5d-a871-93bb45dfe08c
+		summarizeBy: sum
+		sourceColumn: Progression
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumSemaine =
+			
+			VAR base = WEEKNUM(Pertes_UA[Date],2)
+			RETURN if(base=53,1,base)
+		formatString: 0
+		lineageTag: 7149e723-f161-45ac-abe9-400cabf3d7ec
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Année effective' =
+			
+			VAR Semaine_base = WEEKNUM(Pertes_UA[Date],2)
+			RETURN IF(Semaine_base=53, YEAR(Pertes_UA[Date])+1,YEAR(Pertes_UA[Date]))
+		formatString: 0
+		lineageTag: 115b8752-1438-4c90-9e13-58388ecf493e
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mois effectif' =
+			
+			VAR Semaine_base = WEEKNUM(Pertes_UA[Date],2)
+			VAR NUM =IF(Semaine_base=53, 1,MONTH(Pertes_UA[Date]))
+			Var date_base = DATE(Pertes_UA[Année effective],NUM,1)
+			RETURN FORMAT(date_base,"mmmm")
+		lineageTag: 52037b0d-7368-4a37-ad6b-ec0bb63022ec
+		summarizeBy: none
+		sortByColumn: numMois
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column numMois =
+			
+			VAR Semaine_base = WEEKNUM(Pertes_UA[Date],2)
+			VAR NUM =IF(Semaine_base=53, 1,MONTH(Pertes_UA[Date]))
+			Var date_base = DATE(Pertes_UA[Année effective],NUM,1)
+			RETURN MONTH(date_base)
+		formatString: 0
+		lineageTag: ad447cea-5896-4d97-b351-1e923e3c7b9d
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column '6 derniers mois' =
+			
+			VAR __date_max = MAX('Assauts russes'[Date])
+			VAr __param1= DATEDIFF(Pertes_UA[Date],__date_max,MONTH)<=6
+			VAR __param2= Pertes_UA[Date]<=__date_max
+			RETURN __param1&&__param2
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c9c054bc-fec4-42df-852e-dead33709bb3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Pertes_UA = m
+		mode: import
+		source =
+				let
+				    Source = Table.Combine({russia_losses_equipment, russia_losses_personnel}),
+				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Pertes", Int64.Type}, {"Progression", Int64.Type}, {"Catégorie", type text}, {"Date", type date}})
+				in
+				    #"Type modifié"
+
+	annotation PBI_ResultType = Table
+

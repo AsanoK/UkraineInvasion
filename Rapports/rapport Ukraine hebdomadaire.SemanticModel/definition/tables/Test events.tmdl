@@ -1,0 +1,46 @@
+table 'Test events'
+	lineageTag: e60fd0ea-2ce4-4055-ac45-7281368f4555
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ae443cd7-1477-4551-9f77-f0bb0644f2f0
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 129e71a9-6a0b-43ac-8070-e5090efee5d2
+			defaultHierarchy: LocalDateTable_f1a48135-381a-4d9b-8ec5-60b559fe161d.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Texte
+		dataType: string
+		lineageTag: 7ff071db-286a-404d-9c85-333debc56ee5
+		summarizeBy: none
+		sourceColumn: Texte
+
+		annotation SummarizationSetBy = Automatic
+
+	column Titre
+		dataType: string
+		lineageTag: 3bdab0d1-35d8-4b93-b45f-62eb106e6194
+		summarizeBy: none
+		sourceColumn: Titre
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Test events' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMrLQNzDTNzIwMlHSUXIsS8xLPrwyVSHUEcgLySwpSlUwVIrViVYyNkBSFpSZmqeQkqpQXHB4ZXJmYg5crRFYrZEpspElJal5JZn5eQqZyZkKQKosUSE3tQSkujRPoSS1oiRVoSCntFghJz8vHW6QgVJsLAA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Date = _t, Texte = _t, Titre = _t]),
+				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Date", type date}, {"Texte", type text}})
+				in
+				    #"Type modifié"
+
+	annotation PBI_ResultType = Table
+
