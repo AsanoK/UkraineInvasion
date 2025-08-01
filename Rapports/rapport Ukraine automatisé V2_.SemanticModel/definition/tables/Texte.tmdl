@@ -9,41 +9,13 @@ table Texte
 			RETURN COMBINEVALUES(" ",__date, "- jour", __decompte)
 		lineageTag: 1185f4a3-2e55-4fa2-8163-9a52f0f3f651
 
-	column Groupe
-		dataType: string
-		lineageTag: e4a43189-1ffd-4053-9fba-a2525f78937d
-		summarizeBy: none
-		sourceColumn: Groupe
-
-		annotation SummarizationSetBy = Automatic
-
-	column Texte
-		dataType: string
-		lineageTag: eaaa6058-1f9a-43b7-8826-299137c6d493
-		summarizeBy: none
-		sourceColumn: Texte
-		sortByColumn: Ordre
-
-		changedProperty = SortByColumn
-
-		annotation SummarizationSetBy = Automatic
-
 	column Titre
 		dataType: string
 		lineageTag: cd088b89-a463-49f1-8e3b-2b57c99372be
 		summarizeBy: none
 		sourceColumn: Titre
-		sortByColumn: Ordre
 
 		changedProperty = SortByColumn
-
-		annotation SummarizationSetBy = Automatic
-
-	column Catégorie
-		dataType: string
-		lineageTag: 650de36e-902c-4dd4-a4ed-324a37c4341c
-		summarizeBy: none
-		sourceColumn: Catégorie
 
 		annotation SummarizationSetBy = Automatic
 
@@ -70,14 +42,6 @@ table Texte
 		annotation UnderlyingDateTimeDataType = Date
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
-
-	column Ordre
-		dataType: string
-		lineageTag: 69cd225b-124f-44d0-b85c-83e0badf0800
-		summarizeBy: none
-		sourceColumn: Ordre
-
-		annotation SummarizationSetBy = Automatic
 
 	column Titre_display = CONCATENATE("➤ ", Texte[Titre])
 		lineageTag: c0063245-dda1-4158-8fc4-3c0c77e20ba7
@@ -108,22 +72,6 @@ table Texte
 
 		annotation SummarizationSetBy = Automatic
 
-	column _1
-		dataType: string
-		lineageTag: b7bd7458-a412-47bd-9b5b-26eb59435ac7
-		summarizeBy: none
-		sourceColumn: _1
-
-		annotation SummarizationSetBy = Automatic
-
-	column _2
-		dataType: string
-		lineageTag: 3c99645c-4ab9-4b17-82b0-ecfae5bfe4c9
-		summarizeBy: none
-		sourceColumn: _2
-
-		annotation SummarizationSetBy = Automatic
-
 	column _3
 		dataType: string
 		lineageTag: 6a807976-058c-4d5a-ac10-1134c91a6eb1
@@ -145,6 +93,54 @@ table Texte
 		lineageTag: 26645720-2a19-4528-b032-f6d35152c0fc
 		summarizeBy: none
 		sourceColumn: _5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Groupe
+		dataType: string
+		lineageTag: d6169009-6554-4cb6-8e6c-214e99ada84d
+		summarizeBy: none
+		sourceColumn: Groupe
+
+		annotation SummarizationSetBy = Automatic
+
+	column Catégorie
+		dataType: string
+		lineageTag: 6d7ebf1d-c147-4824-8297-cd54030f9cf7
+		summarizeBy: none
+		sourceColumn: Catégorie
+
+		annotation SummarizationSetBy = Automatic
+
+	column Texte
+		dataType: string
+		lineageTag: 71d425c4-2b23-4279-828e-f24ed09c4d77
+		summarizeBy: none
+		sourceColumn: Texte
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordre
+		dataType: string
+		lineageTag: f129ae1e-5195-4485-a3b4-2fb98478b0ef
+		summarizeBy: none
+		sourceColumn: Ordre
+
+		annotation SummarizationSetBy = Automatic
+
+	column _1
+		dataType: string
+		lineageTag: 84b1323d-306d-48b0-ad7c-7d2a6eb3f461
+		summarizeBy: none
+		sourceColumn: _1
+
+		annotation SummarizationSetBy = Automatic
+
+	column _2
+		dataType: string
+		lineageTag: 38970247-bb07-41c0-ba0f-6a3554189b3b
+		summarizeBy: none
+		sourceColumn: _2
 
 		annotation SummarizationSetBy = Automatic
 

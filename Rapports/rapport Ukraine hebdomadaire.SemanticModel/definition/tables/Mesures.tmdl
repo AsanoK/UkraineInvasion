@@ -31,7 +31,7 @@ table Mesures
 	measure 'Titre 2' = CONCATENATE([En-cart], " : Pertes russes")
 		lineageTag: c95fa5b2-bd8a-40e3-89d2-e9d1cb2f017b
 
-	measure 'Bombardements majeurs' = CALCULATE(COUNTROWS('Données cartographiques'),'Données cartographiques'[Type]="Bombardement")
+	measure 'Bombardements majeurs' = CALCULATE(SUM('Données cartographiques'[nb Occurences]),'Données cartographiques'[Type]="Bombardement")
 		formatString: 0
 		lineageTag: 2d8e283f-ab16-424f-9bb7-1cb8738f4efa
 
@@ -134,7 +134,8 @@ table Mesures
 	measure 'Assauts russes S-1' =
 			
 			VAR _num_semaine = SELECTEDVALUE(Calendrier[Numéro semaine])-1
-			RETURN CALCULATE([Assauts russes],Calendrier[Numéro semaine]=_num_semaine)
+			VAR __year = YEAR(TODAY())
+			RETURN CALCULATE([Assauts russes],ALL(Calendrier),Calendrier[Numéro semaine]=_num_semaine,YEAR(Calendrier[Date])=__year)
 		formatString: 0
 		lineageTag: f742f395-936d-4b5b-808a-d8695d7ad5a5
 
@@ -145,6 +146,32 @@ table Mesures
 			VAR __signe = if(__diff>0,"+ "&__diff,if(__diff<0,"- "&__diff,""))
 			RETURN __base& " ("&__signe&")"
 		lineageTag: 9517a549-ba0c-4f91-b0da-07ffe584d465
+
+	measure Titre-Bombardements = [En-cart] & " - Bombardements"
+		lineageTag: 26e71381-1369-4a64-a71d-346e4f70d68b
+
+	measure 'Moyenne mobile de Progression' = ```
+			
+				VAR __LAST_DATE = LASTDATE(Pertes_UA[Date])
+				RETURN
+					AVERAGEX(
+						DATESBETWEEN(
+							Pertes_UA[Date],
+							DATEADD(__LAST_DATE, -7, DAY),
+							DATEADD(__LAST_DATE, 7, DAY)
+						),
+						CALCULATE(SUM('Pertes_UA'[Progression]))
+					)
+			
+			```
+		lineageTag: 79c47919-825e-49e4-aa9d-fbfbdfb13499
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Moyenne Y-1' = CALCULATE([Moyenne mobile de Progression],SAMEPERIODLASTYEAR(Pertes_UA[Date]))
+		lineageTag: 2935db2c-9fc5-4302-b012-9d4e1f327d90
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition Mesures = m
 		mode: import

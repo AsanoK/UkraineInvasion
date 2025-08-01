@@ -11,19 +11,13 @@ relationship 534dedb5-4d37-b22a-da68-106eb8ef8563
 	fromColumn: 'Données cartographiques'.Date
 	toColumn: Calendrier.Date
 
-relationship b4619371-92a4-36f4-172d-674badcc56fc
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: Catégorisation.Catégorie_WS
-	toColumn: 'Pertes RU confirmées'.Type
-
 relationship 129e71a9-6a0b-43ac-8070-e5090efee5d2
 	joinOnDateBehavior: datePartOnly
 	fromColumn: 'Test events'.Date
 	toColumn: LocalDateTable_f1a48135-381a-4d9b-8ec5-60b559fe161d.Date
 
 relationship 67df6b07-b552-9619-2546-9df5609c8684
-	fromColumn: Texte.Date
+	fromColumn: Texte_Hebdo.Date
 	toColumn: Calendrier.Date
 
 relationship ea68c372-6b6f-5e29-b2c5-7c4935c8e2a3
@@ -31,8 +25,24 @@ relationship ea68c372-6b6f-5e29-b2c5-7c4935c8e2a3
 	fromColumn: 'Assauts russes'.Date
 	toColumn: Calendrier.Date
 
-relationship 1e9ed5ee-09e0-4c8d-a97d-43868600ca34
-	joinOnDateBehavior: datePartOnly
+relationship 4d7df193-a80e-985a-7eb1-edb48d29efec
 	fromColumn: Pertes_UA.Date
-	toColumn: LocalDateTable_d8fce523-db68-4f9a-aa02-eae407686868.Date
+	toColumn: Calendrier.Date
+
+relationship 4faaf11c-4341-03e4-983a-fa05cc965610
+	fromColumn: 'Pertes RU confirmées'.Type
+	toColumn: Catégorisation.Catégorie_WS
+
+relationship 4e2eeddf-d10d-1e6b-f5c2-7360a59af047
+	fromColumn: 'Pertes RU confirmées'.Date
+	toColumn: Calendrier.Date
+
+relationship 98b196e8-80ee-493f-f1cc-df959a1c2fdd
+	fromColumn: Texte_Quotidien.Date
+	toColumn: Calendrier.Date
+
+relationship 3d4a3e5c-8b71-48e8-c773-d9b8ecbce158
+	isActive: false
+	fromColumn: Pertes_UA.'décalage 1 an'
+	toColumn: Calendrier.Date
 

@@ -302,7 +302,7 @@ expression 'Points clés' =
 
 expression date_référence =
 		let
-		    Source = Texte,
+		    Source = Texte_Quotidien,
 		    #"Autres colonnes supprimées" = Table.SelectColumns(Source,{"Date"}),
 		    #"Lignes triées" = Table.Sort(#"Autres colonnes supprimées",{{"Date", Order.Descending}}),
 		    Date = #"Lignes triées"{0}[Date]

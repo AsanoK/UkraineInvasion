@@ -148,14 +148,74 @@ table 'Données cartographiques'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column 'lieux.Oblast'
+		dataType: string
+		lineageTag: 4a851438-cc39-4ab2-a035-0fc229535996
+		summarizeBy: none
+		sourceColumn: lieux.Oblast
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'lieux.Pays'
+		dataType: string
+		lineageTag: 6bebddc0-98b9-4bc6-99c9-5e419374e8be
+		summarizeBy: none
+		sourceColumn: lieux.Pays
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'nb occurences'
+		dataType: int64
+		formatString: 0
+		lineageTag: 315d05fa-5247-455f-874a-3853f1ec718a
+		summarizeBy: sum
+		sourceColumn: nb occurences
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsBrigade = CONTAINSSTRING('Données cartographiques'[Nom],"Brigade")
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2fa40164-2427-447d-b8d9-558b6ab44c11
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsRegiment = CONTAINSSTRING('Données cartographiques'[Nom],"Regiment")
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 747180eb-a6ec-48e3-be5b-427f84dff024
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsBrigadeOrRegiment = 'Données cartographiques'[IsBrigade]||'Données cartographiques'[IsRegiment]
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: de011af1-c60d-4d6c-acac-de0de986973b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column SizeUnit = if('Données cartographiques'[IsBrigade],4,if('Données cartographiques'[IsRegiment],1,0))
+		formatString: 0
+		lineageTag: d7c8adea-d51d-4655-9b1a-f776807e2944
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column BrigadeRgtOrNotUnit = 'Données cartographiques'[IsBrigadeOrRegiment]||'Données cartographiques'[Type]="Front"||'Données cartographiques'[Type]="Combat"
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 09f8774f-7401-447e-9e8e-146849baa560
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Données cartographiques' = m
 		mode: import
 		queryGroup: Cartographie
 		source =
 				let
 				    Source = Table.NestedJoin(#"points clé", {"ID lieux"}, lieux, {"ID"}, "lieux", JoinKind.LeftOuter),
-				    #"lieux développé" = Table.ExpandTableColumn(Source, "lieux", {"Lattitude", "Longitude", "Ville"}, {"lieux.Lattitude", "lieux.Longitude", "lieux.Ville"}),
-				    #"Autres colonnes supprimées" = Table.SelectColumns(#"lieux développé",{"Type", "Date", "Priorité", "Affichage", "lieux.Lattitude", "lieux.Longitude", "lieux.Ville"}),
+				    #"lieux développé" = Table.ExpandTableColumn(Source, "lieux", {"Lattitude", "Longitude", "Oblast", "Pays", "Ville"}, {"lieux.Lattitude", "lieux.Longitude", "lieux.Oblast", "lieux.Pays", "lieux.Ville"}),
+				    #"Autres colonnes supprimées" = Table.SelectColumns(#"lieux développé",{"Type", "Date", "Affichage", "nb occurences", "Priorité", "lieux.Lattitude", "lieux.Longitude", "lieux.Oblast", "lieux.Pays", "lieux.Ville"}),
 				    #"Doublons supprimés" = Table.Distinct(#"Autres colonnes supprimées", {"lieux.Ville"}),
 				    #"Colonnes renommées" = Table.RenameColumns(#"Doublons supprimés",{{"lieux.Lattitude", "Lattitude départ"}, {"lieux.Longitude", "Longitude départ"}}),
 				    #"Duplication de la colonne" = Table.DuplicateColumn(#"Colonnes renommées", "Lattitude départ", "Lattitude départ - Copier"),
@@ -164,7 +224,7 @@ table 'Données cartographiques'
 				    #"Requête ajoutée" = Table.Combine({#"Colonnes renommées1", #"Ligne de front", #"Géolocs (Unités et images)"}),
 				    #"Index ajouté" = Table.AddIndexColumn(#"Requête ajoutée", "Index.1", 0, 1, Int64.Type),
 				    #"Colonnes renommées2" = Table.RenameColumns(#"Index ajouté",{{"name", "geoloc"}}),
-				    #"Type modifié" = Table.TransformColumnTypes(#"Colonnes renommées2",{{"Priorité", type number}})
+				    #"Type modifié" = Table.TransformColumnTypes(#"Colonnes renommées2",{{"Priorité", type number}, {"nb occurences", Int64.Type}})
 				in
 				    #"Type modifié"
 

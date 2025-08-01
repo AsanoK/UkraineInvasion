@@ -1,0 +1,109 @@
+table Texte_Quotidien
+	lineageTag: 27275c0c-c981-4bc1-8416-2d18545285b8
+
+	column Groupe
+		dataType: string
+		lineageTag: b810ff2f-7958-477f-8931-1561d94ada5d
+		summarizeBy: none
+		sourceColumn: Groupe
+
+		annotation SummarizationSetBy = Automatic
+
+	column Catégorie
+		dataType: string
+		lineageTag: 3ef512bb-5de5-412e-8607-60909ecfbf69
+		summarizeBy: none
+		sourceColumn: Catégorie
+
+		annotation SummarizationSetBy = Automatic
+
+	column Titre
+		dataType: string
+		lineageTag: 2140262d-285a-4b85-8611-d84482c34dcf
+		summarizeBy: none
+		sourceColumn: Titre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Texte
+		dataType: string
+		lineageTag: 6638b22f-f770-42a0-bfd8-e7e4a2c6ae6f
+		summarizeBy: none
+		sourceColumn: Texte
+		sortByColumn: Ordre
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 402b36e1-b440-4b6e-aef0-6240e6436dc0
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Ordre
+		dataType: string
+		lineageTag: 0693eb85-7b69-40f5-86ee-8c85312ad70c
+		summarizeBy: none
+		sourceColumn: Ordre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: string
+		lineageTag: 0c756995-45cb-43ea-bd87-6cfb6b9d39ec
+		summarizeBy: none
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordre_
+		dataType: string
+		lineageTag: 31bbdcd8-ccc4-48c0-8498-abd736fcff85
+		summarizeBy: none
+		sourceColumn: Ordre_
+
+		annotation SummarizationSetBy = Automatic
+
+	column DernierTexte =
+			
+			Var __max = CALCULATE(MAX(Texte_Quotidien[Date]),ALL(Texte_Quotidien))
+			RETURN Texte_Quotidien[Date]=__max
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8557983b-eb95-4a06-b15f-786e3e4c93c4
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Texte_Quotidien = m
+		mode: import
+		source =
+				let
+				    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1EguBfb3VzBaOqYtk6nFXaXIUn5XsR1CYBC3KNrR-1sw"),
+				    #"Histo texte_Table" = Source{[name="Histo texte",ItemKind="Table"]}[Data],
+				    #"En-têtes promus" = Table.PromoteHeaders(#"Histo texte_Table", [PromoteAllScalars=true]),
+				    #"Type modifié" = Table.TransformColumnTypes(#"En-têtes promus",{{"Groupe", type text}, {"Catégorie", type text}, {"Titre", type text}, {"Texte", type any}, {"Date", type date}, {"Ordre", Int64.Type}, {"", type any}, {"_1", type any}, {"_2", type any}}),
+				    #"Autres colonnes supprimées" = Table.SelectColumns(#"Type modifié",{"Groupe", "Catégorie", "Titre", "Texte", "Date", "Ordre"}),
+				    #"Lignes filtrées1" = Table.SelectRows(#"Autres colonnes supprimées", each ([Groupe] <> "" and [Groupe] <> "        ")),
+				    #"Lignes filtrées3" = Table.SelectRows(#"Lignes filtrées1", each [Texte] <> ""),
+				    #"Rempli vers le bas" = Table.FillDown(#"Lignes filtrées3",{"Date"}),
+				    #"Lignes filtrées2" = Table.SelectRows(#"Rempli vers le bas", each ([Groupe] <> "Groupe")),
+				    #"Espaces supprimés" = Table.TransformColumns(#"Lignes filtrées2",{{"Groupe", Text.Trim, type text}}),
+				    #"Lignes filtrées" = Table.SelectRows(#"Espaces supprimés", each ([Date] <> null)),
+				    #"Index ajouté" = Table.AddIndexColumn(#"Lignes filtrées", "Index", 0, 1, Int64.Type),
+				    #"Type modifié1" = Table.TransformColumnTypes(#"Index ajouté",{{"Ordre", type text}, {"Index", type text}}),
+				    #"Personnalisée ajoutée" = Table.AddColumn(#"Type modifié1", "Ordre_", each if [Ordre]<>null then [Ordre]&"-"&[Index] else "99-"&[Index]),
+				    #"Type modifié2" = Table.TransformColumnTypes(#"Personnalisée ajoutée",{{"Texte", type text}})
+				in
+				    #"Type modifié2"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

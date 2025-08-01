@@ -8,11 +8,6 @@ table Pertes_UA
 		summarizeBy: none
 		sourceColumn: Date
 
-		variation Variation
-			isDefault
-			relationship: 1e9ed5ee-09e0-4c8d-a97d-43868600ca34
-			defaultHierarchy: LocalDateTable_d8fce523-db68-4f9a-aa02-eae407686868.'Hiérarchie de dates'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -97,6 +92,13 @@ table Pertes_UA
 			RETURN __param1&&__param2
 		formatString: """TRUE"";""TRUE"";""FALSE"""
 		lineageTag: c9c054bc-fec4-42df-852e-dead33709bb3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'décalage 1 an' = EDATE(Pertes_UA[Date],12)
+		formatString: General Date
+		lineageTag: 3e293639-40b8-4b5c-becb-37ea699ccb6b
 		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic

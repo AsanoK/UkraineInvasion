@@ -1,0 +1,80 @@
+table Mesures
+	lineageTag: 117d63b3-dc78-4fa1-b84f-52925ba945a0
+
+	measure Today = CALCULATE(MAX(Texte_Quotidien[Date]),Texte_Quotidien)
+		formatString: d mmmm
+		lineageTag: 919cd640-941f-4791-8162-b6dc67342211
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	measure 'Progression MM15' =
+			
+			VAR __calc = IF(
+				ISFILTERED('Calendrier'[Date]),
+				ERROR("Les mesures rapides de Time Intelligence peuvent être regroupées ou filtrées seulement par la hiérarchie de dates ou les colonnes de dates principales fournies par Power BI."),
+				VAR __LAST_DATE = LASTDATE('Calendrier'[Date].[Date])
+				RETURN
+					AVERAGEX(
+						DATESBETWEEN(
+							'Calendrier'[Date].[Date],
+							DATEADD(__LAST_DATE, -7, DAY),
+							DATEADD(__LAST_DATE, 7, DAY)
+						),
+						CALCULATE(SUM('Pertes_UA'[Progression]))
+					)
+			)
+			RETURN if(SUM(Pertes_UA[Progression])=blank(),blank(),__calc)
+		formatString: 0
+		lineageTag: 010c62dc-65cb-4082-8851-8f406c7c76a6
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "RollingAverage"
+				}
+
+		changedProperty = FormatString
+
+	measure 'Progression MM15 Y-1' = CALCULATE([Progression MM15],USERELATIONSHIP(Pertes_UA[décalage 1 an],Calendrier[Date]))
+		lineageTag: 90cd2184-1ce1-490e-a35f-9cc36316cae4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Titre assauts russes' =
+			
+			VAR __moyenne = AVERAGE('Assauts russes'[Assauts russes])
+			VAR __last = CALCULATE(SUM('Assauts russes'[Assauts russes]),Calendrier[IsLastDate])
+			VAR __trend = __last>__moyenne
+			RETURN "Assauts russes : "& __last & if(__trend, "▲","▼")
+		lineageTag: 2b0b5f11-b44f-47b5-8856-72a696db8fff
+
+	measure 'Titre Bombardements' =
+			
+			VAR __moyenne = AVERAGE('Données cartographiques'[nb Occurences])
+			VAR __last = CALCULATE(SUM('Données cartographiques'[nb Occurences]),Calendrier[IsLastDate])
+			VAR __trend = __last>__moyenne
+			RETURN "Bombardements le "& FORMAT([Today],"d mmmm") & ": "& __last & if(__trend, "▲","▼")
+		lineageTag: 18f5f2c4-edbc-4449-98e6-a475adc1738c
+
+	column 'Colonne 1'
+		dataType: string
+		isHidden
+		lineageTag: c7607463-40d1-45a0-a80a-4756afaa0e9c
+		summarizeBy: none
+		sourceColumn: Colonne 1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Mesures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Colonne 1" = _t]),
+				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Colonne 1", type text}})
+				in
+				    #"Type modifié"
+
+	annotation PBI_ResultType = Table
+

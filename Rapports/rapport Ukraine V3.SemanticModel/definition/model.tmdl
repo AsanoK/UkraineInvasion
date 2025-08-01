@@ -10,7 +10,7 @@ queryGroup Cartographie
 
 	annotation PBI_QueryGroupOrder = 0
 
-annotation PBI_QueryOrder = ["Assauts russes","Texte","lieux","Pertes RU confirmées","Pertes_warspotting","Pertes_Oryx","Types pertes","Mesures","russia_losses_equipment","russia_losses_personnel","Pertes_UA","LogsOWL_derniere_date","Catégorisation","points clé","Typage_Owl","Géolocs (Unités et images)","front_source","Ligne de front","Secteurs","Points clés","Données cartographiques","Test events","date_référence"]
+annotation PBI_QueryOrder = ["Assauts russes","Texte_Hebdo","lieux","Pertes RU confirmées","Pertes_warspotting","Pertes_Oryx","Types pertes","russia_losses_equipment","russia_losses_personnel","Pertes_UA","LogsOWL_derniere_date","Catégorisation","points clé","Typage_Owl","Géolocs (Unités et images)","front_source","Ligne de front","Secteurs","Points clés","Données cartographiques","Test events","date_référence","Texte_Quotidien","Mesures"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -18,10 +18,9 @@ annotation PBIDesktopVersion = 2.145.1262.0 (25.07)+10bdeda5ab0db954b2cf824e7a11
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table Texte
+ref table Texte_Hebdo
 ref table DateTableTemplate_3d88b9d9-2caa-4834-9e47-e9442402ba28
 ref table lieux
-ref table Mesures
 ref table Pertes_UA
 ref table Calendrier
 ref table LocalDateTable_92958ceb-3dbb-4f87-9172-34a50f0ff3df
@@ -31,7 +30,8 @@ ref table 'Pertes RU confirmées'
 ref table 'Test events'
 ref table LocalDateTable_f1a48135-381a-4d9b-8ec5-60b559fe161d
 ref table 'Assauts russes'
-ref table LocalDateTable_d8fce523-db68-4f9a-aa02-eae407686868
+ref table Texte_Quotidien
+ref table Mesures
 
 ref cultureInfo fr-FR
 

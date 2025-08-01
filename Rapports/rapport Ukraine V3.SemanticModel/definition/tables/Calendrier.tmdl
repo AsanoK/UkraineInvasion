@@ -1,0 +1,94 @@
+table Calendrier
+	lineageTag: 3c8df586-1acd-498a-ba3e-3c0daf360983
+
+	column Date
+		formatString: d mmmm
+		lineageTag: f9e9ae04-043e-4345-adb8-039e2a157018
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: a193ed5e-6743-4d38-98b4-cf5b5b500c9e
+			defaultHierarchy: LocalDateTable_92958ceb-3dbb-4f87-9172-34a50f0ff3df.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Jour d''invasion' = DATEDIFF(DATE(2022,02,24),Calendrier[Date],DAY)
+		formatString: 0
+		lineageTag: 86c43a5e-94b3-493d-a8d8-cf4475371842
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numéro semaine' = WEEKNUM(Calendrier[Date],2)
+		formatString: 0
+		lineageTag: a586113e-1148-40cf-ae4f-47d3c6937d1d
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dans le passé' = Calendrier[Date]<=today()
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ab2f55b5-dd08-436c-b69b-9c7138bd469b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column '6 derniers mois' =
+			
+			VAR __date_max = MAX('Assauts russes'[Date])
+			VAr __param1= DATEDIFF(Calendrier[Date],__date_max,MONTH)<=6
+			VAR __param2= Calendrier[Date]<=__date_max
+			RETURN __param1&&__param2
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: eb7510b6-4aed-4c67-a7a1-633b21d02b1d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsLastDate =
+			
+			var __max = CALCULATE(max(Texte_Quotidien[Date]),all(Texte_Quotidien))
+			RETURN Calendrier[Date]=__max
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: af74da76-0b57-4deb-9262-9810ac58d8df
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column derniermois =
+			
+			VAR __date_max = MAX('Texte_Quotidien'[Date])
+			VAr __param1= DATEDIFF(Calendrier[Date],__date_max,DAY)<=31
+			VAR __param2= Calendrier[Date]<=__date_max
+			RETURN __param1&&__param2
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4e1db9be-9bd6-40b8-b633-fa6ac86886f4
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column derniereSemaine =
+			
+			VAR __date_max = MAX('Texte_Quotidien'[Date])
+			VAr __param1= DATEDIFF(Calendrier[Date],__date_max,DAY)<7
+			VAR __param2= Calendrier[Date]<=__date_max
+			RETURN __param1&&__param2
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: fe677efa-9da2-4079-8166-6383926c380a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendrier = calculated
+		mode: import
+		source = CALENDARAUTO()
+
+	annotation PBI_Id = b3cf2a6154744ba993a839fd979a68c4
+

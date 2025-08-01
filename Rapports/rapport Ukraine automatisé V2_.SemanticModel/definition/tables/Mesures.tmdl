@@ -21,7 +21,7 @@ table Mesures
 			RETURN __date_format_date
 			
 			```
-		formatString: d mmmm
+		formatString: dd-mm-yy
 		lineageTag: 77842560-52f5-40c4-a8c8-7e72a388280f
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
@@ -43,14 +43,14 @@ table Mesures
 	measure 'Titre 2' = CONCATENATE([En-cart], " : Pertes russes")
 		lineageTag: c95fa5b2-bd8a-40e3-89d2-e9d1cb2f017b
 
-	measure 'Bombardements majeurs' = CALCULATE(COUNTROWS('Données cartographiques'),'Données cartographiques'[Type]="Bombardement")
+	measure 'Bombardements majeurs' = CALCULATE(SUM('Données cartographiques'[nb occurences]))
 		formatString: 0
 		lineageTag: 2d8e283f-ab16-424f-9bb7-1cb8738f4efa
 
-	measure 'Vidéos géocalisées' =
+	measure 'Vidéos géolocalisées' =
 			
 			Var __dateMax= [Date_max]
-			RETURN CALCULATE(COUNTROWS('Données cartographiques'),'Données cartographiques'[Date]=__dateMax,'Données cartographiques'[geoloc] IN {"Russian Geolocations (~30 Days)","Ukraine Geolocations (~30 Days)"})
+			RETURN CALCULATE(COUNTROWS('Données cartographiques'),'Données cartographiques'[Date]=__dateMax, 'Données cartographiques'[Type] IN {"Ukraine Geolocations (~30 Days)","Russian Geolocations (~30 Days)"})
 		formatString: 0
 		lineageTag: 9ca3a7ba-e6d7-47b3-9775-7775576a4662
 
@@ -211,6 +211,22 @@ table Mesures
 		lineageTag: e2d5f39d-bc83-4f88-b730-d121acace55b
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure constante = 1
+		formatString: 0
+		lineageTag: eb0e580a-e666-4016-8fb1-7c0b2ac13905
+
+	measure Titre_carte_zoom = "Bombardements notables - "& FORMAT([Date_max],"dd mmmm")
+		lineageTag: e069020f-b3f9-4384-8973-a310928101ba
+
+	measure 'MM progression Y-1' = CALCULATE([Moyenne mobile de Progression],SAMEPERIODLASTYEAR(Calendrier[Date]))
+		lineageTag: 59e64dd5-d4ae-42bf-84d1-6463f93a11bb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Progression Y-1' = CALCULATE(SUm(Pertes_UA[Progression]),SAMEPERIODLASTYEAR(Pertes_UA[Date]))
+		formatString: 0
+		lineageTag: f406c9dc-462f-4a0e-b31b-290e559fd02d
 
 	partition Mesures = m
 		mode: import

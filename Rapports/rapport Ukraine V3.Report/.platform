@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "rapport Ukraine V3"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c7887ad8-f0af-4413-bf71-3a18922e7fc8"
+  }
+}

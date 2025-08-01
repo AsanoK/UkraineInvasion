@@ -1,0 +1,71 @@
+table 'Pertes RU confirmées'
+	lineageTag: 31331c0d-d88f-4326-89e0-93b841bb9c5a
+
+	column Type
+		dataType: string
+		lineageTag: c6fdf5ea-58fe-4276-a4e9-8c811a96f4ca
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pertes totales'
+		dataType: int64
+		formatString: 0
+		lineageTag: e146957d-2d85-4259-b047-d15d28eb32e9
+		summarizeBy: sum
+		sourceColumn: Pertes totales
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nouvelles pertes'
+		dataType: int64
+		formatString: 0
+		lineageTag: f88f6e57-983b-42f3-bb74-5f63cdf722b3
+		summarizeBy: sum
+		sourceColumn: Nouvelles pertes
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Column1.counts.damaged'
+		dataType: string
+		lineageTag: 320e188a-27c8-4708-a07e-931e4a3e18ea
+		summarizeBy: none
+		sourceColumn: Column1.counts.damaged
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Column1.counts.damaged_new'
+		dataType: string
+		lineageTag: c01cb97b-813c-4537-801e-992844eac42d
+		summarizeBy: none
+		sourceColumn: Column1.counts.damaged_new
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date = TODAY()
+		formatString: General Date
+		lineageTag: f5849dbe-0ccb-4a43-9f53-b759571b43e3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Pertes RU confirmées' = m
+		mode: import
+		source =
+				let
+				    Source = Json.Document(Web.Contents("https://ukr.warspotting.net/api/stats/russia")),
+				    counts_by_type = Source[counts_by_type],
+				    #"Converti en table" = Table.FromList(counts_by_type, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    #"Column1 développé" = Table.ExpandRecordColumn(#"Converti en table", "Column1", {"type_name", "counts"}, {"Column1.type_name", "Column1.counts"}),
+				    #"Column1.counts développé" = Table.ExpandRecordColumn(#"Column1 développé", "Column1.counts", {"losses", "losses_new", "damaged", "damaged_new"}, {"Column1.counts.losses", "Column1.counts.losses_new", "Column1.counts.damaged", "Column1.counts.damaged_new"}),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Column1.counts développé",{{"Column1.type_name", "Type"}, {"Column1.counts.losses", "Pertes totales"}, {"Column1.counts.losses_new", "Nouvelles pertes"}})
+				in
+				    #"Colonnes renommées"
+
+	annotation PBI_ResultType = Table
+
