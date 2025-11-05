@@ -14,6 +14,7 @@ table Texte
 		lineageTag: cd088b89-a463-49f1-8e3b-2b57c99372be
 		summarizeBy: none
 		sourceColumn: Titre
+		sortByColumn: Ordre
 
 		changedProperty = SortByColumn
 
@@ -117,13 +118,17 @@ table Texte
 		lineageTag: 71d425c4-2b23-4279-828e-f24ed09c4d77
 		summarizeBy: none
 		sourceColumn: Texte
+		sortByColumn: Ordre
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
 	column Ordre
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: f129ae1e-5195-4485-a3b4-2fb98478b0ef
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Ordre
 
 		annotation SummarizationSetBy = Automatic
@@ -152,7 +157,7 @@ table Texte
 				    Texte_Table = Source{[name="Texte",ItemKind="Table"]}[Data],
 				    #"Type modifié" = Table.TransformColumnTypes(Texte_Table,{{"Column3", type text}}),
 				    #"En-têtes promus" = Table.PromoteHeaders(#"Type modifié", [PromoteAllScalars=true]),
-				    #"Type modifié1" = Table.TransformColumnTypes(#"En-têtes promus",{{"Date", type date}})
+				    #"Type modifié1" = Table.TransformColumnTypes(#"En-têtes promus",{{"Date", type date}, {"Ordre", Int64.Type}})
 				in
 				    #"Type modifié1"
 

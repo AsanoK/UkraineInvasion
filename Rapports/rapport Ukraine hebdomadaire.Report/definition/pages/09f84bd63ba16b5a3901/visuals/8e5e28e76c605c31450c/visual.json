@@ -1,0 +1,61 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "8e5e28e76c605c31450c",
+  "position": {
+    "x": 10,
+    "y": 0,
+    "z": 1000,
+    "height": 112,
+    "width": 280,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Texte"
+                        }
+                      },
+                      "Property": "Titre"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Texte.Titre",
+              "nativeQueryRef": "Premier Titre"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "233.8459492968659D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Texte.Titre"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

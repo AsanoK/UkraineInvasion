@@ -4329,16 +4329,6 @@ cultureInfo fr-FR
 			          "progression Y-1": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "valeur totale année précédente": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    }
