@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "cbe5c70c3a3f0bf29b3e",
   "position": {
     "x": 408.84097035040429,
@@ -7,7 +7,7 @@
     "z": 10000,
     "height": 294.98652291105122,
     "width": 401.94070080862531,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "esriVisual",
@@ -511,81 +511,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "48a6f5df6b136435774b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Données cartographiques"
-              }
-            },
-            "Property": "Type"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "70ef3f401c249d19b020",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Données cartographiques"
-              }
-            },
-            "Property": "Lattitude départ"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "be3371aaee6380364680",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Données cartographiques"
-              }
-            },
-            "Property": "Longitude départ"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6a9c4d81764328950813",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Données cartographiques"
-                  }
-                },
-                "Property": "Priorité"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f3cc9acc59e00b336d0e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Données cartographiques"
-              }
-            },
-            "Property": "Texte_affichage"
-          }
-        },
-        "type": "Categorical"
       }
     ],
     "filterSortOrder": "Custom"

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "df51fce4c2b7b4d46eca",
   "position": {
     "x": 474.65045592705167,
@@ -7,7 +7,7 @@
     "z": 0,
     "height": 302.4924012158055,
     "width": 793.677811550152,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "columnChart",
@@ -662,7 +662,7 @@
         "howCreated": "User"
       },
       {
-        "name": "807a40e2b2295e8c25ed",
+        "name": "7d3cb0d602a2712a0e1b",
         "field": {
           "Column": {
             "Expression": {
@@ -676,7 +676,7 @@
         "type": "Categorical"
       },
       {
-        "name": "841de1c92a2d0fcebb0a",
+        "name": "c34f2f32a3ae93e13690",
         "field": {
           "Aggregation": {
             "Expression": {

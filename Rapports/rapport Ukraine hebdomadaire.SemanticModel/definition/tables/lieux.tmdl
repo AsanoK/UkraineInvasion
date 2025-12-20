@@ -75,5 +75,5 @@ table lieux
 				in
 				    #"Type modifié1"
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

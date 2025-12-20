@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "8c5d465f29a9cac3ed98",
   "position": {
     "x": 405.59270516717328,
@@ -220,6 +220,47 @@
                     "Right": {
                       "Literal": {
                         "Value": "'Pologne'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFD500'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Données cartographiques"
+                          }
+                        },
+                        "Property": "lieux.Pays"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Roumanie'"
                       }
                     }
                   }

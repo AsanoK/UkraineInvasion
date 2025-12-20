@@ -198,10 +198,10 @@ expression 'points clé' =
 		    #"Historisation points clés_Table" = Source{[name="Historisation points clés",ItemKind="Table"]}[Data],
 		    #"En-têtes promus" = Table.PromoteHeaders(#"Historisation points clés_Table", [PromoteAllScalars=true]),
 		    #"Type modifié" = Table.TransformColumnTypes(#"En-têtes promus",{{"ID lieux", type text}, {"Type", type text}, {"Date", type date}, {"Commentaire", type any}, {"Importance", Int64.Type}}),
-		    #"Colonnes renommées" = Table.RenameColumns(#"Type modifié",{{"Importance", "Priorité"}, {"_1", "Affichage"}, {"", "Source"}}),
+		    #"Colonnes renommées" = Table.RenameColumns(#"Type modifié",{{"Importance", "Priorité"}}),
 		    #"Lignes filtrées" = Table.SelectRows(#"Colonnes renommées", each ([ID lieux] <> "")),
 		    #"Lignes triées" = Table.Sort(#"Lignes filtrées",{{"Date", Order.Descending}}),
-		    #"Colonnes renommées1" = Table.RenameColumns(#"Lignes triées",{{"_2", "nb Occurences"}})
+		    #"Colonnes renommées1" = Table.RenameColumns(#"Lignes triées",{{"NbOccurence", "nb Occurences"}})
 		in
 		    #"Colonnes renommées1"
 	lineageTag: 9fea24e4-8d83-4ae8-95f4-dbda5c5075be

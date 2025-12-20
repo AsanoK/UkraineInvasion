@@ -1,6 +1,6 @@
 expression front_source =
 		let
-		    Source = Xml.Tables(File.Contents("C:\Users\Antoine\Documents\Data Ukraine Offline\Ukraine Control Map.kml")),
+		    Source = Xml.Tables(File.Contents("C:\Users\Antoine\Documents\Data Ukraine Offline\latest\doc.kml")),
 		    Table0 = Source{0}[Table],
 		    #"Type modifié" = Table.TransformColumnTypes(Table0,{{"name", type text}, {"description", type text}}),
 		    Folder = #"Type modifié"{0}[Folder],
@@ -309,4 +309,34 @@ expression Date_Ref =
 	annotation PBI_NavigationStepName = Navigation
 
 	annotation PBI_ResultType = Date
+
+expression 'front_source (2)' =
+		let
+		    Source = Xml.Tables(File.Contents("C:\Users\Antoine\Documents\Data Ukraine Offline\latest\doc.kml")),
+		    Table0 = Source{0}[Table],
+		    #"Type modifié" = Table.TransformColumnTypes(Table0,{{"name", type text}, {"description", type text}}),
+		    Folder = #"Type modifié"{0}[Folder],
+		    #"Type modifié1" = Table.TransformColumnTypes(Folder,{{"name", type text}}),
+		    #"Lignes filtrées" = Table.SelectRows(#"Type modifié1", each ([name] = "Frontline")),
+		    Placemark = #"Lignes filtrées"{0}[Placemark],
+		    #"Type modifié2" = Table.TransformColumnTypes(Placemark,{{"name", type text}, {"description", type text}, {"styleUrl", type text}}),
+		    #"LineString développé" = Table.ExpandTableColumn(#"Type modifié2", "LineString", {"coordinates"}, {"LineString.coordinates"}),
+		    #"Fractionner la colonne par délimiteur" = Table.ExpandListColumn(Table.TransformColumns(#"LineString développé", {{"LineString.coordinates", Splitter.SplitTextByDelimiter(",0", QuoteStyle.Csv), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "LineString.coordinates"),
+		    #"Type modifié3" = Table.TransformColumnTypes(#"Fractionner la colonne par délimiteur",{{"LineString.coordinates", type text}}),
+		    #"Fractionner la colonne par délimiteur1" = Table.SplitColumn(#"Type modifié3", "LineString.coordinates", Splitter.SplitTextByDelimiter(",", QuoteStyle.Csv), {"LineString.coordinates.1", "LineString.coordinates.2"}),
+		    #"Type modifié4" = Table.TransformColumnTypes(#"Fractionner la colonne par délimiteur1",{{"LineString.coordinates.1", type text}, {"LineString.coordinates.2", type text}}),
+		    #"Valeur remplacée" = Table.ReplaceValue(#"Type modifié4",".",",",Replacer.ReplaceText,{"LineString.coordinates.1", "LineString.coordinates.2"}),
+		    #"Type modifié5" = Table.TransformColumnTypes(#"Valeur remplacée",{{"LineString.coordinates.1", type number}, {"LineString.coordinates.2", type number}}),
+		    #"Colonnes supprimées" = Table.RemoveColumns(#"Type modifié5",{"description", "styleUrl"}),
+		    #"Colonnes renommées" = Table.RenameColumns(#"Colonnes supprimées",{{"LineString.coordinates.1", "Longitude"}, {"LineString.coordinates.2", "Lattitude"}}),
+		    #"Index ajouté" = Table.AddIndexColumn(#"Colonnes renommées", "Index", 0, 1, Int64.Type),
+		    #"Colonnes renommées1" = Table.RenameColumns(#"Index ajouté",{{"name", "Attribut"}})
+		in
+		    #"Colonnes renommées1"
+	lineageTag: 98adf59a-ab2d-4de6-8ba6-1ed16af54aab
+	queryGroup: Cartographie
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
 

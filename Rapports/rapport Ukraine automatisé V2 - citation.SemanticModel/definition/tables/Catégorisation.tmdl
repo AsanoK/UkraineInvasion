@@ -1,0 +1,75 @@
+table Catégorisation
+	lineageTag: a805604a-521d-4704-b8cf-daae193a727c
+
+	column 'Catégorie UA'
+		dataType: string
+		lineageTag: f63bcd2d-33b8-4276-885b-fc6c776a5e5f
+		summarizeBy: none
+		sourceColumn: Catégorie UA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Catégorie display'
+		dataType: string
+		lineageTag: 9364513c-3b09-4d2f-8130-d8fc4ab8fde9
+		summarizeBy: none
+		sourceColumn: Catégorie display
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Catégorie sup'
+		dataType: string
+		lineageTag: bad1349b-4edb-4458-8051-b3d504df4297
+		summarizeBy: none
+		sourceColumn: Catégorie sup
+		sortByColumn: Tri_sup
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Affichage standard'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 96552762-d4e9-4119-baa0-98468d75e01c
+		summarizeBy: none
+		sourceColumn: Affichage standard
+
+		annotation SummarizationSetBy = Automatic
+
+	column Catégorie_WS
+		dataType: string
+		lineageTag: 800423f9-9bf1-4793-95ac-4f1c100fc87e
+		summarizeBy: none
+		sourceColumn: Catégorie_WS
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tri_sup
+		dataType: int64
+		formatString: 0
+		lineageTag: 1757a2c8-55ea-465a-97a6-d4ad4dcadf6e
+		summarizeBy: none
+		sourceColumn: Tri_sup
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Catégorie_diplay_vide = if('Catégorisation'[Catégorie display]='Catégorisation'[Catégorie sup],BLANK(),'Catégorisation'[Catégorie display])
+		lineageTag: 7899061b-601d-4b8f-87e1-065d56716d8f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Catégorisation = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("nVVLbhsxDL2K4FUL2EDjfNounU+RAnEb2G42QRayzPGw0UgTUXLg63RVn8MXK6X5ZNzaRdPFQBLFxyEfH2fu73sU5oV0aIB6/d7UBhqkIx++yBU64M2n0c30itcjfj72Hvr3PSNXUgvKsWTT+faHxwKMFwsQFFwmFeyD3wERaGqDZAh6IaTzqDW4NdtH9R5BvAEvCstncPR254oPs8m3GHBmn2E3wHEVOIAWXppHttzYJZLHpxBxd9tNjipoIGGsGcw1msV2Qy8Rh/ycpBij24tYWu0RK/NOGio5pY79BfnZZNJ4txYZLnOPZilWwO/SidZhClmgRi/ZRQZvYzYWfXCcS3XBZNG/5Hjc5rhw1sSyLuMaPcbBoEdrOqS3d6cJUrNykUtHe+uYsUMnZTtHDWI6OR8LWpOHIlIqjQKWCRJhTLNyogNNOmnb0hAipFmItkf06ibNOo2oiLhlkVhjQLPl0L4h5DQJOaKoBIUsY3gKWEb9xgqCT5pt1gb11efgIvJdgnKrccAdU05mXjxL1nxyv9xuMjDEY2B1vN9vqusY7QSp6I1lnqVXjCc3DdcDZ5ka7yPXQXssD7M9ru+Fs+qRR0jLYBSnTm0XlAvI2TTdi5imkSxy5SwSbn+mavbI6axVUpN4TGTFTlRt5G+AEbpSy0qC7xMwB43Klj7xeb3dVKf4ygMhrlvAS5Cj/xvOJFX06z+Hc5gILZI6PSqej8bQLSZ2LIq2060PCX78+q/XFHQ2KJ0tgW/2fcZO9uixxk7kgge4L77LoqhoqYV5ehhzYYsiTl5pyTNU8ZH7qxq26wBnfxmCK7Pk/wRXYZY14OEX", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Catégorie UA" = _t, #"Catégorie display" = _t, #"Catégorie sup" = _t, #"Affichage standard" = _t, Catégorie_WS = _t, Tri_sup = _t]),
+				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Catégorie UA", type text}, {"Catégorie display", type text}, {"Catégorie sup", type text}, {"Affichage standard", type logical}})
+				in
+				    #"Type modifié"
+
+	annotation PBI_ResultType = Table
+

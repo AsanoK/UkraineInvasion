@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "4b473db5b70ad6866620",
   "position": {
     "x": 474.65045592705167,
@@ -165,6 +165,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Pertes russes'"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -417,6 +424,53 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "79056f4f03560753274e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Pertes_UA"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "dde3b62fe4660bde2059",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Pertes_UA"
+                  }
+                },
+                "Property": "Progression"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9ed06a970b300a8350aa",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Moyenne mobile de Progression"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

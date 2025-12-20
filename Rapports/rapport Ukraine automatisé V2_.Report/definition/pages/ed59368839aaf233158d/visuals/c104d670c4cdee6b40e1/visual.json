@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "c104d670c4cdee6b40e1",
   "position": {
     "x": 475,
@@ -7,7 +7,7 @@
     "z": 6000,
     "height": 262,
     "width": 793,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "areaChart",
@@ -193,6 +193,13 @@
               "expr": {
                 "Literal": {
                   "Value": "15D"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -488,67 +495,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "d17715f3c54d6f072a2d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calendrier"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "25f7c4f9e71c7d3a9feb",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Pertes_UA"
-                  }
-                },
-                "Property": "Progression"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5a7bdb16185d6c94e0c6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "Moyenne mobile de Progression"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b0a204e6221c7f8afb97",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "MM progression Y-1"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

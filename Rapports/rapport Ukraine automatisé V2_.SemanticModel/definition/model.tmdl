@@ -15,7 +15,7 @@ queryGroup 'Erreurs des requêtes – 30/04/2025 23:16:08'
 
 	annotation PBI_QueryGroupOrder = 1
 
-annotation PBI_QueryOrder = ["Texte","lieux","Pertes RU confirmées","Pertes_warspotting","Pertes_Oryx","Types pertes","Mesures","russia_losses_equipment","russia_losses_personnel","Pertes_UA","LogsOWL_derniere_date","Catégorisation","points clé","Typage_Owl","Géolocs (Unités et images)","front_source","Ligne de front","Secteurs","Données cartographiques","Assauts russes","Date_Ref"]
+annotation PBI_QueryOrder = ["Texte","lieux","Pertes RU confirmées","Pertes_warspotting","Pertes_Oryx","Types pertes","Mesures","russia_losses_equipment","russia_losses_personnel","Pertes_UA","LogsOWL_derniere_date","Catégorisation","points clé","Typage_Owl","Géolocs (Unités et images)","front_source","Ligne de front","Secteurs","Données cartographiques","Assauts russes","Date_Ref","front_source (2)"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
