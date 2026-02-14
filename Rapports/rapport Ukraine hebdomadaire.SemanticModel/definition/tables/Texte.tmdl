@@ -91,6 +91,14 @@ table Texte
 
 		annotation SummarizationSetBy = Automatic
 
+	column Column1
+		dataType: string
+		lineageTag: 67921add-c9db-4eb1-86ec-f75da91ec7da
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Texte = m
 		mode: import
 		source =

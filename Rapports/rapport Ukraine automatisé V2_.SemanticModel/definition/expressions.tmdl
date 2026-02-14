@@ -196,7 +196,7 @@ expression russia_losses_personnel =
 expression 'points clé' =
 		let
 		    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1EguBfb3VzBaOqYtk6nFXaXIUn5XsR1CYBC3KNrR-1sw"),
-		    #"points clé_Table" = Source{[name="points clé",ItemKind="Table"]}[Data],
+		    #"points clé_Table" = Source{[name="Points clés",ItemKind="Table"]}[Data],
 		    #"En-têtes promus" = Table.PromoteHeaders(#"points clé_Table", [PromoteAllScalars=true]),
 		    #"Type modifié" = Table.TransformColumnTypes(#"En-têtes promus",{{"ID lieux", type text}, {"Type", type text}, {"Date", type date}, {"Commentaire", type any}, {"Priorité", Int64.Type}, {"Source", type any}}),
 		    #"Lignes filtrées" = Table.SelectRows(#"Type modifié", each ([ID lieux] <> "")),

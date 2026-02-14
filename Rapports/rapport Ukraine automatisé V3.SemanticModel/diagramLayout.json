@@ -1,0 +1,126 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 153.3200334969986
+          },
+          "nodeIndex": "Texte",
+          "nodeLineageTag": "07b59ffb-39cd-4386-b7ab-1bdee64723f4",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1570,
+            "y": 171
+          },
+          "nodeIndex": "Mesures",
+          "nodeLineageTag": "49557378-ca30-41b2-a0bf-9274fff10355",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 887.04393133115286,
+            "y": 0
+          },
+          "nodeIndex": "Pertes_UA",
+          "nodeLineageTag": "207a9fb8-f0e4-45e5-9a93-07fc3de7e072",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1168.3851160293461,
+            "y": 103.17426573577893
+          },
+          "nodeIndex": "Calendrier",
+          "nodeLineageTag": "3c8df586-1acd-498a-ba3e-3c0daf360983",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 325,
+            "y": 363
+          },
+          "nodeIndex": "Catégorisation",
+          "nodeLineageTag": "a805604a-521d-4704-b8cf-daae193a727c",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1271.8383821769794,
+            "y": 534.56800587776922
+          },
+          "nodeIndex": "Données cartographiques",
+          "nodeLineageTag": "70718056-c127-4b05-bceb-d1c5d8d5eef9",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 828.57258499916111,
+            "y": 574.14556987177082
+          },
+          "nodeIndex": "Assauts russes",
+          "nodeLineageTag": "14dd23cd-4bb0-48a5-bbf9-52f7fc0e33fe",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 145.88822554645731,
+            "y": 788.76794543570372
+          },
+          "nodeIndex": "TypeLieux",
+          "nodeLineageTag": "9faf797b-55c1-43f7-89fb-783f9094644a",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Toutes les tables",
+      "zoomValue": 70.955543900968763,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Toutes les tables",
+  "defaultDiagram": "Toutes les tables"
+}

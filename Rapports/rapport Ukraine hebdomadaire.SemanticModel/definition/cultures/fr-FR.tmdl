@@ -4556,141 +4556,186 @@ cultureInfo fr-FR
 			          }
 			        }
 			      ]
+			    },
+			    "texte.column_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Texte",
+			          "ConceptualProperty": "Column1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "column 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Column1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mesure.moyenne_Y1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "Moyenne Y-1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "moyenne Y-1": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendrier.annéesemaine": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendrier",
+			          "ConceptualProperty": "Année-semaine"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "année-semaine": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "année semaine": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "assauts_russes.test": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Assauts russes",
+			          "ConceptualProperty": "test"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "test": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "examination": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "exam": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "investigation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "analysis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "quiz": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "trial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "check": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "experiment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "assay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "test_event_date_hiérarchie_de_date_has_test_event_date_jour": {
-			      "Binding": {
-			        "ConceptualEntity": "Test events"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "test_event.date.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "test_event.date.hiérarchie_de_date"
-			          }
-			        },
-			        "test_event.date.jour": {
-			          "Target": {
-			            "Entity": "test_event.date.jour"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "test_event.date.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "test_event.date.jour"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour"
-			        }
-			      ]
-			    },
-			    "test_event_date_hiérarchie_de_date_has_test_event_date_mois": {
-			      "Binding": {
-			        "ConceptualEntity": "Test events"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "test_event.date.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "test_event.date.hiérarchie_de_date"
-			          }
-			        },
-			        "test_event.date.mois": {
-			          "Target": {
-			            "Entity": "test_event.date.mois"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "test_event.date.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "test_event.date.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises"
-			        }
-			      ]
-			    },
-			    "test_event_date_hiérarchie_de_date_has_test_event_date_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "Test events"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "test_event.date.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "test_event.date.hiérarchie_de_date"
-			          }
-			        },
-			        "test_event.date.trimestre": {
-			          "Target": {
-			            "Entity": "test_event.date.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "test_event.date.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "test_event.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres"
-			        }
-			      ]
-			    },
-			    "test_event_date_hiérarchie_de_date_has_test_event_date_année": {
-			      "Binding": {
-			        "ConceptualEntity": "Test events"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "test_event.date.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "test_event.date.hiérarchie_de_date"
-			          }
-			        },
-			        "test_event.date.année": {
-			          "Target": {
-			            "Entity": "test_event.date.année"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "test_event.date.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "test_event.date.année"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années"
-			        }
-			      ]
-			    },
 			    "test_event_date_has_hiérarchie_de_date": {
 			      "Binding": {
 			        "ConceptualEntity": "Test events"
@@ -4951,7 +4996,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour1"
+			          "ID": "hiérarchie_de_dates_have_jour"
 			        }
 			      ]
 			    },
@@ -4984,7 +5029,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises1"
+			          "ID": "hiérarchie_de_dates_have_moises"
 			        }
 			      ]
 			    },
@@ -5017,7 +5062,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres1"
+			          "ID": "hiérarchie_de_dates_have_trimestres"
 			        }
 			      ]
 			    },
@@ -5050,7 +5095,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années1"
+			          "ID": "hiérarchie_de_dates_have_années"
 			        }
 			      ]
 			    },
@@ -5314,7 +5359,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour2"
+			          "ID": "hiérarchie_de_dates_have_jour1"
 			        }
 			      ]
 			    },
@@ -5347,7 +5392,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises2"
+			          "ID": "hiérarchie_de_dates_have_moises1"
 			        }
 			      ]
 			    },
@@ -5380,7 +5425,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres2"
+			          "ID": "hiérarchie_de_dates_have_trimestres1"
 			        }
 			      ]
 			    },
@@ -5413,7 +5458,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années2"
+			          "ID": "hiérarchie_de_dates_have_années1"
 			        }
 			      ]
 			    },
@@ -5700,6 +5745,138 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
+			    "assauts_russes_has_test": {
+			      "Binding": {
+			        "ConceptualEntity": "Assauts russes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "assauts_russes": {
+			          "Target": {
+			            "Entity": "assauts_russes"
+			          }
+			        },
+			        "assauts_russes.test": {
+			          "Target": {
+			            "Entity": "assauts_russes.test"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "assauts_russes"
+			            },
+			            "Object": {
+			              "Role": "assauts_russes.test"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "assauts_russes_have_tests"
+			        }
+			      ]
+			    },
+			    "calendrier_has_annéesemaine": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier": {
+			          "Target": {
+			            "Entity": "calendrier"
+			          }
+			        },
+			        "calendrier.annéesemaine": {
+			          "Target": {
+			            "Entity": "calendrier.annéesemaine"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier"
+			            },
+			            "Object": {
+			              "Role": "calendrier.annéesemaine"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendriers_have_annéesemaines"
+			        }
+			      ]
+			    },
+			    "mesure_has_moyenne_Y1": {
+			      "Binding": {
+			        "ConceptualEntity": "Mesures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mesure": {
+			          "Target": {
+			            "Entity": "mesure"
+			          }
+			        },
+			        "mesure.moyenne_Y1": {
+			          "Target": {
+			            "Entity": "mesure.moyenne_Y1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mesure"
+			            },
+			            "Object": {
+			              "Role": "mesure.moyenne_Y1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mesures_have_moyenne_Y1"
+			        }
+			      ]
+			    },
+			    "texte_has_column_1": {
+			      "Binding": {
+			        "ConceptualEntity": "Texte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "texte": {
+			          "Target": {
+			            "Entity": "texte"
+			          }
+			        },
+			        "texte.column_1": {
+			          "Target": {
+			            "Entity": "texte.column_1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "texte"
+			            },
+			            "Object": {
+			              "Role": "texte.column_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "textes_have_column_1"
+			        }
+			      ]
+			    },
 			    "mesure_has_moyenne_mobile_de_progression": {
 			      "Binding": {
 			        "ConceptualEntity": "Mesures"
@@ -5931,15 +6108,15 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_assauts_russes_disp": {
+			    "assauts_russes_has_mesure_assauts_russes_disp": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Assauts russes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mesure": {
+			        "assauts_russes": {
 			          "Target": {
-			            "Entity": "mesure"
+			            "Entity": "assauts_russes"
 			          }
 			        },
 			        "mesure.assauts_russes_disp": {
@@ -5952,7 +6129,7 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "mesure"
+			              "Role": "assauts_russes"
 			            },
 			            "Object": {
 			              "Role": "mesure.assauts_russes_disp"
@@ -5960,19 +6137,19 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_assauts_russes_disp"
+			          "ID": "assauts_russes_have_assauts_russes_disp"
 			        }
 			      ]
 			    },
-			    "assauts_russes_has_mesure_assauts_russes_S1": {
+			    "mesure_has_assauts_russes_S1": {
 			      "Binding": {
-			        "ConceptualEntity": "Assauts russes"
+			        "ConceptualEntity": "Mesures"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "assauts_russes": {
+			        "mesure": {
 			          "Target": {
-			            "Entity": "assauts_russes"
+			            "Entity": "mesure"
 			          }
 			        },
 			        "mesure.assauts_russes_S1": {
@@ -5985,7 +6162,7 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "assauts_russes"
+			              "Role": "mesure"
 			            },
 			            "Object": {
 			              "Role": "mesure.assauts_russes_S1"
@@ -5993,7 +6170,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "assauts_russes_have_assauts_russes_S1"
+			          "ID": "mesures_have_assauts_russes_S1"
 			        }
 			      ]
 			    },
@@ -7264,15 +7441,15 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_pertes_russes": {
+			    "pertes_UA_has_mesure_pertes_russes": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Pertes_UA"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mesure": {
+			        "pertes_UA": {
 			          "Target": {
-			            "Entity": "mesure"
+			            "Entity": "pertes_UA"
 			          }
 			        },
 			        "mesure.pertes_russes": {
@@ -7285,7 +7462,7 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "mesure"
+			              "Role": "pertes_UA"
 			            },
 			            "Object": {
 			              "Role": "mesure.pertes_russes"
@@ -7293,7 +7470,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_pertes_russes"
+			          "ID": "pertes_UA_have_pertes_russes"
 			        }
 			      ]
 			    },
@@ -7330,15 +7507,15 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_pertes_humaines": {
+			    "pertes_UA_has_mesure_pertes_humaines": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Pertes_UA"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mesure": {
+			        "pertes_UA": {
 			          "Target": {
-			            "Entity": "mesure"
+			            "Entity": "pertes_UA"
 			          }
 			        },
 			        "mesure.pertes_humaines": {
@@ -7351,7 +7528,7 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "mesure"
+			              "Role": "pertes_UA"
 			            },
 			            "Object": {
 			              "Role": "mesure.pertes_humaines"
@@ -7359,7 +7536,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_pertes_humaines"
+			          "ID": "pertes_UA_have_pertes_humaines"
 			        }
 			      ]
 			    },
@@ -7462,15 +7639,15 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_missiles_abattus": {
+			    "pertes_UA_has_mesure_missiles_abattus": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Pertes_UA"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mesure": {
+			        "pertes_UA": {
 			          "Target": {
-			            "Entity": "mesure"
+			            "Entity": "pertes_UA"
 			          }
 			        },
 			        "mesure.missiles_abattus": {
@@ -7483,7 +7660,7 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "mesure"
+			              "Role": "pertes_UA"
 			            },
 			            "Object": {
 			              "Role": "mesure.missiles_abattus"
@@ -7491,7 +7668,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_missiles_abattus"
+			          "ID": "pertes_UA_have_missiles_abattus"
 			        }
 			      ]
 			    },
@@ -7693,15 +7870,15 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_chars_détruits": {
+			    "pertes_UA_has_mesure_chars_détruits": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Pertes_UA"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mesure": {
+			        "pertes_UA": {
 			          "Target": {
-			            "Entity": "mesure"
+			            "Entity": "pertes_UA"
 			          }
 			        },
 			        "mesure.chars_détruits": {
@@ -7714,7 +7891,7 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "mesure"
+			              "Role": "pertes_UA"
 			            },
 			            "Object": {
 			              "Role": "mesure.chars_détruits"
@@ -7722,7 +7899,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_chars_détruits"
+			          "ID": "pertes_UA_have_chars_détruits"
 			        }
 			      ]
 			    },
@@ -9058,6 +9235,138 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_calendriers_are_dans_le_passé_calendriers"
+			        }
+			      ]
+			    },
+			    "test_event_date_hiérarchie_de_date_has_test_event_date_année": {
+			      "Binding": {
+			        "ConceptualEntity": "Test events"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "test_event.date.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "test_event.date.hiérarchie_de_date"
+			          }
+			        },
+			        "test_event.date.année": {
+			          "Target": {
+			            "Entity": "test_event.date.année"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "test_event.date.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "test_event.date.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_années2"
+			        }
+			      ]
+			    },
+			    "test_event_date_hiérarchie_de_date_has_test_event_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Test events"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "test_event.date.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "test_event.date.hiérarchie_de_date"
+			          }
+			        },
+			        "test_event.date.trimestre": {
+			          "Target": {
+			            "Entity": "test_event.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "test_event.date.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "test_event.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_trimestres2"
+			        }
+			      ]
+			    },
+			    "test_event_date_hiérarchie_de_date_has_test_event_date_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "Test events"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "test_event.date.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "test_event.date.hiérarchie_de_date"
+			          }
+			        },
+			        "test_event.date.mois": {
+			          "Target": {
+			            "Entity": "test_event.date.mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "test_event.date.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "test_event.date.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_moises2"
+			        }
+			      ]
+			    },
+			    "test_event_date_hiérarchie_de_date_has_test_event_date_jour": {
+			      "Binding": {
+			        "ConceptualEntity": "Test events"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "test_event.date.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "test_event.date.hiérarchie_de_date"
+			          }
+			        },
+			        "test_event.date.jour": {
+			          "Target": {
+			            "Entity": "test_event.date.jour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "test_event.date.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "test_event.date.jour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_jour2"
 			        }
 			      ]
 			    },

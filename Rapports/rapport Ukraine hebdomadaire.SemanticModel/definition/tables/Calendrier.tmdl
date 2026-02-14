@@ -52,6 +52,12 @@ table Calendrier
 
 		annotation SummarizationSetBy = Automatic
 
+	column Année-semaine = COMBINEVALUES("-",YEAR(Calendrier[Date]),Calendrier[Numéro semaine])
+		lineageTag: 2742589c-38c2-40a8-852b-5316aaa6dbf6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Calendrier = calculated
 		mode: import
 		source = CALENDARAUTO()

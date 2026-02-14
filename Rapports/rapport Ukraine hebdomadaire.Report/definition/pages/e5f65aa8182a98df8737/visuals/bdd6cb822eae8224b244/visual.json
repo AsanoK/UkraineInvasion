@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "bdd6cb822eae8224b244",
   "position": {
     "x": 405.59270516717328,
@@ -459,5 +459,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "36c9ba97a9b25d5ae366",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Assauts russes"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "12cd3ddd80548a836006",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Assauts russes S-1"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

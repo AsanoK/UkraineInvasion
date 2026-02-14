@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "df51fce4c2b7b4d46eca",
   "position": {
     "x": 474.65045592705167,
@@ -809,51 +809,23 @@
           "Where": [
             {
               "Condition": {
-                "And": {
-                  "Left": {
-                    "Not": {
-                      "Expression": {
-                        "Comparison": {
-                          "ComparisonKind": 0,
-                          "Left": {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "p"
-                                }
-                              },
-                              "Property": "NumSemaine"
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "p"
                             }
                           },
-                          "Right": {
-                            "Literal": {
-                              "Value": "51L"
-                            }
-                          }
+                          "Property": "NumSemaine"
                         }
-                      }
-                    }
-                  },
-                  "Right": {
-                    "Not": {
-                      "Expression": {
-                        "Comparison": {
-                          "ComparisonKind": 0,
-                          "Left": {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "p"
-                                }
-                              },
-                              "Property": "NumSemaine"
-                            }
-                          },
-                          "Right": {
-                            "Literal": {
-                              "Value": "22L"
-                            }
-                          }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "7L"
                         }
                       }
                     }

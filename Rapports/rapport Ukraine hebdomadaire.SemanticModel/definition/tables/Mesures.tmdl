@@ -135,7 +135,7 @@ table Mesures
 			
 			VAR _num_semaine = SELECTEDVALUE(Calendrier[Numéro semaine])-1
 			VAR __year = YEAR(TODAY())
-			RETURN CALCULATE([Assauts russes],ALL(Calendrier),Calendrier[Numéro semaine]=_num_semaine,YEAR(Calendrier[Date])=__year)
+			RETURN 1085//CALCULATE([Assauts russes],ALL(Calendrier),Calendrier[Numéro semaine]=_num_semaine,YEAR(Calendrier[Date])=__year)
 		formatString: 0
 		lineageTag: f742f395-936d-4b5b-808a-d8695d7ad5a5
 

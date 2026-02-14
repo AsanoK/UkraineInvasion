@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "844204096db2c5e1f946",
   "position": {
     "x": 10.699088145896656,
@@ -500,6 +500,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "ce6a1d8c8ae6228314ea",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Texte"
+              }
+            },
+            "Property": "Titre_display"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

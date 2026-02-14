@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.1.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "CY24SU06",
@@ -149,58 +149,8 @@
         "howCreated": "User"
       },
       {
-        "name": "962552bbf5ffe20372d9",
-        "ordinal": 3,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calendrier"
-              }
-            },
-            "Property": "Numéro semaine"
-          }
-        },
-        "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "c",
-              "Entity": "Calendrier",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 0,
-                  "Left": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "c"
-                        }
-                      },
-                      "Property": "Numéro semaine"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "50L"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
-      {
         "name": "Filter72e4ef7c880c0aac5784",
-        "ordinal": 4,
+        "ordinal": 3,
         "field": {
           "HierarchyLevel": {
             "Expression": {
@@ -252,14 +202,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "2025L"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "2024L"
+                          "Value": "2026L"
                         }
                       }
                     ]
@@ -298,18 +241,7 @@
                           "0": [
                             {
                               "Literal": {
-                                "Value": "2024L"
-                              }
-                            }
-                          ]
-                        }
-                      ],
-                      [
-                        {
-                          "0": [
-                            {
-                              "Literal": {
-                                "Value": "2025L"
+                                "Value": "2026L"
                               }
                             }
                           ]
@@ -333,11 +265,63 @@
                   },
                   "valueMap": [
                     {
-                      "0": "2024"
-                    },
-                    {
-                      "0": "2025"
+                      "0": "2026"
                     }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "49862244e7018ead34b4",
+        "ordinal": 4,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calendrier"
+              }
+            },
+            "Property": "Année-semaine"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "Calendrier",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "c"
+                          }
+                        },
+                        "Property": "Année-semaine"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'2026-6'"
+                        }
+                      }
+                    ]
                   ]
                 }
               }
@@ -360,6 +344,60 @@
           }
         },
         "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "fd96afd34c73bb0d9e80",
+        "ordinal": 6,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Pertes_UA"
+              }
+            },
+            "Property": "NumSemaine"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "p",
+              "Entity": "Pertes_UA",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "p"
+                            }
+                          },
+                          "Property": "NumSemaine"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "31L"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
         "howCreated": "User"
       }
     ],
