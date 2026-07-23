@@ -4557,29 +4557,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "texte.column_1": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Texte",
-			          "ConceptualProperty": "Column1"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "column 1": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Column1": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "mesure.moyenne_Y1": {
 			      "Definition": {
 			        "Binding": {
@@ -4733,9 +4710,207 @@ cultureInfo fr-FR
 			          }
 			        }
 			      ]
+			    },
+			    "mesure.drones": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Mesures",
+			          "ConceptualProperty": "drones"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "drones": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "buzz": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "hum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "whine": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "murmur": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "whirr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "test_event_date_hiérarchie_de_date_has_test_event_date_jour": {
+			      "Binding": {
+			        "ConceptualEntity": "Test events"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "test_event.date.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "test_event.date.hiérarchie_de_date"
+			          }
+			        },
+			        "test_event.date.jour": {
+			          "Target": {
+			            "Entity": "test_event.date.jour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "test_event.date.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "test_event.date.jour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_jour"
+			        }
+			      ]
+			    },
+			    "test_event_date_hiérarchie_de_date_has_test_event_date_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "Test events"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "test_event.date.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "test_event.date.hiérarchie_de_date"
+			          }
+			        },
+			        "test_event.date.mois": {
+			          "Target": {
+			            "Entity": "test_event.date.mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "test_event.date.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "test_event.date.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_moises"
+			        }
+			      ]
+			    },
+			    "test_event_date_hiérarchie_de_date_has_test_event_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Test events"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "test_event.date.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "test_event.date.hiérarchie_de_date"
+			          }
+			        },
+			        "test_event.date.trimestre": {
+			          "Target": {
+			            "Entity": "test_event.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "test_event.date.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "test_event.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_trimestres"
+			        }
+			      ]
+			    },
+			    "test_event_date_hiérarchie_de_date_has_test_event_date_année": {
+			      "Binding": {
+			        "ConceptualEntity": "Test events"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "test_event.date.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "test_event.date.hiérarchie_de_date"
+			          }
+			        },
+			        "test_event.date.année": {
+			          "Target": {
+			            "Entity": "test_event.date.année"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "test_event.date.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "test_event.date.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_années"
+			        }
+			      ]
+			    },
 			    "test_event_date_has_hiérarchie_de_date": {
 			      "Binding": {
 			        "ConceptualEntity": "Test events"
@@ -4996,7 +5171,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour"
+			          "ID": "hiérarchie_de_dates_have_jour1"
 			        }
 			      ]
 			    },
@@ -5029,7 +5204,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises"
+			          "ID": "hiérarchie_de_dates_have_moises1"
 			        }
 			      ]
 			    },
@@ -5062,7 +5237,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres"
+			          "ID": "hiérarchie_de_dates_have_trimestres1"
 			        }
 			      ]
 			    },
@@ -5095,7 +5270,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années"
+			          "ID": "hiérarchie_de_dates_have_années1"
 			        }
 			      ]
 			    },
@@ -5359,7 +5534,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour1"
+			          "ID": "hiérarchie_de_dates_have_jour2"
 			        }
 			      ]
 			    },
@@ -5392,7 +5567,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises1"
+			          "ID": "hiérarchie_de_dates_have_moises2"
 			        }
 			      ]
 			    },
@@ -5425,7 +5600,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres1"
+			          "ID": "hiérarchie_de_dates_have_trimestres2"
 			        }
 			      ]
 			    },
@@ -5458,7 +5633,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années1"
+			          "ID": "hiérarchie_de_dates_have_années2"
 			        }
 			      ]
 			    },
@@ -5745,6 +5920,39 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
+			    "pertes_UA_has_mesure_drones": {
+			      "Binding": {
+			        "ConceptualEntity": "Pertes_UA"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "pertes_UA": {
+			          "Target": {
+			            "Entity": "pertes_UA"
+			          }
+			        },
+			        "mesure.drones": {
+			          "Target": {
+			            "Entity": "mesure.drones"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "pertes_UA"
+			            },
+			            "Object": {
+			              "Role": "mesure.drones"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "pertes_UA_have_drones"
+			        }
+			      ]
+			    },
 			    "assauts_russes_has_test": {
 			      "Binding": {
 			        "ConceptualEntity": "Assauts russes"
@@ -5841,39 +6049,6 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "mesures_have_moyenne_Y1"
-			        }
-			      ]
-			    },
-			    "texte_has_column_1": {
-			      "Binding": {
-			        "ConceptualEntity": "Texte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "texte": {
-			          "Target": {
-			            "Entity": "texte"
-			          }
-			        },
-			        "texte.column_1": {
-			          "Target": {
-			            "Entity": "texte.column_1"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte"
-			            },
-			            "Object": {
-			              "Role": "texte.column_1"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "textes_have_column_1"
 			        }
 			      ]
 			    },
@@ -6141,15 +6316,15 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure_has_assauts_russes_S1": {
+			    "assauts_russes_has_mesure_assauts_russes_S1": {
 			      "Binding": {
-			        "ConceptualEntity": "Mesures"
+			        "ConceptualEntity": "Assauts russes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "mesure": {
+			        "assauts_russes": {
 			          "Target": {
-			            "Entity": "mesure"
+			            "Entity": "assauts_russes"
 			          }
 			        },
 			        "mesure.assauts_russes_S1": {
@@ -6162,7 +6337,7 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "mesure"
+			              "Role": "assauts_russes"
 			            },
 			            "Object": {
 			              "Role": "mesure.assauts_russes_S1"
@@ -6170,7 +6345,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mesures_have_assauts_russes_S1"
+			          "ID": "assauts_russes_have_assauts_russes_S1"
 			        }
 			      ]
 			    },
@@ -9235,138 +9410,6 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_calendriers_are_dans_le_passé_calendriers"
-			        }
-			      ]
-			    },
-			    "test_event_date_hiérarchie_de_date_has_test_event_date_année": {
-			      "Binding": {
-			        "ConceptualEntity": "Test events"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "test_event.date.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "test_event.date.hiérarchie_de_date"
-			          }
-			        },
-			        "test_event.date.année": {
-			          "Target": {
-			            "Entity": "test_event.date.année"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "test_event.date.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "test_event.date.année"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années2"
-			        }
-			      ]
-			    },
-			    "test_event_date_hiérarchie_de_date_has_test_event_date_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "Test events"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "test_event.date.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "test_event.date.hiérarchie_de_date"
-			          }
-			        },
-			        "test_event.date.trimestre": {
-			          "Target": {
-			            "Entity": "test_event.date.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "test_event.date.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "test_event.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres2"
-			        }
-			      ]
-			    },
-			    "test_event_date_hiérarchie_de_date_has_test_event_date_mois": {
-			      "Binding": {
-			        "ConceptualEntity": "Test events"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "test_event.date.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "test_event.date.hiérarchie_de_date"
-			          }
-			        },
-			        "test_event.date.mois": {
-			          "Target": {
-			            "Entity": "test_event.date.mois"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "test_event.date.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "test_event.date.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises2"
-			        }
-			      ]
-			    },
-			    "test_event_date_hiérarchie_de_date_has_test_event_date_jour": {
-			      "Binding": {
-			        "ConceptualEntity": "Test events"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "test_event.date.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "test_event.date.hiérarchie_de_date"
-			          }
-			        },
-			        "test_event.date.jour": {
-			          "Target": {
-			            "Entity": "test_event.date.jour"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "test_event.date.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "test_event.date.jour"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_jour2"
 			        }
 			      ]
 			    },

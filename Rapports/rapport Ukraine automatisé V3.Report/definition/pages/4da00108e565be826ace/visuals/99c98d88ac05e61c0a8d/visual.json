@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "99c98d88ac05e61c0a8d",
   "position": {
     "x": 391,
     "y": 5,
-    "z": 2,
+    "z": 2000,
     "height": 95,
     "width": 426,
-    "tabOrder": 2
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "lineChart",
@@ -253,6 +253,32 @@
                   "Value": "2D"
                 }
               }
+            },
+            "dataLabelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "dataLabelVerticalPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'above'"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'front'"
+                }
+              }
             }
           },
           "selector": {
@@ -361,39 +387,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "f38e6b560012c5c7ad71",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calendrier"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "06c5ed4614601149716b",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Assauts russes"
-                  }
-                },
-                "Property": "Assauts russes"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "e85e2ab6c1b70c4dc479",
         "field": {
           "Column": {
@@ -461,8 +454,26 @@
               }
             }
           ]
+        }
+      },
+      {
+        "name": "2db9eacf864aa9ad1c0e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Assauts russes"
+                  }
+                },
+                "Property": "Assauts russes"
+              }
+            },
+            "Function": 0
+          }
         },
-        "howCreated": "User"
+        "type": "Advanced"
       }
     ]
   }

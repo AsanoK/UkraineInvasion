@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "50d007951ea74ef75622",
   "position": {
     "x": 10.699088145896656,
@@ -7,7 +7,7 @@
     "z": 6000,
     "height": 466.86930091185411,
     "width": 384.19452887537994,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -438,20 +438,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "123968aea00a0380966b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Texte"
-              }
-            },
-            "Property": "Titre_dyn"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

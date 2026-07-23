@@ -1,19 +1,46 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "0b27c200de71af5c51b2",
   "position": {
     "x": 0,
-    "y": 320,
+    "y": 297.629179331307,
     "z": 0,
-    "height": 399.70260223048331,
-    "width": 559.10780669144981
+    "height": 422.12765957446811,
+    "width": 559.27051671732522,
+    "tabOrder": 3000
   },
   "visual": {
-    "visualType": "areaChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
           "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Pertes_UA"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "Date"
+                        }
+                      },
+                      "Hierarchy": "Hiérarchie de dates"
+                    }
+                  },
+                  "Level": "Année"
+                }
+              },
+              "queryRef": "Pertes_UA.Date.Variation.Hiérarchie de dates.Année",
+              "nativeQueryRef": "Date Année",
+              "active": true
+            },
             {
               "field": {
                 "Column": {
@@ -22,11 +49,11 @@
                       "Entity": "Pertes_UA"
                     }
                   },
-                  "Property": "Date"
+                  "Property": "NumSemaine"
                 }
               },
-              "queryRef": "Pertes_UA.Date.Variation.Hiérarchie de dates.Année1",
-              "nativeQueryRef": "Date Année1",
+              "queryRef": "Pertes_UA.NumSemaine",
+              "nativeQueryRef": "NumSemaine",
               "active": true
             }
           ]
@@ -35,17 +62,28 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "HierarchyLevel": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Catégorisation"
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Pertes_UA"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "Date"
+                        }
+                      },
+                      "Hierarchy": "Hiérarchie de dates"
                     }
                   },
-                  "Property": "Catégorie sup"
+                  "Level": "Année"
                 }
               },
-              "queryRef": "Catégorisation.Catégorie sup",
-              "nativeQueryRef": "Catégorie sup"
+              "queryRef": "Pertes_UA.Date.Variation.Hiérarchie de dates.Année",
+              "nativeQueryRef": "Date Année"
             }
           ]
         },
@@ -67,11 +105,33 @@
                   "Function": 1
                 }
               },
-              "queryRef": "Sum(Pertes_UA.Progression)",
+              "queryRef": "Avg(Pertes_UA.Progression)",
               "nativeQueryRef": "Moyenne de Progression"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Pertes_UA"
+                      }
+                    },
+                    "Property": "Progression"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -128,19 +188,6 @@
           },
           "selector": {
             "id": "1"
-          }
-        }
-      ],
-      "lineStyles": [
-        {
-          "properties": {
-            "strokeWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
           }
         }
       ],
@@ -251,22 +298,8 @@
               }
             }
           ]
-        }
-      },
-      {
-        "name": "Filter6b885c4c6ff88157de5b",
-        "ordinal": 2,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Pertes_UA"
-              }
-            },
-            "Property": "Date"
-          }
         },
-        "type": "Advanced"
+        "howCreated": "User"
       },
       {
         "name": "Filter2f898514339f523804fb",
@@ -322,7 +355,21 @@
         "howCreated": "User"
       },
       {
-        "name": "6c7eb44a5a3d559de510",
+        "name": "66113e11e3b9ee037159",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Pertes_UA"
+              }
+            },
+            "Property": "NumSemaine"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "934d1c4a86d72d044165",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -336,6 +383,31 @@
               }
             },
             "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "789a15ac0250340b182d",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Pertes_UA"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "Date"
+                  }
+                },
+                "Hierarchy": "Hiérarchie de dates"
+              }
+            },
+            "Level": "Année"
           }
         },
         "type": "Advanced"

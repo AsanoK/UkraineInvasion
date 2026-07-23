@@ -91,14 +91,6 @@ table Texte
 
 		annotation SummarizationSetBy = Automatic
 
-	column Column1
-		dataType: string
-		lineageTag: 67921add-c9db-4eb1-86ec-f75da91ec7da
-		summarizeBy: none
-		sourceColumn: Column1
-
-		annotation SummarizationSetBy = Automatic
-
 	partition Texte = m
 		mode: import
 		source =
@@ -107,9 +99,10 @@ table Texte
 				    Hebdo_Table = Source{[name="Hebdo",ItemKind="Table"]}[Data],
 				    #"En-têtes promus" = Table.PromoteHeaders(Hebdo_Table, [PromoteAllScalars=true]),
 				    #"Type modifié" = Table.TransformColumnTypes(#"En-têtes promus",{{"Date", type date}, {"Catégorie", type text}, {"Titre", type text}, {"Résumé", type text}, {"Texte", type text}, {"Prio", Int64.Type}}),
-				    #"Lignes filtrées" = Table.SelectRows(#"Type modifié", each ([Titre] <> ""))
+				    #"Lignes filtrées" = Table.SelectRows(#"Type modifié", each ([Titre] <> "")),
+				    #"Autres colonnes supprimées" = Table.SelectColumns(#"Lignes filtrées",{"Catégorie", "Titre", "Date", "Résumé", "Texte", "Prio"})
 				in
-				    #"Lignes filtrées"
+				    #"Autres colonnes supprimées"
 
 	annotation PBI_ResultType = Table
 

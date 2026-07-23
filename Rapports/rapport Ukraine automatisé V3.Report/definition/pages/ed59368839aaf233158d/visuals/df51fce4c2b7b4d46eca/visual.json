@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "df51fce4c2b7b4d46eca",
   "position": {
     "x": 474.65045592705167,
@@ -660,39 +660,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "7d3cb0d602a2712a0e1b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Catégorisation"
-              }
-            },
-            "Property": "Catégorie sup"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c34f2f32a3ae93e13690",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Pertes_UA"
-                  }
-                },
-                "Property": "Progression"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

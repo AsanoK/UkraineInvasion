@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "473d20b6179731571f39",
   "position": {
     "x": 405.59270516717328,
     "y": 133.25227963525836,
     "z": 0,
     "height": 574.83282674772045,
-    "width": 863.70820668693011
+    "width": 863.70820668693011,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "esriVisual",
@@ -85,7 +86,8 @@
                 }
               },
               "queryRef": "Sum(Données cartographiques.nb Occurences)",
-              "nativeQueryRef": "Somme de nb Occurences"
+              "nativeQueryRef": "Nb Occurences",
+              "displayName": "Nb Occurences"
             }
           ]
         },
@@ -104,6 +106,20 @@
               },
               "queryRef": "Données cartographiques.Texte_affichage",
               "nativeQueryRef": "Texte_affichage"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Données cartographiques"
+                    }
+                  },
+                  "Property": "Nom"
+                }
+              },
+              "queryRef": "Données cartographiques.Nom",
+              "nativeQueryRef": "Nom"
             }
           ]
         }
@@ -173,7 +189,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\"portalUrl\":\"https://www.arcgis.com\",\"version\":\"2.4\",\"isAuthorNamedUser\":false,\"map\":{\"webmap\":{\"is3d\":false,\"itemData\":{\"operationalLayers\":[{\"id\":\"MyLayer\",\"visibility\":true,\"opacity\":1,\"minScale\":0,\"maxScale\":0,\"refreshInterval\":0,\"title\":\"Coordonnées\",\"objectIdField\":\"objectId\",\"type\":\"DataLayer\",\"layerType\":\"ArcGISFeatureLayer\",\"popupEnabled\":true,\"disablePopup\":false,\"visible\":true,\"geometryType\":\"point\",\"source\":[{\"attributes\":{},\"geometry\":{\"x\":0,\"y\":0,\"type\":\"point\",\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100}}}],\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100},\"esriMaps\":{\"isTimeEnabled\":\"false\",\"clusterInfo\":null,\"lastShareInfo\":null},\"timeInfo\":null,\"showLabels\":true,\"featureCollection\":{\"layers\":[{\"popupInfo\":{\"popupElements\":[{\"type\":\"fields\",\"fieldInfos\":[{\"fieldName\":\"Donn_C3_A9es_20cartographiques_lieux_Pays\",\"isEditable\":true,\"label\":\"lieux.Pays\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Lattitude départ\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Longitude départ\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":true,\"label\":\"Somme de nb Occurences\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Texte_affichage\",\"isEditable\":true,\"label\":\"Texte_affichage\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"ROW_ID\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":true,\"label\":\"ROW_ID\",\"tooltip\":\"\",\"visible\":true}]}],\"expressionInfos\":[],\"fieldInfos\":[{\"fieldName\":\"Donn_C3_A9es_20cartographiques_lieux_Pays\",\"isEditable\":true,\"label\":\"lieux.Pays\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Lattitude départ\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Longitude départ\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":true,\"label\":\"Somme de nb Occurences\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Texte_affichage\",\"isEditable\":true,\"label\":\"Texte_affichage\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"ROW_ID\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":true,\"label\":\"ROW_ID\",\"tooltip\":\"\",\"visible\":true}],\"title\":\"\",\"actions\":[]},\"effect\":null,\"layerDefinition\":{\"objectIdField\":\"objectId\",\"fields\":[{\"alias\":\"objectId\",\"editable\":false,\"name\":\"objectId\",\"nullable\":false,\"type\":\"esriFieldTypeOID\"},{\"alias\":\"lieux.Pays\",\"editable\":true,\"length\":-1,\"name\":\"Donn_C3_A9es_20cartographiques_lieux_Pays\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"Lattitude départ\",\"editable\":true,\"name\":\"Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\",\"nullable\":true,\"type\":\"esriFieldTypeDouble\"},{\"alias\":\"Longitude départ\",\"editable\":true,\"name\":\"Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\",\"nullable\":true,\"type\":\"esriFieldTypeDouble\"},{\"alias\":\"Somme de nb Occurences\",\"editable\":true,\"name\":\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\",\"nullable\":true,\"type\":\"esriFieldTypeInteger\"},{\"alias\":\"Texte_affichage\",\"editable\":true,\"length\":-1,\"name\":\"Donn_C3_A9es_20cartographiques_Texte_affichage\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"ROW_ID\",\"editable\":true,\"name\":\"ROW_ID\",\"nullable\":true,\"type\":\"esriFieldTypeInteger\"}],\"geometryType\":\"point\",\"drawingInfo\":{\"renderer\":{\"authoringInfo\":{\"visualVariables\":[{\"theme\":\"high-to-low\",\"type\":\"sizeInfo\"}]},\"type\":\"uniqueValue\",\"visualVariables\":[{\"type\":\"sizeInfo\",\"field\":\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\",\"maxDataValue\":8,\"maxSize\":35,\"minDataValue\":1,\"minSize\":6,\"valueUnit\":\"unknown\"}],\"field1\":\"Donn_C3_A9es_20cartographiques_lieux_Pays\",\"defaultLabel\":\"Autre\",\"defaultSymbol\":{\"type\":\"esriSMS\",\"color\":[170,170,170,255],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":6,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[153,153,153,64],\"width\":0.75,\"style\":\"esriSLSSolid\"}},\"uniqueValueGroups\":[{\"classes\":[{\"description\":\"\",\"label\":\"Ukraine\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[6,89,255,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Ukraine\"]]},{\"description\":\"\",\"label\":\"Russie\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[216,0,0,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Russie\"]]},{\"label\":\"Roumanie\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[255,213,0,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Roumanie\"]]}]}],\"uniqueValueInfos\":[{\"description\":\"\",\"label\":\"Ukraine\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[6,89,255,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Ukraine\"},{\"description\":\"\",\"label\":\"Russie\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[216,0,0,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Russie\"},{\"label\":\"Roumanie\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[255,213,0,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Roumanie\"}]},\"labelingInfo\":[{\"labelExpression\":\"[Donn_C3_A9es_20cartographiques_Texte_affichage]\",\"labelExpressionInfo\":{\"expression\":\"$feature[\\\"Donn_C3_A9es_20cartographiques_Texte_affichage\\\"]\"},\"labelPlacement\":\"esriServerPointLabelPlacementCenterCenter\",\"labelPosition\":\"curved\",\"repeatLabel\":true,\"symbol\":{\"type\":\"esriTS\",\"color\":[0,0,0,255],\"font\":{\"family\":\"Arial Unicode MS\",\"size\":12},\"horizontalAlignment\":\"center\",\"kerning\":true,\"haloColor\":[255,255,255,255],\"haloSize\":5,\"rotated\":false,\"text\":\"\",\"verticalAlignment\":\"baseline\",\"xoffset\":0,\"yoffset\":0,\"angle\":0,\"lineWidth\":192,\"lineHeight\":1}}],\"transparency\":0},\"featureReduction\":null,\"locationProvider\":{\"type\":\"coordinates\",\"lookupFields\":[{\"lookupField\":\"xFieldName\",\"outField\":\"Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\"},{\"lookupField\":\"yFieldName\",\"outField\":\"Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\"}],\"sourceSR\":4326,\"targetSR\":102100},\"minScale\":0,\"maxScale\":0,\"definitionExpression\":null,\"templates\":[{\"name\":\"New Feature\",\"description\":\"\",\"prototype\":{\"attributes\":{\"Donn_C3_A9es_20cartographiques_lieux_Pays\":null,\"Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\":null,\"Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\":null,\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\":null,\"Donn_C3_A9es_20cartographiques_Texte_affichage\":null,\"ROW_ID\":null}}}],\"elevationInfo\":null,\"name\":\"Coordonnées\",\"type\":\"DataLayer\",\"queryParameters\":{\"tableId\":\"\"}},\"featureSet\":{\"features\":[{\"attributes\":{},\"geometry\":{\"x\":0,\"y\":0,\"type\":\"point\",\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100}}}]}}]}}],\"tables\":[],\"baseMap\":{\"baseMapLayers\":[{\"id\":\"VectorTile_3287\",\"opacity\":1,\"title\":\"OpenStreetMap\",\"visibility\":true,\"layerType\":\"VectorTileLayer\",\"styleUrl\":\"https://cdn.arcgis.com/sharing/rest/content/items/0df19d2d940b47658857cc2fc9623840/resources/styles/root.json\"}],\"title\":\"OpenStreetMap\",\"origItemId\":\"c29cfb7875fc4b97b58ba6987c460862\"},\"version\":\"2.26\",\"authoringApp\":\"ArcGIS for Power BI\",\"bookmarks\":[],\"initialState\":{\"viewpoint\":{\"targetGeometry\":{\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100},\"xmin\":-599605966.8629453,\"ymin\":4983283.790379516,\"xmax\":-595589659.64873,\"ymax\":7590703.699242755}}}}},\"webmapExtensions\":{\"format\":2}},\"embedCheckPassed\":true}'"
+                  "Value": "'{\"portalUrl\":\"https://www.arcgis.com\",\"version\":\"2.4\",\"isAuthorNamedUser\":false,\"map\":{\"webmap\":{\"is3d\":false,\"itemData\":{\"operationalLayers\":[{\"id\":\"MyLayer\",\"visibility\":true,\"opacity\":1,\"minScale\":0,\"maxScale\":0,\"refreshInterval\":0,\"title\":\"Coordonnées\",\"objectIdField\":\"objectId\",\"type\":\"DataLayer\",\"layerType\":\"ArcGISFeatureLayer\",\"popupEnabled\":true,\"disablePopup\":false,\"visible\":true,\"geometryType\":\"point\",\"source\":[{\"attributes\":{},\"geometry\":{\"x\":0,\"y\":0,\"type\":\"point\",\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100}}}],\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100},\"esriMaps\":{\"isTimeEnabled\":\"false\",\"clusterInfo\":null,\"lastShareInfo\":null},\"timeInfo\":null,\"showLabels\":true,\"featureCollection\":{\"layers\":[{\"popupInfo\":{\"popupElements\":[{\"type\":\"fields\",\"fieldInfos\":[{\"fieldName\":\"Donn_C3_A9es_20cartographiques_lieux_Pays\",\"isEditable\":true,\"label\":\"lieux.Pays\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"expression/Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\",\"isEditable\":true,\"label\":\"Lattitude départ\",\"visible\":true},{\"fieldName\":\"expression/Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\",\"isEditable\":true,\"label\":\"Longitude départ\",\"visible\":true},{\"fieldName\":\"expression/Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\",\"isEditable\":true,\"label\":\"Nb Occurences\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Texte_affichage\",\"isEditable\":true,\"label\":\"Texte_affichage\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Nom\",\"isEditable\":true,\"label\":\"Nom\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"ROW_ID\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":true,\"label\":\"ROW_ID\",\"tooltip\":\"\",\"visible\":true}]}],\"expressionInfos\":[{\"name\":\"Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\",\"title\":\"Lattitude départ\",\"expression\":\"// PowerBI number format: #,0.00\\n\\nif (IsEmpty($feature[\\\"Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\\\"]))\\n{\\n  return $feature[\\\"Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\\\"] \\n}\\nText($feature[\\\"Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\\\"], \\\"#,###.00\\\")\"},{\"name\":\"Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\",\"title\":\"Longitude départ\",\"expression\":\"// PowerBI number format: #,0.00\\n\\nif (IsEmpty($feature[\\\"Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\\\"]))\\n{\\n  return $feature[\\\"Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\\\"] \\n}\\nText($feature[\\\"Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\\\"], \\\"#,###.00\\\")\"},{\"name\":\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\",\"title\":\"Nb Occurences\",\"expression\":\"// PowerBI number format: 0\\n\\nif (IsEmpty($feature[\\\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\\\"]))\\n{\\n  return $feature[\\\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\\\"] \\n}\\nIIF(Text($feature[\\\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\\\"], \\\"#\\\") == \\\"0\\\" || Text($feature[\\\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\\\"], \\\"#\\\") == \\\"-0\\\", \\\"\\\", Text($feature[\\\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\\\"], \\\"#\\\"))\"}],\"fieldInfos\":[{\"fieldName\":\"Donn_C3_A9es_20cartographiques_lieux_Pays\",\"isEditable\":true,\"label\":\"lieux.Pays\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Lattitude départ\",\"tooltip\":\"\",\"visible\":false},{\"fieldName\":\"expression/Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\",\"isEditable\":true,\"label\":\"Lattitude départ\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Longitude départ\",\"tooltip\":\"\",\"visible\":false},{\"fieldName\":\"expression/Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\",\"isEditable\":true,\"label\":\"Longitude départ\",\"visible\":true},{\"fieldName\":\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":true,\"label\":\"Nb Occurences\",\"tooltip\":\"\",\"visible\":false},{\"fieldName\":\"expression/Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\",\"isEditable\":true,\"label\":\"Nb Occurences\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Texte_affichage\",\"isEditable\":true,\"label\":\"Texte_affichage\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Nom\",\"isEditable\":true,\"label\":\"Nom\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"ROW_ID\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":true,\"label\":\"ROW_ID\",\"tooltip\":\"\",\"visible\":true}],\"title\":\"\",\"actions\":[]},\"layerDefinition\":{\"objectIdField\":\"objectId\",\"fields\":[{\"alias\":\"objectId\",\"editable\":false,\"name\":\"objectId\",\"nullable\":false,\"type\":\"esriFieldTypeOID\"},{\"alias\":\"lieux.Pays\",\"editable\":true,\"length\":-1,\"name\":\"Donn_C3_A9es_20cartographiques_lieux_Pays\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"Lattitude départ\",\"editable\":true,\"name\":\"Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\",\"nullable\":true,\"type\":\"esriFieldTypeDouble\"},{\"alias\":\"Longitude départ\",\"editable\":true,\"name\":\"Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\",\"nullable\":true,\"type\":\"esriFieldTypeDouble\"},{\"alias\":\"Nb Occurences\",\"editable\":true,\"name\":\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\",\"nullable\":true,\"type\":\"esriFieldTypeInteger\"},{\"alias\":\"Texte_affichage\",\"editable\":true,\"length\":-1,\"name\":\"Donn_C3_A9es_20cartographiques_Texte_affichage\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"Nom\",\"editable\":true,\"length\":-1,\"name\":\"Donn_C3_A9es_20cartographiques_Nom\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"ROW_ID\",\"editable\":true,\"name\":\"ROW_ID\",\"nullable\":true,\"type\":\"esriFieldTypeInteger\"}],\"geometryType\":\"point\",\"drawingInfo\":{\"renderer\":{\"authoringInfo\":{\"visualVariables\":[{\"theme\":\"high-to-low\",\"type\":\"sizeInfo\"}]},\"type\":\"uniqueValue\",\"visualVariables\":[{\"type\":\"sizeInfo\",\"field\":\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\",\"maxDataValue\":8,\"maxSize\":35,\"minDataValue\":1,\"minSize\":6,\"valueUnit\":\"unknown\"}],\"field1\":\"Donn_C3_A9es_20cartographiques_lieux_Pays\",\"defaultLabel\":\"Autre\",\"uniqueValueGroups\":[{\"classes\":[{\"description\":\"\",\"label\":\"Ukraine\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[6,89,255,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Ukraine\"]]},{\"description\":\"\",\"label\":\"Russie\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[216,0,0,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Russie\"]]}]}],\"uniqueValueInfos\":[{\"description\":\"\",\"label\":\"Ukraine\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[6,89,255,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Ukraine\"},{\"description\":\"\",\"label\":\"Russie\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[216,0,0,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Russie\"}]},\"labelingInfo\":[{\"labelExpression\":\"[Donn_C3_A9es_20cartographiques_Texte_affichage]\",\"labelExpressionInfo\":{\"expression\":\"$feature[\\\"Donn_C3_A9es_20cartographiques_Texte_affichage\\\"]\"},\"labelPlacement\":\"esriServerPointLabelPlacementCenterCenter\",\"labelPosition\":\"curved\",\"repeatLabel\":true,\"symbol\":{\"type\":\"esriTS\",\"color\":[0,0,0,255],\"font\":{\"family\":\"Arial Unicode MS\",\"size\":12},\"horizontalAlignment\":\"center\",\"kerning\":true,\"haloColor\":[255,255,255,255],\"haloSize\":5,\"rotated\":false,\"text\":\"\",\"verticalAlignment\":\"baseline\",\"xoffset\":0,\"yoffset\":0,\"angle\":0,\"lineWidth\":192,\"lineHeight\":1},\"where\":\"\"}],\"transparency\":0},\"featureReduction\":null,\"locationProvider\":{\"type\":\"coordinates\",\"lookupFields\":[{\"lookupField\":\"xFieldName\",\"outField\":\"Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\"},{\"lookupField\":\"yFieldName\",\"outField\":\"Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\"}],\"sourceSR\":4326,\"targetSR\":3857},\"minScale\":0,\"maxScale\":0,\"definitionExpression\":null,\"templates\":[{\"name\":\"New Feature\",\"description\":\"\",\"prototype\":{\"attributes\":{\"Donn_C3_A9es_20cartographiques_lieux_Pays\":null,\"Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part\":null,\"Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part\":null,\"Sum_Donn_C3_A9es_20cartographiques_nb_20Occurences_\":null,\"Donn_C3_A9es_20cartographiques_Texte_affichage\":null,\"Donn_C3_A9es_20cartographiques_Nom\":null,\"ROW_ID\":null}}}],\"elevationInfo\":null,\"name\":\"Coordonnées\",\"type\":\"DataLayer\",\"queryParameters\":{\"tableId\":\"\"}},\"featureSet\":{\"features\":[{\"attributes\":{},\"geometry\":{\"x\":0,\"y\":0,\"type\":\"point\",\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100}}}]}}]}}],\"tables\":[],\"baseMap\":{\"baseMapLayers\":[{\"id\":\"VectorTile_3287\",\"opacity\":1,\"title\":\"OpenStreetMap\",\"visibility\":true,\"layerType\":\"VectorTileLayer\",\"styleUrl\":\"https://cdn.arcgis.com/sharing/rest/content/items/0df19d2d940b47658857cc2fc9623840/resources/styles/root.json\"}],\"title\":\"OpenStreetMap\",\"origItemId\":\"c29cfb7875fc4b97b58ba6987c460862\"},\"version\":\"2.26\",\"authoringApp\":\"ArcGIS for Power BI\",\"authoringAppVersion\":\"2026.2.992\",\"bookmarks\":[],\"initialState\":{\"viewpoint\":{\"targetGeometry\":{\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100},\"xmin\":-598429512.2313658,\"ymin\":5162470.786634203,\"xmax\":-594408313.0473403,\"ymax\":7769890.695497442}}}}},\"webmapExtensions\":{\"format\":2,\"cards\":[{\"type\":\"legend\",\"width\":200,\"height\":349.40625,\"legends\":[{\"layerId\":\"MyLayer\",\"expanded\":true}]}]}},\"embedCheckPassed\":true}'"
                 }
               }
             }
@@ -498,7 +514,95 @@
         "howCreated": "User"
       },
       {
-        "name": "8b9afbb4900ab1aa9a58",
+        "name": "2256c0118607dc884131",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Données cartographiques"
+              }
+            },
+            "Property": "lieux.Pays"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "Données cartographiques",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "lieux.Pays"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Russie'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Russie - Mer'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Ukraine'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Ukraine - Mer'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "2f760aba00025545a04e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Données cartographiques"
+              }
+            },
+            "Property": "Lattitude départ"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a770054976754d995002",
         "field": {
           "Column": {
             "Expression": {
@@ -512,7 +616,7 @@
         "type": "Advanced"
       },
       {
-        "name": "267387170b1b07ad05e2",
+        "name": "1fd3cd8618724546a927",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -531,35 +635,7 @@
         "type": "Advanced"
       },
       {
-        "name": "e77cfd2bab0ec108ac0e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Données cartographiques"
-              }
-            },
-            "Property": "lieux.Pays"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7e4e20bf3ca801bc39a9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Données cartographiques"
-              }
-            },
-            "Property": "Lattitude départ"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "512bc8b0351e05792cc4",
+        "name": "161826938baab0143de5",
         "field": {
           "Column": {
             "Expression": {
@@ -568,6 +644,20 @@
               }
             },
             "Property": "Texte_affichage"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e106dd86300e7b137db7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Données cartographiques"
+              }
+            },
+            "Property": "Nom"
           }
         },
         "type": "Categorical"

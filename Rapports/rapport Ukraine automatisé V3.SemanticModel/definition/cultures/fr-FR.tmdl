@@ -2963,61 +2963,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "texte.column_1": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Texte",
-			          "ConceptualProperty": "Column1"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "column 1": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Column1": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "texte.entity__3": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Texte",
-			          "ConceptualProperty": "_3"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "_3": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "texte.entity__4": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Texte",
-			          "ConceptualProperty": "_4"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "_4": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "mesure.nb_vidéos_géolocalisées": {
 			      "Definition": {
 			        "Binding": {
@@ -3424,38 +3369,6 @@ cultureInfo fr-FR
 			      "Terms": [
 			        {
 			          "ordre": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "texte.entity__1": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Texte",
-			          "ConceptualProperty": "_1"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "_1": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "texte.entity__2": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Texte",
-			          "ConceptualProperty": "_2"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "_2": {
 			            "State": "Generated"
 			          }
 			        }
@@ -5406,6 +5319,534 @@ cultureInfo fr-FR
 			    }
 			  },
 			  "Relationships": {
+			    "texte_date_jour_in_texte_date_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "Texte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "texte.date.jour": {
+			          "Target": {
+			            "Entity": "texte.date.jour"
+			          }
+			        },
+			        "texte.date.mois": {
+			          "Target": {
+			            "Entity": "texte.date.mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "texte.date.jour"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "texte.date.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jour_are_in_moises"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "texte.date.mois"
+			            },
+			            "Object": {
+			              "Role": "texte.date.jour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_have_jour1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "texte.date.jour"
+			            },
+			            "Object": {
+			              "Role": "texte.date.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jour_have_moises1"
+			        }
+			      ]
+			    },
+			    "texte_date_mois_in_texte_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Texte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "texte.date.mois": {
+			          "Target": {
+			            "Entity": "texte.date.mois"
+			          }
+			        },
+			        "texte.date.trimestre": {
+			          "Target": {
+			            "Entity": "texte.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "texte.date.mois"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "texte.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_are_in_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "texte.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "texte.date.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_moises1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "texte.date.mois"
+			            },
+			            "Object": {
+			              "Role": "texte.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_have_trimestres1"
+			        }
+			      ]
+			    },
+			    "texte_date_trimestre_in_texte_date_année": {
+			      "Binding": {
+			        "ConceptualEntity": "Texte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "texte.date.trimestre": {
+			          "Target": {
+			            "Entity": "texte.date.trimestre"
+			          }
+			        },
+			        "texte.date.année": {
+			          "Target": {
+			            "Entity": "texte.date.année"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "texte.date.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "texte.date.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_années"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "texte.date.année"
+			            },
+			            "Object": {
+			              "Role": "texte.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "années_have_trimestres1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "texte.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "texte.date.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_années1"
+			        }
+			      ]
+			    },
+			    "calendrier_année_mois_jour_jour_in_calendrier_année_mois_jour_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier.année_mois_jour.jour": {
+			          "Target": {
+			            "Entity": "calendrier.année_mois_jour.jour"
+			          }
+			        },
+			        "calendrier.année_mois_jour.mois": {
+			          "Target": {
+			            "Entity": "calendrier.année_mois_jour.mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendrier.année_mois_jour.jour"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendrier.année_mois_jour.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jour_are_in_moises1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.année_mois_jour.mois"
+			            },
+			            "Object": {
+			              "Role": "calendrier.année_mois_jour.jour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_have_jour2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.année_mois_jour.jour"
+			            },
+			            "Object": {
+			              "Role": "calendrier.année_mois_jour.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jour_have_moises2"
+			        }
+			      ]
+			    },
+			    "calendrier_année_mois_jour_mois_in_calendrier_année_mois_jour_année": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendrier"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendrier.année_mois_jour.mois": {
+			          "Target": {
+			            "Entity": "calendrier.année_mois_jour.mois"
+			          }
+			        },
+			        "calendrier.année_mois_jour.année": {
+			          "Target": {
+			            "Entity": "calendrier.année_mois_jour.année"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "calendrier.année_mois_jour.mois"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "calendrier.année_mois_jour.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_are_in_années"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.année_mois_jour.année"
+			            },
+			            "Object": {
+			              "Role": "calendrier.année_mois_jour.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "années_have_moises"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendrier.année_mois_jour.mois"
+			            },
+			            "Object": {
+			              "Role": "calendrier.année_mois_jour.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_have_années"
+			        }
+			      ]
+			    },
+			    "texte_order_as_date_mois_has_texte_order_as_date_jour": {
+			      "Binding": {
+			        "ConceptualEntity": "Texte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "texte.order_as_date.mois": {
+			          "Target": {
+			            "Entity": "texte.order_as_date.mois"
+			          }
+			        },
+			        "texte.order_as_date.jour": {
+			          "Target": {
+			            "Entity": "texte.order_as_date.jour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "texte.order_as_date.mois"
+			            },
+			            "Object": {
+			              "Role": "texte.order_as_date.jour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_have_jour"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "texte.order_as_date.jour"
+			            },
+			            "Object": {
+			              "Role": "texte.order_as_date.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jour_have_moises"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "texte.order_as_date.jour"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "texte.order_as_date.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jour_are_in_moises2"
+			        }
+			      ]
+			    },
+			    "texte_order_as_date_trimestre_has_texte_order_as_date_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "Texte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "texte.order_as_date.trimestre": {
+			          "Target": {
+			            "Entity": "texte.order_as_date.trimestre"
+			          }
+			        },
+			        "texte.order_as_date.mois": {
+			          "Target": {
+			            "Entity": "texte.order_as_date.mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "texte.order_as_date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "texte.order_as_date.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_moises"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "texte.order_as_date.mois"
+			            },
+			            "Object": {
+			              "Role": "texte.order_as_date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "texte.order_as_date.mois"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "texte.order_as_date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "moises_are_in_trimestres1"
+			        }
+			      ]
+			    },
+			    "texte_order_as_date_année_has_texte_order_as_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Texte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "texte.order_as_date.année": {
+			          "Target": {
+			            "Entity": "texte.order_as_date.année"
+			          }
+			        },
+			        "texte.order_as_date.trimestre": {
+			          "Target": {
+			            "Entity": "texte.order_as_date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "texte.order_as_date.année"
+			            },
+			            "Object": {
+			              "Role": "texte.order_as_date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "années_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "texte.order_as_date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "texte.order_as_date.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_années"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "texte.order_as_date.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "texte.order_as_date.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_années1"
+			        }
+			      ]
+			    },
 			    "texte_order_as_date_hiérarchie_de_date_has_texte_order_as_date_jour": {
 			      "Binding": {
 			        "ConceptualEntity": "Texte"
@@ -5571,204 +6012,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "texte_date_mois_has_texte_date_jour": {
-			      "Binding": {
-			        "ConceptualEntity": "Texte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "texte.date.mois": {
-			          "Target": {
-			            "Entity": "texte.date.mois"
-			          }
-			        },
-			        "texte.date.jour": {
-			          "Target": {
-			            "Entity": "texte.date.jour"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte.date.mois"
-			            },
-			            "Object": {
-			              "Role": "texte.date.jour"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "moises_have_jour"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte.date.jour"
-			            },
-			            "Object": {
-			              "Role": "texte.date.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jour_have_moises"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "texte.date.jour"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "texte.date.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jour_are_in_moises1"
-			        }
-			      ]
-			    },
-			    "texte_date_trimestre_has_texte_date_mois": {
-			      "Binding": {
-			        "ConceptualEntity": "Texte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "texte.date.trimestre": {
-			          "Target": {
-			            "Entity": "texte.date.trimestre"
-			          }
-			        },
-			        "texte.date.mois": {
-			          "Target": {
-			            "Entity": "texte.date.mois"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte.date.trimestre"
-			            },
-			            "Object": {
-			              "Role": "texte.date.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte.date.mois"
-			            },
-			            "Object": {
-			              "Role": "texte.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "texte.date.mois"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "texte.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "moises_are_in_trimestres"
-			        }
-			      ]
-			    },
-			    "texte_date_année_has_texte_date_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "Texte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "texte.date.année": {
-			          "Target": {
-			            "Entity": "texte.date.année"
-			          }
-			        },
-			        "texte.date.trimestre": {
-			          "Target": {
-			            "Entity": "texte.date.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte.date.année"
-			            },
-			            "Object": {
-			              "Role": "texte.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "années_have_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte.date.trimestre"
-			            },
-			            "Object": {
-			              "Role": "texte.date.année"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_années"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "texte.date.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "texte.date.année"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_années"
-			        }
-			      ]
-			    },
 			    "texte_date_hiérarchie_de_date_has_texte_date_jour": {
 			      "Binding": {
 			        "ConceptualEntity": "Texte"
@@ -5931,138 +6174,6 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dates_have_hiérarchie_de_dates"
-			        }
-			      ]
-			    },
-			    "calendrier_année_mois_jour_mois_has_calendrier_année_mois_jour_jour": {
-			      "Binding": {
-			        "ConceptualEntity": "Calendrier"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendrier.année_mois_jour.mois": {
-			          "Target": {
-			            "Entity": "calendrier.année_mois_jour.mois"
-			          }
-			        },
-			        "calendrier.année_mois_jour.jour": {
-			          "Target": {
-			            "Entity": "calendrier.année_mois_jour.jour"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendrier.année_mois_jour.mois"
-			            },
-			            "Object": {
-			              "Role": "calendrier.année_mois_jour.jour"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "moises_have_jour1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendrier.année_mois_jour.jour"
-			            },
-			            "Object": {
-			              "Role": "calendrier.année_mois_jour.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jour_have_moises1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "calendrier.année_mois_jour.jour"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "calendrier.année_mois_jour.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jour_are_in_moises"
-			        }
-			      ]
-			    },
-			    "calendrier_année_mois_jour_année_has_calendrier_année_mois_jour_mois": {
-			      "Binding": {
-			        "ConceptualEntity": "Calendrier"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendrier.année_mois_jour.année": {
-			          "Target": {
-			            "Entity": "calendrier.année_mois_jour.année"
-			          }
-			        },
-			        "calendrier.année_mois_jour.mois": {
-			          "Target": {
-			            "Entity": "calendrier.année_mois_jour.mois"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendrier.année_mois_jour.année"
-			            },
-			            "Object": {
-			              "Role": "calendrier.année_mois_jour.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "années_have_moises"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendrier.année_mois_jour.mois"
-			            },
-			            "Object": {
-			              "Role": "calendrier.année_mois_jour.année"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "moises_have_années"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "calendrier.année_mois_jour.mois"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "calendrier.année_mois_jour.année"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "moises_are_in_années"
 			        }
 			      ]
 			    },
@@ -6346,39 +6457,6 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "calendriers_have_données_cartographiques"
-			        }
-			      ]
-			    },
-			    "catégorisation_has_pertes_RU_confirmée": {
-			      "Binding": {
-			        "ConceptualEntity": "Catégorisation"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "catégorisation": {
-			          "Target": {
-			            "Entity": "catégorisation"
-			          }
-			        },
-			        "pertes_RU_confirmée": {
-			          "Target": {
-			            "Entity": "pertes_RU_confirmée"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "catégorisation"
-			            },
-			            "Object": {
-			              "Role": "pertes_RU_confirmée"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "catégorisations_have_pertes_RU_confirmées"
 			        }
 			      ]
 			    },
@@ -7042,72 +7120,6 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "texte_has_entity__2": {
-			      "Binding": {
-			        "ConceptualEntity": "Texte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "texte": {
-			          "Target": {
-			            "Entity": "texte"
-			          }
-			        },
-			        "texte.entity__2": {
-			          "Target": {
-			            "Entity": "texte.entity__2"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte"
-			            },
-			            "Object": {
-			              "Role": "texte.entity__2"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "textes_have__2"
-			        }
-			      ]
-			    },
-			    "texte_has_entity__1": {
-			      "Binding": {
-			        "ConceptualEntity": "Texte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "texte": {
-			          "Target": {
-			            "Entity": "texte"
-			          }
-			        },
-			        "texte.entity__1": {
-			          "Target": {
-			            "Entity": "texte.entity__1"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte"
-			            },
-			            "Object": {
-			              "Role": "texte.entity__1"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "textes_have__1"
-			        }
-			      ]
-			    },
 			    "texte_has_ordre": {
 			      "Binding": {
 			        "ConceptualEntity": "Texte"
@@ -7765,105 +7777,6 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "données_cartographiques_have_nb_vidéos_géolocalisées"
-			        }
-			      ]
-			    },
-			    "texte_has_entity__4": {
-			      "Binding": {
-			        "ConceptualEntity": "Texte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "texte": {
-			          "Target": {
-			            "Entity": "texte"
-			          }
-			        },
-			        "texte.entity__4": {
-			          "Target": {
-			            "Entity": "texte.entity__4"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte"
-			            },
-			            "Object": {
-			              "Role": "texte.entity__4"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "textes_have__4"
-			        }
-			      ]
-			    },
-			    "texte_has_entity__3": {
-			      "Binding": {
-			        "ConceptualEntity": "Texte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "texte": {
-			          "Target": {
-			            "Entity": "texte"
-			          }
-			        },
-			        "texte.entity__3": {
-			          "Target": {
-			            "Entity": "texte.entity__3"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte"
-			            },
-			            "Object": {
-			              "Role": "texte.entity__3"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "textes_have__3"
-			        }
-			      ]
-			    },
-			    "texte_has_column_1": {
-			      "Binding": {
-			        "ConceptualEntity": "Texte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "texte": {
-			          "Target": {
-			            "Entity": "texte"
-			          }
-			        },
-			        "texte.column_1": {
-			          "Target": {
-			            "Entity": "texte.column_1"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte"
-			            },
-			            "Object": {
-			              "Role": "texte.column_1"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "textes_have_column_1"
 			        }
 			      ]
 			    },
@@ -9890,204 +9803,6 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "assauts_russ_have_assauts_russ"
-			        }
-			      ]
-			    },
-			    "texte_order_as_date_année_has_texte_order_as_date_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "Texte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "texte.order_as_date.année": {
-			          "Target": {
-			            "Entity": "texte.order_as_date.année"
-			          }
-			        },
-			        "texte.order_as_date.trimestre": {
-			          "Target": {
-			            "Entity": "texte.order_as_date.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte.order_as_date.année"
-			            },
-			            "Object": {
-			              "Role": "texte.order_as_date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "années_have_trimestres1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte.order_as_date.trimestre"
-			            },
-			            "Object": {
-			              "Role": "texte.order_as_date.année"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_années1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "texte.order_as_date.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "texte.order_as_date.année"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_années1"
-			        }
-			      ]
-			    },
-			    "texte_order_as_date_trimestre_has_texte_order_as_date_mois": {
-			      "Binding": {
-			        "ConceptualEntity": "Texte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "texte.order_as_date.trimestre": {
-			          "Target": {
-			            "Entity": "texte.order_as_date.trimestre"
-			          }
-			        },
-			        "texte.order_as_date.mois": {
-			          "Target": {
-			            "Entity": "texte.order_as_date.mois"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte.order_as_date.trimestre"
-			            },
-			            "Object": {
-			              "Role": "texte.order_as_date.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_moises1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte.order_as_date.mois"
-			            },
-			            "Object": {
-			              "Role": "texte.order_as_date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "moises_have_trimestres1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "texte.order_as_date.mois"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "texte.order_as_date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "moises_are_in_trimestres1"
-			        }
-			      ]
-			    },
-			    "texte_order_as_date_mois_has_texte_order_as_date_jour": {
-			      "Binding": {
-			        "ConceptualEntity": "Texte"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "texte.order_as_date.mois": {
-			          "Target": {
-			            "Entity": "texte.order_as_date.mois"
-			          }
-			        },
-			        "texte.order_as_date.jour": {
-			          "Target": {
-			            "Entity": "texte.order_as_date.jour"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte.order_as_date.mois"
-			            },
-			            "Object": {
-			              "Role": "texte.order_as_date.jour"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "moises_have_jour2"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "texte.order_as_date.jour"
-			            },
-			            "Object": {
-			              "Role": "texte.order_as_date.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jour_have_moises2"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "texte.order_as_date.jour"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "texte.order_as_date.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jour_are_in_moises2"
 			        }
 			      ]
 			    }

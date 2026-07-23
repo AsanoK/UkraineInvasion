@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "e7b49197707d61b5ac67",
   "position": {
     "x": 850.09118541033433,
@@ -7,7 +7,7 @@
     "z": 5000,
     "height": 112.82674772036475,
     "width": 419.209726443769,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "treemap",
@@ -308,6 +308,174 @@
                     "Right": {
                       "Literal": {
                         "Value": "'Roumanie'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Données cartographiques"
+                          }
+                        },
+                        "Property": "lieux.Pays"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Turquie'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Données cartographiques"
+                          }
+                        },
+                        "Property": "lieux.Pays"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Neutre'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Données cartographiques"
+                          }
+                        },
+                        "Property": "lieux.Pays"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Russie - Mer'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Données cartographiques"
+                          }
+                        },
+                        "Property": "lieux.Pays"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Ukraine - Mer'"
                       }
                     }
                   }
@@ -701,21 +869,7 @@
         }
       },
       {
-        "name": "9797cd5023649e0a32aa",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Données cartographiques"
-              }
-            },
-            "Property": "lieux.Pays"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c949db43cda86ae1c069",
+        "name": "91f0d1ab9c5c6339a461",
         "field": {
           "Column": {
             "Expression": {
@@ -729,7 +883,21 @@
         "type": "Categorical"
       },
       {
-        "name": "44c59d7c140e2f477dad",
+        "name": "8639de8a5c0c8c04d03d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Données cartographiques"
+              }
+            },
+            "Property": "lieux.Pays"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "acaff227186c20b93789",
         "field": {
           "Aggregation": {
             "Expression": {

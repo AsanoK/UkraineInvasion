@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
-  "name": "844204096db2c5e1f946",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "4ae499025e26c90ed689",
   "position": {
-    "x": 10.699088145896656,
-    "y": 120.60790273556232,
-    "z": 2000,
-    "height": 586.50455927051678,
-    "width": 384.19452887537994,
-    "tabOrder": 1000
+    "x": 13,
+    "y": 109,
+    "z": 8000,
+    "height": 598,
+    "width": 363,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -63,7 +63,7 @@
                 "Property": "Texte"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
@@ -77,6 +77,18 @@
           {
             "queryRefs": [
               "Texte.Titre_display"
+            ],
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Texte"
+                    }
+                  },
+                  "Property": "Titre_display"
+                }
+              }
             ],
             "isPinned": true
           },
@@ -233,11 +245,6 @@
             }
           }
         }
-      ],
-      "columnHeaders": [
-        {
-          "properties": {}
-        }
       ]
     },
     "visualContainerObjects": {
@@ -247,21 +254,21 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "15D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "15D"
                 }
               }
             },
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "15D"
                 }
               }
             },
@@ -294,7 +301,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "45D"
+                  "Value": "24D"
                 }
               }
             }
@@ -358,7 +365,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Front par secteur'"
+                  "Value": "'Évènements'"
                 }
               }
             },
@@ -366,13 +373,6 @@
               "expr": {
                 "Literal": {
                   "Value": "13D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }
@@ -398,61 +398,8 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "Filterda98a7663224b3a161ee",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Texte"
-              }
-            },
-            "Property": "Catégorie"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "t",
-              "Entity": "Texte",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "t"
-                          }
-                        },
-                        "Property": "Catégorie"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Front'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
-      {
         "name": "Filter705d38f79c32cb3841ed",
+        "ordinal": 0,
         "field": {
           "Column": {
             "Expression": {
@@ -524,7 +471,8 @@
         }
       },
       {
-        "name": "27b61edea33302d399b0",
+        "name": "9fe6f8346e0a35ab299a",
+        "ordinal": 1,
         "field": {
           "Column": {
             "Expression": {
@@ -536,7 +484,149 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "fd072845d3adb1e14472",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Texte"
+              }
+            },
+            "Property": "Titre_display"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "Filterda98a7663224b3a161ee",
+        "ordinal": 3,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Texte"
+              }
+            },
+            "Property": "Catégorie"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "Filtera197afda5b9b0a11a67a",
+        "ordinal": 4,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Texte"
+              }
+            },
+            "Property": "Groupe"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "Texte",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "t"
+                          }
+                        },
+                        "Property": "Groupe"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Event'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "bb25413fe21020eb8161",
+        "ordinal": 5,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Texte"
+              }
+            },
+            "Property": "Texte"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "Texte",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Contains": {
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "t"
+                            }
+                          },
+                          "Property": "Texte"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "'Rien_ID'"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
       }
-    ]
-  }
+    ],
+    "filterSortOrder": "Custom"
+  },
+  "isHidden": true
 }

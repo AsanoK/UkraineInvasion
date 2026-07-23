@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "a7b5daa819a546dbad15",
   "position": {
     "x": 406.10837438423647,
@@ -464,95 +464,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "960ad23b68e04dd10687",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Données cartographiques"
-              }
-            },
-            "Property": "Type"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "dea66901b1800ca8c093",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Données cartographiques"
-              }
-            },
-            "Property": "Lattitude"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "55168206d9e981143cd9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Données cartographiques"
-              }
-            },
-            "Property": "Longitude"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4292b8dd0d6850ac2a0b",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Données cartographiques"
-                  }
-                },
-                "Property": "Priorité"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "26c43b04d7885262c0ad",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Données cartographiques"
-              }
-            },
-            "Property": "Texte_affichage"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6127fd87391d2cd2ad9d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Données cartographiques"
-              }
-            },
-            "Property": "Nom"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

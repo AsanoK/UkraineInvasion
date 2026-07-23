@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "c24ba8ed583c6856d65b",
   "position": {
     "x": 0,
@@ -97,20 +97,6 @@
                   "Value": "true"
                 }
               }
-            },
-            "categoryMin": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
-            "categorySize": {
-              "expr": {
-                "Literal": {
-                  "Value": "82124612781.27808D"
-                }
-              }
             }
           }
         }
@@ -145,63 +131,35 @@
             "Property": "Date"
           }
         },
-        "type": "RelativeDate",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "c",
-              "Entity": "Calendrier",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Between": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "c"
-                        }
-                      },
-                      "Property": "Date"
-                    }
-                  },
-                  "LowerBound": {
-                    "DateSpan": {
-                      "Expression": {
-                        "DateAdd": {
-                          "Expression": {
-                            "DateAdd": {
-                              "Expression": {
-                                "Now": {}
-                              },
-                              "Amount": 1,
-                              "TimeUnit": 0
-                            }
-                          },
-                          "Amount": -2,
-                          "TimeUnit": 3
-                        }
-                      },
-                      "TimeUnit": 0
-                    }
-                  },
-                  "UpperBound": {
-                    "DateSpan": {
-                      "Expression": {
-                        "Now": {}
-                      },
-                      "TimeUnit": 0
-                    }
-                  }
-                }
+        "type": "RelativeDate"
+      },
+      {
+        "name": "b3f87d1e7733cc7f6434",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
               }
-            }
-          ]
-        }
+            },
+            "Property": "Moyenne mobile de pertes humaines"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "998982778e3f584c89c9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Moyenne mobile de pertes blindées"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

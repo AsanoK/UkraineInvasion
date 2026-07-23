@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "CY24SU06",
@@ -318,7 +318,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'2026-6'"
+                          "Value": "'2026-29'"
                         }
                       }
                     ]
@@ -360,44 +360,6 @@
           }
         },
         "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "p",
-              "Entity": "Pertes_UA",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "Comparison": {
-                      "ComparisonKind": 0,
-                      "Left": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "p"
-                            }
-                          },
-                          "Property": "NumSemaine"
-                        }
-                      },
-                      "Right": {
-                        "Literal": {
-                          "Value": "31L"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User"
       }
     ],
@@ -423,7 +385,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -451,11 +413,6 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "Slava558196374864872.json",
-          "path": "Slava558196374864872.json",
-          "type": "CustomTheme"
-        },
-        {
           "name": "pexels-julietberdo-124389375816653027049143.jpg",
           "path": "pexels-julietberdo-124389375816653027049143.jpg",
           "type": "Image"
@@ -469,6 +426,11 @@
           "name": "pexels-julietberdo-124389378788166006045419.jpg",
           "path": "pexels-julietberdo-124389378788166006045419.jpg",
           "type": "Image"
+        },
+        {
+          "name": "Slava558196374864872.json",
+          "path": "Slava558196374864872.json",
+          "type": "CustomTheme"
         }
       ]
     }

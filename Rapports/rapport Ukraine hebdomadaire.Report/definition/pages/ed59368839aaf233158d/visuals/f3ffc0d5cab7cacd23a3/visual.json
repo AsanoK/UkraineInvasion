@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "f3ffc0d5cab7cacd23a3",
   "position": {
     "x": 474.65045592705167,
@@ -7,7 +7,7 @@
     "z": 2000,
     "height": 123.5258358662614,
     "width": 794.65045592705167,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -378,5 +378,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "71dda9e302ea300aa69a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Pertes humaines"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "818dc717c0900b124ca0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Chars détruits"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "60d504bd7886eb681254",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Pertes_Warspotting"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

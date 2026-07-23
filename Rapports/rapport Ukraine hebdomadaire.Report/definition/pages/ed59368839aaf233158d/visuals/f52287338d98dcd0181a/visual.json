@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "f52287338d98dcd0181a",
   "position": {
     "x": 13.617021276595745,
@@ -7,7 +7,7 @@
     "z": 3000,
     "height": 555.37993920972644,
     "width": 449.36170212765961,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -360,6 +360,48 @@
             }
           ]
         }
+      },
+      {
+        "name": "f830ddc1494137178725",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Catégorisation"
+              }
+            },
+            "Property": "Catégorie_diplay_vide"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ca2fc2ebe0ebcd79a58e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Pertes russes"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ab2f1910b3b17ecb1270",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "Pertes_Warspotting"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

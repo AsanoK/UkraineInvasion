@@ -135,7 +135,7 @@ table Mesures
 			
 			VAR _num_semaine = SELECTEDVALUE(Calendrier[Numéro semaine])-1
 			VAR __year = YEAR(TODAY())
-			RETURN 1085//CALCULATE([Assauts russes],ALL(Calendrier),Calendrier[Numéro semaine]=_num_semaine,YEAR(Calendrier[Date])=__year)
+			RETURN CALCULATE([Assauts russes],ALL(Calendrier),Calendrier[Numéro semaine]=_num_semaine,YEAR(Calendrier[Date])=__year)
 		formatString: 0
 		lineageTag: f742f395-936d-4b5b-808a-d8695d7ad5a5
 
@@ -173,6 +173,10 @@ table Mesures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure drones = CALCULATE(SUM(Pertes_UA[Progression]),ALL('Catégorisation'),'Catégorisation'[Catégorie UA]="drone")
+		formatString: 0
+		lineageTag: df19fe9c-b46f-4299-87a9-7702f597fbf6
+
 	partition Mesures = m
 		mode: import
 		source =
@@ -184,4 +188,6 @@ table Mesures
 				    #"Colonnes supprimées"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 

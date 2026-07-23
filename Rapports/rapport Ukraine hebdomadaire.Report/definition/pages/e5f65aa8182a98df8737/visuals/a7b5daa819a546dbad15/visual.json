@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "a7b5daa819a546dbad15",
   "position": {
     "x": 405.59270516717328,
     "y": 120.60790273556232,
     "z": 0,
     "height": 586.50455927051678,
-    "width": 863.70820668693011
+    "width": 863.70820668693011,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "esriVisual",
@@ -125,6 +126,34 @@
               "queryRef": "Sum(Données cartographiques.Priorité)",
               "nativeQueryRef": "Nb occurences",
               "displayName": "Nb occurences"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Données cartographiques"
+                    }
+                  },
+                  "Property": "Nom"
+                }
+              },
+              "queryRef": "Données cartographiques.Nom",
+              "nativeQueryRef": "Nom"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Données cartographiques"
+                    }
+                  },
+                  "Property": "lieux.Oblast"
+                }
+              },
+              "queryRef": "Données cartographiques.lieux.Oblast",
+              "nativeQueryRef": "lieux.Oblast"
             }
           ]
         }
@@ -160,7 +189,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "'{\"portalUrl\":\"https://www.arcgis.com\",\"version\":\"2.4\",\"isAuthorNamedUser\":false,\"map\":{\"webmap\":{\"is3d\":false,\"itemData\":{\"operationalLayers\":[{\"id\":\"MyLayer\",\"visibility\":true,\"opacity\":1,\"minScale\":0,\"maxScale\":0,\"refreshInterval\":0,\"title\":\"Points clés\",\"objectIdField\":\"objectId\",\"type\":\"DataLayer\",\"layerType\":\"ArcGISFeatureLayer\",\"popupEnabled\":true,\"disablePopup\":false,\"visible\":true,\"geometryType\":\"point\",\"source\":[{\"attributes\":{},\"geometry\":{\"x\":0,\"y\":0,\"type\":\"point\",\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100}}}],\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100},\"esriMaps\":{\"isTimeEnabled\":\"false\",\"clusterInfo\":null,\"lastShareInfo\":null},\"timeInfo\":null,\"showLabels\":true,\"featureCollection\":{\"layers\":[{\"popupInfo\":{\"popupElements\":[{\"type\":\"fields\",\"fieldInfos\":[{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Type\",\"isEditable\":true,\"label\":\"Type\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Lattitude départ\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Longitude départ\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Nb occurences\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Texte_affichage\",\"isEditable\":true,\"label\":\"Texte_affichage\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"ROW_ID\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":true,\"label\":\"ROW_ID\",\"tooltip\":\"\",\"visible\":true}]}],\"expressionInfos\":[],\"fieldInfos\":[{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Type\",\"isEditable\":true,\"label\":\"Type\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Lattitude départ\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Longitude départ\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Nb occurences\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Texte_affichage\",\"isEditable\":true,\"label\":\"Texte_affichage\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"ROW_ID\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":true,\"label\":\"ROW_ID\",\"tooltip\":\"\",\"visible\":true}],\"title\":\"\",\"actions\":[]},\"effect\":null,\"layerDefinition\":{\"objectIdField\":\"objectId\",\"fields\":[{\"alias\":\"objectId\",\"editable\":false,\"name\":\"objectId\",\"nullable\":false,\"type\":\"esriFieldTypeOID\"},{\"alias\":\"Type\",\"editable\":true,\"length\":-1,\"name\":\"Donn_C3_A9es_20cartographiques_Type\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"Lattitude départ\",\"editable\":true,\"name\":\"Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\",\"nullable\":true,\"type\":\"esriFieldTypeDouble\"},{\"alias\":\"Longitude départ\",\"editable\":true,\"name\":\"Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\",\"nullable\":true,\"type\":\"esriFieldTypeDouble\"},{\"alias\":\"Nb occurences\",\"editable\":true,\"name\":\"Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\",\"nullable\":true,\"type\":\"esriFieldTypeDouble\"},{\"alias\":\"Texte_affichage\",\"editable\":true,\"length\":-1,\"name\":\"Donn_C3_A9es_20cartographiques_Texte_affichage\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"ROW_ID\",\"editable\":true,\"name\":\"ROW_ID\",\"nullable\":true,\"type\":\"esriFieldTypeInteger\"}],\"geometryType\":\"point\",\"drawingInfo\":{\"renderer\":{\"authoringInfo\":{\"visualVariables\":[{\"theme\":\"high-to-low\",\"type\":\"sizeInfo\"}]},\"type\":\"uniqueValue\",\"visualVariables\":[{\"type\":\"sizeInfo\",\"field\":\"Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\",\"maxDataValue\":6,\"maxSize\":20,\"minDataValue\":1.078,\"minSize\":5,\"valueUnit\":\"unknown\"}],\"field1\":\"Donn_C3_A9es_20cartographiques_Type\",\"defaultLabel\":\"Autre\",\"defaultSymbol\":{\"type\":\"esriSMS\",\"color\":[250,152,0,255],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":6,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[20,20,20,64],\"width\":0.75,\"style\":\"esriSLSSolid\"}},\"uniqueValueGroups\":[{\"classes\":[{\"description\":\"\",\"label\":\"Front\",\"symbol\":{\"type\":\"CIMSymbolReference\",\"symbol\":{\"type\":\"CIMPointSymbol\",\"symbolLayers\":[{\"type\":\"CIMVectorMarker\",\"enable\":true,\"anchorPoint\":{\"x\":0,\"y\":0,\"z\":0},\"anchorPointUnits\":\"Relative\",\"dominantSizeAxis3D\":\"Y\",\"size\":10,\"billboardMode3D\":\"FaceNearPlane\",\"frame\":{\"xmin\":-5,\"ymin\":-5,\"xmax\":5,\"ymax\":5},\"markerGraphics\":[{\"type\":\"CIMMarkerGraphic\",\"geometry\":{\"rings\":[[[0,5],[0.87,4.92],[1.71,4.7],[2.5,4.33],[3.21,3.83],[3.83,3.21],[4.33,2.5],[4.7,1.71],[4.92,0.87],[5,0],[4.92,-0.87],[4.7,-1.71],[4.33,-2.5],[3.83,-3.21],[3.21,-3.83],[2.5,-4.33],[1.71,-4.7],[0.87,-4.92],[0,-5],[-0.87,-4.92],[-1.71,-4.7],[-2.5,-4.33],[-3.21,-3.83],[-3.83,-3.21],[-4.33,-2.5],[-4.7,-1.71],[-4.92,-0.87],[-5,0],[-4.92,0.87],[-4.7,1.71],[-4.33,2.5],[-3.83,3.21],[-3.21,3.83],[-2.5,4.33],[-1.71,4.7],[-0.87,4.92],[0,5]]]},\"symbol\":{\"type\":\"CIMPolygonSymbol\",\"symbolLayers\":[{\"type\":\"CIMSolidStroke\",\"enable\":true,\"capStyle\":\"Round\",\"joinStyle\":\"Round\",\"lineStyle3D\":\"Strip\",\"miterLimit\":10,\"width\":0.2,\"color\":[0,0,128,217]},{\"type\":\"CIMSolidFill\",\"enable\":true,\"color\":[20,20,20,217]}],\"angleAlignment\":\"Map\"}}],\"respectFrame\":true}],\"haloSize\":1,\"scaleX\":1,\"angleAlignment\":\"Display\"}},\"values\":[[\"Front\"]]},{\"description\":\"\",\"label\":\"Bombardement\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[36,153,112,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[23,114,152,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Bombardement\"]]},{\"description\":\"\",\"label\":\"Combat\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[20,20,20,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[20,20,20,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Combat\"]]}]}],\"uniqueValueInfos\":[{\"description\":\"\",\"label\":\"Front\",\"symbol\":{\"type\":\"CIMSymbolReference\",\"symbol\":{\"type\":\"CIMPointSymbol\",\"symbolLayers\":[{\"type\":\"CIMVectorMarker\",\"enable\":true,\"anchorPoint\":{\"x\":0,\"y\":0,\"z\":0},\"anchorPointUnits\":\"Relative\",\"dominantSizeAxis3D\":\"Y\",\"size\":10,\"billboardMode3D\":\"FaceNearPlane\",\"frame\":{\"xmin\":-5,\"ymin\":-5,\"xmax\":5,\"ymax\":5},\"markerGraphics\":[{\"type\":\"CIMMarkerGraphic\",\"geometry\":{\"rings\":[[[0,5],[0.87,4.92],[1.71,4.7],[2.5,4.33],[3.21,3.83],[3.83,3.21],[4.33,2.5],[4.7,1.71],[4.92,0.87],[5,0],[4.92,-0.87],[4.7,-1.71],[4.33,-2.5],[3.83,-3.21],[3.21,-3.83],[2.5,-4.33],[1.71,-4.7],[0.87,-4.92],[0,-5],[-0.87,-4.92],[-1.71,-4.7],[-2.5,-4.33],[-3.21,-3.83],[-3.83,-3.21],[-4.33,-2.5],[-4.7,-1.71],[-4.92,-0.87],[-5,0],[-4.92,0.87],[-4.7,1.71],[-4.33,2.5],[-3.83,3.21],[-3.21,3.83],[-2.5,4.33],[-1.71,4.7],[-0.87,4.92],[0,5]]]},\"symbol\":{\"type\":\"CIMPolygonSymbol\",\"symbolLayers\":[{\"type\":\"CIMSolidStroke\",\"enable\":true,\"capStyle\":\"Round\",\"joinStyle\":\"Round\",\"lineStyle3D\":\"Strip\",\"miterLimit\":10,\"width\":0.2,\"color\":[0,0,128,217]},{\"type\":\"CIMSolidFill\",\"enable\":true,\"color\":[20,20,20,217]}],\"angleAlignment\":\"Map\"}}],\"respectFrame\":true}],\"haloSize\":1,\"scaleX\":1,\"angleAlignment\":\"Display\"}},\"value\":\"Front\"},{\"description\":\"\",\"label\":\"Bombardement\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[36,153,112,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[23,114,152,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Bombardement\"},{\"description\":\"\",\"label\":\"Combat\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[20,20,20,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[20,20,20,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Combat\"}]},\"labelingInfo\":[{\"labelExpression\":\"[Donn_C3_A9es_20cartographiques_Texte_affichage]\",\"labelExpressionInfo\":{\"expression\":\"$feature[\\\"Donn_C3_A9es_20cartographiques_Texte_affichage\\\"]\"},\"labelPlacement\":\"esriServerPointLabelPlacementAboveRight\",\"labelPosition\":\"curved\",\"repeatLabel\":true,\"symbol\":{\"type\":\"esriTS\",\"color\":[0,0,0,255],\"font\":{\"family\":\"Arial Unicode MS\",\"size\":12},\"horizontalAlignment\":\"center\",\"kerning\":true,\"haloColor\":[255,255,255,255],\"haloSize\":5,\"rotated\":false,\"text\":\"\",\"verticalAlignment\":\"baseline\",\"xoffset\":0,\"yoffset\":0,\"angle\":0,\"lineWidth\":192,\"lineHeight\":1}}],\"transparency\":0},\"featureReduction\":null,\"locationProvider\":{\"type\":\"coordinates\",\"lookupFields\":[{\"lookupField\":\"xFieldName\",\"outField\":\"Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\"},{\"lookupField\":\"yFieldName\",\"outField\":\"Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\"}],\"sourceSR\":4326,\"targetSR\":102100},\"minScale\":0,\"maxScale\":0,\"definitionExpression\":null,\"templates\":[{\"name\":\"New Feature\",\"description\":\"\",\"prototype\":{\"attributes\":{\"Donn_C3_A9es_20cartographiques_Type\":null,\"Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\":null,\"Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\":null,\"Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\":null,\"Donn_C3_A9es_20cartographiques_Texte_affichage\":null,\"ROW_ID\":null}}}],\"elevationInfo\":null,\"name\":\"Points clés\",\"type\":\"DataLayer\",\"queryParameters\":{\"tableId\":\"\"}},\"featureSet\":{\"features\":[{\"attributes\":{},\"geometry\":{\"x\":0,\"y\":0,\"type\":\"point\",\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100}}}]}}]}}],\"tables\":[],\"baseMap\":{\"baseMapLayers\":[{\"id\":\"VectorTile_3287\",\"opacity\":1,\"title\":\"OpenStreetMap\",\"visibility\":true,\"layerType\":\"VectorTileLayer\",\"styleUrl\":\"https://cdn.arcgis.com/sharing/rest/content/items/0df19d2d940b47658857cc2fc9623840/resources/styles/root.json\"}],\"title\":\"OpenStreetMap\",\"origItemId\":\"c29cfb7875fc4b97b58ba6987c460862\"},\"version\":\"2.26\",\"authoringApp\":\"ArcGIS for Power BI\",\"bookmarks\":[],\"initialState\":{\"viewpoint\":{\"targetGeometry\":{\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100},\"xmin\":2066173.546752786,\"ymin\":5421785.061360074,\"xmax\":6082480.760968019,\"ymax\":8083016.638136063}}}}},\"webmapExtensions\":{\"format\":2,\"cards\":[{\"type\":\"legend\",\"width\":235,\"height\":355.015625,\"legends\":[{\"layerId\":\"MyLayer\",\"expanded\":true}]}]}},\"embedCheckPassed\":true}'"
+                  "Value": "'{\"portalUrl\":\"https://www.arcgis.com\",\"version\":\"2.4\",\"isAuthorNamedUser\":false,\"map\":{\"webmap\":{\"is3d\":false,\"itemData\":{\"operationalLayers\":[{\"id\":\"MyLayer\",\"visibility\":true,\"opacity\":1,\"minScale\":0,\"maxScale\":0,\"refreshInterval\":0,\"title\":\"Points clés\",\"objectIdField\":\"objectId\",\"type\":\"DataLayer\",\"layerType\":\"ArcGISFeatureLayer\",\"popupEnabled\":true,\"disablePopup\":false,\"visible\":true,\"geometryType\":\"point\",\"source\":[{\"attributes\":{},\"geometry\":{\"x\":0,\"y\":0,\"type\":\"point\",\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100}}}],\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100},\"esriMaps\":{\"isTimeEnabled\":\"false\",\"clusterInfo\":null,\"lastShareInfo\":null},\"timeInfo\":null,\"showLabels\":true,\"featureCollection\":{\"layers\":[{\"popupInfo\":{\"popupElements\":[{\"type\":\"fields\",\"fieldInfos\":[{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Type\",\"isEditable\":true,\"label\":\"Type\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"expression/Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\",\"isEditable\":true,\"label\":\"Lattitude départ\",\"visible\":true},{\"fieldName\":\"expression/Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\",\"isEditable\":true,\"label\":\"Longitude départ\",\"visible\":true},{\"fieldName\":\"expression/Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\",\"isEditable\":true,\"label\":\"Nb occurences\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Texte_affichage\",\"isEditable\":true,\"label\":\"Texte_affichage\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Nom\",\"isEditable\":true,\"label\":\"Nom\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_lieux_Oblast\",\"isEditable\":true,\"label\":\"lieux.Oblast\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"ROW_ID\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":true,\"label\":\"ROW_ID\",\"tooltip\":\"\",\"visible\":true}]}],\"expressionInfos\":[{\"name\":\"Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\",\"title\":\"Lattitude départ\",\"expression\":\"// PowerBI number format: #,0.00\\n\\nif (IsEmpty($feature[\\\"Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\\\"]))\\n{\\n  return $feature[\\\"Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\\\"] \\n}\\nText($feature[\\\"Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\\\"], \\\"#,###.00\\\")\"},{\"name\":\"Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\",\"title\":\"Longitude départ\",\"expression\":\"// PowerBI number format: #,0.00\\n\\nif (IsEmpty($feature[\\\"Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\\\"]))\\n{\\n  return $feature[\\\"Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\\\"] \\n}\\nText($feature[\\\"Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\\\"], \\\"#,###.00\\\")\"},{\"name\":\"Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\",\"title\":\"Nb occurences\",\"expression\":\"// PowerBI number format: 0.0\\n\\nif (IsEmpty($feature[\\\"Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\\\"]))\\n{\\n  return $feature[\\\"Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\\\"] \\n}\\nText($feature[\\\"Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\\\"], \\\"#.0\\\")\"}],\"fieldInfos\":[{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Type\",\"isEditable\":true,\"label\":\"Type\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Lattitude départ\",\"tooltip\":\"\",\"visible\":false},{\"fieldName\":\"expression/Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\",\"isEditable\":true,\"label\":\"Lattitude départ\",\"visible\":true},{\"fieldName\":\"Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Longitude départ\",\"tooltip\":\"\",\"visible\":false},{\"fieldName\":\"expression/Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\",\"isEditable\":true,\"label\":\"Longitude départ\",\"visible\":true},{\"fieldName\":\"Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Nb occurences\",\"tooltip\":\"\",\"visible\":false},{\"fieldName\":\"expression/Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\",\"isEditable\":true,\"label\":\"Nb occurences\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Texte_affichage\",\"isEditable\":true,\"label\":\"Texte_affichage\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_Nom\",\"isEditable\":true,\"label\":\"Nom\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Donn_C3_A9es_20cartographiques_lieux_Oblast\",\"isEditable\":true,\"label\":\"lieux.Oblast\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"ROW_ID\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":true,\"label\":\"ROW_ID\",\"tooltip\":\"\",\"visible\":true}],\"title\":\"\",\"actions\":[]},\"layerDefinition\":{\"objectIdField\":\"objectId\",\"fields\":[{\"alias\":\"objectId\",\"editable\":false,\"name\":\"objectId\",\"nullable\":false,\"type\":\"esriFieldTypeOID\"},{\"alias\":\"Type\",\"editable\":true,\"length\":-1,\"name\":\"Donn_C3_A9es_20cartographiques_Type\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"Lattitude départ\",\"editable\":true,\"name\":\"Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\",\"nullable\":true,\"type\":\"esriFieldTypeDouble\"},{\"alias\":\"Longitude départ\",\"editable\":true,\"name\":\"Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\",\"nullable\":true,\"type\":\"esriFieldTypeDouble\"},{\"alias\":\"Nb occurences\",\"editable\":true,\"name\":\"Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\",\"nullable\":true,\"type\":\"esriFieldTypeDouble\"},{\"alias\":\"Texte_affichage\",\"editable\":true,\"length\":-1,\"name\":\"Donn_C3_A9es_20cartographiques_Texte_affichage\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"Nom\",\"editable\":true,\"length\":-1,\"name\":\"Donn_C3_A9es_20cartographiques_Nom\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"lieux.Oblast\",\"editable\":true,\"length\":-1,\"name\":\"Donn_C3_A9es_20cartographiques_lieux_Oblast\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"ROW_ID\",\"editable\":true,\"name\":\"ROW_ID\",\"nullable\":true,\"type\":\"esriFieldTypeInteger\"}],\"geometryType\":\"point\",\"drawingInfo\":{\"renderer\":{\"authoringInfo\":{\"visualVariables\":[{\"theme\":\"high-to-low\",\"type\":\"sizeInfo\"}]},\"type\":\"uniqueValue\",\"visualVariables\":[{\"type\":\"sizeInfo\",\"field\":\"Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\",\"maxDataValue\":6,\"maxSize\":20,\"minDataValue\":1.078,\"minSize\":5,\"valueUnit\":\"unknown\"}],\"field1\":\"Donn_C3_A9es_20cartographiques_Type\",\"defaultLabel\":\"Autre\",\"defaultSymbol\":{\"type\":\"esriSMS\",\"color\":[250,152,0,255],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":6,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[20,20,20,64],\"width\":0.75,\"style\":\"esriSLSSolid\"}},\"uniqueValueGroups\":[{\"classes\":[{\"description\":\"\",\"label\":\"Front\",\"symbol\":{\"type\":\"CIMSymbolReference\",\"symbol\":{\"type\":\"CIMPointSymbol\",\"symbolLayers\":[{\"type\":\"CIMVectorMarker\",\"enable\":true,\"anchorPoint\":{\"x\":0,\"y\":0,\"z\":0},\"anchorPointUnits\":\"Relative\",\"dominantSizeAxis3D\":\"Y\",\"size\":10,\"billboardMode3D\":\"FaceNearPlane\",\"frame\":{\"xmin\":-5,\"ymin\":-5,\"xmax\":5,\"ymax\":5},\"markerGraphics\":[{\"type\":\"CIMMarkerGraphic\",\"geometry\":{\"rings\":[[[0,5],[0.87,4.92],[1.71,4.7],[2.5,4.33],[3.21,3.83],[3.83,3.21],[4.33,2.5],[4.7,1.71],[4.92,0.87],[5,0],[4.92,-0.87],[4.7,-1.71],[4.33,-2.5],[3.83,-3.21],[3.21,-3.83],[2.5,-4.33],[1.71,-4.7],[0.87,-4.92],[0,-5],[-0.87,-4.92],[-1.71,-4.7],[-2.5,-4.33],[-3.21,-3.83],[-3.83,-3.21],[-4.33,-2.5],[-4.7,-1.71],[-4.92,-0.87],[-5,0],[-4.92,0.87],[-4.7,1.71],[-4.33,2.5],[-3.83,3.21],[-3.21,3.83],[-2.5,4.33],[-1.71,4.7],[-0.87,4.92],[0,5]]]},\"symbol\":{\"type\":\"CIMPolygonSymbol\",\"symbolLayers\":[{\"type\":\"CIMSolidStroke\",\"enable\":true,\"capStyle\":\"Round\",\"joinStyle\":\"Round\",\"lineStyle3D\":\"Strip\",\"miterLimit\":10,\"width\":0.2,\"color\":[0,0,128,217]},{\"type\":\"CIMSolidFill\",\"enable\":true,\"color\":[181,181,181,217]}],\"angleAlignment\":\"Map\"}}],\"respectFrame\":true}],\"haloSize\":1,\"scaleX\":1,\"angleAlignment\":\"Display\"}},\"values\":[[\"Front\"]]},{\"description\":\"\",\"label\":\"Bombardement\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[36,153,112,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[23,114,152,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Bombardement\"]]},{\"description\":\"\",\"label\":\"Combat\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[20,20,20,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[20,20,20,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Combat\"]]}]}],\"uniqueValueInfos\":[{\"description\":\"\",\"label\":\"Front\",\"symbol\":{\"type\":\"CIMSymbolReference\",\"symbol\":{\"type\":\"CIMPointSymbol\",\"symbolLayers\":[{\"type\":\"CIMVectorMarker\",\"enable\":true,\"anchorPoint\":{\"x\":0,\"y\":0,\"z\":0},\"anchorPointUnits\":\"Relative\",\"dominantSizeAxis3D\":\"Y\",\"size\":10,\"billboardMode3D\":\"FaceNearPlane\",\"frame\":{\"xmin\":-5,\"ymin\":-5,\"xmax\":5,\"ymax\":5},\"markerGraphics\":[{\"type\":\"CIMMarkerGraphic\",\"geometry\":{\"rings\":[[[0,5],[0.87,4.92],[1.71,4.7],[2.5,4.33],[3.21,3.83],[3.83,3.21],[4.33,2.5],[4.7,1.71],[4.92,0.87],[5,0],[4.92,-0.87],[4.7,-1.71],[4.33,-2.5],[3.83,-3.21],[3.21,-3.83],[2.5,-4.33],[1.71,-4.7],[0.87,-4.92],[0,-5],[-0.87,-4.92],[-1.71,-4.7],[-2.5,-4.33],[-3.21,-3.83],[-3.83,-3.21],[-4.33,-2.5],[-4.7,-1.71],[-4.92,-0.87],[-5,0],[-4.92,0.87],[-4.7,1.71],[-4.33,2.5],[-3.83,3.21],[-3.21,3.83],[-2.5,4.33],[-1.71,4.7],[-0.87,4.92],[0,5]]]},\"symbol\":{\"type\":\"CIMPolygonSymbol\",\"symbolLayers\":[{\"type\":\"CIMSolidStroke\",\"enable\":true,\"capStyle\":\"Round\",\"joinStyle\":\"Round\",\"lineStyle3D\":\"Strip\",\"miterLimit\":10,\"width\":0.2,\"color\":[0,0,128,217]},{\"type\":\"CIMSolidFill\",\"enable\":true,\"color\":[181,181,181,217]}],\"angleAlignment\":\"Map\"}}],\"respectFrame\":true}],\"haloSize\":1,\"scaleX\":1,\"angleAlignment\":\"Display\"}},\"value\":\"Front\"},{\"description\":\"\",\"label\":\"Bombardement\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[36,153,112,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[23,114,152,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Bombardement\"},{\"description\":\"\",\"label\":\"Combat\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[20,20,20,179],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[20,20,20,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Combat\"}]},\"labelingInfo\":[{\"labelExpression\":\"[Donn_C3_A9es_20cartographiques_Texte_affichage]\",\"labelExpressionInfo\":{\"expression\":\"$feature[\\\"Donn_C3_A9es_20cartographiques_Texte_affichage\\\"]\"},\"labelPlacement\":\"esriServerPointLabelPlacementAboveRight\",\"labelPosition\":\"curved\",\"repeatLabel\":true,\"symbol\":{\"type\":\"esriTS\",\"color\":[0,0,0,255],\"font\":{\"family\":\"Arial Unicode MS\",\"size\":12},\"horizontalAlignment\":\"center\",\"kerning\":true,\"haloColor\":[255,255,255,255],\"haloSize\":5,\"rotated\":false,\"text\":\"\",\"verticalAlignment\":\"baseline\",\"xoffset\":0,\"yoffset\":0,\"angle\":0,\"lineWidth\":192,\"lineHeight\":1},\"where\":\"\"}],\"transparency\":0},\"featureReduction\":null,\"locationProvider\":{\"type\":\"coordinates\",\"lookupFields\":[{\"lookupField\":\"xFieldName\",\"outField\":\"Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\"},{\"lookupField\":\"yFieldName\",\"outField\":\"Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\"}],\"sourceSR\":4326,\"targetSR\":3857},\"minScale\":0,\"maxScale\":0,\"definitionExpression\":null,\"templates\":[{\"name\":\"New Feature\",\"description\":\"\",\"prototype\":{\"attributes\":{\"Donn_C3_A9es_20cartographiques_Type\":null,\"Avg_Donn_C3_A9es_20cartographiques_Lattitude_20d_C3_A9part_\":null,\"Avg_Donn_C3_A9es_20cartographiques_Longitude_20d_C3_A9part_\":null,\"Sum_Donn_C3_A9es_20cartographiques_Priorit_C3_A9_\":null,\"Donn_C3_A9es_20cartographiques_Texte_affichage\":null,\"Donn_C3_A9es_20cartographiques_Nom\":null,\"Donn_C3_A9es_20cartographiques_lieux_Oblast\":null,\"ROW_ID\":null}}}],\"elevationInfo\":null,\"name\":\"Points clés\",\"type\":\"DataLayer\",\"queryParameters\":{\"tableId\":\"\"}},\"featureSet\":{\"features\":[{\"attributes\":{},\"geometry\":{\"x\":0,\"y\":0,\"type\":\"point\",\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100}}}]}}]}}],\"tables\":[],\"baseMap\":{\"baseMapLayers\":[{\"id\":\"VectorTile_3287\",\"opacity\":1,\"title\":\"OpenStreetMap\",\"visibility\":true,\"layerType\":\"VectorTileLayer\",\"styleUrl\":\"https://cdn.arcgis.com/sharing/rest/content/items/0df19d2d940b47658857cc2fc9623840/resources/styles/root.json\"}],\"title\":\"OpenStreetMap\",\"origItemId\":\"c29cfb7875fc4b97b58ba6987c460862\"},\"version\":\"2.26\",\"authoringApp\":\"ArcGIS for Power BI\",\"authoringAppVersion\":\"2026.2.992\",\"bookmarks\":[],\"initialState\":{\"viewpoint\":{\"targetGeometry\":{\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100},\"xmin\":2698184.0372064915,\"ymin\":5135564.952677828,\"xmax\":6714491.251421725,\"ymax\":7796796.529453817}}}}},\"webmapExtensions\":{\"format\":2,\"cards\":[{\"type\":\"legend\",\"width\":178,\"height\":355.015625,\"legends\":[{\"layerId\":\"MyLayer\",\"expanded\":true}]}]}},\"embedCheckPassed\":true}'"
                 }
               }
             }
@@ -221,7 +250,7 @@
             "layerVisible": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -452,53 +481,6 @@
         "howCreated": "User"
       },
       {
-        "name": "f89b22efd3a40cdd624b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Données cartographiques"
-              }
-            },
-            "Property": "Longitude départ"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "797b521eb1a27899b07d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Données cartographiques"
-              }
-            },
-            "Property": "Lattitude départ"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b0edb511b03b0e05ec88",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Données cartographiques"
-                  }
-                },
-                "Property": "Priorité"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "e5592a45a7238e4ea3d8",
         "field": {
           "Column": {
@@ -573,7 +555,54 @@
         }
       },
       {
-        "name": "ce80900049e01c467155",
+        "name": "e0b280357c6135b00c0c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Données cartographiques"
+              }
+            },
+            "Property": "Lattitude départ"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "be438e3ee3ca5beac504",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Données cartographiques"
+              }
+            },
+            "Property": "Longitude départ"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "24455cd4d089044ca86d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Données cartographiques"
+                  }
+                },
+                "Property": "Priorité"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bc346a55a8e0c060a2d7",
         "field": {
           "Column": {
             "Expression": {
@@ -582,6 +611,34 @@
               }
             },
             "Property": "Texte_affichage"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b5964f47d052987cb17c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Données cartographiques"
+              }
+            },
+            "Property": "Nom"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0f0ff0024013503dadab",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Données cartographiques"
+              }
+            },
+            "Property": "lieux.Oblast"
           }
         },
         "type": "Categorical"

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "f551f44d9c663ba9a620",
   "position": {
     "x": 10,
@@ -136,39 +136,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "56da9b860bb527ed9072",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calendrier"
-              }
-            },
-            "Property": "Année"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7abfc868b9685994c720",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Pertes_UA"
-                  }
-                },
-                "Property": "Progression"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

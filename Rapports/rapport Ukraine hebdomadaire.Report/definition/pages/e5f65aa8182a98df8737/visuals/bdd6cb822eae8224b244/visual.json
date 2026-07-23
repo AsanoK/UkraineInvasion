@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "bdd6cb822eae8224b244",
   "position": {
     "x": 405.59270516717328,
@@ -7,7 +7,7 @@
     "z": 1000,
     "height": 98.2370820668693,
     "width": 863.70820668693011,
-    "tabOrder": 1000
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "cardVisual",
@@ -463,7 +463,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "36c9ba97a9b25d5ae366",
+        "name": "95207c55d09610690373",
         "field": {
           "Measure": {
             "Expression": {
@@ -477,7 +477,7 @@
         "type": "Advanced"
       },
       {
-        "name": "12cd3ddd80548a836006",
+        "name": "5568784ed297a93a252d",
         "field": {
           "Measure": {
             "Expression": {

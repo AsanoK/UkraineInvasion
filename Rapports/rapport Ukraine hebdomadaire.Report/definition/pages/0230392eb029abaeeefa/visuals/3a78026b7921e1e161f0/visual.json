@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "3a78026b7921e1e161f0",
   "position": {
     "x": 0,
@@ -7,7 +7,7 @@
     "z": 2000,
     "height": 277.20364741641339,
     "width": 546.62613981762922,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -734,67 +734,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "a6b0ffb375b79b0744ab",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Pertes_UA"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5285b7f899a5d29d3dbc",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Catégorisation"
-              }
-            },
-            "Property": "Catégorie sup"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "8854c1a1a090a6ec0023",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Pertes_UA"
-                  }
-                },
-                "Property": "Progression"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b841ed62c6c3175a61a5",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "nb pertes humaines"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

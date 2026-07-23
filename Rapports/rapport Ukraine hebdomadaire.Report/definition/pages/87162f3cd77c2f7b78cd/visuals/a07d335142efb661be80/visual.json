@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "a07d335142efb661be80",
   "position": {
     "x": 10.699088145896656,
     "y": 71.975683890577514,
     "z": 5000,
     "height": 640,
-    "width": 335.56231003039517
+    "width": 335.56231003039517,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "barChart",
@@ -641,39 +642,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "ce96b166c30965a27773",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calendrier"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "dec0ed55e37c9d21fe41",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Texte"
-                  }
-                },
-                "Property": "Titre"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

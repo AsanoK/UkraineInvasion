@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "abb70ba463a00a25de75",
   "position": {
     "x": 410.77053344623204,
     "y": 673.05673158340392,
-    "z": 6,
+    "z": 6000,
     "height": 34.682472480948348,
     "width": 834.54699407281964,
-    "tabOrder": 6
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Données obtenues en source ouverte. Les opinions et analyses sont les miennes."
+                    "value": "Données obtenues en source ouverte, notamment uacontrolmap.com. Les opinions et analyses sont les miennes."
                   }
                 ]
               }

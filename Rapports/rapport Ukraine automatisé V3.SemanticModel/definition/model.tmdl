@@ -18,7 +18,17 @@ queryGroup Archive
 
 	annotation PBI_QueryGroupOrder = 2
 
-annotation PBI_QueryOrder = ["Texte","lieux","Pertes RU confirmées","LogsOWL_derniere_date","Pertes_Oryx","Pertes_warspotting","Types pertes","Mesures","russia_losses_equipment","russia_losses_personnel","Pertes_UA","Catégorisation","points clé","Typage_Owl","Géolocs (Unités et images)","front_source","Ligne de front","Secteurs","Données cartographiques","Assauts russes","TypeLieux","Dossier pertes_UA","Date_Ref","Dossier_Carte"]
+/// Erreurs dans les requêtes qui ont été chargées sur 20/02/2026 21:33:24.
+queryGroup 'Erreurs des requêtes – 20/02/2026 21:33:24'
+
+	annotation PBI_QueryGroupOrder = 3
+
+/// Erreurs dans les requêtes qui ont été chargées sur 20/02/2026 21:35:15.
+queryGroup 'Erreurs des requêtes – 20/02/2026 21:35:15'
+
+	annotation PBI_QueryGroupOrder = 4
+
+annotation PBI_QueryOrder = ["Texte","lieux","Pertes RU confirmées","LogsOWL_derniere_date","Pertes_Oryx","Pertes_warspotting","Types pertes","Mesures","russia_losses_equipment","russia_losses_personnel","Pertes_UA","Catégorisation","points clé","Typage_Owl","Géolocs (Unités et images)","front_source","Ligne de front","Secteurs","Données cartographiques","Assauts russes","TypeLieux","Dossier pertes_UA","Date_Ref","Dossier_Carte","Erreurs dans Données cartographiques"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 

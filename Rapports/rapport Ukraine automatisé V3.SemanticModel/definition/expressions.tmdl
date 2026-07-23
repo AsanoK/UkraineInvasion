@@ -181,7 +181,8 @@ expression russia_losses_personnel =
 		    #"Requêtes fusionnées" = Table.NestedJoin(#"Personnalisée ajoutée", {"Column1.day"}, #"Personnalisée ajoutée", {"day_after"}, "Personnalisée ajoutée", JoinKind.LeftOuter),
 		    #"Personnalisée ajoutée développé" = Table.ExpandTableColumn(#"Requêtes fusionnées", "Personnalisée ajoutée", {"Column1.personnel"}, {"Personnalisée ajoutée.Column1.personnel"}),
 		    #"Personnalisée ajoutée1" = Table.AddColumn(#"Personnalisée ajoutée développé", "Progression", each if [Personnalisée ajoutée.Column1.personnel]=null then  [Column1.personnel] else [Column1.personnel]-[Personnalisée ajoutée.Column1.personnel]),
-		    #"Autres colonnes supprimées" = Table.SelectColumns(#"Personnalisée ajoutée1",{"Column1.date", "Column1.personnel", "Progression"}),
+		    #"Lignes triées" = Table.Sort(#"Personnalisée ajoutée1",{{"Column1.date", Order.Descending}}),
+		    #"Autres colonnes supprimées" = Table.SelectColumns(#"Lignes triées",{"Column1.date", "Column1.personnel", "Progression"}),
 		    #"Colonnes renommées" = Table.RenameColumns(#"Autres colonnes supprimées",{{"Column1.date", "Date"}, {"Column1.personnel", "Pertes"}}),
 		    #"Personnalisée ajoutée2" = Table.AddColumn(#"Colonnes renommées", "Catégorie", each "Personnel")
 		in
@@ -344,4 +345,25 @@ expression 'Pertes RU confirmées' =
 	annotation PBI_NavigationStepName = Navigation
 
 	annotation PBI_ResultType = Table
+
+expression 'Erreurs dans Données cartographiques' =
+		let
+		Source = #"Données cartographiques",
+		  #"Incompatibilités de types détectées" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Source, Table.ColumnsOfType(Source, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "Le type de la valeur ne correspond pas à celui de la colonne.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Source, pairs),
+		  #"Index ajouté" = Table.AddIndexColumn(#"Incompatibilités de types détectées", "Numéro de ligne" ,1),
+		  #"Conserver les erreurs" = Table.SelectRowsWithErrors(#"Index ajouté", {"Type", "Date", "Commentaire", "Affichage", "nb occurences", "Priorité", "Lattitude", "Longitude", "lieux.Oblast", "lieux.Pays", "Nom", "Index", "geoloc", "Index.1"}),
+		  #"Colonnes permutées" = Table.ReorderColumns(#"Conserver les erreurs", {"Numéro de ligne", "Type", "Date", "Commentaire", "Affichage", "nb occurences", "Priorité", "Lattitude", "Longitude", "lieux.Oblast", "lieux.Pays", "Nom", "Index", "geoloc", "Index.1"})
+		in
+		  #"Colonnes permutées"
+	lineageTag: 6d87e32f-df55-4861-92d0-e6320ddb3e1c
+	queryGroup: 'Erreurs des requêtes – 20/02/2026 21:35:15'
+
+	annotation PBI_NavigationStepName = Navigation
 

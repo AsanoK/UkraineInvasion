@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "9ebb321552ca06246186",
   "position": {
     "x": 391.26164267569857,
     "y": 112.71803556308214,
-    "z": 4,
+    "z": 4000,
     "height": 105.13124470787469,
     "width": 425.94411515664694,
-    "tabOrder": 4
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "lineChart",
@@ -245,6 +245,25 @@
                   "Value": "'right'"
                 }
               }
+            },
+            "dataLabelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "dataLabelVerticalPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'above'"
+                }
+              }
             }
           },
           "selector": {
@@ -395,20 +414,6 @@
         }
       },
       {
-        "name": "3d8eeaa30e8ed09e5e9c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mesures"
-              }
-            },
-            "Property": "nombre pertes humaines"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "d069c93e4a161910ecc1",
         "field": {
           "Column": {
@@ -461,6 +466,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "b24689ba27f34a759ea6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mesures"
+              }
+            },
+            "Property": "nombre pertes humaines"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
